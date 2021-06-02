@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Risk Matrix</title>
+    <link rel="stylesheet" type="text/css" href="./mystyle.css" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // function onClickMatrix(event) {
+
+        //     this.activeCordinates = {
+        //         x: event.offsetX,
+        //         y: event.offsetY
+        //     }
+
+        //     var xCoord = this.activeCordinates.x;
+        //     var yCoord = this.activeCordinates.y;
+        //     console.log(xCoord + ',' + yCoord);
+
+        //     // document.getElementById('risk-matrix').style.top = yCoord + 'px';
+        //     // document.getElementById('risk-matrix').style.left = xCoord + 'px';
+
+        // }
+        // document.addEventListener("click", onClickMatrix);
+
+        // function showData() {
+        //     var data = $('.test').data;
+        //     console.log(data.Title);
+        //     console.log(data);
+    </script>
+
+    <script>
+        // $(document).ready(function() {
+        //     $("#myTooltip").tooltip({
+        //         title: 'Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen',
+        //         html: true,
+        //     });
+        // });
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="left-label">Eintrittswahrscheinlichkeit</div>
+        <div class="bottom-label">Schadenshöhe</div>
+
+        <div risk-matrix-item id="risk-matrix" class="risk-matrix-item">
+            <div class="closed"></div>
+            <div class="open ">
+                <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
+                <span id=link></span>
+            </div>
+        </div>
+
+
+        <div class="child1 "></div>
+        <div class="child2 "></div>
+        <div class="child3 "></div>
+        <div class="child4 "></div>
+
+
+        <div class="child5 "></div>
+        <div class="child6 "></div>
+        <div class="child7 "></div>
+        <div class="child8 "></div>
+
+        <div class="child9 "></div>
+        <div class="child10 "></div>
+        <div class="child11 "></div>
+        <div class="child12 "></div>
+
+        <div class="child13"></div>
+        <div class="child14 "></div>
+        <div class="child15 "></div>
+        <div class="child16 "></div>
+
+
+    </div>
+    <img src="/uploads/risiko.png" alt="chartLegend" class="outer2"></img>
+    <script>
+        function isFloat(val) {
+            if (val.indexOf('.') !== -1) {
+                // would be true. Period found in file name
+                // console.log("True")
+            }
+        }
+
+        var data = [{
+            Id: 1,
+            Title: 'Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen',
+            Description: '',
+
+        }, {
+            Id: 2,
+            Title: 'Risiko 1',
+            Description: 'Some description 2',
+            RiskLikelihood: 'Moeglich',
+            RiskImpact: 'Moderate'
+        }, {
+            Id: 3,
+            Title: 'Risiko 3',
+            Description: 'Some description 3',
+            RiskLikelihood: 'Unwahrscheinlich',
+            RiskImpact: 'Bedeutend'
+        }, {
+            Id: 4,
+            Title: 'Risiko 2',
+            Description: 'Some description 4',
+            RiskLikelihood: 'Sehr wahrscheinlich',
+            RiskImpact: 'Gering'
+        }];
+
+
+        function convert() {
+            debugger
+            //Har ID k against check ho. data ka index change karna ha accordigly id-1 use kar k daikh lena
+            document.getElementById("link").innerHTML = data[0].Title;
+            // console.log(data[0]);
+            var xdata = document.getElementById("inputText1").value;
+            var ydata = document.getElementById("inputText2").value;
+
+
+            // isFloat(xdata);
+            var addPX = 0;
+            var addPY = 0;
+            var valX = 0;
+            var valY = 0;
+            if (xdata.indexOf('.') !== -1) {
+                var valCheckX = xdata.split(".");
+                // console.log(valCheckX);
+                valX = valCheckX[0];
+                addPX = valCheckX[1] * 10;
+            } else {
+                valX = xdata;
+            }
+
+            if (ydata.indexOf('.') !== -1) {
+                var valCheckY = ydata.split(".");
+                // console.log(valCheckY);
+                valY = valCheckY[0];
+                addPY = valCheckY[1] * 10;
+            } else {
+                valY = ydata;
+            }
+
+            if (valX == 1 && valY == 4) {
+                this.activeCordinates = {
+                    x: (310 - addPX),
+                    y: (400 + addPY)
+                }
+
+            } else if (valX == 1 && valY == 3) {
+                this.activeCordinates = {
+                    x: (310 - addPX),
+                    y: (300 + addPY)
+                }
+            } else if (valX == 2 && valY == 3) {
+                this.activeCordinates = {
+                    x: (205 - addPX),
+                    y: (300 + addPY)
+                }
+            } else if (valX == 2 && valY == 4) {
+                this.activeCordinates = {
+                    x: (205 - addPX),
+                    y: (400 + addPY)
+                }
+            } else if (valX == 3 && valY == 4) {
+                this.activeCordinates = {
+                    x: (105 - addPX),
+                    y: (400 + addPY)
+                }
+            } else if (valX == 4 && valY == 4) {
+                this.activeCordinates = {
+                    x: (6 - addPX),
+                    y: (400 + addPY)
+                }
+            } else if (valX == 0 && valY == 0) {
+                this.activeCordinates = {
+                    x: (400 - addPX),
+                    y: (0 + addPY)
+                }
+            } else if (valX == 0 && valY == 1) {
+                this.activeCordinates = {
+                    x: (400 - addPX),
+                    y: (100 + addPY)
+                }
+            } else if (valX == 0 && valY == 2) {
+                this.activeCordinates = {
+                    x: (400 - addPX),
+                    y: (200 + addPY)
+                }
+            } else if (valX == 0 && valY == 3) {
+                this.activeCordinates = {
+                    x: (400 - addPX),
+                    y: (300 + addPY)
+                }
+            } else if (valX == 0 && valY == 4) {
+                this.activeCordinates = {
+                    x: (400 - addPX),
+                    y: (405 + addPY)
+                }
+            } else if (valX == 3 && valY == 3) {
+                this.activeCordinates = {
+                    x: (105 - addPX),
+                    y: (300 + addPY)
+                }
+            } else if (valX == 1 && valY == 2) {
+                this.activeCordinates = {
+                    x: (310 - addPX),
+                    y: (205 + addPY)
+                }
+            } else if (valX == 2 && valY == 2) {
+                this.activeCordinates = {
+                    x: (205 - addPX),
+                    y: (200 + addPY)
+                }
+            } else if (valX == 3 && valY == 2) {
+                this.activeCordinates = {
+                    x: (105 - addPX),
+                    y: (200 + addPY)
+                }
+            } else if (valX == 1 && valY == 1) {
+                this.activeCordinates = {
+                    x: (310 - addPX),
+                    y: (105 + addPY)
+                }
+            } else if (valX == 1 && valY == 0) {
+                this.activeCordinates = {
+                    x: (310 - addPX),
+                    y: (5 + addPY)
+                }
+            } else if (valX == 2 && valY == 0) {
+                this.activeCordinates = {
+                    x: (210 - addPX),
+                    y: (5 + addPY)
+                }
+            } else if (valX == 2 && valY == 1) {
+                this.activeCordinates = {
+                    x: (210 - addPX),
+                    y: (100 + addPY)
+                }
+            } else if (valX == 3 && valY == 1) {
+                this.activeCordinates = {
+                    x: (110 - addPX),
+                    y: (100 + addPY)
+                }
+            } else if (valX == 3 && valY == 0) {
+                this.activeCordinates = {
+                    x: (105 - addPX),
+                    y: (5 + addPY)
+                }
+            } else if (valX == 4 && valY == 1) {
+                this.activeCordinates = {
+                    x: (5 - addPX),
+                    y: (100 + addPY)
+                }
+            } else if (valX == 4 && valY == 2) {
+                this.activeCordinates = {
+                    x: (5 - addPX),
+                    y: (200 + addPY)
+                }
+            } else if (valX == 4 && valY == 3) {
+                this.activeCordinates = {
+                    x: (5 - addPX),
+                    y: (300 + addPY)
+                }
+            } else if (valX == 4 && valY == 4) {
+                this.activeCordinates = {
+                    x: (5 - addPX),
+                    y: (400 + addPY)
+                }
+            } else if (valX == 4 && valY == 0) {
+                this.activeCordinates = {
+                    x: (5 - addPX),
+                    y: (5 + addPY)
+                }
+            }
+            var xCoord = this.activeCordinates.x;
+            var yCoord = this.activeCordinates.y;
+
+            document.getElementById('risk-matrix').style.top = xCoord + 'px';
+            document.getElementById('risk-matrix').style.left = yCoord + 'px';
+
+        }
+    </script>
+
+    <div class="button-field-label ">Spalte X Reihe eingeben</div>
+    <div>
+        <input type="text " id="inputText2" name="Source " size="15 " style="position: absolute; width: 200px;top: 60.5%;left: 1.5%;overflow: hidden;float: left;margin: 0; ">
+        <input type="text " id="inputText1" name="Source " size="15 " style="position: absolute; width: 200px;top: 65.5%;left: 1.5%;overflow: hidden; float: left;margin: 0; ">
+        <button class="button " onclick="convert() ">Submit</button>
+    </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Risk Matrix</title>
+    <link rel="stylesheet" type="text/css" href="./mystyleIMG.css" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // window.readystatechange = function() {
+        //     if (document.readyState === "complete") {
+        //         var lonValue = localStorage.getItem("storageName");
+        //         console.log(lonValue);
+        //     }
+        // }
+        // document.addEventListener('readystatechange', () => console.log('readyState:' + document.readyState));
+
+        // window.onbeforeonload = function() {
+        //     
+        //     localStorage.removeItem("storageName");
+        // }
+
+        // window.onload = function() {
+        //     var lonValue = localStorage.getItem("storageName");
+        //     console.log(lonValue);
+        //     localStorage.removeItem("storageName");
+        // }
+
+
+
+
+        document.oncontextmenu = function() {
+            return false;
+        };
+
+        function myFunction() {
+            // this.redirectTo('/#risikoFelderview/5');
+            btnid = event.srcElement.id;
+            if (btnid == 'mybutton') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/5";
+            } else if (btnid == 'mybutton1') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/3";
+            } else if (btnid == 'mybutton2') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/2";
+            } else if (btnid == 'mybutton3') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/6";
+            } else if (btnid == 'mybutton4') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/10";
+            } else if (btnid == 'mybutton5') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/7";
+            } else if (btnid == 'mybutton6') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/0";
+            } else if (btnid == 'mybutton7') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/4";
+            } else if (btnid == 'mybutton8') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/8";
+            } else if (btnid == 'mybutton9') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/9";
+            } else if (btnid == 'mybutton10') {
+                top.location.href =
+                    "http://localhost:1962/#risikoFelderview/1";
+                // var element = document.getElementById(btnid);
+                // element.classList.add("disabled");
+            } else {
+                var element = document.getElementById(btnid);
+                element.classList.add("disabled");
+            }
+        }
+    </script>
+
+</head>
+
+<script>
+    $(document).ready(function() {
+
+
+        $('#mybutton').click(function() {
+            // $('#mybutton').addClass('makegrey');
+            top.location.href = "http://51.15.76.202/";
+
+        });
+        // $('#mybutton').focus(function() {
+        //     // $('#mybutton').addClass('makegrey');
+        //     var lonValue = localStorage.getItem("storageName");
+        //     console.log(lonValue);
+
+        // });
+
+    });
+
+
+
+    $(document).ready(function() {
+        $('#mybutton1').click(function() {
+            // $('#mybutton1').prop('disabled', true).addClass('disabled');
+            // $('#mybutton1').addClass('makegrey');
+            top.location.href = "http://51.15.76.202/";
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton2').click(function() {
+            // $('#mybutton2').prop('disabled', true).addClass('disabled');
+            $('#mybutton2').addClass('makegrey');
+
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton3').click(function() {
+            $('#mybutton3').addClass('makegrey');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton4').click(function() {
+            $('#mybutton4').addClass('makegrey');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton5').click(function() {
+            $('#mybutton5').addClass('makegrey');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton6').click(function() {
+            $('#mybutton6').addClass('makegrey');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton7').click(function() {
+            $('#mybutton7').addClass('makegrey');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton8').click(function() {
+            $('#mybutton8').addClass('makegrey');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton9').click(function() {
+            $('#mybutton9').addClass('makegrey');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#mybutton10').click(function() {
+            $('#mybutton10').addClass('makegrey');
+        });
+    });
+</script>
+
+<body>
+
+    <div class="container">
+        <img src="../uploads/riskIden.PNG" alt="riskAssesment">
+
+        <button class="kompetenz" id="mybutton" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="gesund" id="mybutton1" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="fuhrung" id="mybutton2" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="kulture" id="mybutton3" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="recht" id="mybutton4" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="markt" id="mybutton5" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="beschafung" id="mybutton6" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="itsicher" id="mybutton7" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="production" id="mybutton8" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="process" id="mybutton9" oncontextmenu="myFunction()"> - - - </button>
+
+        <button class="finanz" id="mybutton10" oncontextmenu="myFunction()"> - - - </button>
+
+
+    </div>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+
+        var lonValue = localStorage.getItem("storageName");
+        console.log(lonValue);
+        // localStorage.removeItem("storageName");
+        // localStorage.clear();
+
+
+        // console.log(document.cookie.split(';'));
+
+
+        for (var i = lonValue; i <= 10; i++) {
+            add(i);
+        }
+
+        function add(i) {
+            var butID = "mybutton" + i;
+            var myelement = document.getElementById(butID);
+            myelement.classList.add("makegrey");
+        }
+    });
+</script>
+
+</html>

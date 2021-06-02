@@ -1,0 +1,897 @@
+<div id="anychart-embed-samples-bct-sunburst-chart-20" class="anychart-embed anychart-embed-samples-bct-sunburst-chart-20">
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-sunburst.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <div id="ac_style_samples-bct-sunburst-chart-20" style="display:none;">
+    html, body, iFrame, #container {
+      width: 190%;
+      height: 170%;
+      margin: 0;
+      padding: 0;
+  }
+  </div>
+  
+  <script>(function(){
+  function ac_add_to_head(el){
+    var head = document.getElementsByTagName('head')[0];
+    head.insertBefore(el,head.firstChild);
+  }
+  function ac_add_link(url){
+    var el = document.createElement('link');
+    el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+    ac_add_to_head(el);
+  }
+  function ac_add_style(css){
+    var ac_style = document.createElement('style');
+    if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+    else ac_style.appendChild(document.createTextNode(css));
+    ac_add_to_head(ac_style);
+  }
+  ac_add_link('https://cdn.anychart.com/releases/8.7.1/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4');
+  ac_add_style(document.getElementById("ac_style_samples-bct-sunburst-chart-20").innerHTML);
+  ac_add_style(".anychart-embed-samples-bct-sunburst-chart-20{width:600px;height:450px;}");
+  })();</script>
+  <button onclick="drillUpALevel()">Startansicht</button>
+  <div id="container"></div>
+  <style>
+    .outer2{
+      position: fixed;
+      right: 80px;
+    top: 120px;
+    width: 14%;
+    }
+
+    .outer{
+      position: fixed;
+      right: 80px;
+      top: 10px;
+    }
+      </style>
+  <img src="/uploads/legends.png" alt="chartLegend" class="outer2"></img>
+  <img src="/uploads/legends2.png" alt="chartLegend2" height="110" class="outer"></img>
+  
+  
+  <script>
+  anychart.onDocumentReady(function () {
+  
+      var data = [
+    {
+                
+        "id": "00",
+        "name": "SORISMA",
+        "parent": null,
+        "value": 1000,
+        fill: '#a01818',
+        url: "",
+      },
+      {
+        "parent": "00",
+        "id": "01",
+        "name": "Unternehmensinfrastruktur",
+        "value": 300,
+        url: ""
+      },
+      {
+        "parent": "00",
+        "id": "02",
+        "name": "Personalmanagement",
+        "value": 250,
+        url: ""
+      },
+             {
+        "parent": "00",
+        "id": "03",
+        "name": "Forschung und Entwicklung",
+        "value": 250,
+        url: ""
+      },
+               {
+        "parent": "00",
+        "id": "04",
+        "name": "Beschaffung",
+        "value": 250,
+        url: ""
+      },
+             {
+        "parent": "00",
+        "id": "05",
+        "name": "Fertigung",
+        "value": 250,
+        url: ""
+      },
+             {
+        "parent": "00",
+        "id": "06",
+        "name": "Marketing & Vertrieb",
+        "value": 200,
+        url: ""
+      },
+      {
+        "parent": "00",
+        "id": "07",
+        "name": "Logistik",
+        "value": 200,
+        url: ""
+      },
+      {
+        "parent": "00",
+        "id": "08",
+        "name": "Service",
+        "value": 200,
+        url: ""
+      },
+  
+     {
+      "parent": "16",
+      "id": "11",
+      "name": "Autom. Datenbereitstellung",
+      "value": 25,
+       fill: '#aeccd9',
+     url: "http://51.15.76.202/#homeview/6",
+       stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "16",
+      "id": "12",
+      "name": "Digitales Kanbanboard",
+    fill: '#aeccd9',
+      "value": 35,
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    url: "http://51.15.76.202/#homeview/7"
+     
+  }, {
+      "parent": "16",
+      "id": "13",
+      "name": "Social Intranet",
+      "value": 25,
+    fill: '#7cbb82',
+    url: "http://51.15.76.202/#homeview/2",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'}
+  },{
+      "parent": "16",
+      "id": "14",
+      "name": "Tool-gestütztes Projektmanagement",
+      "value": 45,
+    fill: '#7cbb82',
+    url: "http://51.15.76.202/#homeview/3",
+     stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "16",
+      "id": "15",
+      "name": "Tool unterstützte Remote Teams",
+      "value": 35,
+    url: "http://51.15.76.202/#homeview/1",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#f8f8a2',
+    label: {
+           fontColor: 'black',
+           }
+  },  {
+      "parent": "17",
+      "id": "16",
+      "name": "Wissensmanagementsysteme",
+      "value": 35,
+    fill: '#7cbb82',
+    url: "http://51.15.76.202/#homeview/4",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "01",
+      "id": "17",
+      "name": "KI-gestützte Belegerkennung",
+      "value": 40,
+    url: "http://51.15.76.202/#homeview/0",
+    fill: '#7cbb82',
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "01",
+      "id": "18",
+      "name": "Harmonisierte IT Struktur",
+      "value": 250,
+    url: "http://51.15.76.202/#homeview/5",
+    fill: '#aeccd9',
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+  },
+  {
+      "parent": "18",
+      "id": "34",
+      "name": "   ",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: "#c0a3a4",
+    url: ""
+    }, 
+    {
+      "parent": "34",
+      "id": "35",
+      "name": "   ",
+      stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: "#e3d6d6",
+    url: ""
+    }, 
+  
+            
+  {
+      "parent": "29",
+      "id": "19",
+      "name": "Betriebliches Gesundheitsmanagement",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/11",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#f8f8a2',
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "30",
+      "id": "20",
+      "name": "IncentiveProgramme",
+      "value": 41,
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/20",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "27",
+      "id": "22",
+      "name": "Befähigungsprogramm für Betriebsräte",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/18",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#f8f8a2',
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "27",
+      "id": "23",
+      "name": "Konstruktive Fehlerkultur",
+      "value": 41,
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/17",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "26",
+      "id": "24",
+      "name": "Flexible Arbeitszeitmodelle",
+      "value": 41,
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/10",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "26",
+      "id": "25",
+      "name": "Schulungsplattform",
+      "value": 41,
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/8",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "33",
+      "id": "26",
+      "name": "Social Media Recruiting",
+      "value": 41,
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/12",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "33",
+      "id": "27",
+      "name": "Anpassung der Unternehmenskultur",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/16",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#f8f8a2',
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "30",
+      "id": "28",
+      "name": "Experts on Demand",
+      "value": 41,
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/14",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "33",
+      "id": "29",
+      "name": "Neue Führungsmodelle",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/15",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#7cbb82',
+  }, {
+      "parent": "33",
+      "id": "30",
+      "name": "Digitales Personalmanagement",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/21",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#f8f8a2',
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "32",
+      "id": "31",
+      "name": "Webbasierte externe Lernangebote",
+      "value": 41,
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/13",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "33",
+      "id": "32",
+      "name": "Change Management Programme",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/9",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#f8f8a2',
+    label: {
+           fontColor: 'black',
+           }
+  }, {
+      "parent": "02",
+      "id": "33",
+      "name": "     ",
+      "value": 41,
+    fill: '#a07576',
+    url: "",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+  },
+            
+            
+            
+  {
+      "parent": "03",
+      "id": "44",
+      "name": "     ",
+      "value": 41,
+      fill: '#a07576',
+      url: "",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+  },
+                 
+  {
+      "parent": "44",
+      "id": "43",
+      "name": "Design Thinking Ansätze", "value": 41,
+    fill: '#7cbb82',
+    url: "http://51.15.76.202/#homeview/26",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+  },
+  {
+      "parent": "43",
+      "id": "37",
+      "name": "Tool gestütztes Anforderungsmanagement",
+      "value": 41,
+    fill: '#7cbb82',
+    url: "http://51.15.76.202/#homeview/24",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  }, {
+      "parent": "41",
+      "id": "38",
+      "name": "Technologieforen",
+      "value": 41,
+    fill: '#7cbb82',
+    url: "http://51.15.76.202/#homeview/25",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  }, {
+      "parent": "42",
+      "id": "39",
+      "name": "Tool gestützte Großgruppen Konzepte",
+      "value": 41,
+    fill: '#7cbb82',
+    url: "http://51.15.76.202/#homeview/27",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  }, {
+      "parent": "44",
+      "id": "40",
+      "name": "Kundenintegrierter Entwicklungsprozess",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/22",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#7cbb82',
+  }, {
+      "parent": "44",
+      "id": "41",
+      "name": "Kollaborative Produktentwicklung",
+      "value": 41,
+    fill: '#aeccd9',
+    url: "http://51.15.76.202/#homeview/31",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "44",
+      "id": "42",
+      "name": "Agile Teams",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/23",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#7cbb82',
+  }, {
+      "parent": "44",
+      "id": "46",
+      "name": "PLM Systeme",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/27",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#7cbb82',
+  },
+            {
+      "parent": "46",
+      "id": "47",
+      "name": " ",
+      "value": 41,
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#e3d6d6',
+    url: ""
+  },
+            {
+      "parent": "40",
+      "id": "48",
+      "name": " ",
+      "value": 41,
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: '#e3d6d6',
+    url: ""
+  },
+  
+  
+          
+   {
+      "parent": "52",
+      "id": "49",
+      "name": "E-Procurement", 
+    url: "http://51.15.76.202/#homeview/32",
+    "value": 41,
+     stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: "#7cbb82",
+   },
+            {
+      "parent": "04",
+      "id": "50",
+      "name": "Prescriptive Analytics", "value": 41,
+              fill: '#aeccd9',
+              url: "http://51.15.76.202/#homeview/31",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+            },
+        {
+      "parent": "04",
+      "id": "51",
+      "name": "Predictive Logistics", "value": 41,
+          fill: '#aeccd9',
+      url: "http://51.15.76.202/#homeview/30",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+        },
+            {
+      "parent": "50",
+      "id": "52",
+      "name": "   ",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: "#c0a3a4",
+    url: ""
+    }, 
+    {
+      "parent": "51",
+      "id": "53",
+      "name": "   ",
+      stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+    fill: "#c0a3a4",
+    url: ""
+  //  stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  //fill: "#e3d6d6",
+    }, 
+          {
+      "parent": "53",
+      "id": "54",
+      "name": " ", "value": 41,
+     stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    fill: "#e3d6d6",
+    url: ""
+   },
+           
+  
+  {
+      "parent": "60",
+      "id": "55",
+      "name": "Industrieroboter",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/33",
+    fill: '#aeccd9',
+  stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+    
+  }, {
+      "parent": "59",
+      "id": "56",
+      "name": "Manufacturing Execution Systems",
+      "value": 41,
+    fill: '#aeccd9',
+    url: "http://51.15.76.202/#homeview/40",
+   stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},  
+  }, {
+      "parent": "58",
+      "id": "57",
+      "name": "Betriebs und Maschinendatenerfassung",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/34",
+    fill: '#aeccd9',
+  stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+   
+  }, {
+      "parent": "62",
+      "id": "58",
+      "name": "Digitale Auftragsüberwachung",
+      "value": 41,
+    fill: '#aeccd9',
+    url: "http://51.15.76.202/#homeview/35",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "62",
+      "id": "59",
+      "name": "AR-basierte Montageunterstützung",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/36",
+    fill: '#aeccd9',
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "62",
+      "id": "60",
+      "name": "Montage Assistenzsysteme",
+      "value": 41,
+    fill: '#aeccd9',
+    url: "http://51.15.76.202/#homeview/39",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "62",
+      "id": "61",
+      "name": "Autom. Qualitätsprüfung",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/38",
+    fill: '#aeccd9',
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  }, {
+      "parent": "05",
+      "id": "62",
+      "name": "Additive Fertigung",
+      "value": 41,
+     fill: '#aeccd9',
+     url: "http://51.15.76.202/#homeview/37",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+  },         
+  {
+      "parent": "61",
+      "id": "63",
+      "name": " ",
+      "value": 41,
+  stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  fill: "#e3d6d6",  
+  url: ""
+  },
+  
+            
+            
+            
+  {
+      "parent": "06",
+      "id": "64",
+      "name": "     ",
+      "value": 41,
+    fill: '#a07576',
+    url: "",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+  },
+  {
+      "parent": "67",
+      "id": "65",
+      "name": "Social Media Konzepte",
+      "value": 41,
+    label: {
+           fontColor: 'black',
+           },
+    fill: '#f8f8a2',
+    url: "http://51.15.76.202/#homeview/42",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  
+  }, {
+      "parent": "64",
+      "id": "66",
+      "name": "Tool-gestützte Anforderungserhebung",
+      "value": 41,
+    fill: "#7cbb82",
+    url: "http://51.15.76.202/#homeview/41",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  
+  
+  }, {
+      "parent": "64",
+      "id": "67",
+      "name": "Vertrieb von 3D-Konstruktionsdateien",
+      "value": 41,
+    fill: "#7cbb82",
+    url: "http://51.15.76.202/#homeview/46",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  
+  
+  }, {
+      "parent": "64",
+      "id": "68",
+      "name": "Predictive Analytics",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/43",
+     fill: '#aeccd9',
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'}
+  
+  }, {
+      "parent": "68",
+      "id": "69",
+      "name": "VR-unterstützter Vertrieb",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/45",
+     fill: '#aeccd9',
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  
+  }, {
+      "parent": "66",
+      "id": "70",
+      "name": "Vertriebs Dashboards",
+    url: "http://51.15.76.202/#homeview/44",
+      "value": 41,
+     fill: '#aeccd9',
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  
+  },
+  {
+      "parent": "07",
+      "id": "71",
+      "name": "     ",
+      "value": 41,
+    fill: '#a07576',
+    url: "",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'}
+  },
+  {
+      "parent": "71",
+      "id": "72",
+      "name": "Cloudbasierter Datenaustausch",
+      "value": 41,
+    fill: '#aeccd9',
+    url: "http://51.15.76.202/#homeview/47",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+  }, {
+      "parent": "71",
+      "id": "73",
+      "name": "Fahrerlose Transportsysteme",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/49",
+    fill: '#aeccd9',
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+  }, {
+      "parent": "73",
+      "id": "74",
+      "name": "Lagerverwaltungssystem",
+      "value": 41,
+    fill: '#aeccd9',
+    url: "http://51.15.76.202/#homeview/48",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  },
+  {
+      "parent": "72",
+      "id": "75",
+      "name": "    ",
+      "value": 41,
+    fill: '#e3d6d6',
+    url: "",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  },
+   {
+      "parent": "08",
+      "id": "76",
+      "name": "Predictive Maintenance",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/51",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'},
+  fill: '#aeccd9',
+  
+  }, {
+      "parent": "08",
+      "id": "77",
+      "name": "KI-basierte Voranalyse",
+      "value": 10,
+    url: "http://51.15.76.202/#homeview/52",
+    stroke: {keys: ['#a07576'], thickness : 10, lineJoin: 'bevel'},
+  fill: '#aeccd9',
+  
+  }, {
+      "parent": "76",
+      "id": "78",
+      "name": "Drohnenbasierte Überwachung",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/56",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+  fill: '#aeccd9',
+  
+  }, {
+      "parent": "77",
+      "id": "79",
+      "name": "Smart Services für Anlagen",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/50",
+    stroke: {keys: ['#c0a3a4'], thickness : 10, lineJoin: 'bevel'},
+  fill: '#aeccd9',
+  
+  }, {
+      "parent": "79",
+      "id": "80",
+      "name": "Remote Assistance",
+      "value": 41,
+    url: "http://51.15.76.202/#homeview/53",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  },
+  {
+      "parent": "78",
+      "id": "81",
+      "name": "    ",
+      "value": 41,
+    fill: '#e3d6d6',
+    url: "",
+    stroke: {keys: ['#e3d6d6'], thickness : 10, lineJoin: 'bevel'},
+  },
+      ];
+  
+      treeData = anychart.data.tree(data, "as-table");
+  
+      chart = anychart.sunburst(treeData);
+  
+      chart.listen("chartDraw",function() {
+  
+        chart.calculationMode("ordinal-from-leaves");
+          
+    var credits = chart.credits();
+    anychart.licenseKey("zshoket@campus.uni-paderborn.de-c3eb80d3-ac41041a");
+    credits.enabled(false);
+    
+      // chart.title().useHtml(true); 
+      // chart.title("Projekt SORISMA identifizierten Industrie 4.0-Use Cases<br><br>" + 
+      //             "<span style='font-size:12; font-style:italic'>" +
+      //             "myViewSystems</span>"); 
+  
+      });
+    
+      chart.interactivity().selectionMode("single-select");
+
+      
+
+    //    chart.contextMenu(false);
+
+    //   var customContextMenu = anychart.ui.contextMenu();
+
+    // customContextMenu.attach(chart);
+
+    // // Set items.
+    // customContextMenu.items([
+    //     {
+    //         text: 'Open AnyChart API',
+    //         href: 'https://api.anychart.com'
+    //     }, {
+    //         text: 'Support',
+    //         href: 'https://www.anychart.com/support/'
+    //     }
+    // ]);
+
+  
+
+
+  chart.contextMenu().itemsFormatter(function(items){
+    index = items['full-screen-enter'].index;
+
+    // add item with custom action
+    items['my-item'] ={
+    'text': 'Doppleclick: Steckbrieföffnen',
+    'action' : chart.listen('click', function (e) {
+      var new_value = e.point.get("url");
+    if(new_value == ""){
+      //do nothing   
+  }else{
+     //window.open(new_value,"_blank");
+     top.location.href = new_value;
+  }
+        
+    })
+    };
+    items['my-url'] = {
+    'text': 'SORISMA',
+    'href': 'http://51.15.76.202/#homeview/0'
+      };
+
+    delete items["save-chart-as"];
+    delete items["save-data-as"];
+    delete items["share-with"];
+    delete items["full-screen-separator"];
+    delete items["about"];
+    delete items["print-chart"];
+    delete items["exporting-separator"];
+    delete items["full-screen-enter"];
+
+    return items;
+  });
+
+  
+  //   chart.listen("pointClick", function(e){
+  
+  // var item = e.point.get("name");
+  //   if(item == parent) {
+  //   chart.drillUp();	
+  //   chart.interactivity().selectionMode("single-select");
+  //   }else {
+  //     chart.drillTo(item);
+  //   //chart.drillUp();	
+  //   chart.interactivity().selectionMode("none");
+  //   }
+  // });
+  
+    chart.listen("pointDblClick", function(e){
+      var new_value = e.point.get("url");
+    if(new_value == ""){
+      //do nothing   
+  }else{
+     //window.open(new_value,"_blank");
+     top.location.href = new_value;
+  }
+      
+      });
+                  
+    chart.labels().position("circular");
+  
+    chart.labels().format('{%Name}');
+    chart.labels().adjustFontSize(true);
+    chart.level(1).labels().fontSize(25);
+    chart.level(2).labels().fontSize(16);
+    chart.labels().wordWrap("break-word");
+    chart.labels().useHtml(true);
+    chart.noData().label().enabled(true);
+    chart.level(1).enabled(true);
+    chart.level(4).enabled(true);
+   
+  
+      chart.container("container");
+  
+      chart.draw();
+  
+  chart.hovered().fill("#96a6a6", 0.4);
+  chart.hovered().labels().fontColor('black');
+  chart.selected().fill("#96a6a6", 0.6);
+  chart.selected().hatchFill("forward-diagonal", "#96a6a6", 0.5, 12);
+  chart.normal().stroke("#96a6a6", 2);
+  chart.hovered().stroke("#96a6a6", 2);
+  chart.selected().stroke("#96a6a6", 4);
+  
+  });
+  
+  
+  
+  // drill up a level
+  function drillUpALevel() {
+     chart.drillUp();
+     //chart.interactivity().selectionMode("drill-down");
+  }
+  </script>
+  </div>
