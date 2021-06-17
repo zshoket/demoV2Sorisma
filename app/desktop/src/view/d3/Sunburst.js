@@ -27,7 +27,7 @@ Ext.define("SORISMA.view.d3.Sunburst", {
       width: "3%",
       // text: "Close Data Details",
       iconCls: "x-fa fa-window-close",
-      style: { position: "absolute", left: "93%", top: "2%" },
+      style: { position: "absolute", left: "90%", top: "2%" },
       docked: "bottom",
       tooltip: "Close Data Details",
       handler: "closeIframe",
