@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dataiFrame</title>
+    
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+    </style>
+<script>
+   
+
+
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+        document.body.removeChild("iframe");
+    }
+});
+
+
+</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            var id = localStorage.getItem("storageName");
+            
+        var url1 = "http://51.15.76.202:3001/api/documents/" + id;
+    const getJSON = async (url) => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(response.statusText);
+
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        return error;
+      }
+    };
+    getJSON(url1)
+      .then((data) => {
+        if (data.length == 0) {
+          alert("No Risk Data");
+        } else {
+            // console.log(data);
+            document.getElementById("name").innerHTML = data.name;
+
+            document.getElementById("kurzbeschreibung").innerHTML = data.kurzbeschreibung;
+
+            var tempReif = data.reifegrad;
+            var strReif = "";
+            for (var j in tempReif) {
+                strReif = strReif + "<li>" + tempReif[j].toString() + "</li>";
+            }
+           document.getElementById("reifegrad").innerHTML = strReif;
+
+var tempKette = data.einordnungKette;
+            var strKette = "";
+            for (var j in tempKette) {
+                strKette = strKette + "<li>" + tempKette[j].toString() + "</li>";
+            }
+           document.getElementById("einordnungKette").innerHTML = strKette;
+           
+            
+var tempNutz = data.nutzenversprechen;
+            var strNutz = "";
+            for (var j in tempNutz) {
+                strNutz = strNutz+ "<li>" + tempNutz[j].toString() + "</li>";
+            }
+           document.getElementById("nutzenversprechen").innerHTML = strNutz;
+            
+          
+
+var tempRisiko = data.risikofeld;
+            var strRisiko = "";
+            for (var j in tempRisiko) {
+                strRisiko = strRisiko+ "<li>" + tempRisiko[j].toString() + "</li>";
+            }
+           document.getElementById("risikofeld").innerHTML = strRisiko;
+
+var tempHera = data.herausforderungen;
+            var strHera = "";
+            for (var j in tempHera) {
+                strHera = strHera+ "<li>" + tempHera[j].toString() + "</li>";
+            }
+           document.getElementById("herausforderungen").innerHTML = strHera;
+ 
+
+
+           var tempMen = data.veraenderungenMensch;
+            var strMen = "";
+            for (var j in tempMen) {
+                strMen = strMen+ "<li>" + tempMen[j].toString() + "</li>";
+            }
+           document.getElementById("veraenderungenMensch").innerHTML = strMen;
+
+  
+
+var tempTech = data.veraenderungenTechnologie;
+            var strTech= "";
+            for (var j in tempTech) {
+                strTech = strTech+ "<li>" + tempTech[j].toString() + "</li>";
+            }
+           document.getElementById("veraenderungenTechnologie").innerHTML = strTech;
+
+
+
+
+            var tempOrgan = data.veraenderungenOrganisation;
+            var strOrgan = "";
+            for (var j in tempOrgan) {
+                strOrgan = strOrgan + "<li>" + tempOrgan[j].toString() + "</li>";
+            }
+           document.getElementById("veraenderungenOrganisation").innerHTML = strOrgan;
+
+
+           document.getElementById("dimension").innerHTML = data.dimension;  
+  
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+});
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="parent">
+<div class="name">
+    <label for="name" style="font-weight: bold;">Name:</label>
+    <div id="name"></div>
+</div>
+<div class="kurzbeschreibung">
+    <label for="kurzbeschreibung" style="font-weight: bold;">Kurzbeschreibung:</label>
+    <div id="kurzbeschreibung"></div>
+</div>
+<div class="reifegrad">
+    <label for="reifegrad" style="font-weight: bold;">Reifegrad:</label>
+    <div id="reifegrad"></div>
+</div>
+<div class="einordnungKette">
+    <label for="einordnungKette" style="font-weight: bold;">EinordnungKette:</label>
+    <div id="einordnungKette"></div>
+</div>
+<div class="nutzenversprechen">
+    <label for="nutzenversprechen" style="font-weight: bold;">Nutzenversprechen:</label>
+    <div id="nutzenversprechen"></div>
+</div>
+<div class="herausforderungen">
+    <label for="herausforderungen" style="font-weight: bold;">Herausforderungen:</label>
+    <div id="herausforderungen"></div>
+</div>
+<div class="risikofeld">
+    <label for="risikofeld" style="font-weight: bold;" >Risikofeld:</label>
+    <div id="risikofeld"></div>
+</div>
+<div class="veraenderungenMensch">
+    <label for="veraenderungenMensch" style="font-weight: bold;">Veränderungen Mensch:</label>
+    <div id="veraenderungenMensch"></div>
+</div>
+<div class="veraenderungenOrganisation">
+    <label for="veraenderungenOrganisation" style="font-weight: bold;">Veränderungen Organisation:</label>
+    <div id="veraenderungenOrganisation"></div>
+</div>
+<div class="veraenderungenTechnologie" >
+    <label for="veraenderungenTechnologie" style="font-weight: bold;">Veränderungen Technologie:</label>
+    <div id="veraenderungenTechnologie"></div>
+</div>
+<div class="dimension">
+    <label for="dimension" style="font-weight: bold;">Dimension:</label>
+    <div id="dimension"></div>
+</div>
+
+        <div>	
+        <a href="#close" title="Close" class="close" onclick="close()">X</a>
+</div>
+    <script>
+ 
+
+
+    </script>
+
+   
+
+
+</body>
+
+</html>

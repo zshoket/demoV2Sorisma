@@ -12,29 +12,29 @@ Ext.define("SORISMA.view.main.MainView", {
     "Ext.layout.Fit",
   ],
   layout: "fit",
-  //   items: [
-  //     {
-  //       xtype: "navview",
-  //       reference: "navview",
-  //       docked: "left",
-  //       bind: { width: "{navview_width}" },
-  //       listeners: { select: "onMenuViewSelectionChange" },
-  //     },
-  //     {
-  //       xtype: "headerview",
-  //       reference: "headerview",
-  //       docked: "top",
-  //       bind: { height: "{headerview_height}" },
-  //     },
-  //     {
-  //       xtype: "footerview",
-  //       reference: "footerview",
-  //       docked: "bottom",
-  //       bind: { height: "{footerview_height}" },
-  //     },
-  //     { xtype: "centerview", reference: "centerview" },
-  //     //{ xtype: 'detailview', reference: 'detailview', docked: 'right',  bind: {width:  '{detailview_width}'}  },
-  //   ],
+  // items: [
+  //   {
+  //     xtype: "navview",
+  //     reference: "navview",
+  //     docked: "left",
+  //     bind: { width: "{navview_width}" },
+  //     listeners: { select: "onMenuViewSelectionChange" },
+  //   },
+  //   {
+  //     xtype: "headerview",
+  //     reference: "headerview",
+  //     docked: "top",
+  //     bind: { height: "{headerview_height}" },
+  //   },
+  //   {
+  //     xtype: "footerview",
+  //     reference: "footerview",
+  //     docked: "bottom",
+  //     bind: { height: "{footerview_height}" },
+  //   },
+  //   { xtype: "centerview", reference: "centerview" },
+  //   //{ xtype: 'detailview', reference: 'detailview', docked: 'right',  bind: {width:  '{detailview_width}'}  },
+  // ],
   items: [
     {
       xtype: "navview",
@@ -47,7 +47,8 @@ Ext.define("SORISMA.view.main.MainView", {
       xtype: "breadcrumbbar",
       docked: "top",
       showIcons: true,
-      store: "bredcrumbStore",
+      store: { type: "bredcrumbStore" },
+      listeners: { change: "testFn" },
       menu: {
         layout: {
           overflow: "scroller",
@@ -55,8 +56,6 @@ Ext.define("SORISMA.view.main.MainView", {
       },
       items: [
         {
-          //   xtype: "component",
-          html: "Menu:",
           style: {
             "margin-left": "10px",
             "margin-right": "10px",

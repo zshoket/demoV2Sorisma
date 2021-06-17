@@ -4,12 +4,13 @@
 >
   <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
   <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-sunburst.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script
     type="text/javascript"
     src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"
   ></script>
-
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -21,15 +22,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
   <div id="ac_style_samples-bct-sunburst-chart-20" style="display: none">
     html, body, iFrame, #container { width: 190%; height: 170%; margin: 0;
     padding: 0; }
   </div>
 
   <script>
-(function () {
+    (function () {
       function ac_add_to_head(el) {
         var head = document.getElementsByTagName("head")[0];
         head.insertBefore(el, head.firstChild);
@@ -62,8 +61,10 @@
       );
     })();
   </script>
-  <button onclick="drillUpALevel()">Startansicht</button>
+
+  <!-- <button onclick="drillUpALevel()">Startansicht</button> -->
   <div id="container"></div>
+
   <style>
     .outer2 {
       position: fixed;
@@ -77,88 +78,9 @@
       right: 80px;
       top: 10px;
     }
-    .container {
-      float: none;
-      margin: auto;
-      text-align: center;
-    }
-    .container > .overly {
-      position: absolute;
-    width: 17.5%;
-    top: 37%;
-    left: 56%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: transparent;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-      /* height: "100%";
-      width: "100%"; */
-    }
-    .modalbox {
-      min-width: 100%;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(81, 51, 51, 0.5);
-      z-index: 99999;
-      pointer-events: auto;
-      display: none;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .modalbox > .dialog {
-      max-width: 100%;
-      position: relative;
-      top: 10px;
-      margin: 5% 10%;
-      padding: 5px 20px 13px 20px;
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-      background: #ffffff;
-      box-shadow: 0 0 10px #000000;
-      -moz-box-shadow: 0 0 10px #000000;
-      -webkit-box-shadow: 0 0 10px #000000;
-      display: block;
-      pointer-events: auto;
-    }
-
-    .closebutton {
-      float: right;
-      font-size: 21px;
-      font-weight: 700;
-      line-height: 1;
-      color: #000;
-      text-shadow: 0 1px 0 #fff;
-      filter: alpha(opacity=20);
-      opacity: 0.6;
-      z-index: 9999;
-      cursor: pointer;
-    }
   </style>
-  <img src="/uploads/legends.png" alt="chartLegend" class="outer2"></img>
-    <img src="/uploads/legends2.png" alt="chartLegend2" height="110" class="outer"></img>
-
-  <div class="container">
-    <input type="button" value="............" id="Overly" class="overly" />
-  </div>
-
-  <div id="ogrooModel" class="modalbox ogroobox">
-    <div class="dialog">
-      <button title="Close" onClick="overlay()" class="closebutton" id="close">
-        close
-      </button>
-      <div style="min-height: 150px"></div>
-    </div>
-  </div>
+  <!-- <img src="/uploads/legends.png" alt="chartLegend" class="outer2"></img>
+    <img src="/uploads/legends2.png" alt="chartLegend2" height="110" class="outer"></img> -->
 
   <script>
     anychart.onDocumentReady(function () {
@@ -232,9 +154,11 @@
           parent: "16",
           id: "11",
           name: "Autom. Datenbereitstellung",
+          detail:
+            "Das Datenmanagement umfasst den kompletten Lebenszyklus der Daten von der Datenentstehung über die Datenerhebung bis zur Datenarchivierung oder -löschung. Die Daten werden dabei in einer zentralen Instanz gesammelt und verwaltet, um die Unternehmensprozesse optimal zu unterstützen. Die Dürkopp Adler AG hat sich bereits für eine Softwarelösung entschieden, um die Zusammenarbeit der verschiedenen Disziplinen, welche auch standortübergreifend miteinander arbeiten, durch ein übergreifendes Datenmanagement zu verbessern.",
           value: 25,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/6",
+          url: "http://51.15.76.202:3001/api/documents/5ece6d0cdc58f20eb4cb2f53",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -245,6 +169,8 @@
           parent: "16",
           id: "12",
           name: "Digitales Kanbanboard",
+          detail:
+            "Digitale Kanban-Boards bieten die Möglichkeit den aktuellen Status eines Projektes oder Prozesses zu visualisieren. Der aktuelle Status wird dabei durch die automatische Ermittlung und Aufnahme von relevanten Informationen ermittelt. Mit Hilfe eines digitalen Boards kann somit der Workflow in Echtzeit abgebildet werden. Kanban-Boards werden bereits von einigen Unternehmen angeboten. Bosch, Intel, KPMG, Accenture, Deloitte und viele weitere Unternehmen verwenden bereits digitale Kanban-Boards zur Visualisierung der Geschaeftsablaeufe.",
           fill: "#aeccd9",
           value: 35,
           stroke: {
@@ -252,15 +178,17 @@
             thickness: 10,
             lineJoin: "bevel",
           },
-          url: "http://localhost:1962/#homeview/7",
+          url: "http://51.15.76.202:3001/api/documents/5ece6ed5f1cb7b3488f775ea",
         },
         {
           parent: "16",
           id: "13",
           name: "Social Intranet",
+          detail:
+            "Durch die Einführung eines software-basierten Kommunikationstools kommt es zu einer staerkeren Vernetzung der Mitarbeiter sowohl innerhalb einzelner Fachbereiche als auch fachbereichsübergreifend. Die Einbeziehung von Mitarbeitern in der Produktion kann mit mobilen Geraeten ebenfalls ermöglicht werden. So können sich beispielsweise in Themen-Communities Interessierte und Gleichgesinnte austauschen und ihre Projekte voranbringen. Die Daimler AG führte ein Social Intranet für eine verbesserte interne Kommunikation und Zusammenarbeit ein, welches zuvor getrennte Systeme zusammengeführt hat.",
           value: 25,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/2",
+          url: "http://51.15.76.202:3001/api/documents/5ece3891d8dcf967fc541359",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -271,9 +199,11 @@
           parent: "16",
           id: "14",
           name: "Tool-gestütztes Projektmanagement",
+          detail:
+            "Ein toolgestütztes Projektmanagement ermöglicht durch die transparente Informationsaufbereitung und -bereitstellung ein effizientes Arbeiten an Projekten in Teams. Mit Hilfe einer Software-Unterstützung (bspw. mit den Tools Asana oder Monday) können z.B. detaillierte Projektplaene erstellt werden, welche nicht nur Projektfortschritte und anfallende Kosten aufzeigen, sondern auch durch kollaborierendes Arbeiten ein direktes Feedback, den Dateienaustausch und Statusaktualisierungen zulassen. Dadurch entsteht ein ganzheitlicher Überblick über die Arbeit, sodass die Teamaufgaben optimal koordiniert werden können.",
           value: 45,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/3",
+          url: "http://51.15.76.202:3001/api/documents/5ece3abad8dcf967fc54135a",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -284,8 +214,10 @@
           parent: "16",
           id: "15",
           name: "Tool unterstützte Remote Teams",
+          detail:
+            "Kommunikationstools können beispielsweise als virtueller Online-Meeting-Raum für Teammitglieder genutzt werden. Sie dienen der Unterstützung des Teams bei der Konversation, dem Austausch wichtiger Projektdaten, dem Austausch von Dateien und der gemeinsamen Durchführung von Auftraegen. Andere Teammitglieder können mithilfe von digitalen Tools und geeigneten Apps über den Fortschritt informiert werden. Beliebte Tools sind hierbei u.a. Slack, Zoom oder Trello",
           value: 35,
-          url: "http://localhost:1962/#homeview/1",
+          url: "http://51.15.76.202:3001/api/documents/5ece35effa40f7426cba7b8d",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -300,9 +232,11 @@
           parent: "17",
           id: "16",
           name: "Wissensmanagementsysteme",
+          detail:
+            "Wissensmanagementsysteme können als softwaretechnische Lösung bei der Aufbereitung, beim Transfer, der Pflege und der Auswertung von Wissen gesehen werden. Das Wissen kann dabei explizit, implizit, extern, intern oder in weiteren Erscheinungsformen vorliegen. Zusaetzlich ist ein Ausbau der Unternehmenskultur hin zum Sichern und Teilen von Wissen im Unternehmen vorzunehmen. Die NASA implementierte beispielsweise eine graphenbasierte ‚Lessons-Learned-Datenbank‘, die das Wissen aus über fünf Jahrzehnten Weltraumforschung bündeln und vernetzt.",
           value: 35,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/4",
+          url: "http://51.15.76.202:3001/api/documents/5ece3cefd8dcf967fc54135b",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -313,8 +247,10 @@
           parent: "01",
           id: "17",
           name: "KI-gestützte Belegerkennung",
+          detail:
+            "Durch KI-gestützte Datenverarbeitungen können externe Belege KI-gesteuert ausgelesen und Daten strukturiert an die Nachfolgesysteme übergeben werden. Um in Zukunft Prozesse vereinheitlichen zu können, ist eine automatisierte Belegartenerkennung relevant. Relevante Informationen auf den Belegen werden dabei vom System selbststaendig erkannt und digitalisiert. Durch eine solche automatisierte Datenverarbeitung werden Fehler vermieden, die Effizienz gesteigert und Prozesse vereinheitlicht. Funktionen dieser Art werden beispielsweise von der Buchhaltungssoftware Candis angeboten.",
           value: 40,
-          url: "http://localhost:1962/#homeview/0",
+          url: "http://51.15.76.202:3001/api/documents/5ece3143a7f3956194cb74e9",
           fill: "#7cbb82",
           stroke: {
             keys: ["#a07576"],
@@ -326,8 +262,10 @@
           parent: "01",
           id: "18",
           name: "Harmonisierte IT Struktur",
+          detail:
+            "Eine unternehmensübergreifende IT-Infrastruktur bezeichnet die Vereinheitlichung und Verknüpfung der relevanten IT-Systeme aller Partner entlang der Wertschöpfungskette. Die unternehmensübergreifende Optimierung und Automatisierung von Prozessen steht dabei im Mittelpunkt. Beispielsweise forscht die Robert Bosch GmbH derzeit gemeinsam mit weiteren Partnern wie dem Deutschen Forschungszentrum für Künstliche Intelligenz an einer Vernetzungs und Diensteplattform „CoCoS“, um standort und unternehmensübergreifend moderne Produktionsanlagen und Altanlagen durch Plug-and-Play zu vernetzen.",
           value: 250,
-          url: "http://localhost:1962/#homeview/5",
+          url: "http://51.15.76.202:3001/api/documents/5ece3fd8d8dcf967fc54135c",
           fill: "#aeccd9",
           stroke: {
             keys: ["#a07576"],
@@ -364,8 +302,10 @@
           parent: "29",
           id: "19",
           name: "Betriebliches Gesundheitsmanagement",
+          detail:
+            "Durch Neuerungen im Rahmen von Industrie 4.0 kommt es zu zusaetzlichen Belastungen für Arbeitnehmer. Eine betriebliche Gesundheitsförderung soll die Gesundheitssituation der Beschaeftigten verbessern, andererseits auch einen unternehmerischen Nutzen erzielen. Diese beinhaltet Arbeitsschutz, betriebliches Eingliederungsmanagement (BEM) und die betriebliche Gesundheitsförderung (BGF). Für Beschaeftigte der Henkel AG in Düsseldorf steht beispielsweise ein 20-köpfiges Team aus aerzten und Assistenzpersonal zur Verfügung, welches sich durch ein breites Angebot um das Gesundheitsmanagement sorgt.",
           value: 41,
-          url: "http://localhost:1962/#homeview/11",
+          url: "http://51.15.76.202:3001/api/documents/5ed3e205a4caf849745b1211",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -380,9 +320,11 @@
           parent: "30",
           id: "20",
           name: "IncentiveProgramme",
+          detail:
+            "Partizipation und proaktive Umsetzung von Veraenderungen werden mit Praemien belohnt. Die konkrete Ausgestaltung der Praemien kann dabei stark variieren und reicht von gemeinsamen Events/Veranstaltungen/Reisen bis hin zu monetaeren Belohnungen. Bekannt für seine Incentive-Programme ist Google, welches durch Praemien und mitarbeiterfreundliche Arbeitsgestaltung bereits mehrmals in der Top 5 des Arbeitgeber-Rankings „100 Best Companies to Work For“ platziert wurde.",
           value: 41,
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/20",
+          url: "http://51.15.76.202:3001/api/documents/5ed3ed79a4caf849745b121a",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -396,8 +338,10 @@
           parent: "27",
           id: "22",
           name: "Befähigungsprogramm für Betriebsräte",
+          detail:
+            "Betriebsraete werden als aktive Gestalter der Veraenderungsprozesse integriert und tragen so zur Entwicklung tragfaehiger Lösungen bei. Durch die Einbeziehung der Betriebsraete in Projekte mit Bezug zur digitalen Transformation können bei der Konzipierung neuer Lösungen die Erfahrungen der Betriebsraete und die Interessen der Arbeitnehmer berücksichtigt werden. Dies verbessert die Chancen für einen erfolgreichen Veraenderungsprozess. Damit die Betriebsraete die neuen Anforderungen für die Gestaltung dieser Veraenderungsprozesse erfüllen können, ist ein systematischer Kompetenzaufbau der Betriebsratsgremien erforderlich.",
           value: 41,
-          url: "http://localhost:1962/#homeview/18",
+          url: "http://51.15.76.202:3001/api/documents/5ed3eb60a4caf849745b1218",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -412,9 +356,11 @@
           parent: "27",
           id: "23",
           name: "Konstruktive Fehlerkultur",
+          detail:
+            "Fehler und Irrtümer sollten nicht prinzipiell verwerflich angesehen werden, da ein konstruktiver Umgang mit diesen die Wissensbasis im Unternehmen verbessern und somit zu einem kontinuierlichen Verbesserungsprozess führen kann. Durch eine hohe Experimentierfreudigkeit und dem Lernen aus Feedback können Produkte beispielsweise effizienter entwickelt werden. Führungskraefte sollten als Beispiel vorangehen und Probleme sowie gescheiterte Projekte thematisieren. Dazu müssen Fehler und Irrtümer offen angesprochen und analysiert werden, um zukunftsund erfolgsorientierte Verhaltensweisen abzuleiten.",
           value: 41,
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/17",
+          url: "http://51.15.76.202:3001/api/documents/5ed3ea19a4caf849745b1217",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -428,9 +374,11 @@
           parent: "26",
           id: "24",
           name: "Flexible Arbeitszeitmodelle",
+          detail:
+            "Mit der Einführung flexibler Arbeitszeitmodelle kommt es zu einer Auflockerung der Orts und Zeitgebundenheit, was durch das Vertrauensprinzip sowie den vermehrten Einsatz mobiler Devices ermöglicht wird. Finanzielle Leistungen reichen alleine haeufig nicht mehr aus, um die Attraktivitaet als Arbeitsgeber zu steigern. Neue Arbeitszeitmodelle bieten den Mitarbeitern dagegen  die Möglichkeit, Beruf und Freizeit flexibel zu gestalten. So wird bspw. in der Inosoft AG auf die Vertrauensarbeitszeit gesetzt, um unproduktive Zeiten zu minimieren und eine sehr gute Vereinbarkeit von Beruf und privaten Verpflichtungen zu ermöglichen. ",
           value: 41,
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/10",
+          url: "http://51.15.76.202:3001/api/documents/5ed3e105a4caf849745b1210",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -444,9 +392,11 @@
           parent: "26",
           id: "25",
           name: "Schulungsplattform",
+          detail:
+            "Als Teil der Personalentwicklung können Schulungsplattformen genutzt werden, um relevantes Wissen computergestützt zu vermitteln und so die Schulungsaktivitaeten individuell für jeden Mitarbeiter zu gestalten sowie zum eigenverantwortlichen Lernen zu motivieren. Die Plattformen sollen mit relevanten Inhalten befüllt werden und die Mitarbeiter zur Nutzung motiviert werden. Durch Videotutorials können bspw. Inhalte zu SW-Tools oder Verwaltungsformalien vermittelt werden. Die Robert Bosch GmbH nutzt bereits webbasierte Trainings zur Aus und Weiterbildung von Mitarbeitern zum Thema „Qualitaetsmanagement",
           value: 41,
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/8",
+          url: "http://51.15.76.202:3001/api/documents/5ece8983f1cb7b3488f775eb",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -460,9 +410,11 @@
           parent: "33",
           id: "26",
           name: "Social Media Recruiting",
+          detail:
+            "Die Entstehung neuer sozialer Netzwerke führt zu Veraenderungen in der Personalrekrutierung. So erreichen Personaldienstleister und Personalabteilungen potentielle Kandidaten haeufig in den sozialen Netzwerken. Dazu muss die Entwicklung von Web 2.0 Technologien und Social-Media-Tools zur Kommunikation, Einbindung, Information und Rekrutierung zukünftiger Talente genutzt werden. Die Commerzbank nutzt bspw. die sozialen Netzwerke um von aktuellen Azubi-Ausflügen zu berichten und so neue Bewerber zu erreichen. Soziale Netzwerke für den beruflichen Kontext sind beispielweise Xing und LinkedIn.",
           value: 41,
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/12",
+          url: "http://51.15.76.202:3001/api/documents/5ed3e430a4caf849745b1212",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -476,8 +428,10 @@
           parent: "33",
           id: "27",
           name: "Anpassung der Unternehmenskultur",
+          detail:
+            "Um den digitalen Wandel und die damit einhergehenden Veraenderungen im Unternehmen erfolgreich umzusetzen, ist eine Anpassung der Unternehmenskultur erforderlich. Die Unternehmenskultur ist dabei das von einer Gruppe gemeinsam gehaltene Set an grundlegenden Überzeugungen (Wahrnehmung, Denken, Handeln, Fühlen). Der digitale Wandel erfordert eine Anpassung des Unternehmens bspw. hinsichtlich der Erhöhung der Agilitaet und Innovationskraft, um langfristig wettbewerbsfaehig bleiben zu können. Dies kann z.B. durch offene Kommunikationsformen oder selbstverantwortliche Teams erreicht werden.",
           value: 41,
-          url: "http://localhost:1962/#homeview/16",
+          url: "http://51.15.76.202:3001/api/documents/5ed3e92fa4caf849745b1216",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -492,9 +446,11 @@
           parent: "30",
           id: "28",
           name: "Experts on Demand",
+          detail:
+            "Für den Fall fehlender interner Wissensressourcen ist der Zugang zu branchenübergreifendem Know-How von Experten essen-tiell. Dabei ermöglicht „Experts on Demand“ bei Bedarf das kurzfristige und temporaere Bereitstellen von Fachkraeften. Das Unter-nehmen arbeitet dafür mit einem Dienstleistungsunternehmen zusammen, welches über einen Pool von Experten mit unterschied-lichen Qualifikationen und Fachgebieten verfügt. Durch die kurzfristige Bereitstellung von Know-How können Projektteams flexibel durch externe Kompetenz ergaenzt werden. Die Porsche AG wendet dieses Konzept bereits für Ingenieure und IT-Spezialisten an.",
           value: 41,
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/14",
+          url: "http://51.15.76.202:3001/api/documents/5ed3e6d7a4caf849745b1214",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -508,8 +464,10 @@
           parent: "33",
           id: "29",
           name: "Neue Führungsmodelle",
+          detail:
+            "Durch die zunehmende Dynamik des Unternehmensumfeld sind Unternehmensstrukturen immer weniger hierarchisiert und zentralisiert. Die hierarchische Führung wird zunehmend durch Selbstkoordination der Mitarbeitenden ersetzt. Dies erfordert die Definition neuer Regeln und Rollen für den Umgang mit Aufgaben, Kunden, Zielen und Kollegen. Flache Hierarchien haben sich schon bei zahlreichen Unternehmen durchgesetzt, so z.B. bei 3M, Google oder Vaude. Der brasilianische Maschinenbauer Semco verzichtet sogar komplett auf Hierarchien, alle Entscheidungen im Unternehmen werden demokratisch getroffen",
           value: 41,
-          url: "http://localhost:1962/#homeview/15",
+          url: "http://51.15.76.202:3001/api/documents/5ed3e84ea4caf849745b1215",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -521,8 +479,10 @@
           parent: "33",
           id: "30",
           name: "Digitales Personalmanagement",
+          detail:
+            "Das Personalmanagement umfasst alle Aufgaben im Zusammenhang mit der Personalplanung, -entwicklung, -führung und             -verwaltung. Durch die Digitalisierung des Personalmanagements entstehen Prozesse zwischen HR, Management und Mitarbeitern, welche durch moderne Tools und Technologien unterstützt werden. Die Leibniz Universitaet Hannover hat bspw. eine Methodik entwickelt, um den Personaleinsatz in der Fertigung kompetenzorientiert zu planen. Diese Methodik wurde von der Fauser AG in das bestehende MES-System implementiert und durch die Bornemann Gewindetechnik GmbH & Co. KG erprobt.",
           value: 41,
-          url: "http://localhost:1962/#homeview/21",
+          url: "http://51.15.76.202:3001/api/documents/5ed3ee29a4caf849745b121b",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -538,8 +498,10 @@
           id: "31",
           name: "Webbasierte externe Lernangebote",
           value: 41,
+          detail:
+            "Zur nachhaltigen und flexiblen Vermittlung von Wissen können IT oder webbasierte externe Lehr und Lerneinheiten genutzt werden, wobei der Zugriff über weltweit verfügbare Webbrowser erfolgt. Durch selbstgesteuertes Lernen wird dadurch die Kompetenzentwicklung verschiedener Zielgruppen eigenverantwortlich ermöglicht. Das Netzwerk „LinkedIn“ bietet z.B. einen Weiterbildungsbereich an, um sich in den Bereichen Business, IT und Kreativitaet durch Onlinekurse oder Lernvideos fortzubilden.",
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/13",
+          url: "http://51.15.76.202:3001/api/documents/5ed3e5aba4caf849745b1213",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -554,7 +516,9 @@
           id: "32",
           name: "Change Management Programme",
           value: 41,
-          url: "http://localhost:1962/#homeview/9",
+          detail:
+            "Der Ansatz des ganzheitlichen Change Managements umfasst die gezielte Steuerung von Veraenderungsprozessen über alle Unternehmensebenen hinweg. Wesentlich dabei ist, dass aenderungen nur unter Mitnahme der Mitarbeiter eingeführt werden. Ziel des Ansatzes ist es, die aenderungen von der strategischen Unternehmensebene bis hin zur Mitarbeiterebene in der Produktion gemeinsam zu planen, zu realisieren, zu reflektieren und zu stabilisieren. Die Bayer AG setzt bereits ein konzernweites Change Management-Programm um, indem beispielsweise Freiraeume zur Staerkung der Eigeninitiative der Mitarbeiter geschaffen werden.",
+          url: "http://51.15.76.202:3001/api/documents/5ece8b99f1cb7b3488f775ec",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -597,9 +561,11 @@
           parent: "44",
           id: "43",
           name: "Design Thinking Ansätze",
+          detail:
+            "Design Thinking ist eine Innovations und Problemlösungsmethode, welche auf einer gemeinschaftlichen Denk und Arbeitskultur basiert. Genutzt werden kann dieser Ansatz beispielsweise für die Entwicklung neuer Produktideen. Grundlegend hierfür sind drei Elemente: „People“, „Place“ und einem iterativen „Process“. Der Prozess besteht dabei in der Regel aus den sechs Schritten „Verstehen“, „Beobachten“, „Point-of-View“, „Ideenfindung“, „Prototyping“ sowie „Verfeinerung“. Bosch hat beispielsweise einen IoT-Campus eröffnet, in dem mit Design-Thinking-Ansaetzen innovative Projekt und Produktideen erarbeitet werden sollen. ",
           value: 41,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/26",
+          url: "http://51.15.76.202:3001/api/documents/5ed50396b17d4786e8d935af",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -611,8 +577,10 @@
           id: "37",
           name: "Tool gestütztes Anforderungsmanagement",
           value: 41,
+          detail:
+            "Durch den Einsatz agiler Prinzipien und Methoden kann die Transparenz, Effizienz und Flexibilitaet von Entwicklungsprozessen gesteigert werden. Mit Methoden wie Scrum kann ein „Binnenunternehmertum“ gefördert und eine Sprint-Struktur etabliert werden. In den Sprints werden von interdisziplinaeren Expertenteams klar definierte Ziele in einem vorgegebenen Zeitraum eigenverantwortlich umgesetzt. Zu beachten sind z.B. die im „Agile Manifesto“ formulierten Grundsaetze agiler Entwicklung und die vorgesehene Rollenverteilung. Der Automobilzulieferer Schaeffler nutzt bspw. agile Teams zur Steigerung der Effizienz.",
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/24",
+          url: "http://51.15.76.202:3001/api/documents/5ed5032db17d4786e8d935ad",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -623,9 +591,11 @@
           parent: "41",
           id: "38",
           name: "Technologieforen",
+          detail:
+            "In regelmaeßigen Veranstaltungen zu bestimmten Themenschwerpunkten wird ein Kennenlernen und ein Erfahrungsund Wissensaustausch ermöglicht. Diese Veranstaltungen können abteilungs-, werksoder auch unternehmensübergreifend organisiert sein. Das Unternehmen Miele führt werksübergreifend regelmaeßige Technologieforen zu bestimmten Technologien durch, um den Austausch und dadurch auch das Wissensmanagement im Unternehmen zu verbessern. Ein unternehmensübergreifendes Beispiel ist die Fachgruppe Industrie 4.0 des Kompetenzzentrums Digital in NRW.",
           value: 41,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/25",
+          url: "http://51.15.76.202:3001/api/documents/5ed50355b17d4786e8d935ae",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -636,9 +606,11 @@
           parent: "42",
           id: "39",
           name: "Tool gestützte Großgruppen Konzepte",
+          detail:
+            "Durch die Nutzung neuer Ansaetze für die Gestaltung und Durchführung von Workshops in Großgruppen können die Ergebnisse hinsichtlich Qualitaet und Kreativitaet gesteigert werden. Formate wie Fishbowl, World Cafe oder Open Space erlauben die Moderation von Großgruppen. Die Teilnehmer können durch „Audience Response Tools“ die Möglichkeit erhalten, über das Smartphone, Tablet oder den Laptop live zu interagieren und den Workshop gemeinsam zu lenken. Somit können waehrend des Workshops Vorschlaege und Anregungen gegeben werden sowie Entscheidungen gemeinsam getroffen werden.",
           value: 41,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/27",
+          url: "http://51.15.76.202:3001/api/documents/5ed50396b17d4786e8d935b0",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -650,7 +622,9 @@
           id: "40",
           name: "Kundenintegrierter Entwicklungsprozess",
           value: 41,
-          url: "http://localhost:1962/#homeview/22",
+          detail:
+            "In Entwicklungsprojekten orientieren sich Unternehmen zwar an den Kunden, eine direkte Einbeziehung dieser erfolgt aber haeufig erst am Ende des Entwicklungsprozesses. Durch die Integration des Kunden in die Entwicklungsteams kann durch erhöhten Austausch die Akzeptanz für das finale Produkt verbessert werden. DHL haelt bspw. Workshops unter Einbezug von Kunden ab, um neue Produkte, Services und Prozesse zu entwickeln. Nike geht sogar einen Schritt weiter und stellt mit „NIKEiD“ ein Tool auf der Website zur Verfügung, wo der Kunde sich Sneaker nach eigenen Wünschen und Vorstellungen zusammenstellen kann.",
+          url: "http://51.15.76.202:3001/api/documents/5ed3ef08a4caf849745b121c",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -662,9 +636,11 @@
           parent: "44",
           id: "41",
           name: "Kollaborative Produktentwicklung",
+          detail:
+            "Ein Cloud-basiertes System ermöglicht den Zugriff auf Anwendungen und Services, welche nicht auf der eigenen Hardware installiert werden müssen. Der Zugriff erfolgt mit Hilfe von internet-faehigen Endgeraeten. Diese IT-Infrastruktur laesst sich auf die Produktentwicklung und den damit verbundenen Prozessen übertragen. Airbus verwendet bereits cloudbasierte Tools in der Produktentwicklung, um Prozesse, Methoden und Tools zu harmonisieren und somit wertvolle Zeit zu sparen.",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/31",
+          url: "http://51.15.76.202:3001/api/documents/5ed503d6b17d4786e8d935b2",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -675,8 +651,10 @@
           parent: "44",
           id: "42",
           name: "Agile Teams",
+          detail:
+            "Durch den Einsatz agiler Prinzipien und Methoden kann die Transparenz, Effizienz und Flexibilitaet von Entwicklungsprozessen gesteigert werden. Mit Methoden wie Scrum kann ein „Binnenunternehmertum“ gefördert und eine Sprint-Struktur etabliert werden. In den Sprints werden von interdisziplinaeren Expertenteams klar definierte Ziele in einem vorgegebenen Zeitraum eigenverantwortlich umgesetzt. Zu beachten sind z.B. die im „Agile Manifesto“ formulierten Grundsaetze agiler Entwicklung und die vorgesehene Rollenverteilung. Der Automobilzulieferer Schaeffler nutzt bspw. agile Teams zur Steigerung der Effizienz.",
           value: 41,
-          url: "http://localhost:1962/#homeview/23",
+          url: "http://51.15.76.202:3001/api/documents/5ed3f028a4caf849745b121d",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -688,8 +666,10 @@
           parent: "44",
           id: "46",
           name: "PLM Systeme",
+          detail:
+            "Die Einführung eines Systems für das Management des Produktlebenszyklus ermöglicht eine ganzheitliche, unternehmensweite Verwaltung und Steuerung von Produktdaten und relevanten Prozessen. Damit können Produkte, alle verbundenen Prozesse und Daten in allen Phasen von der Entwicklung bis zum After-Sales-Service gemanagt werden. Ein Beispiel für eine PLM-Software ist die von der Siemens AG übernommene Software „Teamcenter“. Durch eine zentrale Quelle für das Produkt und Prozesswissen sollen intelligentere Entscheidungen getroffen werden können und somit bessere Produkte ermöglicht werden.",
           value: 41,
-          url: "http://localhost:1962/#homeview/27",
+          url: "http://51.15.76.202:3001/api/documents/5ed503d6b17d4786e8d935b1",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -728,7 +708,9 @@
           parent: "52",
           id: "49",
           name: "E-Procurement",
-          url: "http://localhost:1962/#homeview/32",
+          detail:
+            "Der gezielte Einsatz digitaler Hilfsmittel im strategischen und operativen Einkauf traegt zu einem effizienteren und effektiveren Beschaffungsprozess bei. Dazu werden im Beschaffungsprozess von der Planung bis hin zur Bezahlung saemtliche papierlastige Ablaeufe durch standardisierte, elektronische Ablaeufe ersetzt. So können Einkaeufer bspw. über die Cloud in einem digitalen Produktkatalog aus einem vorverhandelten Sortiment die benötigen Waren auswaehlen und eine Bestellung digital auslösen. Der weitere Beschaffungsprozess wird sodann mithilfe eines Workflowsystems abgewickelt",
+          url: "http://51.15.76.202:3001/api/documents/5ed50a8bb17d4786e8d935b5",
           value: 41,
           stroke: {
             keys: ["#e3d6d6"],
@@ -741,9 +723,11 @@
           parent: "04",
           id: "50",
           name: "Prescriptive Analytics",
+          detail:
+            "Rohstoffdaten und Daten zu deren historischen Preisentwicklung werden für eine bessere Vorhersage der Rohstoffpreisentwicklung gesammelt, aggregiert und analysiert. Auf dieser Datenbasis lassen sich mithilfe praeskriptiver Verfahren Szenarien für die Preisschwankungen ableiten. In Verbindung mit den unternehmensinternen Prognosedaten zu benötigen Rohstoffmengen lassen sich daraufhin optimale Zeitpunkte für den Kauf von Rohstoffen vorhersagen. Die Nutzung der Rohstoff und Preisdaten erlaubt somit einen kosteneffizienteren und zielgenaueren Einkauf im Unternehmen",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/31",
+          url: "http://51.15.76.202:3001/api/documents/5ed50a8bb17d4786e8d935b4",
           stroke: {
             keys: ["#a07576"],
             thickness: 10,
@@ -754,9 +738,11 @@
           parent: "04",
           id: "51",
           name: "Predictive Logistics",
+          detail:
+            "Das Konzept der praediktiven Logistik beschreibt die Faehigkeit eines Unternehmens, genau zu wissen, wann und wo seine Waren ankommen. Dabei werden bspw. Daten zur Wartezeit vor der Entladung, Wetterdaten oder der Verweildauer im Hafen erhoben. Mittels Machine Learning werden diese Daten analysiert, um die Ungenauigkeiten in der derzeitigen Lieferungsverfolgung zu senken und ein exakteres Lieferfenster zu prognostizieren. Kühne + Nagel hat zu diesem Zweck eine digitale Seefrachtplattform entwickelt, die 63.000 Seefracht-Verbindungen erfasst und durch Big Data die Supply Chain Planung effizienter gestaltet.",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/30",
+          url: "http://51.15.76.202:3001/api/documents/5ed50669b17d4786e8d935b3",
           stroke: {
             keys: ["#a07576"],
             thickness: 10,
@@ -807,8 +793,10 @@
           parent: "60",
           id: "55",
           name: "Industrieroboter",
+          detail:
+            "Die Integration von Industrierobotern steigert die Qualitaet und Effizienz in der Produktion durch eine verkürzte Taktzeit, durch verbesserte Arbeitsbedingungen wegen der körperlichen Entlastung und durch eine höhere Prozesssicherheit wegen automatisierter, sensorischer Messungen. Die höchste Roboterdichte ist in der Automobilindustrie zu verzeichnen. Auch in anderen Branchen werden Roboter eingesetzt, bspw. bei Miele zur Produktion von Antriebsmotoren für Waeschetrockner. Zukünftig ist die Integration in Bereiche wie der Kleinserienfertigung, wo Roboter aktuell eher wenig genutzt werden, zu berücksichtigen.",
           value: 41,
-          url: "http://localhost:1962/#homeview/33",
+          url: "http://51.15.76.202:3001/api/documents/5ed50e9eb17d4786e8d935b6",
           fill: "#aeccd9",
           stroke: {
             keys: ["#e3d6d6"],
@@ -822,7 +810,7 @@
           name: "Manufacturing Execution Systems",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/40",
+          url: "http://51.15.76.202:3001/api/documents/40",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -834,7 +822,7 @@
           id: "57",
           name: "Betriebs und Maschinendatenerfassung",
           value: 41,
-          url: "http://localhost:1962/#homeview/34",
+          url: "http://51.15.76.202:3001/api/documents/34",
           fill: "#aeccd9",
           stroke: {
             keys: ["#e3d6d6"],
@@ -848,7 +836,7 @@
           name: "Digitale Auftragsüberwachung",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/35",
+          url: "http://51.15.76.202:3001/api/documents/35",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -860,7 +848,7 @@
           id: "59",
           name: "AR-basierte Montageunterstützung",
           value: 41,
-          url: "http://localhost:1962/#homeview/36",
+          url: "http://51.15.76.202:3001/api/documents/36",
           fill: "#aeccd9",
           stroke: {
             keys: ["#c0a3a4"],
@@ -874,7 +862,7 @@
           name: "Montage Assistenzsysteme",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/39",
+          url: "http://51.15.76.202:3001/api/documents/39",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -886,7 +874,7 @@
           id: "61",
           name: "Autom. Qualitätsprüfung",
           value: 41,
-          url: "http://localhost:1962/#homeview/38",
+          url: "http://51.15.76.202:3001/api/documents/38",
           fill: "#aeccd9",
           stroke: {
             keys: ["#c0a3a4"],
@@ -900,7 +888,7 @@
           name: "Additive Fertigung",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/37",
+          url: "http://51.15.76.202:3001/api/documents/37",
           stroke: {
             keys: ["#a07576"],
             thickness: 10,
@@ -943,7 +931,7 @@
             fontColor: "black",
           },
           fill: "#f8f8a2",
-          url: "http://localhost:1962/#homeview/42",
+          url: "http://51.15.76.202:3001/api/documents/42",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -956,7 +944,7 @@
           name: "Tool-gestützte Anforderungserhebung",
           value: 41,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/41",
+          url: "http://51.15.76.202:3001/api/documents/41",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -969,7 +957,7 @@
           name: "Vertrieb von 3D-Konstruktionsdateien",
           value: 41,
           fill: "#7cbb82",
-          url: "http://localhost:1962/#homeview/46",
+          url: "http://51.15.76.202:3001/api/documents/46",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -981,7 +969,7 @@
           id: "68",
           name: "Predictive Analytics",
           value: 41,
-          url: "http://localhost:1962/#homeview/43",
+          url: "http://51.15.76.202:3001/api/documents/43",
           fill: "#aeccd9",
           stroke: {
             keys: ["#c0a3a4"],
@@ -994,7 +982,7 @@
           id: "69",
           name: "VR-unterstützter Vertrieb",
           value: 41,
-          url: "http://localhost:1962/#homeview/45",
+          url: "http://51.15.76.202:3001/api/documents/45",
           fill: "#aeccd9",
           stroke: {
             keys: ["#e3d6d6"],
@@ -1006,7 +994,7 @@
           parent: "66",
           id: "70",
           name: "Vertriebs Dashboards",
-          url: "http://localhost:1962/#homeview/44",
+          url: "http://51.15.76.202:3001/api/documents/44",
           value: 41,
           fill: "#aeccd9",
           stroke: {
@@ -1034,7 +1022,7 @@
           name: "Cloudbasierter Datenaustausch",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/47",
+          url: "http://51.15.76.202:3001/api/documents/47",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -1046,7 +1034,7 @@
           id: "73",
           name: "Fahrerlose Transportsysteme",
           value: 41,
-          url: "http://localhost:1962/#homeview/49",
+          url: "http://51.15.76.202:3001/api/documents/49",
           fill: "#aeccd9",
           stroke: {
             keys: ["#c0a3a4"],
@@ -1060,7 +1048,7 @@
           name: "Lagerverwaltungssystem",
           value: 41,
           fill: "#aeccd9",
-          url: "http://localhost:1962/#homeview/48",
+          url: "http://51.15.76.202:3001/api/documents/48",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -1085,7 +1073,7 @@
           id: "76",
           name: "Predictive Maintenance",
           value: 41,
-          url: "http://localhost:1962/#homeview/51",
+          url: "http://51.15.76.202:3001/api/documents/51",
           stroke: {
             keys: ["#a07576"],
             thickness: 10,
@@ -1098,7 +1086,7 @@
           id: "77",
           name: "KI-basierte Voranalyse",
           value: 10,
-          url: "http://localhost:1962/#homeview/52",
+          url: "http://51.15.76.202:3001/api/documents/52",
           stroke: {
             keys: ["#a07576"],
             thickness: 10,
@@ -1111,7 +1099,7 @@
           id: "78",
           name: "Drohnenbasierte Überwachung",
           value: 41,
-          url: "http://localhost:1962/#homeview/56",
+          url: "http://51.15.76.202:3001/api/documents/56",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -1124,7 +1112,7 @@
           id: "79",
           name: "Smart Services für Anlagen",
           value: 41,
-          url: "http://localhost:1962/#homeview/50",
+          url: "http://51.15.76.202:3001/api/documents/50",
           stroke: {
             keys: ["#c0a3a4"],
             thickness: 10,
@@ -1136,8 +1124,10 @@
           parent: "79",
           id: "80",
           name: "Remote Assistance",
+          detail:
+            "Remote Assistance ist eine Funktion, bei der über ein spezielles Protokoll ein Computer ferngesteuert werden kann. Diese Technik kann zur Unterstützung von Kunden oder unternehmensinternen Gruppen bei technischen Fragestellungen genutzt werden, wobei der persönliche Kontakt durch Fernsteuerung bzw. Telekommunikationsnetzwerke ersetzt wird. Eine verbreitete Software zur Fernwartung ist TeamViewer. Diese wird beispielsweise von Philips genutzt, um einen permanenten Fernzugriff auf Digital Signage Displays zu ermöglichen",
           value: 41,
-          url: "http://localhost:1962/#homeview/53",
+          url: "http://51.15.76.202:3001/api/documents/5ed53e72b17d4786e8d935ca",
           stroke: {
             keys: ["#e3d6d6"],
             thickness: 10,
@@ -1213,9 +1203,8 @@
         return items;
       });
 
-        // chart.listen("pointClick", function(e){
-          
-    
+      //   chart.listen("pointClick", function(e){
+
       // var item = e.point.get("name");
       //   if(item == parent) {
       //   chart.drillUp();
@@ -1235,15 +1224,30 @@
         if (new_value == "") {
           //do nothing
         } else {
-          top.location.href = myURL;
+          // top.location.href = new_value;
           localStorage.setItem("storageName", lastPart);
-          console.log(lastPart);
+
+          var ifrm = document.createElement("iframe");
+
+          ifrm.setAttribute("src", "../html/loadData.html");
+
+          ifrm.style.width = "580px";
+          ifrm.style.height = "480px";
+          ifrm.style.top = "5%";
+          ifrm.style.right = "2%";
+          ifrm.style.position = "absolute";
+          document.body.appendChild(ifrm);
         }
       });
 
       chart.labels().position("circular");
 
       chart.labels().format("{%Name}");
+      chart.tooltip().format("{%Name}\n\n {%detail}");
+
+      chart.tooltip().width(500);
+      chart.tooltip().height(180);
+
       chart.labels().adjustFontSize(true);
       chart.level(1).labels().fontSize(25);
       chart.level(2).labels().fontSize(16);
@@ -1262,6 +1266,9 @@
       chart.selected().fill("#96a6a6", 0.6);
       chart.selected().hatchFill("forward-diagonal", "#96a6a6", 0.5, 12);
       chart.normal().stroke("#96a6a6", 2);
+
+      // chart.normal().stroke("red", 2);
+
       chart.hovered().stroke("#96a6a6", 2);
       chart.selected().stroke("#96a6a6", 4);
     });
@@ -1269,19 +1276,6 @@
     // drill up a level
     function drillUpALevel() {
       chart.drillUp();
-      //chart.interactivity().selectionMode("drill-down");
     }
-
-         document.getElementById("Overly").addEventListener("click", function () 
-    {
-      var e = document.getElementsByClassName("modalbox");
-
-      e[0].style.display = "block";
-    });
-    document.getElementById("close").addEventListener("click", function () {
-      var e = document.getElementsByClassName("modalbox");
-      e[0].style.display = "none";
-    });
-    
   </script>
 </div>

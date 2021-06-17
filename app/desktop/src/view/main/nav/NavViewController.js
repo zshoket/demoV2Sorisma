@@ -14,6 +14,5 @@ Ext.define("SORISMA.view.main.nav.NavViewController", {
       return;
     }
     this.fireViewEvent("select", node);
-    window.frames[0].location.reload();
   },
 });
