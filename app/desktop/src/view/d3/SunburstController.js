@@ -23,4 +23,13 @@ Ext.define("SORISMA.view.d3.SunburstController", {
   closeIframe: function () {
     window.frames[0].location.reload();
   },
+
+  addToList: function () {
+    var renderEl = this.element.down(".renderEl"),
+      button = this.add({
+        xtype: "button",
+        text: "Sample",
+      });
+    renderEl.appendChild(button.element);
+  },
 });

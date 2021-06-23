@@ -32,5 +32,17 @@ Ext.define("SORISMA.view.d3.Sunburst", {
       tooltip: "Close Data Details",
       handler: "closeIframe",
     },
+
+    {
+      xtype: "button",
+      floating: true,
+      width: "10%",
+      text: "Merken",
+      iconCls: "x-fa fa-external-link",
+      style: { position: "absolute", left: "70%", top: "92%" },
+      docked: "bottom",
+      tooltip: "Markierung in Liste",
+      handler: "addToList",
+    },
   ],
 });
