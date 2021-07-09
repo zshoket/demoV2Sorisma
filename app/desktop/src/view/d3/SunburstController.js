@@ -25,11 +25,10 @@ Ext.define("SORISMA.view.d3.SunburstController", {
   },
 
   addToList: function () {
-    var renderEl = this.element.down(".renderEl"),
-      button = this.add({
-        xtype: "button",
-        text: "Sample",
-      });
-    renderEl.appendChild(button.element);
+    if (window.location !== window.parent.location) {
+      alert("I have an iframe");
+    } else {
+      console.log("Not an Iframe");
+    }
   },
 });
