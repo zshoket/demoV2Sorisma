@@ -21,14 +21,20 @@ Ext.define("SORISMA.view.d3.SunburstController", {
   },
 
   closeIframe: function () {
-    window.frames[0].location.reload();
+    // window.frames[0].location.reload();
+    document.radarChart.location.reload()
   },
 
   addToList: function () {
-    if (window.location !== window.parent.location) {
-      alert("I have an iframe");
+    if (localStorage == null) {
+      Ext.Msg.alert('Please Select a UseCase First');
     } else {
-      console.log("Not an Iframe");
+      alert("Hello! I am an alert box!!");
     }
+    // if (window.location !== window.parent.location) {
+    //   alert("I have an iframe");
+    // } else {
+    //   console.log("Not an Iframe");
+    // }
   },
 });

@@ -7,13 +7,13 @@ Ext.define('SORISMA.view.merkliste.merklistViewController', {
 
     onItemSelected: function (grid, records, e) {
 
-        var selectedRecord = grid.getSelection();
-        var row = grid.store.indexOf(selectedRecord);
-        if (row == 0) {
-            this.redirectTo('#felderpanelview/0');
-        } else {
-            this.redirectTo('#felderpanelview/' + row);
-        }
+        // var selectedRecord = grid.getSelection();
+        // var row = grid.store.indexOf(selectedRecord);
+        // if (row == 0) {
+        //     this.redirectTo('#felderpanelview/0');
+        // } else {
+        //     this.redirectTo('#felderpanelview/' + row);
+        // }
     }
 
     // onItemSelected: function (grid, records, e) {

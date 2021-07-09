@@ -6,7 +6,7 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
   controller: { type: "merklistviewcontroller" },
   viewModel: { type: "merklistviewmodel" },
   store: { type: "personnelviewstore" },
-  rowNumbers: true,
+  rowNumbers: false,
   plugins: {
     rowedit: {
       autoConfirm: false,
@@ -16,9 +16,7 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
     {
       text: "Auswahl",
       xtype: "checkcolumn",
-      fieldLabel: "checkbox_label",
-      name: "checkbox_name",
-      // dataIndex: 'felderName',
+      dataIndex: 'active',
       editable: false,
       width: 220,
     },
@@ -37,7 +35,7 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
     },
     {
       text: "Risikofeld",
-      //   dataIndex: "kurzbeschreibung",
+      dataIndex: "risikofeld",
       editable: false,
       width: 350,
     },

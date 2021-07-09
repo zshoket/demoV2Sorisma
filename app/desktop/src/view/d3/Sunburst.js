@@ -18,7 +18,7 @@ Ext.define("SORISMA.view.d3.Sunburst", {
 
   defaultType: "panel",
 
-  html: '<iframe id="radarChart" src="html/funcTesting.html" scrolling="no" height="900px" width="100%" ></iframe>',
+  html: '<iframe name="radarChart" src="html/funcTesting.html" scrolling="no" height="900px" width="100%" ></iframe>',
 
   items: [
     {
