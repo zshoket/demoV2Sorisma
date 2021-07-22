@@ -27,7 +27,7 @@ Ext.define("SORISMA.view.d3.Sunburst", {
       width: "10%",
       text: "Ausblenden",
       iconCls: "x-fa fa-retweet",
-      style: { position: "absolute", left: "85%", top: "92%" },
+      style: { position: "absolute", left: "75%", top: "92%" },
       docked: "bottom",
       tooltip: "Ausblenden",
       handler: "closeIframe",
@@ -39,10 +39,11 @@ Ext.define("SORISMA.view.d3.Sunburst", {
       width: "10%",
       text: "Merken",
       iconCls: "x-fa fa-check",
-      style: { position: "absolute", left: "75%", top: "92%" },
+      style: { position: "absolute", left: "65%", top: "92%" },
       docked: "bottom",
       tooltip: "Markierung in Liste",
       handler: "addToList",
     },
+
   ],
 });

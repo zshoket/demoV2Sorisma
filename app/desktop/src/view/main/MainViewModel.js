@@ -70,12 +70,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             //     },
             // ],
           },
-          {
-            text: "Risiko Graphic",
-            iconCls: "x-fa fa-file",
-            xtype: "graphicview",
-            leaf: true,
-          },
+          // {
+          //   text: "Risiko Graphic",
+          //   iconCls: "x-fa fa-file",
+          //   xtype: "graphicview",
+          //   leaf: true,
+          // },
           // {
           //   text: "Steckbriefe (Listenansicht)",
           //   iconCls: "x-fa fa-table",
@@ -124,6 +124,18 @@ Ext.define("SORISMA.view.main.MainViewModel", {
           //   xtype: "risikomatrix",
           //   leaf: true,
           // },
+          {
+            text: "RadarChart Variante 1",
+            iconCls: "fa fa-stroopwafel fa-spin",
+            xtype: "varEin",
+            leaf: true,
+          },
+          {
+            text: "RadarChart Variante 2",
+            iconCls: "fa fa-stroopwafel fa-spin",
+            xtype: "varZwei",
+            leaf: true,
+          },
         ],
       },
     },
