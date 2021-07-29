@@ -125,8 +125,8 @@ Ext.define("SORISMA.view.main.MainViewModel", {
           //   leaf: true,
           // },
           {
-            text: "RadarChart Variante 1",
-            iconCls: "fa fa-stroopwafel fa-spin",
+            text: "Digitaler Reifegrad",
+            iconCls: "fa fa-bookmark",
             xtype: "varEin",
             leaf: true,
           },

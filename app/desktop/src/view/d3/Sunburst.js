@@ -2,6 +2,7 @@ Ext.define("SORISMA.view.d3.Sunburst", {
   extend: "Ext.panel.Panel",
   xtype: "d3Sunburst",
   controller: "d3-sunburst",
+  cls: "Sunburst",
   viewModel: {
     type: "d3-sunburst",
   },
@@ -30,13 +31,15 @@ Ext.define("SORISMA.view.d3.Sunburst", {
       style: { position: "absolute", left: "75%", top: "92%" },
       docked: "bottom",
       tooltip: "Ausblenden",
+      // cls: 'style1',
       handler: "closeIframe",
     },
 
     {
       xtype: "button",
+      id: 'markBtn',
+      // cls: 'style1',
       floating: true,
-      width: "10%",
       text: "Merken",
       iconCls: "x-fa fa-check",
       style: { position: "absolute", left: "65%", top: "92%" },

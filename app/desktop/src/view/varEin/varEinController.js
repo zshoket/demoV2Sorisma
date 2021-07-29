@@ -25,16 +25,16 @@ Ext.define("SORISMA.view.varEin.varEinController", {
     document.radarChart2.location.reload();
   },
 
-  addToList: function () {
-    if (localStorage == null) {
-      Ext.Msg.alert('Please Select a UseCase First');
-    } else {
-      alert("Hello! I am an alert box!!");
-    }
-    // if (window.location !== window.parent.location) {
-    //   alert("I have an iframe");
-    // } else {
-    //   console.log("Not an Iframe");
+  addmarkedToList: function () {
+    debugger
+    // if (document.getElementById('ext-element-123').checked) {
+    //   alert('It is done');
+    alert(document.getElementById('ext-element-123').value);
+
     // }
+  },
+
+  testFn: function (obj, value) {
+    alert(value);
   },
 });
