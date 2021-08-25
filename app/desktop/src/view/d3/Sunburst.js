@@ -19,7 +19,7 @@ Ext.define("SORISMA.view.d3.Sunburst", {
 
   defaultType: "panel",
 
-  html: '<iframe name="radarChart" src="html/funcTesting.html" scrolling="no" height="900px" width="100%" ></iframe>',
+  html: '<iframe name="radarChart" src="html/radarChartIMG.html" scrolling="no" height="900px" width="100%" ></iframe>',
 
   items: [
     {
@@ -35,18 +35,18 @@ Ext.define("SORISMA.view.d3.Sunburst", {
       handler: "closeIframe",
     },
 
-    {
-      xtype: "button",
-      id: 'markBtn',
-      // cls: 'style1',
-      floating: true,
-      text: "Merken",
-      iconCls: "x-fa fa-check",
-      style: { position: "absolute", left: "65%", top: "92%" },
-      docked: "bottom",
-      tooltip: "Markierung in Liste",
-      handler: "addToList",
-    },
+    // {
+    //   xtype: "button",
+    //   id: 'markBtn',
+    //   // cls: 'style1',
+    //   floating: true,
+    //   text: "Merken",
+    //   iconCls: "x-fa fa-check",
+    //   style: { position: "absolute", left: "65%", top: "92%" },
+    //   docked: "bottom",
+    //   tooltip: "Markierung in Liste",
+    //   handler: "addToList",
+    // },
 
   ],
 });

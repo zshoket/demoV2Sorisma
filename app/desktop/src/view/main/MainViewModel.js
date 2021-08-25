@@ -50,6 +50,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             leaf: true,
           },
           {
+            text: "Digitaler Reifegrad",
+            iconCls: "fa fa-bookmark",
+            xtype: "varEin",
+            leaf: true,
+          },
+          {
             text: "Steckbriefe (Datenansicht)",
             iconCls: "x-fa fa-table",
             xtype: "homeview",
@@ -124,18 +130,13 @@ Ext.define("SORISMA.view.main.MainViewModel", {
           //   xtype: "risikomatrix",
           //   leaf: true,
           // },
-          {
-            text: "Digitaler Reifegrad",
-            iconCls: "fa fa-bookmark",
-            xtype: "varEin",
-            leaf: true,
-          },
-          {
-            text: "RadarChart Variante 2",
-            iconCls: "fa fa-stroopwafel fa-spin",
-            xtype: "varZwei",
-            leaf: true,
-          },
+
+          // {
+          //   text: "RadarChart Variante 2",
+          //   iconCls: "fa fa-stroopwafel fa-spin",
+          //   xtype: "varZwei",
+          //   leaf: true,
+          // },
         ],
       },
     },

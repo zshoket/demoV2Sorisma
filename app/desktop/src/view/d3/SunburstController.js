@@ -22,8 +22,9 @@ Ext.define("SORISMA.view.d3.SunburstController", {
 
   closeIframe: function () {
     debugger
-    // window.frames[0].location.reload();
-    document.radarChart.location.reload();
+    window.frames[0].location.reload();
+    // document.radarChart.location.reload();
+    // window.iframe.contentWindow.document.reload();
     // document.getElementById("").style.visibility = "visible";
     // document.getElementById("markBtn").classList.remove('style1');
 

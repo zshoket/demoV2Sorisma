@@ -18,7 +18,7 @@ Ext.define("SORISMA.view.varEin.varEin", {
   scrollable: false,
   defaultType: "panel",
 
-  html: '<iframe name="radarChart" src="html/testingPoint.html" scrolling="no" height="900px" width="100%" ></iframe>',
+  html: '<iframe name="radarChart" src="html/digitalRiefegrad.html" scrolling="no" height="900px" width="100%" ></iframe>',
 
   // items: [
 
