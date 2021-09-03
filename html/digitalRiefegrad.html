@@ -31,7 +31,7 @@
 
     <div>
 
-        <input type="radio" id="1" name="drone" value="1" />
+        <input type="radio" id="1" name="drone" value="T1" />
         <label for="1" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Digitalisierung steckt in den
             Kinderschuhen</label>
 
@@ -39,7 +39,7 @@
     </div>
 
     <div>
-        <input type="radio" id="2" name="drone" value="2" />
+        <input type="radio" id="2" name="drone" value="T2" />
         <label for="2" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Digitale Technologien werden
             im Unternehmen vereinzelt
             eingesetzt</label>
@@ -48,13 +48,13 @@
     </div>
 
     <div>
-        <input type="radio" id="3" name="drone" value="3" />
+        <input type="radio" id="3" name="drone" value="T3" />
         <label for="3" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">An vielen Stellen im
             Unternehmen werden digitale Technologien
             eingesetzt</label>
     </div>
     <div>
-        <input type="radio" id="4" name="drone" value="4" />
+        <input type="radio" id="4" name="drone" value="T4" />
         <label for="4" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Digitale Technologien werden
             im Unternehmen umfassend eingesetzt</label>
     </div>
@@ -62,25 +62,25 @@
     <h4 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:20px;">Organisation</h4>
 
     <div>
-        <input type="radio" id="5" name="drone2" value="5" />
+        <input type="radio" id="5" name="drone2" value="O1" />
         <label for="5" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Digitalisierungs Aktivitäten
             folgen keiner konkreten Strategie</label>
     </div>
 
     <div>
-        <input type="radio" id="6" name="drone2" value="6" />
+        <input type="radio" id="6" name="drone2" value="O2" />
         <label for="6" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Einzelne Projekte sind
             strategisch aufeinander abgestimmt</label>
     </div>
 
     <div>
-        <input type="radio" id="7" name="drone2" value="7" />
+        <input type="radio" id="7" name="drone2" value="O3" />
         <label for="7" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Einzelne Projekte sind zu
             strategischen Programmen
             zusammengefasst</label>
     </div>
     <div>
-        <input type="radio" id="8" name="drone2" value="8" />
+        <input type="radio" id="8" name="drone2" value="O4" />
         <label for="8" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Es existiert eine
             Digitalisierungsstrategie für das gesamte
             Unternehmen</label>
@@ -89,25 +89,25 @@
     <h4 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size:20px;">Mensch</h4>
 
     <div>
-        <input type="radio" id="9" name="drone3" value="9" />
+        <input type="radio" id="9" name="drone3" value="M1" />
         <label for="9" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Die Arbeitswelt ist starr
             strukturiert und analog gestaltet</label>
     </div>
 
     <div>
-        <input type="radio" id="10" name="drone3" value="10" />
+        <input type="radio" id="10" name="drone3" value="M2" />
         <label for="10" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Es existieren vereinzelt
             flexibel gestaltete Arbeitsstrukturen</label>
     </div>
 
     <div>
-        <input type="radio" id="11" name="drone3" value="11" />
+        <input type="radio" id="11" name="drone3" value="M3" />
         <label for="11" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">An vielen Stellen ist die
             Arbeitswelt flexibel gestaltet und
             digitalisiert</label>
     </div>
     <div>
-        <input type="radio" id="12" name="drone3" value="12" />
+        <input type="radio" id="12" name="drone3" value="M4" />
         <label for="12" style="font-family: Arial, Helvetica, sans-serif; font-size:13px;">Die Arbeitswelt ist flexibel
             ausgerichtet und alle Tätigkeiten werden
             digital unterstützt</label>
@@ -245,10 +245,37 @@
             }
         }
 
-        currentSelection = val1 + ',' + val2 + ',' + val3;
-        // console.log(currentSelection);
 
-        if (currentSelection == '4,8,12' || currentSelection == '3,7,11') {
+
+        if (val1 == 'T3' || val1 == 'T4') {
+            var currentSelection1 = "hoch";
+        }
+        else {
+            var currentSelection1 = "gering";
+        }
+
+
+        if (val2 == 'O3' || val2 == 'O4') {
+            var currentSelection2 = "hoch";
+        }
+        else {
+            var currentSelection2 = "gering";
+        }
+
+
+        if (val3 == 'M3' || val3 == 'M4') {
+            var currentSelection3 = "hoch";
+        }
+        else {
+            var currentSelection3 = "gering";
+        }
+        currentSelection = currentSelection1 + ',' + currentSelection2 + ',' + currentSelection3;
+
+        console.log(currentSelection);
+
+
+
+        if (currentSelection == "hoch,hoch,hoch") {
 
             var check = document.getElementById("box1");
             check.classList.add("widget2");
@@ -262,7 +289,7 @@
             }
         }
 
-        else if (currentSelection == '4,5,12' || currentSelection == '3,6,11') {
+        else if (currentSelection == "hoch,gering,hoch") {
 
             var check = document.getElementById("box2");
             check.classList.add("widget2");
@@ -277,7 +304,7 @@
             }
         }
 
-        else if (currentSelection == '4,8,9' || currentSelection == '3,7,10') {
+        else if (currentSelection == "hoch,hoch,gering") {
 
             var check = document.getElementById("box3");
             check.classList.add("widget2");
@@ -293,7 +320,7 @@
             }
         }
 
-        else if (currentSelection == '3,5,9' || currentSelection == '4,6,10') {
+        else if (currentSelection == "hoch,gering,gering") {
 
             var check = document.getElementById("box4");
             check.classList.add("widget2");
@@ -309,7 +336,7 @@
             }
         }
 
-        else if (currentSelection == '1,5,11' || currentSelection == '2,6,12') {
+        else if (currentSelection == "gering,gering,hoch") {
 
             var check = document.getElementById("box5");
             check.classList.add("widget2");
@@ -325,7 +352,7 @@
             }
         }
 
-        else if (currentSelection == '1,7,9' || currentSelection == '2,8,10') {
+        else if (currentSelection == "gering,hoch,gering") {
 
             var check = document.getElementById("box6");
             check.classList.add("widget2");
@@ -341,7 +368,7 @@
             }
         }
 
-        else if (currentSelection == '1,7,10' || currentSelection == '2,8,12') {
+        else if (currentSelection == "gering,hoch,hoch") {
 
             var check = document.getElementById("box7");
             check.classList.add("widget2");
@@ -357,7 +384,7 @@
             }
         }
 
-        else if (currentSelection == '1,5,9' || currentSelection == '2,6,10') {
+        else if (currentSelection == "gering,gering,gering") {
 
             var check = document.getElementById("box8");
             check.classList.add("widget2");
@@ -376,6 +403,7 @@
             alert("Bitte wählen Sie die richtigen Optionen");
         }
     }
+
 </script>
 
 </html>

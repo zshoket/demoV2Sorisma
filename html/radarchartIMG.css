@@ -1076,3 +1076,20 @@ position: absolute;
 }
 
 .betrGesund{border-radius: 90%;}
+
+.ausblend{
+  position:absolute;
+  top: 81%;
+  left: 80%;
+  width: 10%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-color: transparent;
+  color: #a01818;
+  /* display: inline-block; */
+  cursor:pointer;
+  outline: 0 !important;
+  display: none;
+   font-weight:550;
+}
