@@ -1093,3 +1093,21 @@ position: absolute;
   display: none;
    font-weight:550;
 }
+
+.marker
+{
+    position:absolute;
+  top: 81%;
+  left: 70%;
+  width: 10%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-color: transparent;
+  color: #a01818;
+  /* display: inline-block; */
+  cursor:pointer;
+  outline: 0 !important;
+  display: none;
+   font-weight:550;
+}

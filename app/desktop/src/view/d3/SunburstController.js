@@ -29,10 +29,10 @@ Ext.define("SORISMA.view.d3.SunburstController", {
   },
 
   addToList: function () {
-    if (localStorage == null) {
+    if (localStorage.storageName2 == null) {
       Ext.Msg.alert('Please Select a UseCase First');
     } else {
-      alert("Hello! I am an alert box!!");
+      console.log(localStorage.storageName2);
     }
     // if (window.location !== window.parent.location) {
     //   alert("I have an iframe");

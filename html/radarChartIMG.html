@@ -54,7 +54,7 @@
 
 
     function myFunction() {
-      debugger
+
       var clickId = event.srcElement.id;
 
       var number = document.getElementById(clickId).value;
@@ -73,12 +73,22 @@
       ifrm.style.position = "absolute";
       document.body.appendChild(ifrm);
       document.getElementById("mybutton55").style.setProperty('display', 'inline-block');
+      document.getElementById("mybutton56").style.setProperty('display', 'inline-block');
     }
     function blended() {
       document.querySelectorAll('iframe').forEach(
         function (elem) {
           elem.parentNode.removeChild(elem);
           document.getElementById("mybutton55").style.setProperty('display', 'none');
+          document.getElementById("mybutton56").style.setProperty('display', 'none');
+        });
+    }
+    function marker() {
+      document.querySelectorAll('iframe').forEach(
+        function (elem) {
+          // elem.parentNode.removeChild(elem);
+          console.log(localStorage.storageName2);
+
         });
     }
 
@@ -220,6 +230,7 @@
     <!-- Personal-management -->
 
     <button class="ausblend" id="mybutton55" onclick="blended()"><i class="fa fa-retweet"></i> Ausblenden</button>
+    <button class="marker" id="mybutton56" onclick="marker()"><i class="fa fa-check"></i> Merken</button>
   </div>
   <script>
 
