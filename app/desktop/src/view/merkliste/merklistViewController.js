@@ -5,18 +5,115 @@ Ext.define('SORISMA.view.merkliste.merklistViewController', {
 
 
 
-    onItemSelected: function (grid, records, e) {
+    // onItemSelected: function (grid, info) {
 
-        // var selectedRecord = grid.getSelection();
-        // var row = grid.store.indexOf(selectedRecord);
-        // if (row == 0) {
-        //     this.redirectTo('#felderpanelview/0');
-        // } else {
-        //     this.redirectTo('#felderpanelview/' + row);
-        // }
-    }
+    //     var selectedRecord = grid.getSelection();
+    //     var row = grid.store.indexOf(selectedRecord);
+    //     if (row == 0) {
+    //         // this.redirectTo('#felderpanelview/0');
 
-    // onItemSelected: function (grid, records, e) {
+    //         console.log(localStorage.storageName2);
+    //     } else {
+    //         // this.redirectTo('#felderpanelview/' + row);
+
+    //         console.log(localStorage.storageName2);
+
+    //     }
+    // },
+    onShowFn: function () {
+        debugger
+        var me = this;
+        me.getView().getStore().setFilters([
+            function (item) {
+                var filterArr = JSON.parse(localStorage.getItem("storageName2"));
+                return filterArr.includes(item.id);
+            }
+        ]);
+    },
+
+    onItemSelected: function (grid, info) {
+        debugger
+        var myId = info.record.get("id");
+        var url1 = "http://51.15.76.202:3001/api/documents/" + myId + "/risikos";
+        const getJSON = async (url) => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(response.statusText);
+
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                return error;
+            }
+        };
+        getJSON(url1)
+            .then((data) => {
+                if (data.length == 0) {
+                    Ext.Msg.alert("Kein Risiko gefunden");
+                } else {
+                    Ext.create("Ext.window.Window", {
+                        title: "Verbundene Risiken",
+                        height: "50%",
+                        width: "30%",
+                        layout: "fit",
+                        scrollable: true,
+                        closeable: false,
+                        bbar: [
+                            {
+                                // text: "schließen",
+                                iconCls: "x-fa fa-3x fa-times",
+                                tooltip: "schließen",
+                                handler: function () {
+                                    this.up("window").close();
+                                },
+                            },
+                        ],
+                        autoShow: true,
+                        items: {
+                            xtype: "grid",
+                            store: { type: "arraystore" },
+                            scrollable: true,
+                            border: true,
+                            columns: [
+                                {
+                                    text: "Risk Name",
+                                    editable: false,
+                                    dataIndex: "name",
+                                    width: 250,
+                                    cell: { userCls: "bold" },
+                                },
+                                {
+                                    text: "Dimension",
+                                    dataIndex: "dimension",
+                                    editable: false,
+                                    width: 150,
+                                },
+                            ],
+                            store: Ext.create("Ext.data.ArrayStore", {
+                                extend: "Ext.data.Store",
+                                alias: "store.arraystore",
+                                model: "SORISMA.model.Risikos",
+                                proxy: {
+                                    type: "ajax",
+                                    url: url1,
+                                    headers: {
+                                        Accept: "application/json",
+                                    },
+                                    reader: {
+                                        type: "json",
+                                        rootProperty: "items",
+                                    },
+                                },
+                                autoLoad: true,
+                            }),
+                        },
+                    }).show();
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    },
     //     var record = records[0];
     //     var newId = record.get('id');
     //     if (newId == '5f99767055574829c05cc725') {

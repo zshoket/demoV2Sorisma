@@ -160,8 +160,22 @@
                 .catch((error) => {
                     console.error(error);
                 });
+            debugger
+            var storageString = localStorage.getItem("storageName2");
+            var storArr = [];
+            if (!storageString) {
+                storArr.push(id)
+            }
+            else {
 
-            localStorage.setItem("storageName2", id);
+
+                storArr = JSON.parse(storageString);
+                if (!storArr.includes(id)) {
+                    storArr.push(id)
+                }
+            }
+
+            localStorage.setItem("storageName2", JSON.stringify(storArr));
 
         });
 

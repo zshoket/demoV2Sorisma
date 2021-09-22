@@ -5,7 +5,9 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
   requires: ["Ext.grid.rowedit.Plugin"],
   controller: { type: "merklistviewcontroller" },
   viewModel: { type: "merklistviewmodel" },
-  store: { type: "personnelviewstore" },
+  store: {
+    type: "personnelviewstore",
+  },
   rowNumbers: false,
   plugins: {
     rowedit: {
@@ -62,5 +64,6 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
 
   listeners: {
     select: "onItemSelected",
+    show: "onShowFn"
   },
 });
