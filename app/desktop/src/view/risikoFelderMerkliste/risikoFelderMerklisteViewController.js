@@ -1,6 +1,6 @@
-Ext.define("SORISMA.view.merkliste.merklistViewController", {
+Ext.define("SORISMA.view.risikoFelderMerkliste.risikoFelderMerklisteViewController", {
   extend: "Ext.app.ViewController",
-  alias: "controller.merklistviewcontroller",
+  alias: "controller.risikoFelderMerklisteViewcontroller",
 
   // onItemSelected: function (grid, info) {
 

@@ -21,8 +21,8 @@ Ext.define("SORISMA.view.d3.SunburstController", {
   },
 
   closeIframe: function () {
-    debugger
-    document.getElementById("mainChart").contentWindow.location.reload(true);;
+    debugger;
+    document.getElementById("mainChart").contentWindow.location.reload(true);
 
     // window.frames[0].location.reload();
     // document.radarChart.location.reload();
@@ -30,7 +30,7 @@ Ext.define("SORISMA.view.d3.SunburstController", {
 
   addToList: function () {
     if (localStorage.storageName2 == null) {
-      Ext.Msg.alert('Please Select a UseCase First');
+      Ext.Msg.alert("Please Select a UseCase First");
     } else {
       console.log(localStorage.storageName2);
     }
@@ -39,5 +39,10 @@ Ext.define("SORISMA.view.d3.SunburstController", {
     // } else {
     //   console.log("Not an Iframe");
     // }
+  },
+
+  myShowFn: function () {
+    window.localStorage.clear();
+    // document.getElementById("mainChart").contentWindow.location.reload(true);
   },
 });

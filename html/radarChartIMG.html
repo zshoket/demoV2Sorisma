@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>RadarChart</title>
+    <link rel="stylesheet" type="text/css" href="./radarchartIMG.css" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"
+    ></script>
 
-<head>
-  <title>RadarChart</title>
-  <link rel="stylesheet" type="text/css" href="./radarchartIMG.css" />
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
-    /* .close {
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      /* .close {
     background: #606061;
     color: #FFFFFF;
     line-height: 25px;
@@ -40,208 +51,475 @@
 .close:hover {
     background: #00d9ff;
 } */
-  </style>
-  <script>
+    </style>
+    <script></script>
 
+    <script>
+      function myFunction() {
+        var clickId = event.srcElement.id;
 
+        var number = document.getElementById(clickId).value;
 
+        localStorage.setItem("storageName", number);
 
+        var ifrm = document.createElement("iframe");
 
+        ifrm.setAttribute("src", "../html/loadData.html");
 
-  </script>
-
-  <script>
-
-
-    function myFunction() {
-
-      var clickId = event.srcElement.id;
-
-      var number = document.getElementById(clickId).value;
-
-      localStorage.setItem("storageName", number);
-
-      var ifrm = document.createElement("iframe");
-
-      ifrm.setAttribute("src", "../html/loadData.html");
-
-      ifrm.style.width = "40%";
-      ifrm.style.height = "75%";
-      ifrm.style.top = "2%";
-      ifrm.style.right = "1%";
-      ifrm.frameBorder = "0";
-      ifrm.style.position = "absolute";
-      document.body.appendChild(ifrm);
-      document.getElementById("mybutton55").style.setProperty('display', 'inline-block');
-      document.getElementById("mybutton56").style.setProperty('display', 'inline-block');
-    }
-    function blended() {
-      document.querySelectorAll('iframe').forEach(
-        function (elem) {
+        ifrm.style.width = "40%";
+        ifrm.style.height = "75%";
+        ifrm.style.top = "2%";
+        ifrm.style.right = "1%";
+        ifrm.frameBorder = "0";
+        ifrm.style.position = "absolute";
+        document.body.appendChild(ifrm);
+        document
+          .getElementById("mybutton55")
+          .style.setProperty("display", "inline-block");
+        document
+          .getElementById("mybutton56")
+          .style.setProperty("display", "inline-block");
+      }
+      function blended() {
+        document.querySelectorAll("iframe").forEach(function (elem) {
           elem.parentNode.removeChild(elem);
-          document.getElementById("mybutton55").style.setProperty('display', 'none');
-          document.getElementById("mybutton56").style.setProperty('display', 'none');
+          document
+            .getElementById("mybutton55")
+            .style.setProperty("display", "none");
+          document
+            .getElementById("mybutton56")
+            .style.setProperty("display", "none");
         });
-    }
-    function marker() {
-      document.querySelectorAll('iframe').forEach(
-        function (elem) {
+      }
+      function marker() {
+        document.querySelectorAll("iframe").forEach(function (elem) {
           // elem.parentNode.removeChild(elem);
-          console.log(localStorage.storageName2);
-
+          // console.log(localStorage.storageName2);
+          // alert("steckbrief added to list");
         });
-    }
-
-  </script>
-
-</head>
-
-<body>
-
-  <img src="..\html\RadarChartImg.png" alt="RadarChart" style="position: relative;" width="60%" height="730">
-  <div class="container">
-    <!--Unternehmensinfrastruktur -->
-    <button class="tool" id="mybutton" onclick="myFunction()" value="5ece3abad8dcf967fc54135a"></button>
-
-    <button class="automDaten" id="mybutton1" onclick="myFunction()" value="5ece6d0cdc58f20eb4cb2f53"></button>
-
-    <button class="wissenMan" id="mybutton2" onclick="myFunction()" value="5ece3cefd8dcf967fc54135b"></button>
-
-    <button class="digiKanban" id="mybutton3" onclick="myFunction()" value="5ece6ed5f1cb7b3488f775ea"></button>
-
-    <button class="toolRemoteTeam" id="mybutton4" onclick="myFunction()" value="5ece35effa40f7426cba7b8d"></button>
-
-    <button class="soIntranet" id="mybutton5" onclick="myFunction()" value="5ece3891d8dcf967fc541359"></button>
-
-    <button class="kIbeleg" id="mybutton6" onclick="myFunction()" value="5ece3143a7f3956194cb74e9"></button>
-
-    <button class="harmonIT" id="mybutton7" onclick="myFunction()" value="5ece3fd8d8dcf967fc54135c"></button>
-    <!--Unternehmensinfrastruktur -->
-
-    <!--Service-->
-    <button class="remoteAss" id="mybutton8" onclick="myFunction()" value="5ed53e72b17d4786e8d935ca"></button>
-
-    <button class="drohnen" id="mybutton9" onclick="myFunction()" value="5ed53e72b17d4786e8d935cb"></button>
-
-    <button class="smartServ" id="mybutton10" onclick="myFunction()" value="5ed53e72b17d4786e8d935c7"></button>
-
-    <button class="preMaintain" id="mybutton11" onclick="myFunction()" value="5ed53e72b17d4786e8d935c8"></button>
-
-    <button class="kiVorAnal" id="mybutton12" onclick="myFunction()" value="5ed53e72b17d4786e8d935c9"></button>
-    <!--Service-->
-
-    <!--Logistik-->
-    <button class="lagerVer" id="mybutton13" onclick="myFunction()" value="5ed53552b17d4786e8d935c5"></button>
-
-    <button class="fahlTrans" id="mybutton14" onclick="myFunction()" value="5ed53552b17d4786e8d935c6"></button>
-
-    <button class="cloudDaten" id="mybutton15" onclick="myFunction()" value="5ed53552b17d4786e8d935c4"></button>
-
-    <!--Logistik-->
-
-
-    <!-- Marketing & Vertrieb -->
-    <button class="predAnal" id="mybutton16" onclick="myFunction()" value="5ed52dcdb17d4786e8d935c0"></button>
-
-    <button class="vertrieb" id="mybutton17" onclick="myFunction()" value="5ed53552b17d4786e8d935c3"></button>
-
-    <button class="toolAnford" id="mybutton18" onclick="myFunction()" value="5ed52dcdb17d4786e8d935be"></button>
-
-    <button class="vrVertrieb" id="mybutton19" onclick="myFunction()" value="5ed53552b17d4786e8d935c2"></button>
-
-    <button class="dashboard" id="mybutton20" onclick="myFunction()" value="5ed52dcdb17d4786e8d935c1"></button>
-
-    <button class="socialMedia" id="mybutton21" onclick="myFunction()" value="5ed52dcdb17d4786e8d935bf"></button>
-    <!--Marketing & Vertrieb-->
-
-    <!-- Fertigung -->
-    <button class="addFertig" id="mybutton22" onclick="myFunction()" value="5ed52284b17d4786e8d935ba"></button>
-
-    <button class="autoQuali" id="mybutton23" onclick="myFunction()" value="5ed52284b17d4786e8d935bb"></button>
-
-    <button class="montAssis" id="mybutton24" onclick="myFunction()" value="5ed52284b17d4786e8d935bc"></button>
-
-    <button class="digAuftrag" id="mybutton25" onclick="myFunction()" value="5ed52284b17d4786e8d935b8"></button>
-
-    <button class="arBasierte" id="mybutton26" onclick="myFunction()" value="5ed52284b17d4786e8d935b9"></button>
-
-    <button class="betriebMasch" id="mybutton27" onclick="myFunction()" value="5ed50e9eb17d4786e8d935b7"></button>
-
-    <button class="manuSystem" id="mybutton28" onclick="myFunction()" value="5ed52dcdb17d4786e8d935bd"></button>
-
-    <button class="indutrRobot" id="mybutton29" onclick="myFunction()" value="5ed50e9eb17d4786e8d935b6"></button>
-    <!-- Fertigung -->
-
-    <!-- Beschaffung -->
-    <button class="predLog" id="mybutton30" onclick="myFunction()" value="5ed50669b17d4786e8d935b3"></button>
-
-    <button class="perpekt" id="mybutton31" onclick="myFunction()" value="5ed50a8bb17d4786e8d935b4"></button>
-
-    <button class="eProcure" id="mybutton32" onclick="myFunction()" value="5ed50a8bb17d4786e8d935b5"></button>
-    <!-- Beschaffung -->
-
-    <!-- Forschung & Entwicklung -->
-    <button class="plmSys" id="mybutton33" onclick="myFunction()" value="5ed503d6b17d4786e8d935b1"></button>
-
-    <button class="agileTeam" id="mybutton34" onclick="myFunction()" value="5ed3f028a4caf849745b121d"></button>
-
-    <button class="designThin" id="mybutton35" onclick="myFunction()" value="5ed50396b17d4786e8d935af"></button>
-
-    <button class="kollabProd" id="mybutton36" onclick="myFunction()" value="5ed503d6b17d4786e8d935b2"></button>
-
-    <button class="kundenInteg" id="mybutton37" onclick="myFunction()" value="5ed3ef08a4caf849745b121c"></button>
-
-    <button class="toolAnforderung" id="mybutton38" onclick="myFunction()" value="5ed52dcdb17d4786e8d935be"></button>
-
-    <button class="techForen" id="mybutton39" onclick="myFunction()" value="5ed50355b17d4786e8d935ae"></button>
-
-    <button class="grossGrupe" id="mybutton40" onclick="myFunction()" value="5ed50396b17d4786e8d935b0"></button>
-    <!-- Forschung & Entwicklung -->
-
-    <!-- Personal-management -->
-    <button class="socRecruit" id="mybutton41" onclick="myFunction()" value="5ed3e430a4caf849745b1212"></button>
-
-    <button class="digiPersonal" id="mybutton42" onclick="myFunction()" value="5ed3ee29a4caf849745b121b"></button>
-
-    <button class="chngMan" id="mybutton43" onclick="myFunction()" value="5ece8b99f1cb7b3488f775ec"></button>
-
-    <button class="anpasungKultur" id="mybutton44" onclick="myFunction()" value="5ed3e92fa4caf849745b1216"></button>
-
-    <button class="neuFuhrung" id="mybutton45" onclick="myFunction()" value="5ed3e84ea4caf849745b1215"></button>
-
-    <button class="schlung" id="mybutton46" onclick="myFunction()" value="5ece8983f1cb7b3488f775eb"></button>
-
-    <button class="flexArbite" id="mybutton47" onclick="myFunction()" value="5ed3e105a4caf849745b1210"></button>
-
-    <button class="webBasierte" id="mybutton48" onclick="myFunction()" value="5ed3e5aba4caf849745b1213"></button>
-
-    <button class="kompMan" id="mybutton49" onclick="myFunction()" value="5ed3ec75a4caf849745b1219"></button>
-
-    <button class="konsFehler" id="mybutton50" onclick="myFunction()" value="5ed3ea19a4caf849745b1217"></button>
-
-    <button class="befRate" id="mybutton51" onclick="myFunction()" value="5ed3eb60a4caf849745b1218"></button>
-
-    <button class="expertDem" id="mybutton52" onclick="myFunction()" value="5ed3e6d7a4caf849745b1214"></button>
-
-    <button class="incePro" id="mybutton53" onclick="myFunction()" value="5ed3ed79a4caf849745b121a"></button>
-
-    <button class="betrGesund" id="mybutton54" onclick="myFunction()" value="5ed3e205a4caf849745b1211"></button>
-
-    <!-- Personal-management -->
-
-    <button class="ausblend" id="mybutton55" onclick="blended()"><i class="fa fa-retweet"></i> Ausblenden</button>
-    <button class="marker" id="mybutton56" onclick="marker()"><i class="fa fa-check"></i> Merken</button>
-  </div>
-  <script>
-
-
-
-
-  </script>
-
-
-
-
-</body>
-
+      }
+    </script>
+  </head>
+
+  <body>
+    <img
+      src="..\html\RadarChartImg.png"
+      alt="RadarChart"
+      style="position: relative"
+      width="60%"
+      height="730"
+    />
+    <div class="container">
+      <!--Unternehmensinfrastruktur -->
+      <button
+        class="tool"
+        id="mybutton"
+        onclick="myFunction()"
+        value="5ece3abad8dcf967fc54135a"
+      ></button>
+
+      <button
+        class="automDaten"
+        id="mybutton1"
+        onclick="myFunction()"
+        value="5ece6d0cdc58f20eb4cb2f53"
+      ></button>
+
+      <button
+        class="wissenMan"
+        id="mybutton2"
+        onclick="myFunction()"
+        value="5ece3cefd8dcf967fc54135b"
+      ></button>
+
+      <button
+        class="digiKanban"
+        id="mybutton3"
+        onclick="myFunction()"
+        value="5ece6ed5f1cb7b3488f775ea"
+      ></button>
+
+      <button
+        class="toolRemoteTeam"
+        id="mybutton4"
+        onclick="myFunction()"
+        value="5ece35effa40f7426cba7b8d"
+      ></button>
+
+      <button
+        class="soIntranet"
+        id="mybutton5"
+        onclick="myFunction()"
+        value="5ece3891d8dcf967fc541359"
+      ></button>
+
+      <button
+        class="kIbeleg"
+        id="mybutton6"
+        onclick="myFunction()"
+        value="5ece3143a7f3956194cb74e9"
+      ></button>
+
+      <button
+        class="harmonIT"
+        id="mybutton7"
+        onclick="myFunction()"
+        value="5ece3fd8d8dcf967fc54135c"
+      ></button>
+      <!--Unternehmensinfrastruktur -->
+
+      <!--Service-->
+      <button
+        class="remoteAss"
+        id="mybutton8"
+        onclick="myFunction()"
+        value="5ed53e72b17d4786e8d935ca"
+      ></button>
+
+      <button
+        class="drohnen"
+        id="mybutton9"
+        onclick="myFunction()"
+        value="5ed53e72b17d4786e8d935cb"
+      ></button>
+
+      <button
+        class="smartServ"
+        id="mybutton10"
+        onclick="myFunction()"
+        value="5ed53e72b17d4786e8d935c7"
+      ></button>
+
+      <button
+        class="preMaintain"
+        id="mybutton11"
+        onclick="myFunction()"
+        value="5ed53e72b17d4786e8d935c8"
+      ></button>
+
+      <button
+        class="kiVorAnal"
+        id="mybutton12"
+        onclick="myFunction()"
+        value="5ed53e72b17d4786e8d935c9"
+      ></button>
+      <!--Service-->
+
+      <!--Logistik-->
+      <button
+        class="lagerVer"
+        id="mybutton13"
+        onclick="myFunction()"
+        value="5ed53552b17d4786e8d935c5"
+      ></button>
+
+      <button
+        class="fahlTrans"
+        id="mybutton14"
+        onclick="myFunction()"
+        value="5ed53552b17d4786e8d935c6"
+      ></button>
+
+      <button
+        class="cloudDaten"
+        id="mybutton15"
+        onclick="myFunction()"
+        value="5ed53552b17d4786e8d935c4"
+      ></button>
+
+      <!--Logistik-->
+
+      <!-- Marketing & Vertrieb -->
+      <button
+        class="predAnal"
+        id="mybutton16"
+        onclick="myFunction()"
+        value="5ed52dcdb17d4786e8d935c0"
+      ></button>
+
+      <button
+        class="vertrieb"
+        id="mybutton17"
+        onclick="myFunction()"
+        value="5ed53552b17d4786e8d935c3"
+      ></button>
+
+      <button
+        class="toolAnford"
+        id="mybutton18"
+        onclick="myFunction()"
+        value="5ed52dcdb17d4786e8d935be"
+      ></button>
+
+      <button
+        class="vrVertrieb"
+        id="mybutton19"
+        onclick="myFunction()"
+        value="5ed53552b17d4786e8d935c2"
+      ></button>
+
+      <button
+        class="dashboard"
+        id="mybutton20"
+        onclick="myFunction()"
+        value="5ed52dcdb17d4786e8d935c1"
+      ></button>
+
+      <button
+        class="socialMedia"
+        id="mybutton21"
+        onclick="myFunction()"
+        value="5ed52dcdb17d4786e8d935bf"
+      ></button>
+      <!--Marketing & Vertrieb-->
+
+      <!-- Fertigung -->
+      <button
+        class="addFertig"
+        id="mybutton22"
+        onclick="myFunction()"
+        value="5ed52284b17d4786e8d935ba"
+      ></button>
+
+      <button
+        class="autoQuali"
+        id="mybutton23"
+        onclick="myFunction()"
+        value="5ed52284b17d4786e8d935bb"
+      ></button>
+
+      <button
+        class="montAssis"
+        id="mybutton24"
+        onclick="myFunction()"
+        value="5ed52284b17d4786e8d935bc"
+      ></button>
+
+      <button
+        class="digAuftrag"
+        id="mybutton25"
+        onclick="myFunction()"
+        value="5ed52284b17d4786e8d935b8"
+      ></button>
+
+      <button
+        class="arBasierte"
+        id="mybutton26"
+        onclick="myFunction()"
+        value="5ed52284b17d4786e8d935b9"
+      ></button>
+
+      <button
+        class="betriebMasch"
+        id="mybutton27"
+        onclick="myFunction()"
+        value="5ed50e9eb17d4786e8d935b7"
+      ></button>
+
+      <button
+        class="manuSystem"
+        id="mybutton28"
+        onclick="myFunction()"
+        value="5ed52dcdb17d4786e8d935bd"
+      ></button>
+
+      <button
+        class="indutrRobot"
+        id="mybutton29"
+        onclick="myFunction()"
+        value="5ed50e9eb17d4786e8d935b6"
+      ></button>
+      <!-- Fertigung -->
+
+      <!-- Beschaffung -->
+      <button
+        class="predLog"
+        id="mybutton30"
+        onclick="myFunction()"
+        value="5ed50669b17d4786e8d935b3"
+      ></button>
+
+      <button
+        class="perpekt"
+        id="mybutton31"
+        onclick="myFunction()"
+        value="5ed50a8bb17d4786e8d935b4"
+      ></button>
+
+      <button
+        class="eProcure"
+        id="mybutton32"
+        onclick="myFunction()"
+        value="5ed50a8bb17d4786e8d935b5"
+      ></button>
+      <!-- Beschaffung -->
+
+      <!-- Forschung & Entwicklung -->
+      <button
+        class="plmSys"
+        id="mybutton33"
+        onclick="myFunction()"
+        value="5ed503d6b17d4786e8d935b1"
+      ></button>
+
+      <button
+        class="agileTeam"
+        id="mybutton34"
+        onclick="myFunction()"
+        value="5ed3f028a4caf849745b121d"
+      ></button>
+
+      <button
+        class="designThin"
+        id="mybutton35"
+        onclick="myFunction()"
+        value="5ed50396b17d4786e8d935af"
+      ></button>
+
+      <button
+        class="kollabProd"
+        id="mybutton36"
+        onclick="myFunction()"
+        value="5ed503d6b17d4786e8d935b2"
+      ></button>
+
+      <button
+        class="kundenInteg"
+        id="mybutton37"
+        onclick="myFunction()"
+        value="5ed3ef08a4caf849745b121c"
+      ></button>
+
+      <button
+        class="toolAnforderung"
+        id="mybutton38"
+        onclick="myFunction()"
+        value="5ed52dcdb17d4786e8d935be"
+      ></button>
+
+      <button
+        class="techForen"
+        id="mybutton39"
+        onclick="myFunction()"
+        value="5ed50355b17d4786e8d935ae"
+      ></button>
+
+      <button
+        class="grossGrupe"
+        id="mybutton40"
+        onclick="myFunction()"
+        value="5ed50396b17d4786e8d935b0"
+      ></button>
+      <!-- Forschung & Entwicklung -->
+
+      <!-- Personal-management -->
+      <button
+        class="socRecruit"
+        id="mybutton41"
+        onclick="myFunction()"
+        value="5ed3e430a4caf849745b1212"
+      ></button>
+
+      <button
+        class="digiPersonal"
+        id="mybutton42"
+        onclick="myFunction()"
+        value="5ed3ee29a4caf849745b121b"
+      ></button>
+
+      <button
+        class="chngMan"
+        id="mybutton43"
+        onclick="myFunction()"
+        value="5ece8b99f1cb7b3488f775ec"
+      ></button>
+
+      <button
+        class="anpasungKultur"
+        id="mybutton44"
+        onclick="myFunction()"
+        value="5ed3e92fa4caf849745b1216"
+      ></button>
+
+      <button
+        class="neuFuhrung"
+        id="mybutton45"
+        onclick="myFunction()"
+        value="5ed3e84ea4caf849745b1215"
+      ></button>
+
+      <button
+        class="schlung"
+        id="mybutton46"
+        onclick="myFunction()"
+        value="5ece8983f1cb7b3488f775eb"
+      ></button>
+
+      <button
+        class="flexArbite"
+        id="mybutton47"
+        onclick="myFunction()"
+        value="5ed3e105a4caf849745b1210"
+      ></button>
+
+      <button
+        class="webBasierte"
+        id="mybutton48"
+        onclick="myFunction()"
+        value="5ed3e5aba4caf849745b1213"
+      ></button>
+
+      <button
+        class="kompMan"
+        id="mybutton49"
+        onclick="myFunction()"
+        value="5ed3ec75a4caf849745b1219"
+      ></button>
+
+      <button
+        class="konsFehler"
+        id="mybutton50"
+        onclick="myFunction()"
+        value="5ed3ea19a4caf849745b1217"
+      ></button>
+
+      <button
+        class="befRate"
+        id="mybutton51"
+        onclick="myFunction()"
+        value="5ed3eb60a4caf849745b1218"
+      ></button>
+
+      <button
+        class="expertDem"
+        id="mybutton52"
+        onclick="myFunction()"
+        value="5ed3e6d7a4caf849745b1214"
+      ></button>
+
+      <button
+        class="incePro"
+        id="mybutton53"
+        onclick="myFunction()"
+        value="5ed3ed79a4caf849745b121a"
+      ></button>
+
+      <button
+        class="betrGesund"
+        id="mybutton54"
+        onclick="myFunction()"
+        value="5ed3e205a4caf849745b1211"
+      ></button>
+
+      <!-- Personal-management -->
+
+      <button class="ausblend" id="mybutton55" onclick="blended()">
+        <i class="fa fa-retweet"></i> Ausblenden
+      </button>
+      <button class="marker" id="mybutton56" onclick="marker()">
+        <i class="fa fa-check"></i> Merken
+      </button>
+    </div>
+    <script></script>
+  </body>
 </html>

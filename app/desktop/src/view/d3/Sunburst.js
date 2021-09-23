@@ -34,7 +34,6 @@ Ext.define("SORISMA.view.d3.Sunburst", {
     //   // cls: 'style1',
     //   handler: "closeIframe",
     // },
-
     // {
     //   xtype: "button",
     //   id: 'markBtn',
@@ -47,6 +46,8 @@ Ext.define("SORISMA.view.d3.Sunburst", {
     //   tooltip: "Markierung in Liste",
     //   handler: "addToList",
     // },
-
   ],
+  listeners: {
+    show: "myShowFn",
+  },
 });

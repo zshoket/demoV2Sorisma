@@ -76,12 +76,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             //     },
             // ],
           },
-          // {
-          //   text: "Risiko Graphic",
-          //   iconCls: "x-fa fa-file",
-          //   xtype: "graphicview",
-          //   leaf: true,
-          // },
+          {
+            text: "Risiko Graphic",
+            iconCls: "x-fa fa-file",
+            xtype: "graphicview",
+            leaf: true,
+          },
           // {
           //   text: "Steckbriefe (Listenansicht)",
           //   iconCls: "x-fa fa-table",
@@ -122,6 +122,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             text: "Risikofelder (Datenansicht)",
             iconCls: "x-fa fa-barcode",
             xtype: "felderpanelview",
+            leaf: true,
+          },
+          {
+            text: "Merkliste Risikofelder",
+            iconCls: "x-fa fa-barcode",
+            xtype: "risikoFelderMerklisteView",
             leaf: true,
           },
           // {
