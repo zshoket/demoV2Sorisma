@@ -36,7 +36,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
 
       header: {
         style: {
-          backgroundColor: "#7f7f7f",
+          backgroundColor: "#a01818",
         },
       },
       margin: "0 10 0 0",
@@ -45,7 +45,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Char. Ursachen",
+      title: "Charakteristisch Ursachen",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -57,11 +57,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoursachen1}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoursachen1}</ul>',
       },
     },
     {
-      title: "Char. Risikotyp",
+      title: "Charakteristisch Risikotyp",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -73,11 +73,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisiken1}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisiken1}</ul>',
       },
     },
     {
-      title: "Char. Auswirkung",
+      title: "Charakteristisch Auswirkung",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -89,7 +89,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoauswirkungen1}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoauswirkungen1}</ul>',
       },
     },
     {
@@ -108,7 +108,8 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
           id: "checkbox1",
           xtype: "checkbox",
-          inputValue: "1",
+          cls: "mycheck",
+          value: "1",
           checked: false,
           width: 120,
         },
@@ -116,7 +117,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
 
     {
-      title: "Char. Ursachen",
+      title: "Charakteristisch Ursachen",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -128,11 +129,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoursachen2}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoursachen2}</ul>',
       },
     },
     {
-      title: "Char. Risikotyp",
+      title: "Charakteristisch Risikotyp",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -144,11 +145,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisiken2}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisiken2}</ul>',
       },
     },
     {
-      title: "Char. Auswirkung",
+      title: "Charakteristisch Auswirkung",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -160,7 +161,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoauswirkungen2}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoauswirkungen2}</ul>',
       },
     },
     {
@@ -179,14 +180,15 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
           id: "checkbox2",
           xtype: "checkbox",
-          inputValue: "2",
+          cls: "mycheck",
+          value: "2",
           width: 120,
         },
       ],
     },
 
     {
-      title: "Char. Ursachen",
+      title: "Charakteristisch Ursachen",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -198,11 +200,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoursachen3}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoursachen3}</ul>',
       },
     },
     {
-      title: "Char. Risikotyp",
+      title: "Charakteristisch Risikotyp",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -214,11 +216,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisiken3}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisiken3}</ul>',
       },
     },
     {
-      title: "Char. Auswirkung",
+      title: "Charakteristisch Auswirkung",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -230,7 +232,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoauswirkungen3}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoauswirkungen3}</ul>',
       },
     },
     {
@@ -249,14 +251,15 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
           id: "checkbox3",
           xtype: "checkbox",
-          inputValue: "3",
+          cls: "mycheck",
+          value: "3",
           width: 120,
         },
       ],
     },
 
     {
-      title: "Char. Ursachen",
+      title: "Charakteristisch Ursachen",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -268,11 +271,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoursachen4}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoursachen4}</ul>',
       },
     },
     {
-      title: "Char. Risikotyp",
+      title: "Charakteristisch Risikotyp",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -284,11 +287,11 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisiken4}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisiken4}</ul>',
       },
     },
     {
-      title: "Char. Auswirkung",
+      title: "Charakteristisch Auswirkung",
       width: "26.5%",
       height: "18%",
       split: true,
@@ -300,7 +303,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
       margin: "0 10 0 0",
       bind: {
-        html: '<h2 style="font-size:14px">{data_charRisikoauswirkungen4}</h2>',
+        html: '<ul style="font-size:14px">{data_charRisikoauswirkungen4}</ul>',
       },
     },
     {
@@ -319,7 +322,8 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         {
           id: "checkbox4",
           xtype: "checkbox",
-          inputValue: "4",
+          cls: "mycheck",
+          value: "4",
           width: 120,
         },
       ],
@@ -341,7 +345,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     //       height: "60%",
     //       header: false,
     //       bind: {
-    //         html: '<ul style="font-size:14px">{data_kurzbeschreibung}</ul>',
+    //         html: '<ul style="font-size:15px">{data_kurzbeschreibung}</ul>',
     //       },
     //     },
     // {
@@ -358,7 +362,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     //   },
     //   margin: "0 10 0 0",
     //   bind: {
-    //     html: '<p style="font-size:14px">{data_riskLevel}</p>',
+    //     html: '<ul style="font-size:14px">{data_riskLevel}</ul>',
     //   },
     // items: [
     //     {
@@ -409,7 +413,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     //       },
     //       margin: "0 10 0 0",
     //       bind: {
-    //         html: '<ul style="font-size:14px">{data_dimension}</ul>',
+    //         html: '<ul style="font-size:15px">{data_dimension}</ul>',
     //       },
     //     },
     //     {
@@ -429,7 +433,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     //       },
     //       split: true,
     //       bind: {
-    //         html: '<ul style="font-size:14px">{data_stossrichtung}</ul>',
+    //         html: '<ul style="font-size:15px">{data_stossrichtung}</ul>',
     //       },
     //     },
     //   ],
@@ -445,7 +449,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     //     },
     //   },
     //   bind: {
-    //     html: '<ul style="font-size:14px">{data_charRisikoursachen}</ul>',
+    //     html: '<ul style="font-size:15px">{data_charRisikoursachen}</ul>',
     //   },
     // },
     // {
@@ -459,7 +463,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     //     },
     //   },
     //   bind: {
-    //     html: '<ul style="font-size:14px">{data_charRisiken}</ul>',
+    //     html: '<ul style="font-size:15px">{data_charRisiken}</ul>',
     //   },
     // },
     // {
@@ -473,7 +477,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     //     },
     //   },
     //   bind: {
-    //     html: '<ul style="font-size:14px">{data_charRisikoauswirkungen}</ul>',
+    //     html: '<ul style="font-size:15px">{data_charRisikoauswirkungen}</ul>',
     //   },
     // },
     {
@@ -506,7 +510,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
           handler: "onButtonBack",
         },
         {
-          text: "Add to Marklist",
+          text: "Mark & ViewList",
           xtype: "button",
           docked: true,
           width: "12%",
@@ -520,4 +524,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       ],
     },
   ],
+  listeners: {
+    show: "correctUrl",
+  },
 });

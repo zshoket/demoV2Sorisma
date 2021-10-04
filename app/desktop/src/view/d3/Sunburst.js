@@ -15,7 +15,7 @@ Ext.define("SORISMA.view.d3.Sunburst", {
     "Ext.navigation.View",
     "Ext.container.*",
   ],
-  scrollable: false,
+  scrollable: true,
 
   defaultType: "panel",
 

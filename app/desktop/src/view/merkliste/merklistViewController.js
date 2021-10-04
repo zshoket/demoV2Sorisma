@@ -29,126 +29,41 @@ Ext.define("SORISMA.view.merkliste.merklistViewController", {
       ]);
   },
 
-  onItemSelected: function (grid, info) {
-    debugger;
-    var myId = info.record.get("id");
-    var url1 = "http://51.15.76.202:3001/api/documents/" + myId + "/risikos";
-    const getJSON = async (url) => {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(response.statusText);
+  clrList: function (grid, info) {
+    var me = this;
+    me.getView().getStore().removeAll();
 
-        const data = await response.json();
-        return data;
-      } catch (error) {
-        return error;
-      }
-    };
-    getJSON(url1)
-      .then((data) => {
-        if (data.length == 0) {
-          Ext.Msg.alert("Kein Risiko gefunden");
-        } else {
-          Ext.create("Ext.window.Window", {
-            title: "Verbundene Risiken",
-            height: "50%",
-            width: "30%",
-            layout: "fit",
-            scrollable: true,
-            closeable: false,
-            bbar: [
-              {
-                // text: "schließen",
-                iconCls: "x-fa fa-3x fa-times",
-                tooltip: "schließen",
-                handler: function () {
-                  this.up("window").close();
-                },
-              },
-            ],
-            autoShow: true,
-            items: {
-              xtype: "grid",
-              store: { type: "arraystore" },
-              scrollable: true,
-              border: true,
-              columns: [
-                {
-                  text: "Risk Name",
-                  editable: false,
-                  dataIndex: "name",
-                  width: 250,
-                  cell: { userCls: "bold" },
-                },
-                {
-                  text: "Dimension",
-                  dataIndex: "dimension",
-                  editable: false,
-                  width: 150,
-                },
-              ],
-              store: Ext.create("Ext.data.ArrayStore", {
-                extend: "Ext.data.Store",
-                alias: "store.arraystore",
-                model: "SORISMA.model.Risikos",
-                proxy: {
-                  type: "ajax",
-                  url: url1,
-                  headers: {
-                    Accept: "application/json",
-                  },
-                  reader: {
-                    type: "json",
-                    rootProperty: "items",
-                  },
-                },
-                autoLoad: true,
-              }),
-            },
-          }).show();
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    me.getView().getStore().sync();
+
+    window.localStorage.clear();
   },
-  //     var record = records[0];
-  //     var newId = record.get('id');
-  //     if (newId == '5f99767055574829c05cc725') {
-  //         this.redirectTo('#felderpanelview/0');
-  //     } else if (newId == '5f9982c4205b621070403da6') {
-  //         this.redirectTo('#felderpanelview/1');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403da7') {
-  //         this.redirectTo('#felderpanelview/2');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403da8') {
-  //         this.redirectTo('#felderpanelview/3');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403da9') {
-  //         this.redirectTo('#felderpanelview/4');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403daa') {
-  //         this.redirectTo('#felderpanelview/5');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403dab') {
-  //         this.redirectTo('#felderpanelview/6');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403dac') {
-  //         this.redirectTo('#felderpanelview/7');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403dad') {
-  //         this.redirectTo('#felderpanelview/8');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403dae') {
-  //         this.redirectTo('#felderpanelview/9');
-  //     }
-  //     else if (newId == '5f9982c4205b621070403daf') {
-  //         this.redirectTo('#felderpanelview/10');
-  //     }
-  //     else {
-  //         Ext.Msg.alert('Keine Risikofelder Datei gefunden');
-  //     }
 
-  // }
+  init: function () {
+    this.control({
+      checkcolumn: {
+        checkchange: this.checkboxChanged,
+      },
+    });
+  },
+
+  removeToList: function (record) {
+    debugger;
+    var selectedSuccessValues = Ext.getCmp("chkid").getDataIndex();
+    if (selectedSuccessValues == "active") {
+      var index = this.data.indexOf(record);
+      this.data.removeAt(index);
+      if (this.pruneModifiedRecords) {
+        this.modified.remove(record);
+      }
+      if (this.snapshot) {
+        this.snapshot.remove(record);
+      }
+      this.fireEvent("remove", this, record, index);
+    }
+    // console.log(selectedSuccessValues);
+  },
+
+  getToRiskImg: function () {
+    this.redirectTo("#graphicview");
+  },
 });

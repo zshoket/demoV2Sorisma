@@ -175,14 +175,14 @@ Ext.define("SORISMA.store.bredcrumbStore", {
         text: "Risikofelder (Datenansicht)",
         xtype: "felderpanelview",
         leaf: true,
-        children: [
-          {
-            text: "Risikofelder (Datenansicht)",
-            // iconCls: "x-fa fa-barcode",
-            // xtype: "felderpanelview",
-            // leaf: true,
-          },
-        ],
+        // children: [
+        //   {
+        //     text: "Risikofelder (Datenansicht)",
+        //     // iconCls: "x-fa fa-barcode",
+        //     // xtype: "felderpanelview",
+        //     // leaf: true,
+        //   },
+        // ],
       },
     ],
   },

@@ -1,17 +1,16 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    /* padding: 5px; */
-    background: var(--bodycolor);
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding: 5px; */
+  background: var(--bodycolor);
 }
 
 .container .tool {
-    
-    position: absolute;
-    /* background-color: #7fc185;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: #7fc185;  */
+  background-color: transparent;
   border: none;
   top: 8.6%;
-    left: 29%;
+  left: 29%;
   color: white;
   padding: 12.5px;
   text-align: center;
@@ -22,17 +21,17 @@ body {
   cursor: pointer;
 }
 
-.kompetenz{
-    border-radius: 95%;
+.kompetenz {
+  border-radius: 95%;
 }
 
 .container .automDaten {
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 3.1%;
-    left: 29%;
+  left: 29%;
   color: white;
   padding: 13.5px;
   text-align: center;
@@ -43,17 +42,17 @@ body {
   cursor: pointer;
 }
 
-.automDaten{
-    border-radius: 95%;
+.automDaten {
+  border-radius: 95%;
 }
 
 .container .wissenMan {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 16%;
-    left: 29%;
+  left: 29%;
   color: white;
   padding: 13.5px;
   text-align: center;
@@ -64,17 +63,17 @@ body {
   cursor: pointer;
 }
 
-.wissenMan{
-    border-radius: 90%;
+.wissenMan {
+  border-radius: 90%;
 }
 
 .container .digiKanban {
-   position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 9.8%;
-    left: 35.5%;
+  left: 35.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -85,17 +84,17 @@ body {
   cursor: pointer;
 }
 
-.digiKanban{
-    border-radius: 90%;
+.digiKanban {
+  border-radius: 90%;
 }
 
 .container .toolRemoteTeam {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 11.8%;
-    left: 37.3%;
+  left: 37.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -106,15 +105,17 @@ body {
   cursor: pointer;
 }
 
-.toolRemoteTeam{ border-radius: 90%;}
+.toolRemoteTeam {
+  border-radius: 90%;
+}
 
 .container .soIntranet {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 13%;
-    left: 41.2%;
+  left: 41.2%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -125,15 +126,17 @@ body {
   cursor: pointer;
 }
 
-.soIntranet {border-radius: 90%;}
+.soIntranet {
+  border-radius: 90%;
+}
 
 .container .kIbeleg {
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 25%;
-    left: 28.5%;
+  left: 28.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -144,15 +147,17 @@ body {
   cursor: pointer;
 }
 
-.kIbeleg{border-radius: 90%;}
+.kIbeleg {
+  border-radius: 90%;
+}
 
 .container .harmonIT {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 33.7%;
-    left: 29.3%;
+  left: 29.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -163,15 +168,17 @@ body {
   cursor: pointer;
 }
 
-.harmonIT{border-radius: 90%;}
+.harmonIT {
+  border-radius: 90%;
+}
 
 .container .remoteAss {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 7%;
-    left: 22.3%;
+  left: 22.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -182,15 +189,17 @@ body {
   cursor: pointer;
 }
 
-.remoteAss{border-radius: 90%;}
+.remoteAss {
+  border-radius: 90%;
+}
 
 .container .drohnen {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 15%;
-    left: 26%;
+  left: 26%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -201,17 +210,17 @@ body {
   cursor: pointer;
 }
 
-.drohnen{
-    border-radius: 90%;
+.drohnen {
+  border-radius: 90%;
 }
 
 .container .smartServ {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 21%;
-    left: 21%;
+  left: 21%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -222,15 +231,17 @@ body {
   cursor: pointer;
 }
 
-.smartServ{border-radius: 90%;}
+.smartServ {
+  border-radius: 90%;
+}
 
-.preMaintain{
-      position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.preMaintain {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 25.4%;
-    left: 26.7%;
+  left: 26.7%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -241,15 +252,17 @@ body {
   cursor: pointer;
 }
 
-.preMaintain{border-radius: 90%;}
+.preMaintain {
+  border-radius: 90%;
+}
 
-.kiVorAnal{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.kiVorAnal {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 35%;
-    left: 26.7%;
+  left: 26.7%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -260,15 +273,17 @@ body {
   cursor: pointer;
 }
 
-.kiVorAnal{border-radius:90%}
+.kiVorAnal {
+  border-radius: 90%;
+}
 
-.lagerVer{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.lagerVer {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 20%;
-    left: 11.7%;
+  left: 11.7%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -279,15 +294,17 @@ body {
   cursor: pointer;
 }
 
-.lagerVer{border-radius: 90%;}
+.lagerVer {
+  border-radius: 90%;
+}
 
 .fahlTrans {
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 25.8%;
-    left: 16.5%;
+  left: 16.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -298,15 +315,17 @@ body {
   cursor: pointer;
 }
 
-.fahlTrans{border-radius: 90%;}
+.fahlTrans {
+  border-radius: 90%;
+}
 
-.cloudDaten{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.cloudDaten {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 34%;
-    left: 15.5%;
+  left: 15.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -317,15 +336,17 @@ body {
   cursor: pointer;
 }
 
-.cloudDaten{border-radius: 90%;}
+.cloudDaten {
+  border-radius: 90%;
+}
 
-.predAnal{
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.predAnal {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 41.8%;
-    left: 13.5%;
+  left: 13.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -336,15 +357,17 @@ body {
   cursor: pointer;
 }
 
-.predAnal{border-radius: 90%;}
+.predAnal {
+  border-radius: 90%;
+}
 
 .vertrieb {
-     position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 45%;
-    left: 14.7%;
+  left: 14.7%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -355,15 +378,17 @@ body {
   cursor: pointer;
 }
 
-.vertrieb{border-radius: 90%;}
+.vertrieb {
+  border-radius: 90%;
+}
 
-.toolAnford{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.toolAnford {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 49.5%;
-    left: 15.3%;
+  left: 15.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -374,15 +399,17 @@ body {
   cursor: pointer;
 }
 
-.toolAnford{border-radius: 90%;}
+.toolAnford {
+  border-radius: 90%;
+}
 
-.vrVertrieb{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.vrVertrieb {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
   top: 42.8%;
-    left: 8.5%;
+  left: 8.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -393,17 +420,17 @@ body {
   cursor: pointer;
 }
 
-.vrVertrieb{
-    border-radius: 90%;
+.vrVertrieb {
+  border-radius: 90%;
 }
 
-.dashboard{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.dashboard {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 49.5%;
-    left: 10.6%;
+  top: 49.5%;
+  left: 10.6%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -414,17 +441,17 @@ body {
   cursor: pointer;
 }
 
-.dashboard{
-    border-radius: 90%;
+.dashboard {
+  border-radius: 90%;
 }
 
-.socialMedia{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.socialMedia {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 56%;
-    left: 11.3%;
+  top: 56%;
+  left: 11.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -435,17 +462,17 @@ body {
   cursor: pointer;
 }
 
-.socialMedia{
-    border-radius: 90%;
+.socialMedia {
+  border-radius: 90%;
 }
 
-.addFertig{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.addFertig {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 46.5%;
-    left: 26.3%;
+  top: 46.5%;
+  left: 26.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -456,17 +483,17 @@ body {
   cursor: pointer;
 }
 
-.addFertig{
-      border-radius: 90%;
+.addFertig {
+  border-radius: 90%;
 }
 
-.autoQuali{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.autoQuali {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 53.7%;
-    left: 21%;
+  top: 53.7%;
+  left: 21%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -477,17 +504,17 @@ body {
   cursor: pointer;
 }
 
-.autoQuali{
-      border-radius: 90%;
+.autoQuali {
+  border-radius: 90%;
 }
 
-.montAssis{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.montAssis {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 57.8%;
-    left: 26.5%;
+  top: 57.8%;
+  left: 26.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -498,19 +525,17 @@ body {
   cursor: pointer;
 }
 
-.montAssis{
-      border-radius: 90%;
+.montAssis {
+  border-radius: 90%;
 }
 
-
-
-.digAuftrag{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.digAuftrag {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 56%;
-    left: 19.5%;
+  top: 56%;
+  left: 19.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -521,17 +546,17 @@ body {
   cursor: pointer;
 }
 
-.digAuftrag{
-      border-radius: 90%;
+.digAuftrag {
+  border-radius: 90%;
 }
 
-.arBasierte{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.arBasierte {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 63.5%;
-    left: 22%;
+  top: 63.5%;
+  left: 22%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -542,15 +567,17 @@ body {
   cursor: pointer;
 }
 
-.arBasierte{border-radius: 90%;}
+.arBasierte {
+  border-radius: 90%;
+}
 
-.betriebMasch{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.betriebMasch {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 64%;
-    left: 15.5%;
+  top: 64%;
+  left: 15.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -561,17 +588,17 @@ body {
   cursor: pointer;
 }
 
-.betriebMasch{
-      border-radius: 90%;
+.betriebMasch {
+  border-radius: 90%;
 }
 
-.manuSystem{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.manuSystem {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 70.8%;
-    left: 20.2%;
+  top: 70.8%;
+  left: 20.2%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -582,18 +609,17 @@ body {
   cursor: pointer;
 }
 
-.manuSystem{
-      border-radius: 90%;
+.manuSystem {
+  border-radius: 90%;
 }
 
-
-.indutrRobot{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.indutrRobot {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 73.7%;
-    left: 26.5%;
+  top: 73.7%;
+  left: 26.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -604,34 +630,17 @@ body {
   cursor: pointer;
 }
 
-.indutrRobot{
-      border-radius: 90%;
+.indutrRobot {
+  border-radius: 90%;
 }
 
-.predLog{ position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.predLog {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 48%;
-    left: 29%;
-  color: white;
-  padding: 13px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  /* font-size: 16px; */
-  margin: 1px 0.5px;
-  cursor: pointer;}
-
-.predLog{border-radius: 90%;}
-
-.perpekt{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
-  border: none;
-   top: 53.5%;
-    left: 29.5%;
+  top: 48%;
+  left: 29%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -642,15 +651,17 @@ body {
   cursor: pointer;
 }
 
-.perpekt{border-radius: 90%;}
+.predLog {
+  border-radius: 90%;
+}
 
-.eProcure{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.perpekt {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 69.5%;
-    left: 32%;
+  top: 53.5%;
+  left: 29.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -661,15 +672,17 @@ body {
   cursor: pointer;
 }
 
-.eProcure{border-radius: 90%;}
+.perpekt {
+  border-radius: 90%;
+}
 
-.techForen{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.eProcure {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 48%;
-    left: 44.8%;
+  top: 69.5%;
+  left: 32%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -680,15 +693,17 @@ body {
   cursor: pointer;
 }
 
-.techForen{border-radius: 90%;}
+.eProcure {
+  border-radius: 90%;
+}
 
-.grossGrupe{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.techForen {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 55.3%;
-    left: 45%;
+  top: 48%;
+  left: 44.8%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -699,15 +714,17 @@ body {
   cursor: pointer;
 }
 
-.grossGrupe{border-radius: 90%;}
+.techForen {
+  border-radius: 90%;
+}
 
-.kundenInteg{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.grossGrupe {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 55%;
-    left: 38.7%;
+  top: 55.3%;
+  left: 45%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -718,15 +735,17 @@ body {
   cursor: pointer;
 }
 
-.kundenInteg{border-radius: 90%;}
+.grossGrupe {
+  border-radius: 90%;
+}
 
-
-.toolAnforderung{position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.kundenInteg {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 41.5%;
-    left: 44.2%;
+  top: 55%;
+  left: 38.7%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -734,16 +753,20 @@ body {
   display: inline-block;
   /* font-size: 16px; */
   margin: 1px 0.5px;
-  cursor: pointer;}
+  cursor: pointer;
+}
 
-.toolAnforderung{border-radius: 90%;}
+.kundenInteg {
+  border-radius: 90%;
+}
 
-.kollabProd{position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.toolAnforderung {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 46%;
-    left: 39.8%;
+  top: 41.5%;
+  left: 44.2%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -751,16 +774,40 @@ body {
   display: inline-block;
   /* font-size: 16px; */
   margin: 1px 0.5px;
-  cursor: pointer;}
-.kollabProd{border-radius: 90%;}
+  cursor: pointer;
+}
+
+.toolAnforderung {
+  border-radius: 90%;
+}
+
+.kollabProd {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
+  border: none;
+  top: 46%;
+  left: 39.8%;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 16px; */
+  margin: 1px 0.5px;
+  cursor: pointer;
+}
+.kollabProd {
+  border-radius: 90%;
+}
 
 .designThin {
-position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 40.8%;
-    left: 39.4%;
+  top: 40.8%;
+  left: 39.4%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -771,15 +818,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.designThin{border-radius: 90%;}
+.designThin {
+  border-radius: 90%;
+}
 
-.plmSys{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.plmSys {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 45%;
-    left: 37.3%;
+  top: 45%;
+  left: 37.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -790,15 +839,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.plmSys{border-radius: 90%;}
+.plmSys {
+  border-radius: 90%;
+}
 
-.agileTeam{
- position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.agileTeam {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 51.8%;
-    left: 36%;
+  top: 51.8%;
+  left: 36%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -808,54 +859,17 @@ position: absolute;
   margin: 1px 0.5px;
   cursor: pointer;
 }
-.agileTeam{border-radius: 90%;}
-
-.socRecruit{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
-  border: none;
-   top: 38.4%;
-    left: 42%;
-  color: white;
-  padding: 13px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  /* font-size: 16px; */
-  margin: 1px 0.5px;
-  cursor: pointer;
+.agileTeam {
+  border-radius: 90%;
 }
 
-.socRecruit{border-radius: 90%;}
-
-.digiPersonal{
-position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.socRecruit {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 36.6%;
-    left: 38.3%;
-  color: white;
-  padding: 13px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  /* font-size: 16px; */
-  margin: 1px 0.5px;
-  cursor: pointer;
-
-}
-
-.digiPersonal{border-radius: 90%;}
-
-.chngMan{
-position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
-  border: none;
-   top: 28%;
-    left: 37%;
+  top: 38.4%;
+  left: 42%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -866,34 +880,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.chngMan{border-radius: 90%;}
-
-
-.anpasungKultur{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
-  border: none;
-   top: 29.4%;
-    left: 38.7%;
-  color: white;
-  padding: 13px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  /* font-size: 16px; */
-  margin: 1px 0.5px;
-  cursor: pointer;
+.socRecruit {
+  border-radius: 90%;
 }
-.anpasungKultur{border-radius: 90%;}
 
-.neuFuhrung{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.digiPersonal {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-    top: 24.5%;
-    left: 37.7%;
+  top: 36.6%;
+  left: 38.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -904,15 +901,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.neuFuhrung{border-radius: 90%;}
+.digiPersonal {
+  border-radius: 90%;
+}
 
-.schlung{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.chngMan {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 37.7%;
-    left: 46%;
+  top: 28%;
+  left: 37%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -923,15 +922,37 @@ position: absolute;
   cursor: pointer;
 }
 
-.schlung{border-radius: 90%;}
+.chngMan {
+  border-radius: 90%;
+}
 
-.flexArbite{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.anpasungKultur {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 33.3%;
-    left: 48%;
+  top: 29.4%;
+  left: 38.7%;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 16px; */
+  margin: 1px 0.5px;
+  cursor: pointer;
+}
+.anpasungKultur {
+  border-radius: 90%;
+}
+
+.neuFuhrung {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
+  border: none;
+  top: 24.5%;
+  left: 37.7%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -942,15 +963,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.flexArbite{border-radius: 90%;}
+.neuFuhrung {
+  border-radius: 90%;
+}
 
-.webBasierte{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.schlung {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 30%;
-    left: 45%;
+  top: 37.7%;
+  left: 46%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -961,15 +984,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.webBasierte{border-radius: 90%;}
+.schlung {
+  border-radius: 90%;
+}
 
-.kompMan{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.flexArbite {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 26.8%;
-    left: 45.3%;
+  top: 33.3%;
+  left: 48%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -980,15 +1005,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.kompMan{border-radius: 90%;}
+.flexArbite {
+  border-radius: 90%;
+}
 
-.konsFehler{
-position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.webBasierte {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 29.7%;
-    left: 47.3%;
+  top: 30%;
+  left: 45%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -999,15 +1026,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.konsFehler{border-radius: 90%;}
+.webBasierte {
+  border-radius: 90%;
+}
 
-.befRate{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.kompMan {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 23.5%;
-    left: 46.5%;
+  top: 26.8%;
+  left: 45.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -1018,15 +1047,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.befRate{border-radius: 90%;}
+.kompMan {
+  border-radius: 90%;
+}
 
-.expertDem{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.konsFehler {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 20.5%;
-    left: 43.5%;
+  top: 29.7%;
+  left: 47.3%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -1037,15 +1068,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.expertDem{border-radius: 90%;}
+.konsFehler {
+  border-radius: 90%;
+}
 
-.incePro{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.befRate {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 18.7%;
-    left: 41%;
+  top: 23.5%;
+  left: 46.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -1056,15 +1089,17 @@ position: absolute;
   cursor: pointer;
 }
 
-.incePro{border-radius: 90%;}
+.befRate {
+  border-radius: 90%;
+}
 
-.betrGesund{
-    position: absolute;
-    /* background-color: red;  */
-    background-color: transparent;
+.expertDem {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
   border: none;
-   top: 16.2%;
-    left: 42.5%;
+  top: 20.5%;
+  left: 43.5%;
   color: white;
   padding: 13px;
   text-align: center;
@@ -1075,10 +1110,54 @@ position: absolute;
   cursor: pointer;
 }
 
-.betrGesund{border-radius: 90%;}
+.expertDem {
+  border-radius: 90%;
+}
 
-.ausblend{
-  position:absolute;
+.incePro {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
+  border: none;
+  top: 18.7%;
+  left: 41%;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 16px; */
+  margin: 1px 0.5px;
+  cursor: pointer;
+}
+
+.incePro {
+  border-radius: 90%;
+}
+
+.betrGesund {
+  position: absolute;
+  /* background-color: red;  */
+  background-color: transparent;
+  border: none;
+  top: 16.2%;
+  left: 42.5%;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 16px; */
+  margin: 1px 0.5px;
+  cursor: pointer;
+}
+
+.betrGesund {
+  border-radius: 90%;
+}
+
+.ausblend {
+  position: absolute;
   top: 81%;
   left: 80%;
   width: 10%;
@@ -1088,15 +1167,14 @@ position: absolute;
   border-color: transparent;
   color: #a01818;
   /* display: inline-block; */
-  cursor:pointer;
+  cursor: pointer;
   outline: 0 !important;
   display: none;
-   font-weight:550;
+  font-weight: 550;
 }
 
-.marker
-{
-    position:absolute;
+.marker {
+  position: absolute;
   top: 81%;
   left: 70%;
   width: 10%;
@@ -1106,8 +1184,22 @@ position: absolute;
   border-color: transparent;
   color: #a01818;
   /* display: inline-block; */
-  cursor:pointer;
+  cursor: pointer;
   outline: 0 !important;
   display: none;
-   font-weight:550;
+  font-weight: 550;
+}
+
+#target {
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  background: #a01818;
+  top: 1%;
+  left: 1%;
+  padding: 10px;
+  color: aliceblue;
+  border: 2px solid #999;
+  margin: 0px;
+  float: left;
 }

@@ -34,15 +34,10 @@ Ext.define("SORISMA.view.d3.SunburstController", {
     } else {
       console.log(localStorage.storageName2);
     }
-    // if (window.location !== window.parent.location) {
-    //   alert("I have an iframe");
-    // } else {
-    //   console.log("Not an Iframe");
-    // }
   },
 
   myShowFn: function () {
-    window.localStorage.clear();
+    // window.localStorage.clear();
     // document.getElementById("mainChart").contentWindow.location.reload(true);
   },
 });

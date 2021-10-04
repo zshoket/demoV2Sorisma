@@ -18,7 +18,8 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
     {
       text: "Auswahl",
       xtype: "checkcolumn",
-      dataIndex: 'active',
+      id: "chkid",
+      dataIndex: "active",
       editable: false,
       width: 220,
     },
@@ -61,9 +62,44 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
             
         }  */
   ],
+  items: [
+    {
+      xtype: "button",
+      floating: true,
+      width: "10%",
+      text: "Liste löschen",
+      iconCls: "x-fa fa-retweet",
+      style: { position: "absolute", left: "82%", top: "85%" },
+      docked: "bottom",
+      tooltip: "Komplettliste löschen",
+      handler: "clrList",
+    },
+    {
+      xtype: "button",
+      width: "14%",
+      floating: true,
+      text: "Steckbrief entfernen",
+      iconCls: "x-fa fa-check",
+      style: { position: "absolute", left: "68.5%", top: "85%" },
+      docked: "bottom",
+      tooltip: "Ausgewählten Steckbrief entfernen",
+      handler: "removeToList",
+    },
+    {
+      xtype: "button",
+      width: "17%",
+      floating: true,
+      text: "Aktive Risikofelder anzeigen",
+      iconCls: "x-fa fa-align-justify",
+      style: { position: "absolute", left: "52%", top: "85%" },
+      docked: "bottom",
+      tooltip: "Aktive Risikofelder anzeigen",
+      handler: "getToRiskImg",
+    },
+  ],
 
   listeners: {
     select: "onItemSelected",
-    show: "onShowFn"
+    show: "onShowFn",
   },
 });

@@ -92,11 +92,21 @@
         });
       }
       function marker() {
-        document.querySelectorAll("iframe").forEach(function (elem) {
-          // elem.parentNode.removeChild(elem);
-          // console.log(localStorage.storageName2);
-          // alert("steckbrief added to list");
-        });
+        // document.querySelectorAll("iframe").forEach(function (elem) {
+        var fadeTarget = document.getElementById("target");
+        fadeTarget.style.visibility = "visible";
+        var fadeEffect = setInterval(function () {
+          if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+          }
+          if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+          } else {
+            clearInterval(fadeEffect);
+          }
+        }, 300);
+        fadeTarget.style = "";
+        // });
       }
     </script>
   </head>
@@ -519,6 +529,7 @@
       <button class="marker" id="mybutton56" onclick="marker()">
         <i class="fa fa-check"></i> Merken
       </button>
+      <div id="target" style="visibility: hidden">Steckbrief markiert</div>
     </div>
     <script></script>
   </body>
