@@ -50,11 +50,18 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             leaf: true,
           },
           {
+            text: "Risiko Identifikation",
+            iconCls: "x-fa fa-file",
+            xtype: "graphicview",
+            leaf: true,
+          },
+          {
             text: "Digitaler Reifegrad",
             iconCls: "fa fa-bookmark",
             xtype: "varEin",
             leaf: true,
           },
+
           {
             text: "Steckbriefe (Datenansicht)",
             iconCls: "x-fa fa-table",
@@ -76,12 +83,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             //     },
             // ],
           },
-          {
-            text: "Risiko Graphic",
-            iconCls: "x-fa fa-file",
-            xtype: "graphicview",
-            leaf: true,
-          },
+
           // {
           //   text: "Steckbriefe (Listenansicht)",
           //   iconCls: "x-fa fa-table",
@@ -126,23 +128,23 @@ Ext.define("SORISMA.view.main.MainViewModel", {
           },
           {
             text: "Merkliste Risikofelder",
-            iconCls: "x-fa fa-barcode",
+            iconCls: "x-fa fa-database",
             xtype: "risikoFelderMerklisteView",
             leaf: true,
           },
-          // {
-          //   text: "Risikobewertung",
-          //   iconCls: "x-fa fa-barcode",
-          //   xtype: "risikomatrix",
-          //   leaf: true,
-          // },
+          {
+            text: "Risikobewertung",
+            iconCls: "x-fa fa-bars",
+            xtype: "risikomatrix",
+            leaf: true,
+          },
 
-          // {
-          //   text: "RadarChart Variante 2",
-          //   iconCls: "fa fa-stroopwafel fa-spin",
-          //   xtype: "varZwei",
-          //   leaf: true,
-          // },
+          {
+            text: "Spin Diagram",
+            iconCls: "x-fa fa-bullseye",
+            xtype: "varZwei",
+            leaf: true,
+          },
         ],
       },
     },

@@ -130,31 +130,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelViewController", {
   },
 
   checkAll: function () {
-    // var button = Ext.ComponentQuery.query("checkbox2[type=checkbox]", this);
-    // button.setValue(true);
-    // this.redirectTo("#risikoFelderMerklisteView");
-    // Ext.ComponentQuery.query('checkbox[id="checkbox2"]');
-    // var compont = parentControl.getComponent("checkbox2").setValue(true);
-
-    // var selection = Ext.getCmp("checkbox4").getValue();
-    // if (selection == 4) {
-    //   Ext.Msg.alert(selection);
-    // } else {
-    //   alert("Try Again");
-    // }
-    debugger;
-    var newArray = [];
-    var x = "";
-    for (var i = 1; i <= 4; i++) {
-      add(i);
-    }
-    function add(i) {
-      var butID = "checkbox" + i;
-      var selectedSuccessValues = Ext.getCmp(butID).getChecked();
-      newArray.push(selectedSuccessValues);
-
-      console.log(newArray);
-    }
+    this.redirectTo("#risikoFelderMerklisteView");
   },
 
   correctUrl: function () {

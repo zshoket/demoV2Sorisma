@@ -14,15 +14,21 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
       autoConfirm: false,
     },
   },
+
+  selectable: {
+    columns: false,
+    rows: true, // Can select cells and rows, but not columns
+    checkbox: true, // Uses the draggable selection extender
+  },
   columns: [
-    {
-      text: "Auswahl",
-      xtype: "checkcolumn",
-      id: "chkid",
-      dataIndex: "active",
-      editable: false,
-      width: 220,
-    },
+    // {
+    //   text: "Auswahl",
+    //   xtype: "checkcolumn",
+    //   id: "chkid",
+    //   dataIndex: "active",
+    //   editable: false,
+    //   width: 220,
+    // },
     {
       text: "Steckbrief",
       dataIndex: "name",
@@ -62,6 +68,7 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
             
         }  */
   ],
+
   items: [
     {
       xtype: "button",
@@ -95,6 +102,18 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
       docked: "bottom",
       tooltip: "Aktive Risikofelder anzeigen",
       handler: "getToRiskImg",
+    },
+    {
+      xtype: "button",
+      docked: true,
+      width: "10%",
+      floating: true,
+      style: { position: "absolute", bottom: "10px", left: "10px" },
+      docked: "bottom",
+      text: "Zurück",
+      iconCls: "x-fa fa-backward",
+      tooltip: "zurück zur Übersicht",
+      handler: "refreshGrid",
     },
   ],
 

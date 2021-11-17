@@ -133,26 +133,19 @@ Ext.define("SORISMA.view.main.MainViewController", {
       var homeController = homeview.getController();
       homeController.reloadData();
     }
-    centerview.setActiveItem(xtype);
-    menuview.setSelection(node);
-    var vm = this.getViewModel();
-    vm.set("heading", node.get("text"));
 
     var dataview = Ext.getCmp("dataview");
     if (dataview) {
       var dataController = dataview.getController();
       dataController.reloadRiskData();
     }
-    centerview.setActiveItem(xtype);
-    menuview.setSelection(node);
-    var vm = this.getViewModel();
-    vm.set("heading", node.get("text"));
 
     var felderview = Ext.getCmp("felderpanelview");
     if (felderview) {
       var felderController = felderview.getController();
       felderController.reloadFelderData();
     }
+
     centerview.setActiveItem(xtype);
     menuview.setSelection(node);
     var vm = this.getViewModel();

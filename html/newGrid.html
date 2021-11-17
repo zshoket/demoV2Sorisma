@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Risk Matrix</title>
+    <link rel="stylesheet" type="text/css" href="./newStyle.css" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
+
+    <script>
+     
+      var col, el;
+
+$("input[type=radio]").click(function() {
+   el = $(this);
+   col = el.data("col");
+   $("input[data-col=" + col + "]").prop("checked", false);
+   el.prop("checked", true);
+});
+    </script>
+
+</head>
+
+<body>
+
+<fieldset>
+  <legend>Schadenshöhe</legend>
+  <div class="wrapper">
+    <div class="grid-header">
+      <div class="header-item"></div>
+      <div class="header-item">
+        <div>Risk type 1</div>
+      </div>
+      <div class="header-item">Risk type 2</div>
+      <div class="header-item">Risk type 3</div>
+	        <div class="header-item">Risk type 4</div>
+    </div>
+  </div>
+  
+  <div class="grid-row">
+    <div class="flex-item">Mensch</div>
+       
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+	
+  </div>
+   <div class="grid-row">
+    <div class="flex-item">Mensch</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+   <div class="grid-row">
+    <div class="flex-item">Mensch</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+   <div class="grid-row">
+    <div class="flex-item">Mensch</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+   <div class="grid-row">
+    <div class="flex-item">Technologie</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+   <div class="grid-row">
+    <div class="flex-item">Technologie</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+   <div class="grid-row">
+    <div class="flex-item">Technologie</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+   <div class="grid-row">
+    <div class="flex-item">Organisation</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+     <div class="grid-row">
+    <div class="flex-item">Organisation</div>
+
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	
+  </div>
+     <div class="grid-row">
+    <div class="flex-item">Organisation</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+     <div class="grid-row">
+    <div class="flex-item">Organisation</div>
+    <label class="flex-item">
+      <input type="radio" value="impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="no-impact" name="consult-sig-sme"> <span></span>
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+	<label class="flex-item">
+      <input type="radio" value="not-reviewed" name="consult-sig-sme"> <span></span>
+    </label>
+  </div>
+
+  <legend>Eintrittswahrscheinlichkeit</legend>
+  <div>
+    <button class="btn btn-save">Submit</button>
+  </div>
+</fieldset>
+
+
+</body>
+
+</html>

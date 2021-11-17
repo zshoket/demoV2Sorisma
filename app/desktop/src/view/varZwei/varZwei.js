@@ -17,7 +17,9 @@ Ext.define("SORISMA.view.varZwei.varZwei", {
 
   defaultType: "panel",
 
-  // html: '<iframe name="radarChart1" src="html/funcTesting - Variation 5.html" scrolling="no" height="900px" width="100%" ></iframe>',
+  html: [
+    '<iframe src="html/FinalSpinDiagram.html" scrolling="no" height="900px" width="100%" ></iframe>',
+  ],
 
   // items: [
   //   {

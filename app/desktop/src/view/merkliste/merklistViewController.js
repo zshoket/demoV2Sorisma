@@ -38,6 +38,12 @@ Ext.define("SORISMA.view.merkliste.merklistViewController", {
     window.localStorage.clear();
   },
 
+  refreshGrid: function (grid, info) {
+    var me = this;
+    me.getView().getStore().sync();
+    this.redirectTo("#d3Sunburst");
+  },
+
   init: function () {
     this.control({
       checkcolumn: {
@@ -46,20 +52,22 @@ Ext.define("SORISMA.view.merkliste.merklistViewController", {
     });
   },
 
-  removeToList: function (record) {
-    debugger;
-    var selectedSuccessValues = Ext.getCmp("chkid").getDataIndex();
-    if (selectedSuccessValues == "active") {
-      var index = this.data.indexOf(record);
-      this.data.removeAt(index);
-      if (this.pruneModifiedRecords) {
-        this.modified.remove(record);
-      }
-      if (this.snapshot) {
-        this.snapshot.remove(record);
-      }
-      this.fireEvent("remove", this, record, index);
-    }
+  removeToList: function () {
+    var me = this;
+    var store = me.getView().getStore();
+    var selection = me.getView().getSelection();
+    store.remove(selection);
+
+    // var selectedSuccessValues = Ext.getCmp("chkid").getDataIndex();
+    // var store = me.getView().getStore();
+    // if (selectedSuccessValues == "active") {
+    //   var selection = me.getView();
+    //   if (selection) {
+    //     store.remove(selection);
+    //   }
+    // } else {
+    //   console.log("Not Working");
+    // }
     // console.log(selectedSuccessValues);
   },
 

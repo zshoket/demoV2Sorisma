@@ -45,9 +45,9 @@
       //     localStorage.removeItem("storageName");
       // }
 
-      //   document.oncontextmenu = function () {
-      //     return false;
-      //   };
+      document.oncontextmenu = function () {
+        return false;
+      };
 
       function myFunction() {
         // this.redirectTo('/#felderpanelview/5');
@@ -220,14 +220,35 @@
     document.addEventListener("DOMContentLoaded", function () {
       var lonValue = localStorage.getItem("storageName");
       //   console.log(lonValue);
-      for (var i = 6; i <= 10; i++) {
+
+      for (var i = 0; i <= 10; i++) {
         add(i);
       }
       function add(i) {
         var butID = "mybutton" + i;
-        var myelement = document.getElementById(butID);
-        myelement.classList.add("makegrey");
+        if (
+          butID == "mybutton0" ||
+          butID == "mybutton2" ||
+          butID == "mybutton7" ||
+          butID == "mybutton9" ||
+          butID == "mybutton6"
+        ) {
+          console.log("Not a Doctor");
+        } else {
+          var myelement = document.getElementById(butID);
+          myelement.classList.add("makegrey");
+        }
       }
+      // var lonValue = localStorage.getItem("storageName");
+      // //   console.log(lonValue);
+      // for (var i = 6; i <= 10; i++) {
+      //   add(i);
+      // }
+      // function add(i) {
+      //   var butID = "mybutton" + i;
+      //   var myelement = document.getElementById(butID);
+      //   myelement.classList.add("makegrey");
+      // }
     });
   </script>
 </html>

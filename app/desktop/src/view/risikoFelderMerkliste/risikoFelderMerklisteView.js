@@ -14,20 +14,25 @@ Ext.define("SORISMA.view.risikoFelderMerkliste.risikoFelderMerklisteView", {
       autoConfirm: false,
     },
   },
+  selectable: {
+    columns: false,
+    rows: true, // Can select cells and rows, but not columns
+    checkbox: true, // Uses the draggable selection extender
+  },
   columns: [
-    {
-      text: "Auswahl",
-      xtype: "checkcolumn",
-      // dataIndex: 'active',
-      editable: false,
-      width: 220,
-    },
+    // {
+    //   text: "Auswahl",
+    //   xtype: "checkcolumn",
+    //   // dataIndex: 'active',
+    //   editable: false,
+    //   width: 220,
+    // },
     {
       text: "Risikofelder",
       dataIndex: "felderName",
       editable: false,
       cell: { userCls: "bold" },
-      width: 660,
+      width: 250,
     },
     {
       text: "Dimension",
@@ -35,31 +40,55 @@ Ext.define("SORISMA.view.risikoFelderMerkliste.risikoFelderMerklisteView", {
       editable: false,
       width: 200,
     },
+
+    {
+      text: "Charakteristische Risiken",
+      dataIndex: "charRisiken",
+      editable: false,
+      width: 450,
+    },
     {
       text: "Risikolevel",
       dataIndex: "riskLevel",
       editable: false,
-      width: 350,
+      width: 150,
     },
-
-    /* {
-            text: 'Risiken anzeigen',
-            width: 140,
-            hideable: false,
-            sortable: false,
-            disableSelection: true,
-            menuDisabled: true,
-            rowSelect: false,
-            cell: {
-                tools: {
-                    approve: {
-                    iconCls: "x-fa fa-paperclip",
-                    handler: 'onMyClick'
-                    }
-                 }
-            }
-            
-        }  */
+  ],
+  items: [
+    {
+      xtype: "button",
+      floating: true,
+      width: "10%",
+      text: "Liste löschen",
+      iconCls: "x-fa fa-retweet",
+      style: { position: "absolute", left: "82%", top: "85%" },
+      docked: "bottom",
+      tooltip: "Komplettliste löschen",
+      handler: "clrList",
+    },
+    {
+      xtype: "button",
+      width: "14%",
+      floating: true,
+      text: "Risiko entfernen",
+      iconCls: "x-fa fa-check",
+      style: { position: "absolute", left: "68.5%", top: "85%" },
+      docked: "bottom",
+      tooltip: "Ausgewählten Steckbrief entfernen",
+      handler: "removeToList",
+    },
+    {
+      xtype: "button",
+      docked: true,
+      width: "10%",
+      floating: true,
+      style: { position: "absolute", bottom: "10px", left: "10px" },
+      docked: "bottom",
+      text: "Zurück",
+      iconCls: "x-fa fa-backward",
+      tooltip: "zurück zur Übersicht",
+      handler: "goBack",
+    },
   ],
 
   listeners: {
