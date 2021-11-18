@@ -13,33 +13,15 @@ Ext.define("SORISMA.view.startScreen.startViewController", {
     this.redirectTo("#d3Sunburst");
   },
 
-  // onApprove: function (button) {
-  //   Ext.create("Ext.window.Window", {
-  //     title: "Breadcrumb Bar",
-  //     height: "50%",
-  //     width: "30%",
-  //     layout: "fit",
-  //     scrollable: true,
-  //     closeable: false,
-  //     bbar: [
-  //       {
-  //         // text: "schließen",
-  //         iconCls: "x-fa fa-3x fa-times",
-  //         tooltip: "schließen",
-  //         handler: function () {
-  //           this.up("window").close();
-  //         },
-  //       },
-  //     ],
-  //     autoShow: true,
-  //     html: "My Page",
-  //     tbar: [
-  //       {
-  //         xtype: "breadcrumb",
-  //         store: { type: "breadcrumbStore" },
-  //       },
-  //     ],
-  //     //   store: bredcrumbStore,
-  //   }).show();
-  // },
+  showInfo: function () {
+    Ext.Msg.show({
+      title: "Information",
+      message: "Einige Details dazu hier",
+      width: 300,
+      buttons: Ext.MessageBox.CANCEL,
+      icon: Ext.MessageBox.INFO,
+      multiLine: true,
+      prompt: { maxlength: 280, autocapitalize: true },
+    });
+  },
 });

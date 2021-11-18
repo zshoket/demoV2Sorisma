@@ -1,40 +1,24 @@
 Ext.define("SORISMA.view.varEin.varEinController", {
   extend: "Ext.app.ViewController",
   alias: "controller.varEinController",
-  action: "changeView",
-  refs: {
-    PersonnelView: {
-      autoCreate: true,
-      selector: "#personnelview",
-      xtype: "personnelview",
-    },
+
+  goBack: function () {
+    this.redirectTo("#startview");
   },
 
-  control: {
-    "button[action=changeView]": {
-      tap: "changeView",
-    },
+  goAhead: function () {
+    this.redirectTo("#d3Sunburst");
   },
 
-  changeView: function () {
-    this.redirectTo("personnelview");
-  },
-
-  closeIframe: function () {
-    // window.frames[0].location.reload();
-    document.radarChart2.location.reload();
-  },
-
-  addmarkedToList: function () {
-    debugger
-    // if (document.getElementById('ext-element-123').checked) {
-    //   alert('It is done');
-    alert(document.getElementById('ext-element-123').value);
-
-    // }
-  },
-
-  testFn: function (obj, value) {
-    alert(value);
+  showInfo: function () {
+    Ext.Msg.show({
+      title: "Information",
+      message: "Einige Details dazu hier",
+      width: 300,
+      buttons: Ext.MessageBox.CANCEL,
+      icon: Ext.MessageBox.INFO,
+      multiLine: true,
+      prompt: { maxlength: 280, autocapitalize: true },
+    });
   },
 });

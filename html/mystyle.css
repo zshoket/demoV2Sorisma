@@ -600,9 +600,27 @@ body {
 }
 
 .button {
-  position: absolute;
-  top: 70.5%;
-  left: 80.5%;
+  position: relative;
+  top: -80.5%;
+  left: 68.5%;
+  background-color: transparent;
+  border: none;
+  color: #a01818;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  float: left;
+  font-weight: 550;
+}
+
+.button2 {
+  position: relative;
+  top: -80.5%;
+  left: 68.5%;
   background-color: transparent;
   border: none;
   color: #a01818;

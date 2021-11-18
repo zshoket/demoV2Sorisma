@@ -2,21 +2,6 @@ Ext.define("SORISMA.view.merkliste.merklistViewController", {
   extend: "Ext.app.ViewController",
   alias: "controller.merklistviewcontroller",
 
-  // onItemSelected: function (grid, info) {
-
-  //     var selectedRecord = grid.getSelection();
-  //     var row = grid.store.indexOf(selectedRecord);
-  //     if (row == 0) {
-  //         // this.redirectTo('#felderpanelview/0');
-
-  //         console.log(localStorage.storageName2);
-  //     } else {
-  //         // this.redirectTo('#felderpanelview/' + row);
-
-  //         console.log(localStorage.storageName2);
-
-  //     }
-  // },
   onShowFn: function () {
     var me = this;
     me.getView()
@@ -38,7 +23,7 @@ Ext.define("SORISMA.view.merkliste.merklistViewController", {
     window.localStorage.clear();
   },
 
-  refreshGrid: function (grid, info) {
+  goBack: function (grid, info) {
     var me = this;
     me.getView().getStore().sync();
     this.redirectTo("#d3Sunburst");
@@ -57,21 +42,31 @@ Ext.define("SORISMA.view.merkliste.merklistViewController", {
     var store = me.getView().getStore();
     var selection = me.getView().getSelection();
     store.remove(selection);
-
-    // var selectedSuccessValues = Ext.getCmp("chkid").getDataIndex();
-    // var store = me.getView().getStore();
-    // if (selectedSuccessValues == "active") {
-    //   var selection = me.getView();
-    //   if (selection) {
-    //     store.remove(selection);
-    //   }
-    // } else {
-    //   console.log("Not Working");
-    // }
-    // console.log(selectedSuccessValues);
   },
 
   getToRiskImg: function () {
-    this.redirectTo("#graphicview");
+    debugger;
+    var me = this;
+    var store = me.getView().getStore();
+    var mySelection = me.getView().getSelection();
+    if (mySelection == null || undefined) {
+      Ext.Msg.alert(
+        "Bitte wählen Sie zuerst einen Use Case aus, um aktive Risikofelder zu sehen."
+      );
+    } else {
+      this.redirectTo("#graphicview");
+    }
+  },
+
+  showInfo: function () {
+    Ext.Msg.show({
+      title: "Information",
+      message: "Einige Details dazu hier",
+      width: 300,
+      buttons: Ext.MessageBox.CANCEL,
+      icon: Ext.MessageBox.INFO,
+      multiLine: true,
+      prompt: { maxlength: 280, autocapitalize: true },
+    });
   },
 });

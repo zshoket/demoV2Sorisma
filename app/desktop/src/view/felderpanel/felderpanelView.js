@@ -35,6 +35,20 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       split: true,
 
       header: {
+        items: [
+          {
+            xtype: "button",
+            text: "Info",
+            iconCls: "x-fa fa-info-circle",
+            style: {
+              color: "white",
+              backgroundColor: "black",
+            },
+            tooltip:
+              "Informationen über diese Seite und was Sie hier tun können",
+            handler: "showInfo",
+          },
+        ],
         style: {
           backgroundColor: "#a01818",
         },
@@ -46,7 +60,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Ursachen",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -62,7 +76,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Risikotyp",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -78,7 +92,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Auswirkung",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -92,36 +106,36 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         html: '<ul style="font-size:14px">{data_charRisikoauswirkungen1}</ul>',
       },
     },
-    {
-      title: "Risiktyp trifft für UseCase zu",
-      width: "16.7%",
-      height: "18%",
-      split: true,
+    // {
+    //   title: "Risiktyp trifft für UseCase zu",
+    //   width: "16.7%",
+    //   height: "18%",
+    //   split: true,
 
-      header: {
-        style: {
-          backgroundColor: "#7f7f7f",
-        },
-      },
-      margin: "0 10 0 0",
-      items: [
-        {
-          id: "checkbox1",
-          xtype: "checkbox",
-          cls: "mycheck",
-          value: "1",
-          checked: false,
-          width: 120,
-        },
-      ],
-    },
+    //   header: {
+    //     style: {
+    //       backgroundColor: "#7f7f7f",
+    //     },
+    //   },
+    //   margin: "0 10 0 0",
+    //   items: [
+    //     {
+    //       id: "checkbox1",
+    //       xtype: "checkbox",
+    //       cls: "mycheck",
+    //       value: "1",
+    //       checked: false,
+    //       width: 120,
+    //     },
+    //   ],
+    // },
 
     {
       title: "Charakteristisch Ursachen",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
-
+      style: { color: "white !important" },
       header: {
         style: {
           backgroundColor: "#7f7f7f",
@@ -134,7 +148,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Risikotyp",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -150,7 +164,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Auswirkung",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -164,32 +178,32 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         html: '<ul style="font-size:14px">{data_charRisikoauswirkungen2}</ul>',
       },
     },
-    {
-      title: "Risiktyp trifft für UseCase zu",
-      width: "16.7%",
-      height: "18%",
-      split: true,
+    // {
+    //   title: "Risiktyp trifft für UseCase zu",
+    //   width: "16.7%",
+    //   height: "18%",
+    //   split: true,
 
-      header: {
-        style: {
-          backgroundColor: "#7f7f7f",
-        },
-      },
-      margin: "0 10 0 0",
-      items: [
-        {
-          id: "checkbox2",
-          xtype: "checkbox",
-          cls: "mycheck",
-          value: "2",
-          width: 120,
-        },
-      ],
-    },
+    //   header: {
+    //     style: {
+    //       backgroundColor: "#7f7f7f",
+    //     },
+    //   },
+    //   margin: "0 10 0 0",
+    //   items: [
+    //     {
+    //       id: "checkbox2",
+    //       xtype: "checkbox",
+    //       cls: "mycheck",
+    //       value: "2",
+    //       width: 120,
+    //     },
+    //   ],
+    // },
 
     {
       title: "Charakteristisch Ursachen",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -205,7 +219,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Risikotyp",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -221,7 +235,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Auswirkung",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -235,32 +249,32 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         html: '<ul style="font-size:14px">{data_charRisikoauswirkungen3}</ul>',
       },
     },
-    {
-      title: "Risiktyp trifft für UseCase zu",
-      width: "16.7%",
-      height: "18%",
-      split: true,
+    // {
+    //   title: "Risiktyp trifft für UseCase zu",
+    //   width: "16.7%",
+    //   height: "18%",
+    //   split: true,
 
-      header: {
-        style: {
-          backgroundColor: "#7f7f7f",
-        },
-      },
-      margin: "0 10 0 0",
-      items: [
-        {
-          id: "checkbox3",
-          xtype: "checkbox",
-          cls: "mycheck",
-          value: "3",
-          width: 120,
-        },
-      ],
-    },
+    //   header: {
+    //     style: {
+    //       backgroundColor: "#7f7f7f",
+    //     },
+    //   },
+    //   margin: "0 10 0 0",
+    //   items: [
+    //     {
+    //       id: "checkbox3",
+    //       xtype: "checkbox",
+    //       cls: "mycheck",
+    //       value: "3",
+    //       width: 120,
+    //     },
+    //   ],
+    // },
 
     {
       title: "Charakteristisch Ursachen",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -276,7 +290,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Risikotyp",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -292,7 +306,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     },
     {
       title: "Charakteristisch Auswirkung",
-      width: "26.5%",
+      width: "32.3%",
       height: "18%",
       split: true,
 
@@ -306,28 +320,28 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
         html: '<ul style="font-size:14px">{data_charRisikoauswirkungen4}</ul>',
       },
     },
-    {
-      title: "Risiktyp trifft für UseCase zu",
-      width: "16.7%",
-      height: "18%",
-      split: true,
+    // {
+    //   title: "Risiktyp trifft für UseCase zu",
+    //   width: "16.7%",
+    //   height: "18%",
+    //   split: true,
 
-      header: {
-        style: {
-          backgroundColor: "#7f7f7f",
-        },
-      },
-      margin: "0 10 0 0",
-      items: [
-        {
-          id: "checkbox4",
-          xtype: "checkbox",
-          cls: "mycheck",
-          value: "4",
-          width: 120,
-        },
-      ],
-    },
+    //   header: {
+    //     style: {
+    //       backgroundColor: "#7f7f7f",
+    //     },
+    //   },
+    //   margin: "0 10 0 0",
+    //   items: [
+    //     {
+    //       id: "checkbox4",
+    //       xtype: "checkbox",
+    //       cls: "mycheck",
+    //       value: "4",
+    //       width: 120,
+    //     },
+    //   ],
+    // },
     // {
     //   title: "Kurzbeschreibung",
     //   width: "52%",
@@ -468,7 +482,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     // },
     // {
     //   title: "Charakteristische Risikoauswirkungen",
-    //   width: "32%",
+    //   width: "32.3%",
     //   height: "27%",
     //   split: true,
     //   header: {
@@ -510,7 +524,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
           handler: "onButtonBack",
         },
         {
-          text: "Zur Merkliste hinzufügen",
+          text: "Bewertung beginnen",
           xtype: "button",
           docked: true,
           width: "15%",
@@ -518,8 +532,8 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
           style: { position: "absolute", bottom: "10px", left: "50%" },
           docked: "bottom",
           iconCls: "x-fa fa-3x fa-check",
-          tooltip: "Zur Merkliste hinzufügen",
-          handler: "checkAll",
+          tooltip: "Bewertung beginnen",
+          handler: "redirectMe",
         },
       ],
     },

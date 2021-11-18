@@ -779,6 +779,12 @@ debugger
             document.getElementById('risk-matrix').style.left = yCoord + 'px';
 
         }
+
+
+        function uncheckAll() {
+  document.querySelectorAll('input[type="checkbox"]')
+    .forEach(el => el.checked = false);
+}
     </script>
 
     <!-- <div class="button-field-label ">Spalte X Reihe eingeben</div>
@@ -789,7 +795,8 @@ debugger
         
     </div> -->
 
-    <button class="button" onclick="convert() ">Absenden</button>
+    <button class="button" onclick="convert() ">Absenden  <i class="fa fa-arrow-circle-up"></i></button>
+    <button class="button2" onclick="uncheckAll()">Alle Abwählen <i class="fa fa-bandcamp"></i></button>
     </div>
     </div>
 

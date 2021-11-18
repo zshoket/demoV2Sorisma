@@ -129,8 +129,16 @@ Ext.define("SORISMA.view.felderpanel.felderpanelViewController", {
     }
   },
 
-  checkAll: function () {
-    this.redirectTo("#risikoFelderMerklisteView");
+  showInfo: function () {
+    Ext.Msg.show({
+      title: "Information",
+      message: "Einige Details dazu hier",
+      width: 300,
+      buttons: Ext.MessageBox.CANCEL,
+      icon: Ext.MessageBox.INFO,
+      multiLine: true,
+      prompt: { maxlength: 280, autocapitalize: true },
+    });
   },
 
   correctUrl: function () {
@@ -140,5 +148,9 @@ Ext.define("SORISMA.view.felderpanel.felderpanelViewController", {
       this.redirectTo("#felderpanelview/0");
     } else {
     }
+  },
+
+  redirectMe: function () {
+    this.redirectTo("#risikomatrix");
   },
 });

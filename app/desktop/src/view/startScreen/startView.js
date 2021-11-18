@@ -26,6 +26,18 @@ Ext.define("SORISMA.view.startScreen.startView", {
       tooltip: "Weiter",
       handler: "onButtonForward",
     },
+    {
+      xtype: "button",
+
+      width: "8%",
+      floating: true,
+      style: { position: "absolute", left: "91%", top: "0%" },
+
+      text: "Info",
+      iconCls: "x-fa fa-info-circle",
+      tooltip: "Informationen über diese Seite und was Sie hier tun können",
+      handler: "showInfo",
+    },
     // {
     //   xtype: "button",
     //   text: "Show Breadcrumb Bar",

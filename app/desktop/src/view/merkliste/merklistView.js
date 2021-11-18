@@ -16,9 +16,12 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
   },
 
   selectable: {
+    mode: "SINGLE",
     columns: false,
+    allowDeselect: true,
     rows: true, // Can select cells and rows, but not columns
     checkbox: true, // Uses the draggable selection extender
+    toggleOnClick: true,
   },
   columns: [
     // {
@@ -113,12 +116,13 @@ Ext.define("SORISMA.view.merkliste.merklistView", {
       text: "Zurück",
       iconCls: "x-fa fa-backward",
       tooltip: "zurück zur Übersicht",
-      handler: "refreshGrid",
+      handler: "goBack",
     },
   ],
 
   listeners: {
-    select: "onItemSelected",
+    // select: "onItemSelected",
+    selectionchange: "onSelectionChange",
     show: "onShowFn",
   },
 });

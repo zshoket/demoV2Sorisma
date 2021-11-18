@@ -21,7 +21,6 @@ Ext.define("SORISMA.view.d3.SunburstController", {
   },
 
   closeIframe: function () {
-    debugger;
     document.getElementById("mainChart").contentWindow.location.reload(true);
 
     // window.frames[0].location.reload();
@@ -39,5 +38,16 @@ Ext.define("SORISMA.view.d3.SunburstController", {
   myShowFn: function () {
     // window.localStorage.clear();
     // document.getElementById("mainChart").contentWindow.location.reload(true);
+  },
+  showInfo: function () {
+    Ext.Msg.show({
+      title: "Information",
+      message: "Einige Details dazu hier",
+      width: 300,
+      buttons: Ext.MessageBox.CANCEL,
+      icon: Ext.MessageBox.INFO,
+      multiLine: true,
+      prompt: { maxlength: 280, autocapitalize: true },
+    });
   },
 });
