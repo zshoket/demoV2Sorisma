@@ -23,15 +23,25 @@ Ext.define("SORISMA.view.risikoMatrix.risikoMatrix", {
   items: [
     {
       xtype: "button",
-
-      width: "8%",
+      width: "7%",
       floating: true,
-      style: { position: "absolute", left: "92%", top: "0%" },
-
+      style: { position: "absolute", left: "91.5%", top: "1.5%" },
       text: "Info",
       iconCls: "x-fa fa-info-circle",
       tooltip: "Informationen über diese Seite und was Sie hier tun können",
       handler: "showInfo",
+    },
+    {
+      xtype: "button",
+      text: "Weiter",
+      iconCls: "x-fa fa-3x fa-forward",
+      docked: true,
+      width: "8%",
+      floating: true,
+      style: { position: "absolute", left: "91%", top: "96%" },
+      docked: "bottom",
+      tooltip: "Weiter zu Visualisierung",
+      handler: "onButtonForward",
     },
   ],
 });

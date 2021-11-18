@@ -21,29 +21,30 @@ Ext.define("SORISMA.view.varZwei.varZwei", {
     '<iframe src="html/FinalSpinDiagram.html" scrolling="no" height="900px" width="100%" ></iframe>',
   ],
 
-  // items: [
-  //   {
-  //     xtype: "button",
-  //     floating: true,
-  //     width: "10%",
-  //     text: "Ausblenden",
-  //     iconCls: "x-fa fa-retweet",
-  //     style: { position: "absolute", left: "85%", top: "92%" },
-  //     docked: "bottom",
-  //     tooltip: "Ausblenden",
-  //     handler: "closeIframe",
-  //   },
+  items: [
+    {
+      xtype: "button",
 
-  // {
-  //   xtype: "button",
-  //   floating: true,
-  //   width: "10%",
-  //   text: "Merken",
-  //   iconCls: "x-fa fa-check",
-  //   style: { position: "absolute", left: "75%", top: "92%" },
-  //   docked: "bottom",
-  //   tooltip: "Markierung in Liste",
-  //   handler: "addToList",
-  // },
-  // ],
+      width: "8%",
+      floating: true,
+      style: { position: "absolute", left: "91%", top: "2%" },
+
+      text: "Info",
+      iconCls: "x-fa fa-info-circle",
+      tooltip: "Informationen über diese Seite und was Sie hier tun können",
+      handler: "showInfo",
+    },
+    {
+      xtype: "button",
+      docked: true,
+      width: "10%",
+      floating: true,
+      style: { position: "absolute", bottom: "10px", left: "10px" },
+      docked: "bottom",
+      text: "Zurück",
+      iconCls: "x-fa fa-backward",
+      tooltip: "zurück zur Übersicht",
+      handler: "goBack",
+    },
+  ],
 });

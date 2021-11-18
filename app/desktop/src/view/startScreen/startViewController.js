@@ -10,7 +10,7 @@ Ext.define("SORISMA.view.startScreen.startViewController", {
   },
 
   onButtonForward: function (button) {
-    this.redirectTo("#d3Sunburst");
+    this.redirectTo("#varEin");
   },
 
   showInfo: function () {
@@ -23,5 +23,24 @@ Ext.define("SORISMA.view.startScreen.startViewController", {
       multiLine: true,
       prompt: { maxlength: 280, autocapitalize: true },
     });
+  },
+
+  registerUser: function () {
+    var dialog = Ext.create({
+      xtype: "dialog",
+      title: "Anmeldeformular für Neue Benutzer",
+
+      maximizable: false,
+      html: '<p align="center"><iframe src="html/registerForm.html" align="center" scrolling="yes" height="600px" width="900px" ></iframe>',
+
+      buttons: {
+        ok: function () {
+          // standard button (see below)
+          dialog.destroy();
+        },
+      },
+    });
+
+    dialog.show();
   },
 });

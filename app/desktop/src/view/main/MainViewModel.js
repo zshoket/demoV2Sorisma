@@ -126,12 +126,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             xtype: "felderpanelview",
             leaf: true,
           },
-          {
-            text: "Merkliste Risikofelder",
-            iconCls: "x-fa fa-database",
-            xtype: "risikoFelderMerklisteView",
-            leaf: true,
-          },
+          // {
+          //   text: "Merkliste Risikofelder",
+          //   iconCls: "x-fa fa-database",
+          //   xtype: "risikoFelderMerklisteView",
+          //   leaf: true,
+          // },
           {
             text: "Risikobewertung",
             iconCls: "x-fa fa-bars",

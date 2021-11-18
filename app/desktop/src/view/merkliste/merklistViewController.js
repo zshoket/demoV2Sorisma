@@ -50,9 +50,7 @@ Ext.define("SORISMA.view.merkliste.merklistViewController", {
     var store = me.getView().getStore();
     var mySelection = me.getView().getSelection();
     if (mySelection == null || undefined) {
-      Ext.Msg.alert(
-        "Bitte wählen Sie zuerst einen Use Case aus, um aktive Risikofelder zu sehen."
-      );
+      Ext.Msg.alert("Bitte wählen Sie zuerst einen Use Case aus");
     } else {
       this.redirectTo("#graphicview");
     }

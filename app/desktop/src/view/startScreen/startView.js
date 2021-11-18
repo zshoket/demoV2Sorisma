@@ -16,6 +16,18 @@ Ext.define("SORISMA.view.startScreen.startView", {
   items: [
     {
       xtype: "button",
+      text: "Anmelden/Registrieren",
+      //   iconCls: "x-fa fa-3x fa-forward",
+      docked: true,
+      width: "15%",
+      floating: true,
+      style: { position: "absolute", right: "50%", top: "50%" },
+      docked: "bottom",
+      tooltip: "Anmelden/Registrieren zum Spielen",
+      handler: "registerUser",
+    },
+    {
+      xtype: "button",
       text: "Weiter",
       //   iconCls: "x-fa fa-3x fa-forward",
       docked: true,

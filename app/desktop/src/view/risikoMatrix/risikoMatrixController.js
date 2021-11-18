@@ -13,4 +13,8 @@ Ext.define("SORISMA.view.risikoMatrix.risikoMatrixController", {
       prompt: { maxlength: 280, autocapitalize: true },
     });
   },
+
+  onButtonForward: function () {
+    this.redirectTo("#varZwei");
+  },
 });

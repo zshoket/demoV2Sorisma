@@ -1,40 +1,20 @@
 Ext.define("SORISMA.view.varZwei.varZweiController", {
   extend: "Ext.app.ViewController",
   alias: "controller.varZweiController",
-  action: "changeView",
-  refs: {
-    PersonnelView: {
-      autoCreate: true,
-      selector: "#personnelview",
-      xtype: "personnelview",
-    },
+
+  showInfo: function () {
+    Ext.Msg.show({
+      title: "Information",
+      message: "Einige Details dazu hier",
+      width: 300,
+      buttons: Ext.MessageBox.CANCEL,
+      icon: Ext.MessageBox.INFO,
+      multiLine: true,
+      prompt: { maxlength: 280, autocapitalize: true },
+    });
   },
 
-  control: {
-    "button[action=changeView]": {
-      tap: "changeView",
-    },
-  },
-
-  changeView: function () {
-    this.redirectTo("personnelview");
-  },
-
-  closeIframe: function () {
-    // window.frames[0].location.reload();
-    document.radarChart1.location.reload();
-  },
-
-  addToList: function () {
-    if (localStorage == null) {
-      Ext.Msg.alert('Please Select a UseCase First');
-    } else {
-      alert("Hello! I am an alert box!!");
-    }
-    // if (window.location !== window.parent.location) {
-    //   alert("I have an iframe");
-    // } else {
-    //   console.log("Not an Iframe");
-    // }
+  goBack: function () {
+    this.redirectTo("#risikomatrix");
   },
 });
