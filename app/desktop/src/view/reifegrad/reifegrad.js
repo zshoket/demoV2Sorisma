@@ -1,14 +1,14 @@
-Ext.define("SORISMA.view.varEin.varEin", {
+Ext.define("SORISMA.view.reifegrad.reifegrad", {
   extend: "Ext.panel.Panel",
-  xtype: "varEin",
-  controller: "varEinController",
-  cls: "varEin",
+  xtype: "reifegrad",
+  controller: "reifegradController",
+  cls: "reifegrad",
   viewModel: {
-    type: "varEinModel",
+    type: "reifegradModel",
   },
   requires: [
-    "SORISMA.view.varEin.varEinController",
-    "SORISMA.view.varEin.varEinModel",
+    "SORISMA.view.reifegrad.reifegradController",
+    "SORISMA.view.reifegrad.reifegradModel",
     "Ext.form.FieldSet",
     "Ext.form.field.*",
     "Ext.navigation.View",
@@ -45,17 +45,17 @@ Ext.define("SORISMA.view.varEin.varEin", {
       tooltip: "weiter zum UseCase",
       handler: "goAhead",
     },
-    {
-      xtype: "button",
+    // {
+    //   xtype: "button",
 
-      width: "8%",
-      floating: true,
-      style: { position: "absolute", left: "91%", top: "2%" },
+    //   width: "8%",
+    //   floating: true,
+    //   style: { position: "absolute", left: "91%", top: "2%" },
 
-      text: "Info",
-      iconCls: "x-fa fa-info-circle",
-      tooltip: "Informationen über diese Seite und was Sie hier tun können",
-      handler: "showInfo",
-    },
+    //   text: "Info",
+    //   iconCls: "x-fa fa-info-circle",
+    //   tooltip: "Informationen über diese Seite und was Sie hier tun können",
+    //   handler: "showInfo",
+    // },
   ],
 });

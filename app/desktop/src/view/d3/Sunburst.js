@@ -22,18 +22,16 @@ Ext.define("SORISMA.view.d3.Sunburst", {
   html: '<iframe id="mainChart" name="radarChart" src="html/radarChartIMG.html" scrolling="no" height="900px" width="100%" ></iframe>',
 
   items: [
-    {
-      xtype: "button",
-
-      width: "8%",
-      floating: true,
-      style: { position: "absolute", left: "92%", top: "2%" },
-
-      text: "Info",
-      iconCls: "x-fa fa-info-circle",
-      tooltip: "Informationen über diese Seite und was Sie hier tun können",
-      handler: "showInfo",
-    },
+    // {
+    //   xtype: "button",
+    //   width: "8%",
+    //   floating: true,
+    //   style: { position: "absolute", left: "92%", top: "2%" },
+    //   text: "Info",
+    //   iconCls: "x-fa fa-info-circle",
+    //   tooltip: "Informationen über diese Seite und was Sie hier tun können",
+    //   handler: "showInfo",
+    // },
     // {
     //   xtype: "button",
     //   id: 'markBtn',

@@ -6,7 +6,7 @@ Ext.define("SORISMA.view.graphic.graphicViewController", {
     // document.iframeid.location.reload();
     window.frames[0].location.reload();
     document.getElementById("iframeid").contentWindow.location.reload(true);
-    this.redirectTo("#d3Sunburst");
+    this.redirectTo("#merklistview");
   },
   showInfo: function () {
     Ext.Msg.show({

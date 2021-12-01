@@ -10,7 +10,7 @@ Ext.define("SORISMA.view.startScreen.startViewController", {
   },
 
   onButtonForward: function (button) {
-    this.redirectTo("#varEin");
+    this.redirectTo("#reifegrad");
   },
 
   showInfo: function () {
@@ -34,9 +34,10 @@ Ext.define("SORISMA.view.startScreen.startViewController", {
       html: '<p align="center"><iframe src="html/registerForm.html" align="center" scrolling="yes" height="600px" width="900px" ></iframe>',
 
       buttons: {
-        ok: function () {
-          // standard button (see below)
-          dialog.destroy();
+        cancel: function () {
+          text: "Cancel",
+            // standard button (see below)
+            dialog.destroy();
         },
       },
     });

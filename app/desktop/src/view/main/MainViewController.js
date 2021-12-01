@@ -192,6 +192,20 @@ Ext.define("SORISMA.view.main.MainViewController", {
           }
       }, */
 
+  showInfo: function (button) {
+    var lastPart = window.location.href.split("/#").pop();
+    console.log(lastPart);
+    Ext.Msg.show({
+      title: "Information",
+      message: "Einige Details dazu hier",
+      width: 300,
+      buttons: Ext.MessageBox.CANCEL,
+      icon: Ext.MessageBox.INFO,
+      multiLine: true,
+      prompt: { maxlength: 280, autocapitalize: true },
+    });
+  },
+
   onBottomViewlogout: function () {
     localStorage.setItem("LoggedIn", false);
     this.getView().destroy();

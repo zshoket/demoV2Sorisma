@@ -22,18 +22,18 @@ Ext.define("SORISMA.view.varZwei.varZwei", {
   ],
 
   items: [
-    {
-      xtype: "button",
+    // {
+    //   xtype: "button",
 
-      width: "8%",
-      floating: true,
-      style: { position: "absolute", left: "91%", top: "2%" },
+    //   width: "8%",
+    //   floating: true,
+    //   style: { position: "absolute", left: "91%", top: "2%" },
 
-      text: "Info",
-      iconCls: "x-fa fa-info-circle",
-      tooltip: "Informationen über diese Seite und was Sie hier tun können",
-      handler: "showInfo",
-    },
+    //   text: "Info",
+    //   iconCls: "x-fa fa-info-circle",
+    //   tooltip: "Informationen über diese Seite und was Sie hier tun können",
+    //   handler: "showInfo",
+    // },
     {
       xtype: "button",
       docked: true,

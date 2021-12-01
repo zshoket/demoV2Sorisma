@@ -9,13 +9,18 @@ Ext.define("SORISMA.view.main.header.HeaderView", {
       cls: "headerviewtext",
       bind: { html: "{heading}" },
     },
-    /* '->',
-        {
-            xtype: 'button',
-            ui: 'headerbutton',
-            reference: 'detailtoggle',
-            handler: 'onHeaderViewDetailToggle',
-            iconCls: 'x-fa fa-arrow-left'
-        } */
+    {
+      xtype: "button",
+      text: "Info",
+      iconCls: "x-fa fa-info-circle",
+      style: {
+        color: "white",
+        backgroundColor: "#808080",
+        position: "absolute",
+        left: "92%",
+      },
+      tooltip: "Informationen über diese Seite und was Sie hier tun können",
+      handler: "showInfo",
+    },
   ],
 });

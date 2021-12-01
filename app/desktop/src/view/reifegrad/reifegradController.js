@@ -1,6 +1,6 @@
-Ext.define("SORISMA.view.varEin.varEinController", {
+Ext.define("SORISMA.view.reifegrad.reifegradController", {
   extend: "Ext.app.ViewController",
-  alias: "controller.varEinController",
+  alias: "controller.reifegradController",
 
   goBack: function () {
     this.redirectTo("#startview");

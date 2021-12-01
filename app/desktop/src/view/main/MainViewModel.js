@@ -40,7 +40,7 @@ Ext.define("SORISMA.view.main.MainViewModel", {
           {
             text: "Digitaler Reifegrad",
             iconCls: "fa fa-bookmark",
-            xtype: "varEin",
+            xtype: "reifegrad",
             leaf: true,
           },
           {

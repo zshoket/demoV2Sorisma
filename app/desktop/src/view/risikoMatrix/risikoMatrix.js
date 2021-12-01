@@ -21,16 +21,16 @@ Ext.define("SORISMA.view.risikoMatrix.risikoMatrix", {
   html: '<iframe src="html/graph.html" scrolling="no" height="900" width="100%"></iframe>',
 
   items: [
-    {
-      xtype: "button",
-      width: "7%",
-      floating: true,
-      style: { position: "absolute", left: "91.5%", top: "1.5%" },
-      text: "Info",
-      iconCls: "x-fa fa-info-circle",
-      tooltip: "Informationen über diese Seite und was Sie hier tun können",
-      handler: "showInfo",
-    },
+    // {
+    //   xtype: "button",
+    //   width: "7%",
+    //   floating: true,
+    //   style: { position: "absolute", left: "91.5%", top: "1.5%" },
+    //   text: "Info",
+    //   iconCls: "x-fa fa-info-circle",
+    //   tooltip: "Informationen über diese Seite und was Sie hier tun können",
+    //   handler: "showInfo",
+    // },
     {
       xtype: "button",
       text: "Weiter",
