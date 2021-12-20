@@ -18,8 +18,8 @@ Ext.define("SORISMA.view.risikoMatrix.risikoMatrix", {
 
   defaultType: "panel",
 
-  html: '<iframe src="html/graph.html" scrolling="no" height="900" width="100%"></iframe>',
-
+  // html: '<iframe src="html/graph.html" scrolling="no" height="900" width="100%"></iframe>',
+  html: '<iframe src="html/bewurtungMatrix.html" scrolling="no" height="900" width="100%"></iframe>',
   items: [
     // {
     //   xtype: "button",

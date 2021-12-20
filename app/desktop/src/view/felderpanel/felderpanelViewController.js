@@ -18,7 +18,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelViewController", {
     if (record) {
       var data = record.getData();
       var vm = me.getViewModel();
-
+      debugger;
       vm.set("data_felderName", data.felderName);
 
       vm.set("data_riskLevel", data.riskLevel);

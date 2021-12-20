@@ -29,7 +29,7 @@ Ext.define("SORISMA.view.startScreen.startView", {
     {
       xtype: "button",
       text: "Weiter",
-      //   iconCls: "x-fa fa-3x fa-forward",
+      iconCls: "x-fa fa-3x fa-forward",
       docked: true,
       width: "10%",
       floating: true,

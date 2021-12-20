@@ -50,4 +50,8 @@ Ext.define("SORISMA.view.d3.SunburstController", {
       prompt: { maxlength: 280, autocapitalize: true },
     });
   },
+
+  onButtonForward: function (button) {
+    this.redirectTo("#merklistview");
+  },
 });

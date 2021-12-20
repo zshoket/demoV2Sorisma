@@ -193,17 +193,91 @@ Ext.define("SORISMA.view.main.MainViewController", {
       }, */
 
   showInfo: function (button) {
-    var lastPart = window.location.href.split("/#").pop();
-    console.log(lastPart);
-    Ext.Msg.show({
-      title: "Information",
-      message: "Einige Details dazu hier",
-      width: 300,
-      buttons: Ext.MessageBox.CANCEL,
-      icon: Ext.MessageBox.INFO,
-      multiLine: true,
-      prompt: { maxlength: 280, autocapitalize: true },
-    });
+    var lastPart = window.location.href.split("/").pop();
+
+    if (lastPart == "#startview") {
+      Ext.Msg.show({
+        title: "Information",
+        message: "Start Page Details dazu hier",
+        width: 300,
+        buttons: Ext.MessageBox.CANCEL,
+        icon: Ext.MessageBox.INFO,
+        multiLine: true,
+        prompt: { maxlength: 280, autocapitalize: true },
+      });
+    } else if (lastPart == "#reifegrad") {
+      Ext.Msg.show({
+        title: "Information",
+        message: "Reifegrad Details dazu hier",
+        width: 300,
+        buttons: Ext.MessageBox.CANCEL,
+        icon: Ext.MessageBox.INFO,
+        multiLine: true,
+        prompt: { maxlength: 280, autocapitalize: true },
+      });
+    } else if (lastPart == "#d3Sunburst") {
+      Ext.Msg.show({
+        title: "Information",
+        message: "RadarChart Details dazu hier",
+        width: 300,
+        buttons: Ext.MessageBox.CANCEL,
+        icon: Ext.MessageBox.INFO,
+        multiLine: true,
+        prompt: { maxlength: 280, autocapitalize: true },
+      });
+    } else if (lastPart == "#merklistview") {
+      Ext.Msg.show({
+        title: "Information",
+        message: "Merkliste Details dazu hier",
+        width: 300,
+        buttons: Ext.MessageBox.CANCEL,
+        icon: Ext.MessageBox.INFO,
+        multiLine: true,
+        prompt: { maxlength: 280, autocapitalize: true },
+      });
+    } else if (lastPart == "#graphicview") {
+      Ext.Msg.show({
+        title: "Information",
+        message: "Graphicview Details dazu hier",
+        width: 300,
+        buttons: Ext.MessageBox.CANCEL,
+        icon: Ext.MessageBox.INFO,
+        multiLine: true,
+        prompt: { maxlength: 280, autocapitalize: true },
+      });
+    }
+    // else if (lastPart == "#homeview/0") {
+    //   Ext.Msg.show({
+    //     title: "Information",
+    //     message: "Stecbrief Details dazu hier",
+    //     width: 300,
+    //     buttons: Ext.MessageBox.CANCEL,
+    //     icon: Ext.MessageBox.INFO,
+    //     multiLine: true,
+    //     prompt: { maxlength: 280, autocapitalize: true },
+    //   });
+    // }
+    else if (lastPart >= 0 && lastPart <= 10) {
+      Ext.Msg.show({
+        title: "Information",
+        message: "FelderPanel Details dazu hier",
+        width: 300,
+        buttons: Ext.MessageBox.CANCEL,
+        icon: Ext.MessageBox.INFO,
+        multiLine: true,
+        prompt: { maxlength: 280, autocapitalize: true },
+      });
+    } else if (lastPart == "#risikomatrix") {
+      Ext.Msg.show({
+        title: "Information",
+        message: "Risikobewurtung Details dazu hier",
+        width: 300,
+        buttons: Ext.MessageBox.CANCEL,
+        icon: Ext.MessageBox.INFO,
+        multiLine: true,
+        prompt: { maxlength: 280, autocapitalize: true },
+      });
+    }
   },
 
   onBottomViewlogout: function () {

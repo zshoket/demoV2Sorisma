@@ -14,15 +14,16 @@ body {
 
 .column1 {
   width: 65%;
-  float: right;
+  /* float: right; */
   padding-left: 25px;
+  position: static;
   padding-top: 10px;
 }
 .column2 {
   width: 35%;
   float: left;
   padding-left: 15px;
-  /* padding-top: 10px; */
+  padding-top: 10px;
   position: relative;
 }
 .column {
@@ -241,7 +242,7 @@ body {
   -ms-transform: rotate(270deg);
   transform-origin: left bottom 0;
   right: 41%;
-  top: 34%;
+  top: 38%;
 }
 
 .outer2 {
@@ -259,15 +260,25 @@ body {
   display: flex;
 }
 
-#bg-text {
+#neidrig-text {
   color: grey;
   font-weight: 650;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   position: absolute;
   right: 86.5%;
-  top: 33%;
+  bottom: -98px;
 }
+
+/* #bg-text {
+  color: grey;
+  font-weight: 650;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  position: absolute;
+  right: 86.5%;
+  top: 29.5%;
+} */
 
 #bg-text2 {
   color: grey;
@@ -286,7 +297,7 @@ body {
   -webkit-transform: rotate(360deg);
   position: absolute;
   right: 75.6%;
-  top: 47.7%;
+  top: 55%;
 }
 
 #bg-text4 {
@@ -296,7 +307,7 @@ body {
   -webkit-transform: rotate(360deg);
   position: absolute;
   right: 22.6%;
-  top: 47.7%;
+  top: 55%;
 }
 
 .headLabel {
@@ -310,7 +321,7 @@ body {
   position: absolute;
   font-size: 1.2em;
   font-weight: 700;
-  top: 48%;
+  top: 55%;
   /* top: 57.5%; */
   left: 35%;
   overflow: hidden;
@@ -320,7 +331,7 @@ body {
   position: absolute;
   border-radius: 125%;
   margin-left: 0px;
-  bottom: 52%;
+  bottom: 44.5%;
   width: 4.5%;
   height: 2.5%;
   background: #fff;
@@ -333,8 +344,8 @@ body {
 }
 
 .risk-matrix-item:hover {
-  width: 20%;
-  height: 20%;
+  width: 50%;
+  height: 50%;
   margin-left: -8%;
   margin-bottom: -8%;
   z-index: 2000;
@@ -385,7 +396,8 @@ body {
 .risk-matrix-item1 {
   position: absolute;
   margin-left: 15px;
-  bottom: 52%;
+  bottom: 84.5%;
+  left: 15%;
   border-radius: 125%;
   width: 4.5%;
   height: 2.5%;
@@ -398,7 +410,7 @@ body {
   transition: all 1s ease;
 }
 
-.risk-matrix-item1:hover {
+/* .risk-matrix-item1:hover {
   width: 20%;
   height: 20%;
   margin-left: -8%;
@@ -423,19 +435,19 @@ body {
   -ms-transition-delay: 0.5s;
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-}
+} */
 
 .risk-matrix-item1 > .closed {
   display: table;
   width: 100%;
   height: 100%;
-  font-size: 0.7em;
+
   background-image: -ms-linear-gradient(top, #fff, #ffd81a);
   background-image: -webkit-linear-gradient(top, #fff, #ffd81a);
   background-image: linear-gradient(top, #fff, #ffd81a);
 }
 
-.risk-matrix-item1 > .closed > span {
+/* .risk-matrix-item1 > .closed > span {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -446,12 +458,13 @@ body {
   -ms-transition-delay: 1s;
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
-}
+} */
 
 .risk-matrix-item2 {
   position: absolute;
   margin-left: 30px;
-  bottom: 52%;
+  bottom: 57.5%;
+  left: 35%;
   border-radius: 125%;
   width: 4.5%;
   height: 2.5%;
@@ -464,7 +477,7 @@ body {
   transition: all 1s ease;
 }
 
-.risk-matrix-item2:hover {
+/* .risk-matrix-item2:hover {
   width: 20%;
   height: 20%;
   margin-left: -8%;
@@ -489,7 +502,7 @@ body {
   -ms-transition-delay: 0.5s;
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-}
+} */
 
 .risk-matrix-item2 > .closed {
   display: table;
@@ -501,7 +514,7 @@ body {
   background-image: linear-gradient(top, #fff, #ffd81a);
 }
 
-.risk-matrix-item2 > .closed > span {
+/* .risk-matrix-item2 > .closed > span {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -512,12 +525,13 @@ body {
   -ms-transition-delay: 1s;
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
-}
+} */
 
 .risk-matrix-item3 {
   position: absolute;
   margin-left: 40px;
-  bottom: 52%;
+  bottom: 77.5%;
+  left: 57%;
   border-radius: 125%;
   width: 4.5%;
   height: 2.5%;
@@ -530,7 +544,7 @@ body {
   transition: all 1s ease;
 }
 
-.risk-matrix-item3:hover {
+/* .risk-matrix-item3:hover {
   width: 20%;
   height: 20%;
   margin-left: -8%;
@@ -555,7 +569,7 @@ body {
   -ms-transition-delay: 0.5s;
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-}
+} */
 
 .risk-matrix-item3 > .closed {
   display: table;
@@ -567,7 +581,7 @@ body {
   background-image: linear-gradient(top, #fff, #ffd81a);
 }
 
-.risk-matrix-item3 > .closed > span {
+/* .risk-matrix-item3 > .closed > span {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -578,7 +592,7 @@ body {
   -ms-transition-delay: 1s;
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
-}
+} */
 
 .line-chart {
   list-style: none;
@@ -601,7 +615,7 @@ body {
 
 .button {
   position: relative;
-  top: -80.5%;
+  top: -60.5%;
   left: 68.5%;
   background-color: transparent;
   border: none;
@@ -619,7 +633,7 @@ body {
 
 .button2 {
   position: relative;
-  top: -80.5%;
+  top: -60.5%;
   left: 68.5%;
   background-color: transparent;
   border: none;
@@ -631,6 +645,38 @@ body {
   margin: 4px 2px;
   cursor: pointer;
 
+  float: left;
+  font-weight: 550;
+}
+
+.r2Button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  border-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  bottom: 84.5%;
+  left: 71%;
+  border-radius: 110%;
+  color: white;
+  position: absolute;
+}
+
+.closeBtn {
+  position: relative;
+  top: -65.5%;
+  left: 68.5%;
+  background-color: transparent;
+  border: none;
+  color: #a01818;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
   float: left;
   font-weight: 550;
 }
@@ -648,13 +694,36 @@ body {
 /* table css*/
 
 table {
+  table-layout: fixed;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
-  position: relative;
   border-collapse: collapse;
   background-color: #f6f6f6;
-} /* Spacing */
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+/* Spacing */
+td:nth-child(1),
+th:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+td:nth-child(2),
+th:nth-child(2) {
+  position: sticky;
+  left: 100px;
+  z-index: 1;
+}
+td:nth-child(3),
+th:nth-child(3) {
+  position: sticky;
+  left: 230px;
+  z-index: 1;
+}
+
 td,
 th {
   border: 1px solid #999;

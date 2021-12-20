@@ -44,6 +44,18 @@ Ext.define("SORISMA.view.d3.Sunburst", {
     //   tooltip: "Markierung in Liste",
     //   handler: "addToList",
     // },
+    {
+      xtype: "button",
+      text: "Weiter",
+      iconCls: "x-fa fa-3x fa-forward",
+      docked: true,
+      width: "8%",
+      floating: true,
+      style: { position: "absolute", left: "91%", top: "96%" },
+      docked: "bottom",
+      tooltip: "Weiter zu Visualisierung",
+      handler: "onButtonForward",
+    },
   ],
   listeners: {
     show: "myShowFn",

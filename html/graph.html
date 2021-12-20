@@ -2,504 +2,532 @@
 <html>
 
 <head>
-    <title>Risk Matrix</title>
-    <link rel="stylesheet" type="text/css" href="./mystyle.css" />
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
+  <title>Risk Matrix</title>
+  <link rel="stylesheet" type="text/css" href="./mystyle.css" />
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-    <script>
-        // $(document).ready(function() {
-        //     $("#myTooltip").tooltip({
-        //         title: 'Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen',
-        //         html: true,
-        //     });
-        // });
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
+  <script>
+    // $(document).ready(function() {
+    //     $("#myTooltip").tooltip({
+    //         title: 'Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen',
+    //         html: true,
+    //     });
+    // });
+    $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
 
-    </script>
+  </script>
 
 </head>
 
 <body>
-    <div class="row">
-  <div class="column1">
-    <table>
+  <div class="row">
+    <div class="column1">
+      <table>
         <h5>Schadenshöhe</h5>
-  <!-- <caption>A summary of top sites with both paid and free course</caption> -->
-  <thead>
-    <tr>
-      <th scope="col">Dimension</th>
-      <th scope="col">Komponente</th>
-      <th scope="col">Frage</th>
-      <th scope="col">Risk Type 1</th>
-      <th scope="col">Risk Type 2</th>
-      <th scope="col">Risk Type 3</th>
-      <th scope="col">Risk Type 4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Mensch</th>
-      <td>Zusammenarbeit</td>
-      <td>Beeinträchtigt das Risiko die Zusammenarbeit, wie z.B durch Verschlechterung des Betriebsklimas in Form von Zweifel, Unzufriedenheit oder gar Widerstand?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="type" value="1"  >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T1" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type3" value="" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input  type="checkbox" name="type4" value="" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
-    
-    <tr>
-      <th scope="row">Mensch</th>
-      <td>Qualifizierung</td>
-      <td>Wirkt sich das Risiko negativ auf die Qualifizierung der Mitarbeiter aus, wie z B. durch einen erhöhten Schulungsbedarf oder einen Verlust der Leistungsfähigkeit?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="type" value="2"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T2" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    
-    </tr>
-    <tr>
-      <th scope="row">Mensch</th>
-      <td>Arbeitsstrukturen</td>
-      <td>Hat das Risiko einen negativen Einfluss auf die Arbeitsstruktur wie z B. mangelnde Mitarbeiterkapazität (Arbeitsplatz, Arbeitsumgebung, angewendete Betriebssysteme)?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="type" value="3"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T3" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
-    <tr>
-      <th scope="row">Mensch</th>
-      <td>Arbeitsaufgaben</td>
-      <td>Wirkt sich das Risiko negativ auf die Arbeitsaufgaben aus, wie z B durch eine steigende Komplexität der Aufgaben (oder fehlende Verteilung von klaren Verantwortlichkeiten)?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="type" value="4"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T4" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
+        <!-- <caption>A summary of top sites with both paid and free course</caption> -->
+        <thead>
+          <tr>
+            <th scope="col" class="fixed-side">Dimension</th>
+            <th scope="col" class="fixed-side">Komponente</th>
+            <th scope="col" class="fixed-side">Frage</th>
+            <th scope="col">Risk Type 1</th>
+            <th scope="col">Risk Type 2</th>
+            <th scope="col">Risk Type 3</th>
+            <th scope="col">Risk Type 4</th>
+            <th scope="col">Risk Type 5</th>
+            <th scope="col">Risk Type 6</th>
+            <th scope="col">Risk Type 7</th>
+            <th scope="col">Risk Type 8</th>
+            <th scope="col">Risk Type 9</th>
 
-    <tr>
-      <th scope="row">Technologie</th>
-      <td>Automatisierung</td>
-      <td>Führt das Risiko zu einer Beeinträchtigung der Automatisierung z B durch die Notwendigkeit manueller Eingriffe (und das Verfehlen eines Automatisierungsgrads)?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="type" value="5"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T5" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Mensch</th>
+            <td>Zusammenarbeit</td>
+            <td>Beeinträchtigt das Risiko die Zusammenarbeit, wie z.B durch Verschlechterung des Betriebsklimas in Form
+              von Zweifel, Unzufriedenheit oder gar Widerstand?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="1">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T1">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type3" value="">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" name="type4" value="">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
 
-  <tr>
-      <th scope="row">Technologie</th>
-      <td>IT-Systeme</td>
-      <td>Führt das Risiko zu einer Verschlechterung der lT-Systeme, wie z B durch unbefugte Systemzugriffe bei Sicherheitslücken?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="type" value="6"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T6" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
+          <tr>
+            <th scope="row">Mensch</th>
+            <td>Qualifizierung</td>
+            <td>Wirkt sich das Risiko negativ auf die Qualifizierung der Mitarbeiter aus, wie z B. durch einen erhöhten
+              Schulungsbedarf oder einen Verlust der Leistungsfähigkeit?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="2">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T2">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
 
-      <tr>
-      <th scope="row">Technologie</th>
-      <td>Datenmanagement</td>
-      <td>Führt das Risiko zu einer Beeinträchtigung des Datenmanagements, wie z B. einem gestörten Datentransfer oder einer Minderung der Datenqualität?</td>
-     <td><label class="switch">
-        <input type="checkbox" name="type" value="7"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T7" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
+          </tr>
+          <tr>
+            <th scope="row">Mensch</th>
+            <td>Arbeitsstrukturen</td>
+            <td>Hat das Risiko einen negativen Einfluss auf die Arbeitsstruktur wie z B. mangelnde Mitarbeiterkapazität
+              (Arbeitsplatz, Arbeitsumgebung, angewendete Betriebssysteme)?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="3">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T3">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Mensch</th>
+            <td>Arbeitsaufgaben</td>
+            <td>Wirkt sich das Risiko negativ auf die Arbeitsaufgaben aus, wie z B durch eine steigende Komplexität der
+              Aufgaben (oder fehlende Verteilung von klaren Verantwortlichkeiten)?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="4">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T4">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">Technologie</th>
+            <td>Automatisierung</td>
+            <td>Führt das Risiko zu einer Beeinträchtigung der Automatisierung z B durch die Notwendigkeit manueller
+              Eingriffe (und das Verfehlen eines Automatisierungsgrads)?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="5">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T5">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">Technologie</th>
+            <td>IT-Systeme</td>
+            <td>Führt das Risiko zu einer Verschlechterung der lT-Systeme, wie z B durch unbefugte Systemzugriffe bei
+              Sicherheitslücken?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="6">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T6">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">Technologie</th>
+            <td>Datenmanagement</td>
+            <td>Führt das Risiko zu einer Beeinträchtigung des Datenmanagements, wie z B. einem gestörten Datentransfer
+              oder einer Minderung der Datenqualität?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="7">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T7">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
 
 
- <tr>
-      <th scope="row">Organisation</th>
-      <td>Prozesse</td>
-      <td>Führt das Risiko zu einer Zunahme an Prozessstörungen,z B aufgrund von unklaren Abläufen und Verantwortlichkeiten?</td>
-     <td><label class="switch">
-        <input type="checkbox" name="type" value="8"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T8" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
-     <tr>
-      <th scope="row">Organisation</th>
-      <td>Organisationsstruktur</td>
-      <td>Wirkt sich das Risiko negativ auf die Organisationsstrukturen aus, wie z B. der Entstehung von ineffizienten Organisationsschnittstellen?</td>
-     <td><label class="switch">
-        <input type="checkbox" name="type" value="9"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T2" value="T9" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
-     <tr>
-      <th scope="row">Organisation</th>
-      <td>Kultur</td>
-      <td>Wirkt sich das Risiko negativ auf die Kultur aus, wie z.B. die Entstehung eines Führungsvakuums oder die Veränderung von etablierten Werten und Normen?</td>
-     <td><label class="switch">
-        <input type="checkbox" name="type" value="10"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T10" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
-     <tr>
-      <th scope="row">Organisation</th>
-      <td>Wissen</td>
-      <td>Führt das Risiko zu einer Reduzierung von Kenntnissen und Wissen, wie z.B. durch ein verschlechtertes Wissensmanagement aufgrund von inkonsistenten Daten- und Informationserhebungen.</td>
-     <td><label class="switch">
-        <input type="checkbox" name="type" value="11"   >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="type2" value="T11" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </tr>
-</tbody>
-</table>
-<table>
+          <tr>
+            <th scope="row">Organisation</th>
+            <td>Prozesse</td>
+            <td>Führt das Risiko zu einer Zunahme an Prozessstörungen,z B aufgrund von unklaren Abläufen und
+              Verantwortlichkeiten?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="8">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T8">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Organisation</th>
+            <td>Organisationsstruktur</td>
+            <td>Wirkt sich das Risiko negativ auf die Organisationsstrukturen aus, wie z B. der Entstehung von
+              ineffizienten Organisationsschnittstellen?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="9">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T2" value="T9">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Organisation</th>
+            <td>Kultur</td>
+            <td>Wirkt sich das Risiko negativ auf die Kultur aus, wie z.B. die Entstehung eines Führungsvakuums oder die
+              Veränderung von etablierten Werten und Normen?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="10">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T10">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Organisation</th>
+            <td>Wissen</td>
+            <td>Führt das Risiko zu einer Reduzierung von Kenntnissen und Wissen, wie z.B. durch ein verschlechtertes
+              Wissensmanagement aufgrund von inkonsistenten Daten- und Informationserhebungen.</td>
+            <td><label class="switch">
+                <input type="checkbox" name="type" value="11">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="type2" value="T11">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
         <h5>Eintrittswahrscheinlichkeit</h5>
- <thead>
-    <tr>
-    
-      <th scope="col">Frage</th>
-      <th scope="col">Risk Type 1</th>
-      <th scope="col">Risk Type 2</th>
-      <th scope="col">Risk Type 3</th>
-      <th scope="col">Risk Type 4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      
-      <td>Gibt es bereits erste Anzeichen / Risikoursachen</td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L1">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L2">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L3">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox" name="lowerVal" value="L4">
-        <span class="slider round"></span>
-        </label>
-    </td>
-<tr>
-      
-      <td>Ist das Risiko in der Vergangenheit beriet einmal aufgetreten? Wird das Risiko nochmal auftreten?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L5">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L6">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L7">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox" name="lowerVal" value="L8">
-        <span class="slider round"></span>
-        </label>
-    </td>
-<tr>
-      
-      <td>Treten ähnliche Risiken immer wieder in Projekten ein?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L9">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox">
-        <span class="slider round" name="lowerVal" value="L10"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L11">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox" name="lowerVal" value="L12" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-    <tr>
-      
-      <td>Haben Mitarbeiter die Gefahr des Eintretens des Risikos bereits aufgezeigt?</td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L13" >
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L14">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td><label class="switch">
-        <input type="checkbox" name="lowerVal" value="L15">
-        <span class="slider round"></span>
-        </label>
-    </td>
-      <td>
-        <label class="switch">
-        <input type="checkbox" name="lowerVal" value="L16">
-        <span class="slider round"></span>
-        </label>
-    </td>
-    </table>
+        <thead>
+          <tr>
 
-  </div>
-  <div class="column2">
-    
-    <div class="parent">
+            <th scope="col">Frage</th>
+            <th scope="col">Risk Type 1</th>
+            <th scope="col">Risk Type 2</th>
+            <th scope="col">Risk Type 3</th>
+            <th scope="col">Risk Type 4</th>
+            <th scope="col">Risk Type 1</th>
+            <th scope="col">Risk Type 2</th>
+            <th scope="col">Risk Type 3</th>
+            <th scope="col">Risk Type 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
 
-        <div ><span class="left-label-span">Eintrittswahrscheinlichkeit</span></div>
+            <td>Gibt es bereits erste Anzeichen / Risikoursachen</td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L1">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L2">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L3">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" name="lowerVal" value="L4">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          <tr>
+
+            <td>Ist das Risiko in der Vergangenheit beriet einmal aufgetreten? Wird das Risiko nochmal auftreten?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L5">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L6">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L7">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" name="lowerVal" value="L8">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          <tr>
+
+            <td>Treten ähnliche Risiken immer wieder in Projekten ein?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L9">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox">
+                <span class="slider round" name="lowerVal" value="L10"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L11">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" name="lowerVal" value="L12">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          <tr>
+
+            <td>Haben Mitarbeiter die Gefahr des Eintretens des Risikos bereits aufgezeigt?</td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L13">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L14">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td><label class="switch">
+                <input type="checkbox" name="lowerVal" value="L15">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" name="lowerVal" value="L16">
+                <span class="slider round"></span>
+              </label>
+            </td>
+      </table>
+
+    </div>
+    <div class="column2">
+
+      <div class="parent">
+
+        <div><span class="left-label-span">Eintrittswahrscheinlichkeit</span></div>
         <div class="bottom-label ">Schadenshöhe</div>
 
         <div risk-matrix-item id="risk-matrix" class="risk-matrix-item">
-            <div class="closed" style="text-align: center; font-weight: 700;">R1</div>
-            <div class="open ">
-                <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
-                <span id=link></span>
-                
-            </div>
+          <div class="closed" style="text-align: center; font-weight: 700;">R1</div>
+          <div class="open ">
+            <span title="">
+              <p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br>
+                <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate
+              </p>
+            </span>
+            <span id=link></span>
+
+          </div>
         </div>
 
         <div risk-matrix-item id="risk-matrix1" class="risk-matrix-item1">
-            <div class="closed" style="text-align: center; font-weight: 700;">R2</div>
-            <div class="open ">
-                <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
-                <span id=link></span>
-            </div>
+          <div class="closed" style="text-align: center; font-weight: 700;">R2</div>
+          <div class="open ">
+
+            <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
+            <span id=link></span>
+          </div>
         </div>
 
         <div risk-matrix-item id="risk-matrix2" class="risk-matrix-item2">
-            <div class="closed" style="text-align: center; font-weight: 700;">R3</div>
-            <div class="open ">
-                <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
-                <span id=link></span>
-            </div>
+          <div class="closed" style="text-align: center; font-weight: 700;">R3</div>
+          <div class="open ">
+            <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
+            <span id=link></span>
+          </div>
         </div>
 
         <div risk-matrix-item id="risk-matrix3" class="risk-matrix-item3">
-            <div class="closed" style="text-align: center; font-weight: 700;">R4</div>
-            <div class="open ">
-                <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
-                <span id=link></span>
-            </div>
+          <div class="closed" style="text-align: center; font-weight: 700;">R4</div>
+          <div class="open ">
+            <!-- <span title=""><p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br> <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate</p></span> -->
+            <span id=link></span>
+          </div>
         </div>
 
-<div class="headLabel"> <h5>Risikoportfolio</h5> </div>
+        <div class="headLabel">
+          <h5>Risikoportfolio</h5>
+        </div>
         <div class="child1 "></div>
         <div class="child2 "></div>
         <div class="child3 "></div>
@@ -517,295 +545,330 @@
         <div class="child12 "></div>
 
         <div class="child13">
-            
+
         </div>
         <div class="child14 "></div>
         <div class="child15 "></div>
         <div class="child16 "></div>
 
 
-    </div>
-    <div id="background">
-        <p id="bg-text">Niedrig</p>
-	        </div>
-          <div id="backgroundAbove">
+      </div>
+      <div id="background">
+        <p id="neidrig-text">Niedrig</p>
+      </div>
+      <div id="backgroundAbove">
         <p id="bg-text2">Hoch</p>
-	        </div>
-          <div id="backgroundBelow">
+      </div>
+      <div id="backgroundBelow">
         <p id="bg-text3">Gering</p>
-	        </div>
-          <div id="backgroundBelow">
+      </div>
+      <div id="backgroundBelow">
         <p id="bg-text4">Hoch</p>
-	        </div>
+      </div>
+    </div>
   </div>
-</div>
-    <!-- <iframe src="../html/newGrid.html" alt="chartLegend" frameBorder="0" class="outer2"></iframe> -->
-    <script>
-        
-
-        var data = [{
-            Id: 1,
-            Title: 'Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen',
-            Description: '',
-
-        }, {
-            Id: 2,
-            Title: 'Risiko 1',
-            Description: 'Some description 2',
-            RiskLikelihood: 'Moeglich',
-            RiskImpact: 'Moderate'
-        }, {
-            Id: 3,
-            Title: 'Risiko 3',
-            Description: 'Some description 3',
-            RiskLikelihood: 'Unwahrscheinlich',
-            RiskImpact: 'Bedeutend'
-        }, {
-            Id: 4,
-            Title: 'Risiko 2',
-            Description: 'Some description 4',
-            RiskLikelihood: 'Sehr wahrscheinlich',
-            RiskImpact: 'Gering'
-        }];
+  <!-- <iframe src="../html/newGrid.html" alt="chartLegend" frameBorder="0" class="outer2"></iframe> -->
+  <script>
 
 
-        function convert() {
-          var var_array = [];
-          var var_array2 = [];
-          var val_x = 0;
-          var val_y = 0;
-          var firstLine = false;
-          var secondLine = false;
-          var lowValArray = [];
-          
-    $("input:checkbox[name=type]:checked").each(function(){
-    var_array.push($(this).val());
-    // the value of Y will remin 0 to keeep it on low while the value of 
-    // X will change 
-    if (var_array.length == '1'){
-      val_x = '1';
-    }
-    else if (var_array.length == '2'){
-      val_x = '2';
-    }
-    else if (var_array.length == '3'){
-      val_x = '3';
-    }
-    else if (var_array.length == '4'){
-      val_x = '4';
-    }else if (var_array.length == '5'){
-      val_x = '5';
-    }else if (var_array.length == '6'){
-      val_x = '6';
-    }else if (var_array.length == '7'){
-      val_x = '7';
-    }else if (var_array.length == '8'){
-      val_x = '8';
-    }else if (var_array.length == '9'){
-      val_x = '9';
-    }else if (var_array.length == '10'){
-      val_x = '10';
-    }
-    else if (var_array.length == '11'){
-      val_x = '11';
-    }
-    firstLine = true;
-  });
-        
-        
-       
-    $("input:checkbox[name=type2]:checked").each(function(){
-    var_array2.push($(this).val());
-    // the value of Y will remin 0 to keeep it on low while the value of 
-    // X will change 
-    if (var_array2.length == '1'){
-      val_x = '1';
-    }
-    else if (var_array2.length == '2'){
-      val_x = '2';
-    }
-    else if (var_array2.length == '3'){
-      val_x = '3';
-    }
-    else if (var_array2.length == '4'){
-      val_x = '4';
-    }else if (var_array2.length == '5'){
-      val_x = '5';
-    }else if (var_array2.length == '6'){
-      val_x = '6';
-    }else if (var_array2.length == '7'){
-      val_x = '7';
-    }else if (var_array2.length == '8'){
-      val_x = '8';
-    }else if (var_array2.length == '9'){
-      val_x = '9';
-    }else if (var_array2.length == '10'){
-      val_x = '10';
-    }
-    else if (var_array2.length == '11'){
-      val_x = '11';
-    }
-    secondLine = true;
-  });
+    var data = [{
+      Id: 1,
+      Title: 'Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen',
+      Description: '',
 
-            //debugger
-            //Har ID k against check ho. data ka index change karna ha accordigly id-1 use kar k daikh lena
-            // document.getElementById("link").innerHTML = data[0].Title;
-            var valX = val_x; // text box values 
-            var valY = val_y; // text box values 
-
-            if (valX == 0 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455  ),
-                    y: (65   )
-                }
-            } 
-            else if (valX == 1 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455  ),
-                    y: (80   )
-                }
-            } 
-            else if (valX == 2 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455  ),
-                    y: (120   )
-                }
-            } 
-            else if (valX == 3 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455  ),
-                    y: (160   )
-                }
-            } 
-            else if (valX == 4 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), //+ addPX
-                    y: (200 ) // - addPY
-                }
-            }
-            else if (valX == 5 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), //+ addPX
-                    y: (240 ) // - addPY
-                }
-            }
-            else if (valX == 6 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), //+ addPX
-                    y: (280 ) // - addPY
-                }
-            }
-            else if (valX == 7 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), //+ addPX
-                    y: (320 ) // - addPY
-                }
-            }
-            else if (valX == 8 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), //+ addPX
-                    y: (360 ) // - addPY
-                }
-            }
-            else if (valX == 9 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), //+ addPX
-                    y: (400 ) // - addPY
-                }
-            }
-            else if (valX == 10 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), //+ addPX
-                    y: (430 ) // - addPY
-                }
-            }
-            else if (valX == 11 && valY == 0) {
-                this.activeCordinates = {
-                    x: (455 ), 
-                    y: (445 ) 
-                }
-            }
-
-            var xCoord = this.activeCordinates.x;
-            var yCoord = this.activeCordinates.y;
-
-            // document.getElementById('risk-matrix').style.top = xCoord + 'px';
-            // document.getElementById('risk-matrix').style.left = yCoord + 'px'; 
-
-            if (firstLine == true){
-              document.getElementById('risk-matrix').style.top = xCoord + 'px';
-            document.getElementById('risk-matrix').style.left = yCoord + 'px'; 
-            }
-            else if (secondLine == true){
-              document.getElementById('risk-matrix1').style.top = xCoord + 'px';
-            // document.getElementById('risk-matrix1').style.left = yCoord + 'px'; 
-            } 
-//lower Blocks to change y-Axis
-  $("input:checkbox[name=lowerVal]:checked").each(function(){
-    lowValArray.push($(this).val());
-    
-    if (lowValArray.length == '1'){
-      val_y = '1';
-    }
-    else if (lowValArray.length == '2'){
-      val_y = '2';
-    }
-    else if (lowValArray.length == '3'){
-      val_y = '3';
-    }
-    else if (lowValArray.length == '4'){
-      val_y = '4';
-    }
-
-  });
-
-              var valX2 = val_x; // text box values 
-            var valY2 = val_y; // text box values 
+    }, {
+      Id: 2,
+      Title: 'Risiko 1',
+      Description: 'Some description 2',
+      RiskLikelihood: 'Moeglich',
+      RiskImpact: 'Moderate'
+    }, {
+      Id: 3,
+      Title: 'Risiko 3',
+      Description: 'Some description 3',
+      RiskLikelihood: 'Unwahrscheinlich',
+      RiskImpact: 'Bedeutend'
+    }, {
+      Id: 4,
+      Title: 'Risiko 2',
+      Description: 'Some description 4',
+      RiskLikelihood: 'Sehr wahrscheinlich',
+      RiskImpact: 'Gering'
+    }];
 
 
-            if (valX2 == 0 && valY2 == 1) {
-                this.activeCordinates = {
-                    y: (360  )
-                }
-            } 
-            else if (valX2 == 0 && valY2 == 2) {
-                this.activeCordinates = {
-                    y: (255  )
-                }
-            } 
-            else if (valX2 == 0 && valY2 == 3) {
-                this.activeCordinates = {
-                     y: (150   )
-                }
-            } 
-            else if (valX2 == 0 && valY2 == 4) {
-                this.activeCordinates = {
-                     y: (55   )
-                }
-            } 
+    function convert() {
+      var var_array = [];
+      var var_array2 = [];
+      var val_x = 0;
+      var val_y = 0;
+      var firstLine = false;
+      var secondLine = false;
+      var lowValArray = [];
+      var lowValues = false;
+      debugger
+      $("input:checkbox[name=type]:checked").each(function () {
+        var_array.push($(this).val());
+        // the value of Y will remin 0 to keeep it on low while the value of 
+        // X will change 
+        if (var_array.length == '1') {
+          val_x = '1';
+        }
+        else if (var_array.length == '2') {
+          val_x = '2';
+        }
+        else if (var_array.length == '3') {
+          val_x = '3';
+        }
+        else if (var_array.length == '4') {
+          val_x = '4';
+        } else if (var_array.length == '5') {
+          val_x = '5';
+        } else if (var_array.length == '6') {
+          val_x = '6';
+        } else if (var_array.length == '7') {
+          val_x = '7';
+        } else if (var_array.length == '8') {
+          val_x = '8';
+        } else if (var_array.length == '9') {
+          val_x = '9';
+        } else if (var_array.length == '10') {
+          val_x = '10';
+        }
+        else if (var_array.length == '11') {
+          val_x = '11';
+        }
+        firstLine = true;
+      });
 
-            var yCoord2 = this.activeCordinates.y;
-
-        document.getElementById('risk-matrix').style.top = yCoord2 + 'px'; 
 
 
-            
+      //   $("input:checkbox[name=type2]:checked").each(function(){
+      //   var_array2.push($(this).val());
+      //   // the value of Y will remin 0 to keeep it on low while the value of 
+      //   // X will change 
+      //   if (var_array2.length == '1'){
+      //     val_x = '1';
+      //   }
+      //   else if (var_array2.length == '2'){
+      //     val_x = '2';
+      //   }
+      //   else if (var_array2.length == '3'){
+      //     val_x = '3';
+      //   }
+      //   else if (var_array2.length == '4'){
+      //     val_x = '4';
+      //   }else if (var_array2.length == '5'){
+      //     val_x = '5';
+      //   }else if (var_array2.length == '6'){
+      //     val_x = '6';
+      //   }else if (var_array2.length == '7'){
+      //     val_x = '7';
+      //   }else if (var_array2.length == '8'){
+      //     val_x = '8';
+      //   }else if (var_array2.length == '9'){
+      //     val_x = '9';
+      //   }else if (var_array2.length == '10'){
+      //     val_x = '10';
+      //   }
+      //   else if (var_array2.length == '11'){
+      //     val_x = '11';
+      //   }
+      //   secondLine = true;
+      // });
+
+      //debugger
+      //Har ID k against check ho. data ka index change karna ha accordigly id-1 use kar k daikh lena
+      // document.getElementById("link").innerHTML = data[0].Title;
+
+      var valX = val_x; // text box values 
+      var valY = val_y; // text box values 
+
+      if (valX == 0 && valY == 0) {
+        this.activeCordinates = {
+          x: (455),
+          y: (65)
+        }
+      }
+      else if (valX == 1 && valY == 0) {
+        this.activeCordinates = {
+          x: (455),
+          y: (80)
+        }
+      }
+      else if (valX == 2 && valY == 0) {
+        this.activeCordinates = {
+          x: (455),
+          y: (120)
+        }
+      }
+      else if (valX == 3 && valY == 0) {
+        this.activeCordinates = {
+          x: (455),
+          y: (160)
+        }
+      }
+      else if (valX == 4 && valY == 0) {
+        this.activeCordinates = {
+          x: (455), //+ addPX
+          y: (200) // - addPY
+        }
+      }
+      else if (valX == 5 && valY == 0) {
+        this.activeCordinates = {
+          x: (455), //+ addPX
+          y: (240) // - addPY
+        }
+      }
+      else if (valX == 6 && valY == 0) {
+        this.activeCordinates = {
+          x: (455), //+ addPX
+          y: (280) // - addPY
+        }
+      }
+      else if (valX == 7 && valY == 0) {
+        this.activeCordinates = {
+          x: (455), //+ addPX
+          y: (320) // - addPY
+        }
+      }
+      else if (valX == 8 && valY == 0) {
+        this.activeCordinates = {
+          x: (455), //+ addPX
+          y: (360) // - addPY
+        }
+      }
+      else if (valX == 9 && valY == 0) {
+        this.activeCordinates = {
+          x: (455), //+ addPX
+          y: (400) // - addPY
+        }
+      }
+      else if (valX == 10 && valY == 0) {
+        this.activeCordinates = {
+          x: (455), //+ addPX
+          y: (430) // - addPY
+        }
+      }
+      else if (valX == 11 && valY == 0) {
+        this.activeCordinates = {
+          x: (455),
+          y: (445)
+        }
+      }
+
+      var xCoord = this.activeCordinates.x;
+      var yCoord = this.activeCordinates.y;
+      if (firstLine == true) {
+        // document.getElementById('risk-matrix').style.top = xCoord + 'px';
+        document.getElementById('risk-matrix').style.left = yCoord + 'px';
+        lowValues = false;
+      }
+
+      // if (firstLine == true){
+      //   document.getElementById('risk-matrix').style.top = xCoord + 'px';
+      // document.getElementById('risk-matrix').style.left = yCoord + 'px'; 
+      // }
+      // else if (secondLine == true){
+      //   document.getElementById('risk-matrix1').style.top = xCoord + 'px';
+      // // document.getElementById('risk-matrix1').style.left = yCoord + 'px'; 
+      // } 
+
+      //lower Blocks to change y-Axis
+      $("input:checkbox[name=lowerVal]:checked").each(function () {
+
+
+        lowValArray.push($(this).val());
+
+        if (lowValArray.length == '1') {
+          val_y = '1';
+          lowValues = true;
+        }
+        else if (lowValArray.length == '2') {
+          val_y = '2';
+          lowValues = true;
+        }
+        else if (lowValArray.length == '3') {
+          val_y = '3';
+          lowValues = true;
+        }
+        else if (lowValArray.length == '4') {
+          val_y = '4';
+          lowValues = true;
         }
 
-        function uncheckAll() {
-          document.querySelectorAll('input[type="checkbox"]')
-          .forEach(el => el.checked = false);
-           document.getElementById('risk-matrix1').style.top = '455px';
-            document.getElementById('risk-matrix1').style.left = '65px'; 
-             document.getElementById('risk-matrix').style.top = '455px';
-            document.getElementById('risk-matrix').style.left = '65px'; 
+      });
+
+      var valX2 = val_x; // text box values 
+      var valY2 = val_y; // text box values 
+
+
+      if (valY2 == 1) {
+        this.activeCordinates = {
+          y: (360)
         }
+      }
+      else if (valY2 == 2) {
+        this.activeCordinates = {
+          y: (255)
+        }
+      }
+      else if (valY2 == 3) {
+        this.activeCordinates = {
+          y: (150)
+        }
+      }
+      else if (valY2 == 4) {
+        this.activeCordinates = {
+          y: (55)
+        }
+      }
+
+      var yCoord2 = this.activeCordinates.y;
+      if (lowValues == true) {
+        document.getElementById('risk-matrix').style.top = yCoord2 + 'px';
+        lowValues = false;
+      }
 
 
-    </script>
 
-    <!-- <div class="button-field-label ">Spalte X Reihe eingeben</div>
+
+    }
+
+    function uncheckAll() {
+      document.querySelectorAll('input[type="checkbox"]')
+        .forEach(el => el.checked = false);
+      document.getElementById('risk-matrix1').style.top = '455px';
+      document.getElementById('risk-matrix1').style.left = '65px';
+      document.getElementById('risk-matrix').style.top = '455px';
+      document.getElementById('risk-matrix').style.left = '65px';
+    }
+
+    function myFunction() {
+      debugger
+      var ifrm = document.createElement("iframe");
+
+      ifrm.setAttribute("src", "../html/FinalSpinDiagram.html");
+
+      ifrm.style.width = "40%";
+      ifrm.style.height = "75%";
+      ifrm.style.top = "2%";
+      ifrm.style.right = "1%";
+      ifrm.style.zIndex = "9999";
+      ifrm.frameBorder = "0";
+      ifrm.style.position = "absolute";
+      document.body.appendChild(ifrm);
+    }
+
+    function closemyDiv() {
+      debugger
+      document.querySelectorAll("iframe").forEach(function (elem) {
+        elem.parentNode.removeChild(elem);
+      });
+    }
+  </script>
+
+  <!-- <div class="button-field-label ">Spalte X Reihe eingeben</div>
     <div>
         <input type="text " id="inputText2" name="Source " size="15 " style="position: absolute; width: 200px;top: 60.5%;left: 1.5%;overflow: hidden;float: left;margin: 0; ">
         <input type="text " id="inputText1" name="Source " size="15 " style="position: absolute; width: 200px;top: 65.5%;left: 1.5%;overflow: hidden; float: left;margin: 0; ">
@@ -813,10 +876,13 @@
         
     </div> -->
 
-    <button class="button" onclick="convert() ">Absenden  <i class="fa fa-arrow-circle-up"></i></button>
-    <button class="button2" onclick="uncheckAll()">Alle Abwählen <i class="fa fa-bandcamp"></i></button>
-    </div>
-    </div>
+  <button class="button" onclick="convert() ">Absenden <i class="fa fa-arrow-circle-up"></i></button>
+  <button class="button2" onclick="uncheckAll()">Alle Abwählen <i class="fa fa-bandcamp"></i></button>
+  <button class="r2Button" onclick="myFunction()" style="position: absolute; ">.</button>
+  <div id="iframeHolder"></div>
+  <button class="closeBtn" onclick="closemyDiv()">Ausblend Iframe</button>
+  </div>
+  </div>
 
 
 </body>
