@@ -26,6 +26,10 @@
   jQuery(document).ready(function () {
     jQuery(".main-table").clone(true).appendTo('#table-scroll').addClass('clone');
   });
+
+  jQuery(document).ready(function () {
+    jQuery(".main-table2").clone(true).appendTo('#table-scroll2').addClass('clone2');
+  });
 </script>
 
 <body>
@@ -42,7 +46,7 @@
 
                 <th scope="col" class="fixed-side">Dimension</th>
                 <th scope="col" class="fixed-side">Komponente</th>
-                <th scope="col" class="fixed-side">Frage</th>
+                <th scope="col" class="fixed-side" style="min-width: 520px !important">Frage</th>
                 <th scope="col">Risk Type 1</th>
                 <th scope="col">Risk Type 2</th>
                 <th scope="col">Risk Type 3</th>
@@ -72,68 +76,12 @@
                   Betriebsklimas in Form
                   von Zweifel, Unzufriedenheit oder gar Widerstand?</td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type" value="1">
+                    <input type="checkbox" name="type" value="11">
                     <span class="slider round"></span>
                   </label>
                 </td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T1">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type3" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" name="type4" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type3" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" name="type4" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type3" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" name="type4" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type3" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="fixed-side">Mensch</th>
-                <td class="fixed-side">Qualifizierung</td>
-                <td class="fixed-side">Wirkt sich das Risiko negativ auf die Qualifizierung der Mitarbeiter aus, wie z
-                  B.
-                  durch einen erhöhten
-                  Schulungsbedarf oder einen Verlust der Leistungsfähigkeit?</td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type" value="2">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T2">
+                    <input type="checkbox" name="type2" value="T11">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -148,49 +96,9 @@
                     <span class="slider round"></span>
                   </label>
                 </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type3" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" name="type4" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
                 <td>
                   <label class="switch">
                     <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type3" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" name="type4" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="fixed-side">Mensch</th>
-                <td class="fixed-side">Arbeitsstrukturen</td>
-                <td class="fixed-side">Hat das Risiko einen negativen Einfluss auf die Arbeitsstruktur wie z B.
-                  mangelnde
-                  Mitarbeiterkapazität
-                  (Arbeitsplatz, Arbeitsumgebung, angewendete Betriebssysteme)?</td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type" value="3">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T3">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -217,30 +125,6 @@
                     <span class="slider round"></span>
                   </label>
                 </td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td><label class="switch">
-                    <input type="checkbox" name="type3" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-                <td>
-                  <label class="switch">
-                    <input type="checkbox" name="type4" value="">
-                    <span class="slider round"></span>
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="fixed-side">Mensch</th>
-                <td class="fixed-side">Arbeitsaufgaben</td>
-                <td class="fixed-side">Wirkt sich das Risiko negativ auf die Arbeitsaufgaben aus, wie z B durch eine
-                  steigende Komplexität der
-                  Aufgaben (oder fehlende Verteilung von klaren Verantwortlichkeiten)?</td>
                 <td><label class="switch">
                     <input type="checkbox" name="type" value="4">
                     <span class="slider round"></span>
@@ -290,21 +174,27 @@
                     <span class="slider round"></span>
                   </label>
                 </td>
-
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
               </tr>
               <tr>
-                <th scope="row" class="fixed-side">Technologie</th>
-                <td class="fixed-side">Automatisierung</td>
-                <td class="fixed-side">Führt das Risiko zu einer Beeinträchtigung der Automatisierung z B durch die
-                  Notwendigkeit manueller
-                  Eingriffe (und das Verfehlen eines Automatisierungsgrads)?</td>
+                <th scope="row" class="fixed-side">Mensch</th>
+                <td class="fixed-side">Qualifizierung</td>
+                <td class="fixed-side">Wirkt sich das Risiko negativ auf die Qualifizierung der Mitarbeiter aus, wie z
+                  B.
+                  durch einen erhöhten
+                  Schulungsbedarf oder einen Verlust der Leistungsfähigkeit?</td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type" value="5">
+                    <input type="checkbox" name="type" value="11">
                     <span class="slider round"></span>
                   </label>
                 </td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T5">
+                    <input type="checkbox" name="type2" value="T11">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -316,6 +206,399 @@
                 <td>
                   <label class="switch">
                     <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fixed-side">Mensch</th>
+                <td class="fixed-side">Arbeitsstrukturen</td>
+                <td class="fixed-side">Hat das Risiko einen negativen Einfluss auf die Arbeitsstruktur wie z B.
+                  mangelnde
+                  Mitarbeiterkapazität
+                  (Arbeitsplatz, Arbeitsumgebung, angewendete Betriebssysteme)?</td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="11">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T11">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="fixed-side">Mensch</th>
+                <td class="fixed-side">Arbeitsaufgaben</td>
+                <td class="fixed-side">Wirkt sich das Risiko negativ auf die Arbeitsaufgaben aus, wie z B durch eine
+                  steigende Komplexität der
+                  Aufgaben (oder fehlende Verteilung von klaren Verantwortlichkeiten)?</td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="11">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T11">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row" class="fixed-side">Technologie</th>
+                <td class="fixed-side">Automatisierung</td>
+                <td class="fixed-side">Führt das Risiko zu einer Beeinträchtigung der Automatisierung z B durch die
+                  Notwendigkeit manueller
+                  Eingriffe (und das Verfehlen eines Automatisierungsgrads)?</td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="11">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T11">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -357,12 +640,12 @@
                   Systemzugriffe bei
                   Sicherheitslücken?</td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type" value="6">
+                    <input type="checkbox" name="type" value="11">
                     <span class="slider round"></span>
                   </label>
                 </td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T6">
+                    <input type="checkbox" name="type2" value="T11">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -384,6 +667,61 @@
                   </label>
                 </td>
                 <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label>
@@ -415,12 +753,12 @@
                   gestörten Datentransfer
                   oder einer Minderung der Datenqualität?</td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type" value="7">
+                    <input type="checkbox" name="type" value="11">
                     <span class="slider round"></span>
                   </label>
                 </td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T7">
+                    <input type="checkbox" name="type2" value="T11">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -442,6 +780,61 @@
                   </label>
                 </td>
                 <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label>
@@ -474,12 +867,12 @@
                   Abläufen und
                   Verantwortlichkeiten?</td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type" value="8">
+                    <input type="checkbox" name="type" value="11">
                     <span class="slider round"></span>
                   </label>
                 </td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T8">
+                    <input type="checkbox" name="type2" value="T11">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -501,6 +894,61 @@
                   </label>
                 </td>
                 <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label>
@@ -531,12 +979,12 @@
                   Entstehung von
                   ineffizienten Organisationsschnittstellen?</td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type" value="9">
+                    <input type="checkbox" name="type" value="11">
                     <span class="slider round"></span>
                   </label>
                 </td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T2" value="T9">
+                    <input type="checkbox" name="type2" value="T11">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -558,6 +1006,61 @@
                   </label>
                 </td>
                 <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label>
@@ -588,12 +1091,12 @@
                   Führungsvakuums oder die
                   Veränderung von etablierten Werten und Normen?</td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type" value="10">
+                    <input type="checkbox" name="type" value="11">
                     <span class="slider round"></span>
                   </label>
                 </td>
                 <td><label class="switch">
-                    <input type="checkbox" name="type2" value="T10">
+                    <input type="checkbox" name="type2" value="T11">
                     <span class="slider round"></span>
                   </label>
                 </td>
@@ -615,6 +1118,61 @@
                   </label>
                 </td>
                 <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label>
@@ -695,14 +1253,547 @@
                     <span class="slider round"></span>
                   </label>
                 </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
               </tr>
             </tbody>
-
           </table>
         </div>
       </div>
-    </div>
+      <h5>Eintrittswahrscheinlichkeit</h5>
+      <div id="table-scroll2" class="table-scroll2">
+        <div class="table-wrap2">
+          <table class="main-table2">
 
+            <thead>
+              <tr>
+
+                <th scope="col" class="fixed-side2" style="min-width: 500px !important;">
+                  Frage</th>
+                <th scope="col">Risk Type 1</th>
+                <th scope="col">Risk Type 2</th>
+                <th scope="col">Risk Type 3</th>
+                <th scope="col">Risk Type 4</th>
+                <th scope="col">Risk Type 5</th>
+                <th scope="col">Risk Type 6</th>
+                <th scope="col">Risk Type 7</th>
+                <th scope="col">Risk Type 8</th>
+                <th scope="col">Risk Type 9</th>
+                <th scope="col">Risk Type 10</th>
+                <th scope="col">Risk Type 12</th>
+                <th scope="col">Risk Type 13</th>
+                <th scope="col">Risk Type 14</th>
+                <th scope="col">Risk Type 15</th>
+                <th scope="col">Risk Type 16</th>
+                <th scope="col">Risk Type 17</th>
+                <th scope="col">Risk Type 18</th>
+                <th scope="col">Risk Type 19</th>
+                <th scope="col">Risk Type 20</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td class="fixed-side2" style="font-weight: bolder !important;">Gibt es bereits erste Anzeichen /
+                  Risikoursachen</td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L1">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L2">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+
+                <td class="fixed-side2" style="font-weight: bolder !important;">Ist das Risiko in der Vergangenheit
+                  beriet einmal aufgetreten? Wird das Risiko
+                  nochmal auftreten?
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L5">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L6">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L7">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L8">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+
+                <td class="fixed-side2" style="font-weight: bolder !important;">Treten ähnliche Risiken immer wieder in
+                  Projekten ein?</td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L9">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round" name="lowerVal" value="L10"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L11">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L12">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+
+                <td class="fixed-side2" style="font-weight: bolder !important;">Haben Mitarbeiter die Gefahr des
+                  Eintretens des Risikos bereits aufgezeigt?</td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L13">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L14">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L15">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox" name="lowerVal" value="L16">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type" value="4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T4">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox" name="type2" value="T3">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td><label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
     <div class="flex-child green">
       <div class="left-label-span">Eintrittswahrscheinlichkeit</div>
       <div class="bottom-label ">Schadenshöhe</div>
@@ -718,12 +1809,7 @@
         <div risk-matrix-item id="risk-matrix" class="risk-matrix-item">
           <div class="closed" style="text-align: center; font-weight: 700;">R1</div>
           <div class="open ">
-            <span title="">
-              <p><i>Mitarbeiter verfügen nicht über die benötigten technischen Kompetenzen</i><br>
-                <b>Risikowahrscheinlichkeit:</b> Moeglich,<br><b> Schadenshoehe:</b> Moderate
-              </p>
-            </span>
-            <span id=link></span>
+
 
           </div>
         </div>
@@ -769,13 +1855,288 @@
       <div id="backgroundBelow">
         <p id="bg-text4">Hoch</p>
       </div>
+      <button class="button" onclick="convert() ">Absenden <i class="fa fa-arrow-circle-up"></i></button>
+      <button class="button2" onclick="uncheckAll()">Alle Abwählen <i class="fa fa-bandcamp"></i></button>
+
     </div>
 
+    <script>
+      function convert() {
+        var var_array = [];
+        var var_array2 = [];
+        var val_x = 0;
+        var val_y = 0;
+        var firstLine = false;
+        var secondLine = false;
+        var lowValArray = [];
+        var lowValues = false;
 
+        $("input:checkbox[name=type]:checked").each(function () {
+          var_array.push($(this).val());
+          // the value of Y will remin 0 to keeep it on low while the value of 
+          // X will change 
+          if (var_array.length == '1') {
+            val_x = '1';
+          }
+          else if (var_array.length == '2') {
+            val_x = '2';
+          }
+          else if (var_array.length == '3') {
+            val_x = '3';
+          }
+          else if (var_array.length == '4') {
+            val_x = '4';
+          } else if (var_array.length == '5') {
+            val_x = '5';
+          } else if (var_array.length == '6') {
+            val_x = '6';
+          } else if (var_array.length == '7') {
+            val_x = '7';
+          } else if (var_array.length == '8') {
+            val_x = '8';
+          } else if (var_array.length == '9') {
+            val_x = '9';
+          } else if (var_array.length == '10') {
+            val_x = '10';
+          }
+          else if (var_array.length == '11') {
+            val_x = '11';
+          }
+          firstLine = true;
+        });
+
+
+
+        //   $("input:checkbox[name=type2]:checked").each(function(){
+        //   var_array2.push($(this).val());
+        //   // the value of Y will remin 0 to keeep it on low while the value of 
+        //   // X will change 
+        //   if (var_array2.length == '1'){
+        //     val_x = '1';
+        //   }
+        //   else if (var_array2.length == '2'){
+        //     val_x = '2';
+        //   }
+        //   else if (var_array2.length == '3'){
+        //     val_x = '3';
+        //   }
+        //   else if (var_array2.length == '4'){
+        //     val_x = '4';
+        //   }else if (var_array2.length == '5'){
+        //     val_x = '5';
+        //   }else if (var_array2.length == '6'){
+        //     val_x = '6';
+        //   }else if (var_array2.length == '7'){
+        //     val_x = '7';
+        //   }else if (var_array2.length == '8'){
+        //     val_x = '8';
+        //   }else if (var_array2.length == '9'){
+        //     val_x = '9';
+        //   }else if (var_array2.length == '10'){
+        //     val_x = '10';
+        //   }
+        //   else if (var_array2.length == '11'){
+        //     val_x = '11';
+        //   }
+        //   secondLine = true;
+        // });
+
+        //debugger
+        //Har ID k against check ho. data ka index change karna ha accordigly id-1 use kar k daikh lena
+        // document.getElementById("link").innerHTML = data[0].Title;
+
+        var valX = val_x; // text box values 
+        var valY = val_y; // text box values 
+
+        if (valX == 0 && valY == 0) {
+          this.activeCordinates = {
+            x: (495),
+            y: (10)
+          }
+        }
+        else if (valX == 1 && valY == 0) {
+          this.activeCordinates = {
+            x: (495),
+            y: (35)
+          }
+        }
+        else if (valX == 2 && valY == 0) {
+          this.activeCordinates = {
+            x: (495),
+            y: (70)
+          }
+        }
+        else if (valX == 3 && valY == 0) {
+          this.activeCordinates = {
+            x: (495),
+            y: (100)
+          }
+        }
+        else if (valX == 4 && valY == 0) {
+          this.activeCordinates = {
+            x: (495), //+ addPX
+            y: (130) // - addPY
+          }
+        }
+        else if (valX == 5 && valY == 0) {
+          this.activeCordinates = {
+            x: (495), //+ addPX
+            y: (170) // - addPY
+          }
+        }
+        else if (valX == 6 && valY == 0) {
+          this.activeCordinates = {
+            x: (495), //+ addPX
+            y: (220) // - addPY
+          }
+        }
+        else if (valX == 7 && valY == 0) {
+          this.activeCordinates = {
+            x: (495), //+ addPX
+            y: (270) // - addPY
+          }
+        }
+        else if (valX == 8 && valY == 0) {
+          this.activeCordinates = {
+            x: (495), //+ addPX
+            y: (290) // - addPY
+          }
+        }
+        else if (valX == 9 && valY == 0) {
+          this.activeCordinates = {
+            x: (495), //+ addPX
+            y: (310) // - addPY
+          }
+        }
+        else if (valX == 10 && valY == 0) {
+          this.activeCordinates = {
+            x: (495), //+ addPX
+            y: (350) // - addPY
+          }
+        }
+        else if (valX == 11 && valY == 0) {
+          this.activeCordinates = {
+            x: (495),
+            y: (370)
+          }
+        }
+
+        var xCoord = this.activeCordinates.x;
+        var yCoord = this.activeCordinates.y;
+        if (firstLine == true) {
+          // document.getElementById('risk-matrix').style.top = xCoord + 'px';
+          document.getElementById('risk-matrix').style.left = yCoord + 'px';
+          lowValues = false;
+        }
+
+        // if (firstLine == true){
+        //   document.getElementById('risk-matrix').style.top = xCoord + 'px';
+        // document.getElementById('risk-matrix').style.left = yCoord + 'px'; 
+        // }
+        // else if (secondLine == true){
+        //   document.getElementById('risk-matrix1').style.top = xCoord + 'px';
+        // // document.getElementById('risk-matrix1').style.left = yCoord + 'px'; 
+        // } 
+
+        //lower Blocks to change y-Axis
+        $("input:checkbox[name=lowerVal]:checked").each(function () {
+
+
+          lowValArray.push($(this).val());
+
+          if (lowValArray.length == '1') {
+            val_y = '1';
+            lowValues = true;
+          }
+          else if (lowValArray.length == '2') {
+            val_y = '2';
+            lowValues = true;
+          }
+          else if (lowValArray.length == '3') {
+            val_y = '3';
+            lowValues = true;
+          }
+          else if (lowValArray.length == '4') {
+            val_y = '4';
+            lowValues = true;
+          }
+
+        });
+
+        var valX2 = val_x; // text box values 
+        var valY2 = val_y; // text box values 
+
+
+        if (valY2 == 1) {
+          this.activeCordinates = {
+            y: (400)
+          }
+        }
+        else if (valY2 == 2) {
+          this.activeCordinates = {
+            y: (295)
+          }
+        }
+        else if (valY2 == 3) {
+          this.activeCordinates = {
+            y: (190)
+          }
+        }
+        else if (valY2 == 4) {
+          this.activeCordinates = {
+            y: (95)
+          }
+        }
+
+        var yCoord2 = this.activeCordinates.y;
+        if (lowValues == true) {
+          document.getElementById('risk-matrix').style.top = yCoord2 + 'px';
+          lowValues = false;
+        }
+
+
+
+
+      }
+
+      function uncheckAll() {
+        document.querySelectorAll('input[type="checkbox"]')
+          .forEach(el => el.checked = false);
+        // document.getElementById('risk-matrix1').style.top = '455px';
+        // document.getElementById('risk-matrix1').style.left = '65px';
+        document.getElementById('risk-matrix').style.top = '495px';
+        document.getElementById('risk-matrix').style.left = '10px';
+      }
+
+      function myFunction() {
+        debugger
+        var ifrm = document.createElement("iframe");
+
+        ifrm.setAttribute("src", "../html/FinalSpinDiagram.html");
+
+        ifrm.style.width = "40%";
+        ifrm.style.height = "75%";
+        ifrm.style.top = "2%";
+        ifrm.style.right = "1%";
+        ifrm.style.zIndex = "9999";
+        ifrm.frameBorder = "0";
+        ifrm.style.position = "absolute";
+        document.body.appendChild(ifrm);
+      }
+
+      function closemyDiv() {
+        debugger
+        document.querySelectorAll("iframe").forEach(function (elem) {
+          elem.parentNode.removeChild(elem);
+        });
+      }
+    </script>
+
+
+    <!-- <div id="iframeHolder"></div> -->
+    <!-- <button class="closeBtn" onclick="closemyDiv()">Ausblend Iframe</button> -->
+  </div>
   </div>
 </body>
-<script>
-
-</script>
 
 </html>
