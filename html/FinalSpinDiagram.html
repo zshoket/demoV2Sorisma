@@ -1,126 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>SpinDiagram Final</title>
-    <link
-      href="https://playground.anychart.com/docs/samples/BCT_Radar_Chart_01/iframe"
-      rel="canonical"
-    />
-    <meta content="Radar Chart,Spider Web" name="keywords" />
-    <meta
-      content="AnyChart - JavaScript Charts designed to be embedded and integrated"
-      name="description"
-    />
-    <!--[if lt IE 9]>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>SpinDiagram Final</title>
+  <link href="https://playground.anychart.com/docs/samples/BCT_Radar_Chart_01/iframe" rel="canonical" />
+  <meta content="Radar Chart,Spider Web" name="keywords" />
+  <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description" />
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link
-      href="https://cdn.anychart.com/releases/8.10.0/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style>
-      html,
-      body,
-      #container {
-        width: 90%;
-        height: 90%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+  <link href="https://cdn.anychart.com/releases/8.10.0/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4"
+    rel="stylesheet" type="text/css" />
+  <style>
+    html,
+    body,
+    #container {
+      /* width: 90%; */
+      height: 89%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 
-    <style>
-      .label {
-        color: white;
-        padding: 8px;
-        font-family: Arial;
-        top: 10%;
-        left: 50%;
-      }
+  <style>
+    .label {
+      color: white;
+      padding: 8px;
+      font-family: Arial;
+      top: 10%;
+      left: 50%;
+    }
 
-      .info {
-        background-color: #2196f3;
-      } /* Blue */
-      .Risikobewertung {
-        background-color: #f44336;
-      } /* Red */
-    </style>
+    .info {
+      background-color: #2196f3;
+    }
+
+    .Risikobewertung {
+      background-color: #f44336;
+    }
+
+  </style>
   </head>
-  <body>
-    <div id="container"></div>
-    <span class="label info">Digital Reifegrad</span>
 
-    <span class="label Risikobewertung">Risikobewertung</span>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-radar.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-    <script type="text/javascript">
-      anychart.onDocumentReady(function () {
-        // create data for the first series
-        var data_1 = [
-          { x: "Mensch", value: 1 },
-          { x: "Technologie", value: 2 },
-          { x: "Organisation", value: 4 },
-        ];
+<body>
+  <div id="container"></div>
+  <span class="label info">Digital Reifegrad</span>
+  <span class="label Risikobewertung">Risikobewertung</span>
+<script
+  src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script
+  src="https://cdn.anychart.com/releases/8.10.0/js/anychart-radar.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script
+  src="https://cdn.anychart.com/releases/8.10.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script
+  src="https://cdn.anychart.com/releases/8.10.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script type="text/javascript">
+  anychart.onDocumentReady(function () {
+    // create data for the first series
+    var data_1 = [
+      { x: "Mensch", value: 1 },
+      { x: "Technologie", value: 2 },
+      { x: "Organisation", value: 3.5 },
+    ];
 
-        // create data for the second series
-        var data_2 = [
-          { x: "Mensch", value: 4 },
-          { x: "Technologie", value: 1 },
-          { x: "Organisation", value: 2 },
-        ];
+    // create data for the second series
+    var data_2 = [
+      { x: "Mensch", value: 3 },
+      { x: "Technologie", value: 1 },
+      { x: "Organisation", value: 2 },
+    ];
 
-        // create a chart
-        var chart = anychart.radar();
-        chart.defaultSeriesType("area");
+    // create a chart
+    var chart = anychart.radar();
+    chart.defaultSeriesType("area");
 
-        var Risikobewertung = chart.line(data_1);
+    var Risikobewertung = chart.line(data_1);
 
-        Risikobewertung.normal().fill("red", 0.3);
-        Risikobewertung.hovered().fill("#00cc99", 0.1);
-        Risikobewertung.selected().fill("#00cc99", 0.5);
-        Risikobewertung.normal().stroke("red", 1, "10 5", "round");
-        Risikobewertung.hovered().stroke("#00cc99", 2, "10 5", "round");
-        Risikobewertung.selected().stroke("#00cc99", 4, "10 5", "round");
+    Risikobewertung.normal().fill("rgb(0, 102, 204)", 0.3);
+    Risikobewertung.hovered().fill("#00cc99", 0.1);
+    Risikobewertung.selected().fill("#00cc99", 0.5);
+    Risikobewertung.normal().stroke("red", 1, "10 5", "round");
+    Risikobewertung.hovered().stroke("#00cc99", 2, "10 5", "round");
+    Risikobewertung.selected().stroke("#00cc99", 4, "10 5", "round");
 
-        var DigitalerReifergrad = chart.area(data_2);
+    var DigitalerReifergrad = chart.area(data_2);
 
-        DigitalerReifergrad.normal().fill("#0066cc", 0.3);
-        DigitalerReifergrad.hovered().fill("#0066cc", 0.1);
-        DigitalerReifergrad.selected().fill("#0066cc", 0.5);
-        DigitalerReifergrad.normal().stroke("#0066cc");
-        DigitalerReifergrad.hovered().stroke("#0066cc", 2);
-        DigitalerReifergrad.selected().stroke("#0066cc", 4);
+    DigitalerReifergrad.normal().fill("#0066cc", 0.3);
+    DigitalerReifergrad.hovered().fill("#0066cc", 0.1);
+    DigitalerReifergrad.selected().fill("#0066cc", 0.5);
+    DigitalerReifergrad.normal().stroke("#0066cc");
+    DigitalerReifergrad.hovered().stroke("#0066cc", 2);
+    DigitalerReifergrad.selected().stroke("#0066cc", 4);
 
-        chart.yScale().stackMode("value");
-        chart.yAxis().stroke("#545f69");
-        chart.yAxis().ticks().stroke("#545f69");
+    chart.yScale().stackMode("value");
+    chart.yAxis().stroke("#545f69");
+    chart.yAxis().ticks().stroke("#545f69");
 
-        var labels = chart.labels();
-        labels.enabled(false);
+    chart.yScale().minimum(0).maximum(4).ticks({ interval: 1 });
+    var labels = chart.labels();
+    labels.enabled(false);
 
-        var credits = chart.credits();
-        anychart.licenseKey(
-          "zshoket@campus.uni-paderborn.de-c3eb80d3-ac41041a"
-        );
-        credits.enabled(false);
+    var credits = chart.credits();
+    anychart.licenseKey(
+      "zshoket@campus.uni-paderborn.de-c3eb80d3-ac41041a"
+    );
+    credits.enabled(false);
 
-        chart.xGrid().palette(["#fef8c4", "#c7dff1", "#bbe1d7"]);
+    // chart.background().fill({
+    //   src: "https://i.ibb.co/mc7Qky0/Diagram1.png",
+    //   mode: "fit"
+    // });
 
-        // set the chart title
+    chart.xGrid().palette(["#fef8c4", "#c7dff1", "#bbe1d7"]);
+    chart.contextMenu(false);
+      // set the chart title
 
-        // set the container id
-        chart.container("container");
+    // set the container id
+    chart.container("container");
 
-        // initiate drawing the chart
-        chart.draw();
-      });
+    // initiate drawing the chart
+    chart.draw();
+  });
     </script>
   </body>
+
 </html>

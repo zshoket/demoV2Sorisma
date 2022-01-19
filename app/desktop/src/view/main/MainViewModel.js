@@ -139,12 +139,12 @@ Ext.define("SORISMA.view.main.MainViewModel", {
             leaf: true,
           },
 
-          {
-            text: "Spin Diagram",
-            iconCls: "x-fa fa-bullseye",
-            xtype: "varZwei",
-            leaf: true,
-          },
+          // {
+          //   text: "Spin Diagram",
+          //   iconCls: "x-fa fa-bullseye",
+          //   xtype: "varZwei",
+          //   leaf: true,
+          // },
         ],
       },
     },
