@@ -145,6 +145,13 @@ Ext.define("SORISMA.view.main.MainViewModel", {
           //   xtype: "varZwei",
           //   leaf: true,
           // },
+                    {
+            text: "Bewurtung Test",
+            iconCls: "x-fa fa-database",
+            xtype: "bewurtungTest",
+            leaf: true,
+          },
+
         ],
       },
     },
