@@ -1,6 +1,5 @@
 {
   "git.ignoreLimitWarning": true,
-  "editor.formatOnSave": true,
   "cmake.configureOnOpen": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[html]": {
