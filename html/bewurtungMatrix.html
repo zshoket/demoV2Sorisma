@@ -1731,7 +1731,7 @@
       <div id="backgroundBelow">
         <p id="bg-text4">hoch</p>
       </div>
-      <button class="button" onclick="convert() ">Absenden <i class="fa fa-arrow-circle-up"></i></button>
+      <button class="button" onclick="convert(); calResults(); ">Absenden <i class="fa fa-arrow-circle-up"></i></button>
       <button class="button2" onclick="uncheckAll()">alle abwählen <i class="fa fa-bandcamp"></i></button>
 
       <h6 style="position: absolute; right: 310px;">UseCase Auswählen:</h6>
@@ -2398,7 +2398,7 @@
           document.getElementById('risk-matrix1').style.top = yCoord2 + 'px';
           lowValues = false;
         }
-        
+
         // if (lowValues == true) {
         //   document.getElementById('risk-matrix2').style.top = yCoord2 + 'px';
         //   lowValues = false;
@@ -2729,6 +2729,7 @@
       //     }
       //   }
       // } // function ending
+      // collect all the divs
     </script>
 
 
@@ -2742,7 +2743,7 @@
                             top: 55.7%; text-align: center; font-weight: 700;">R1</a>
       </div>
 
-      <div id="popup21" class="overlay">
+      <!-- <div id="popup21" class="overlay">
         <div class="popup">
           <h2>Risikoprofil</h2>
           <a class="close" href="#">×</a>
@@ -2751,7 +2752,7 @@
               style="height: 785px; overflow: hidden; width: 100%;"></iframe>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div id="popup2" class="overlay">
         <div class="popup">
@@ -2769,7 +2770,7 @@
                             top: 55.7%;">R2</a>
       </div>
 
-      <!-- <div class="box">
+      <div class="box">
         <a class="overlaybutton" id="risk-matrix3" href="#popup2" style="text-align: center; font-weight: 700; left: 74.5%;
                             top: 15.7%;">R3</a>
       </div>
@@ -2854,14 +2855,51 @@
                                       top: 11.7%;">R19</a>
       </div> -->
 
-      <!-- <div class="box">
+      <div class="box">
         <a class="overlaybutton" id="risk-matrix20" href="#popup2" style="text-align: center; font-weight: 700; left: 75.5%;
                                       top: 23.7%;">R20</a>
-      </div> -->
+      </div>
     </div>
 
   </div>
   </div>
+  <script>
+    function calResults() {
+
+      var divs = document.getElementsByClassName('box');
+      // get window width and height
+      var winWidth = 1520;
+      var winHeight = 500;
+
+      // i stands for "index". you could also call this banana or haircut. it's a variable
+      for (var i = 0; i < divs.length; i++) {
+
+        // shortcut! the current div in the list
+        var thisDiv = divs[i];
+        let boxes = "risk-matrix" + i;
+        if (boxes === "risk-matrix0") {
+
+        } else {
+
+          // get random numbers for each element
+          randomTop = getRandomNumber(95, winHeight);
+          randomLeft = getRandomNumber(1160, winWidth);
+
+          // update top and left position
+          document.getElementById(boxes).style.top = randomTop + 'px';
+          document.getElementById(boxes).style.left = randomLeft + 'px';
+        }
+
+      }
+
+      // function that returns a random number between a min and max
+      function getRandomNumber(min, max) {
+
+        return Math.random() * (max - min) + min;
+
+      }
+    }
+  </script>
 </body>
 
 </html>
