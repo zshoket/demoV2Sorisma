@@ -1726,16 +1726,16 @@
         <p id="bg-text2">hoch</p>
       </div>
       <div id="backgroundBelow">
-        <p id="bg-text3">gering</p>
+        <p id="bg-text3">hoch</p>
       </div>
       <div id="backgroundBelow">
-        <p id="bg-text4">hoch</p>
+        <p id="bg-text4">gering</p>
       </div>
       <button class="button" onclick="convert(); calResults(); ">Absenden <i class="fa fa-arrow-circle-up"></i></button>
       <button class="button2" onclick="uncheckAll()">alle abwählen <i class="fa fa-bandcamp"></i></button>
 
-      <h6 style="position: absolute; right: 310px;">UseCase Auswählen:</h6>
-      <form id="uscform" action="UseCaseForm">
+      <h6 style="position: absolute; right: 310px; visibility: hidden;">UseCase Auswählen:</h6>
+      <form style= "visibility:hidden;" id="uscform" action="UseCaseForm">
         <select value="UseCase" onchange="showUseCase(this.value)">
           <option value="">Select a UseCase:</option>
           <option value="KI-gestützte Belegerkennung zur automatisierten Datenerfassung und verarbeitung">
@@ -1900,39 +1900,39 @@
         </select>
       </form>
 
-      <div id="txtHint2">UseCase info will be listed here...</div>
+      <div style= "visibility:hidden;" id="txtHint2">UseCase info will be listed here...</div>
 
-      <div class="uscName">
+      <div style= "visibility:hidden;" class="uscName">
         <label for="uscName" style="font-weight: bold">Name:</label>
         <div id="uscName"></div>
       </div>
-      <div class="uscReifgrad">
+      <div style= "visibility:hidden;" class="uscReifgrad">
         <label for="uscReifgrad" style="font-weight: bold"> UseCase Reifgrad:</label>
         <div id="uscReifgrad"></div>
       </div>
-      <div class="uscDimension">
+      <div style= "visibility:hidden;" class="uscDimension">
         <label for="uscDimension" style="font-weight: bold">Dimension:</label>
         <div id="uscDimension"></div>
       </div>
       <br />
-      <form id="fr1" action="DigitalReifegradForm">
+      <form style= "visibility:hidden;" id="fr1" action="DigitalReifegradForm">
         <h6>Digital Reifegrad:</h6>
         <br />
-        <select value="DigiR" onchange="showReifgrad(this.value)">
+        <select style= "visibility:hidden;" value="DigiR" onchange="showReifgrad(this.value)">
           <option value="">Select a Reifgrad value:</option>
           <option value="1">M1</option>
           <option value="2">M2</option>
           <option value="3">M3</option>
           <option value="4">M4</option>
         </select>
-        <select value="DigiR2" onchange="showReifgrad2(this.value)">
+        <select style= "visibility:hidden;" value="DigiR2" onchange="showReifgrad2(this.value)">
           <option value="">Select a Reifgrad value:</option>
           <option value="1">T1</option>
           <option value="2">T2</option>
           <option value="3">T3</option>
           <option value="4">T4</option>
         </select>
-        <select value="DigiR3" onchange="showReifgrad3(this.value)">
+        <select style= "visibility:hidden;" value="DigiR3" onchange="showReifgrad3(this.value)">
           <option value="">Select a Reifgrad value:</option>
           <option value="1">O1</option>
           <option value="2">O2</option>
@@ -1940,9 +1940,9 @@
           <option value="4">O4</option>
         </select>
       </form>
-      <div id="txtreifegrad">Reifegrad 1:</div>
-      <div id="txtreifegrad2">Reifegrad 2:</div>
-      <div id="txtreifegrad3">Reifegrad 3:</div>
+      <div style= "visibility:hidden;" id="txtreifegrad">Reifegrad 1:</div>
+      <div style= "visibility:hidden;" id="txtreifegrad2">Reifegrad 2:</div>
+      <div style= "visibility:hidden;" id="txtreifegrad3">Reifegrad 3:</div>
       <br />
 
       <!-- <button type="button" id="btn" onclick="calResults()">Submit!</button> -->
