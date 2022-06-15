@@ -145,10 +145,16 @@ Ext.define("SORISMA.view.main.MainViewModel", {
                     //   xtype: "varZwei",
                     //   leaf: true,
                     // },
+                    // {
+                    //     text: "Bewertung Schadenshöhe (Test)",
+                    //     iconCls: "x-fa fa-database",
+                    //     xtype: "bewurtungTest",
+                    //     leaf: true,
+                    // },
                     {
-                        text: "Bewertung Schadenshöhe (Test)",
+                        text: "Maßnahmen und Events Ansicht",
                         iconCls: "x-fa fa-database",
-                        xtype: "bewurtungTest",
+                        xtype: "massNahmenEventsview",
                         leaf: true,
                     },
                 ],
