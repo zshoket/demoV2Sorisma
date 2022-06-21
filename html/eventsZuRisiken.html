@@ -1,790 +1,1894 @@
 <!DOCTYPE html>
 <html>
 
-<meta content="utf-8" http-equiv="encoding" />
-<meta name="robots" content="noindex, nofollow" />
-<meta name="googlebot" content="noindex, nofollow" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
+<head>
+    <title>Sorisma Bewurtung</title>
+    <link rel="stylesheet" type="text/css" href="./bewurtungStyle2.css" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<style>
-     html {
-        overflow: scroll !important;
-  overflow-y: scroll;
-  overflow-x: scroll;
-}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--bodycolor);
-  height: 100%;
-  width: 80%;
-  /* position: absolute;*/
-  /* overflow-x: hidden; */
-  font-size: 13px !important;
-  padding-bottom: 14rem;
-}
-    table,
-    th,
-    td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
+    </style>
+</head>
 
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".main-table").clone(true).appendTo('#table-scroll').addClass('clone');
+    });
+
+    jQuery(document).ready(function () {
+        jQuery(".main-table2").clone(true).appendTo('#table-scroll2').addClass('clone2');
+    });
+</script>
 
 <body>
-    <form id="fr1" action="RisktypZuEventsForm">
-        <h6>Risiko Auswahl:</h6>
-        <br />
-        <select value="DigiR" onchange="showEvents1(this.value)">
-          <option value="">Select a RiskType:</option>
-          <option value="Kompetenzmangel">Kompetenzmangel
-        </option>
-         <option value="Fachkräftemangel">Fachkräftemangel
-        </option>
-         <option value="Fehlende Akzeptanz">Fehlende Akzeptanz
-        </option>
-         <option value="Entgrenzung der Arbeit">Entgrenzung der Arbeit
-        </option>
-        <option value="Gefährdung der Arbeitssicherheit">Gefährdung der Arbeitssicherheit
-        </option>
-        <option value="Fehleinschätzung durch intransparente Prozesse">Fehleinschätzung durch intransparente Prozesse
-        </option>
-          <option value="Gefährdung der IT-Sicherheit">Gefährdung der IT-Sicherheit
-        </option>
-        <option value="Gefährdung des Datenschutzes">Gefährdung des Datenschutzes
-        </option>
-        <option value="Instabile Datenübertragung">Instabile Datenübertragung
-        </option>
-        <option value="Unausgereiftes Datenmanagement">Unausgereiftes Datenmanagement
-        </option>
-        <option value="Unzureichende Datenqualität">Unzureichende Datenqualität
-        </option>
-        <option value="Fehlerhafte Datenverarbeitung">Fehlerhafte Datenverarbeitung
-        </option>
-        <option value="Fragiles Wertschöpfungssystem">Fragiles Wertschöpfungssystem
-        </option>
-        <option value="Mangelnder technologischer Reifegrad">Mangelnder technologischer Reifegrad
-        </option>
-        <option value="Fragile vernetztes Produktion (intern)">Fragile vernetztes Produktion (intern)
-        </option>
-        <option value="Fehlinvestitionen">Fehlinvestitionen
-        </option>
-        <option value="Unklare rechtliche Rahmenbedingungen">Unklare rechtliche Rahmenbedingungen
-        </option>
-        <option value="Mangelnde Mitarbeiterkapazitäten">Mangelnde Mitarbeiterkapazitäten
-        </option>
-        <option value="Imageverlust">Imageverlust
-        </option>
-        <option value="Ausbleibender Wandel der Kultur">Ausbleibender Wandel der Kultur
-        </option>
-        <option value="Unzureichende Kooperationen zw. Netzwerkpartnern">Unzureichende Kooperationen zw. Netzwerkpartnern
-        </option>
-        <option value="Ungeeignetes Geschäftsmodell">Ungeeignetes Geschäftsmodell
-        </option>
-        <option value="Ungeeignete Organisationsstruktur">Ungeeignete Organisationsstruktur
-        </option>
-        <option value="Fehlerhafte Koordination zw. Orga.-Einheiten">Fehlerhafte Koordination zw. Orga.-Einheiten
-        </option>
-        <option value="Unzureichende Standards">Unzureichende Standards
-        </option>
-        <option value="Unklares Wettbewerbsumfeld">Unklares Wettbewerbsumfeld
-        </option>
-        <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
-        </option>
-        </select>
-        <select value="DigiR2" onchange="showEvents2(this.value)">
-          <option value="">Select a RiskType:</option>
-          <option value="Kompetenzmangel">Kompetenzmangel
-        </option>
-         <option value="Fachkräftemangel">Fachkräftemangel
-        </option>
-         <option value="Fehlende Akzeptanz">Fehlende Akzeptanz
-        </option>
-         <option value="Entgrenzung der Arbeit">Entgrenzung der Arbeit
-        </option>
-        <option value="Gefährdung der Arbeitssicherheit">Gefährdung der Arbeitssicherheit
-        </option>
-        <option value="Fehleinschätzung durch intransparente Prozesse">Fehleinschätzung durch intransparente Prozesse
-        </option>
-          <option value="Gefährdung der IT-Sicherheit">Gefährdung der IT-Sicherheit
-        </option>
-        <option value="Gefährdung des Datenschutzes">Gefährdung des Datenschutzes
-        </option>
-        <option value="Instabile Datenübertragung">Instabile Datenübertragung
-        </option>
-        <option value="Unausgereiftes Datenmanagement">Unausgereiftes Datenmanagement
-        </option>
-        <option value="Unzureichende Datenqualität">Unzureichende Datenqualität
-        </option>
-        <option value="Fehlerhafte Datenverarbeitung">Fehlerhafte Datenverarbeitung
-        </option>
-        <option value="Fragiles Wertschöpfungssystem">Fragiles Wertschöpfungssystem
-        </option>
-        <option value="Mangelnder technologischer Reifegrad">Mangelnder technologischer Reifegrad
-        </option>
-        <option value="Fragile vernetztes Produktion (intern)">Fragile vernetztes Produktion (intern)
-        </option>
-        <option value="Fehlinvestitionen">Fehlinvestitionen
-        </option>
-        <option value="Unklare rechtliche Rahmenbedingungen">Unklare rechtliche Rahmenbedingungen
-        </option>
-        <option value="Mangelnde Mitarbeiterkapazitäten">Mangelnde Mitarbeiterkapazitäten
-        </option>
-        <option value="Imageverlust">Imageverlust
-        </option>
-        <option value="Ausbleibender Wandel der Kultur">Ausbleibender Wandel der Kultur
-        </option>
-        <option value="Unzureichende Kooperationen zw. Netzwerkpartnern">Unzureichende Kooperationen zw. Netzwerkpartnern
-        </option>
-        <option value="Ungeeignetes Geschäftsmodell">Ungeeignetes Geschäftsmodell
-        </option>
-        <option value="Ungeeignete Organisationsstruktur">Ungeeignete Organisationsstruktur
-        </option>
-        <option value="Fehlerhafte Koordination zw. Orga.-Einheiten">Fehlerhafte Koordination zw. Orga.-Einheiten
-        </option>
-        <option value="Unzureichende Standards">Unzureichende Standards
-        </option>
-        <option value="Unklares Wettbewerbsumfeld">Unklares Wettbewerbsumfeld
-        </option>
-        <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
-        </option>
-        </select>
-        <select value="DigiR3" onchange="showEvents3(this.value)">
-          <option value="">Select a RiskType:</option>
-          <option value="Kompetenzmangel">Kompetenzmangel
-        </option>
-         <option value="Fachkräftemangel">Fachkräftemangel
-        </option>
-         <option value="Fehlende Akzeptanz">Fehlende Akzeptanz
-        </option>
-         <option value="Entgrenzung der Arbeit">Entgrenzung der Arbeit
-        </option>
-        <option value="Gefährdung der Arbeitssicherheit">Gefährdung der Arbeitssicherheit
-        </option>
-        <option value="Fehleinschätzung durch intransparente Prozesse">Fehleinschätzung durch intransparente Prozesse
-        </option>
-          <option value="Gefährdung der IT-Sicherheit">Gefährdung der IT-Sicherheit
-        </option>
-        <option value="Gefährdung des Datenschutzes">Gefährdung des Datenschutzes
-        </option>
-        <option value="Instabile Datenübertragung">Instabile Datenübertragung
-        </option>
-        <option value="Unausgereiftes Datenmanagement">Unausgereiftes Datenmanagement
-        </option>
-        <option value="Unzureichende Datenqualität">Unzureichende Datenqualität
-        </option>
-        <option value="Fehlerhafte Datenverarbeitung">Fehlerhafte Datenverarbeitung
-        </option>
-        <option value="Fragiles Wertschöpfungssystem">Fragiles Wertschöpfungssystem
-        </option>
-        <option value="Mangelnder technologischer Reifegrad">Mangelnder technologischer Reifegrad
-        </option>
-        <option value="Fragile vernetztes Produktion (intern)">Fragile vernetztes Produktion (intern)
-        </option>
-        <option value="Fehlinvestitionen">Fehlinvestitionen
-        </option>
-        <option value="Unklare rechtliche Rahmenbedingungen">Unklare rechtliche Rahmenbedingungen
-        </option>
-        <option value="Mangelnde Mitarbeiterkapazitäten">Mangelnde Mitarbeiterkapazitäten
-        </option>
-        <option value="Imageverlust">Imageverlust
-        </option>
-        <option value="Ausbleibender Wandel der Kultur">Ausbleibender Wandel der Kultur
-        </option>
-        <option value="Unzureichende Kooperationen zw. Netzwerkpartnern">Unzureichende Kooperationen zw. Netzwerkpartnern
-        </option>
-        <option value="Ungeeignetes Geschäftsmodell">Ungeeignetes Geschäftsmodell
-        </option>
-        <option value="Ungeeignete Organisationsstruktur">Ungeeignete Organisationsstruktur
-        </option>
-        <option value="Fehlerhafte Koordination zw. Orga.-Einheiten">Fehlerhafte Koordination zw. Orga.-Einheiten
-        </option>
-        <option value="Unzureichende Standards">Unzureichende Standards
-        </option>
-        <option value="Unklares Wettbewerbsumfeld">Unklares Wettbewerbsumfeld
-        </option>
-        <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
-        </option>
-        </select>
-      </form>
-      <br />
-    <table style="width: 60%;" >
-        <tr>
-            <th>Massnahm Auswahl für Risiko 1</th>
-            <th>Event 1</th>
-            <th>Massnahm Auswahl für Risiko 2</th>
-            <th>Event 2</th>
-            <th>Massnahm Auswahl für Risiko 3</th>
-            <th>Event 3</th>
-        </tr>
-        <tr>
-            <td>
-                <form action="UseCaseForm">
-                    <select value="UseCase" onchange="showMassNahm(this.value)">
-                        <option value="">Select a Massnahm:</option>
-                        <option value="Verbesserung der Veränderungskultur">
-                            Verbesserung der Veränderungskultur
-                        </option>
+    <div class="flex-container">
 
-                        <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
+        <div class="flex-child magenta">
+            <form id="fr1" action="RisktypZuEventsForm">
+                <h6>Risiko Auswahl:</h6>
+                <br />
+                <select id="digiR1" value="DigiR" onchange="showEvents1(this.value)">
+                    <option value="">Select a RiskType:</option>
+                    <option value="Kompetenzmangel">Kompetenzmangel
+                    </option>
+                    <option value="Fachkräftemangel">Fachkräftemangel
+                    </option>
+                    <option value="Fehlende Akzeptanz">Fehlende Akzeptanz
+                    </option>
+                    <option value="Entgrenzung der Arbeit">Entgrenzung der Arbeit
+                    </option>
+                    <option value="Gefährdung der Arbeitssicherheit">Gefährdung der Arbeitssicherheit
+                    </option>
+                    <option value="Fehleinschätzung durch intransparente Prozesse">Fehleinschätzung durch intransparente
+                        Prozesse
+                    </option>
+                    <option value="Gefährdung der IT-Sicherheit">Gefährdung der IT-Sicherheit
+                    </option>
+                    <option value="Gefährdung des Datenschutzes">Gefährdung des Datenschutzes
+                    </option>
+                    <option value="Instabile Datenübertragung">Instabile Datenübertragung
+                    </option>
+                    <option value="Unausgereiftes Datenmanagement">Unausgereiftes Datenmanagement
+                    </option>
+                    <option value="Unzureichende Datenqualität">Unzureichende Datenqualität
+                    </option>
+                    <option value="Fehlerhafte Datenverarbeitung">Fehlerhafte Datenverarbeitung
+                    </option>
+                    <option value="Fragiles Wertschöpfungssystem">Fragiles Wertschöpfungssystem
+                    </option>
+                    <option value="Mangelnder technologischer Reifegrad">Mangelnder technologischer Reifegrad
+                    </option>
+                    <option value="Fragile vernetztes Produktion (intern)">Fragile vernetztes Produktion (intern)
+                    </option>
+                    <option value="Fehlinvestitionen">Fehlinvestitionen
+                    </option>
+                    <option value="Unklare rechtliche Rahmenbedingungen">Unklare rechtliche Rahmenbedingungen
+                    </option>
+                    <option value="Mangelnde Mitarbeiterkapazitäten">Mangelnde Mitarbeiterkapazitäten
+                    </option>
+                    <option value="Imageverlust">Imageverlust
+                    </option>
+                    <option value="Ausbleibender Wandel der Kultur">Ausbleibender Wandel der Kultur
+                    </option>
+                    <option value="Unzureichende Kooperationen zw. Netzwerkpartnern">Unzureichende Kooperationen zw.
+                        Netzwerkpartnern
+                    </option>
+                    <option value="Ungeeignetes Geschäftsmodell">Ungeeignetes Geschäftsmodell
+                    </option>
+                    <option value="Ungeeignete Organisationsstruktur">Ungeeignete Organisationsstruktur
+                    </option>
+                    <option value="Fehlerhafte Koordination zw. Orga.-Einheiten">Fehlerhafte Koordination zw.
+                        Orga.-Einheiten
+                    </option>
+                    <option value="Unzureichende Standards">Unzureichende Standards
+                    </option>
+                    <option value="Unklares Wettbewerbsumfeld">Unklares Wettbewerbsumfeld
+                    </option>
+                    <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
+                    </option>
+                </select>
+                <select value="DigiR2" onchange="showEvents2(this.value)">
+                    <option value="">Select a RiskType:</option>
+                    <option value="Kompetenzmangel">Kompetenzmangel
+                    </option>
+                    <option value="Fachkräftemangel">Fachkräftemangel
+                    </option>
+                    <option value="Fehlende Akzeptanz">Fehlende Akzeptanz
+                    </option>
+                    <option value="Entgrenzung der Arbeit">Entgrenzung der Arbeit
+                    </option>
+                    <option value="Gefährdung der Arbeitssicherheit">Gefährdung der Arbeitssicherheit
+                    </option>
+                    <option value="Fehleinschätzung durch intransparente Prozesse">Fehleinschätzung durch intransparente
+                        Prozesse
+                    </option>
+                    <option value="Gefährdung der IT-Sicherheit">Gefährdung der IT-Sicherheit
+                    </option>
+                    <option value="Gefährdung des Datenschutzes">Gefährdung des Datenschutzes
+                    </option>
+                    <option value="Instabile Datenübertragung">Instabile Datenübertragung
+                    </option>
+                    <option value="Unausgereiftes Datenmanagement">Unausgereiftes Datenmanagement
+                    </option>
+                    <option value="Unzureichende Datenqualität">Unzureichende Datenqualität
+                    </option>
+                    <option value="Fehlerhafte Datenverarbeitung">Fehlerhafte Datenverarbeitung
+                    </option>
+                    <option value="Fragiles Wertschöpfungssystem">Fragiles Wertschöpfungssystem
+                    </option>
+                    <option value="Mangelnder technologischer Reifegrad">Mangelnder technologischer Reifegrad
+                    </option>
+                    <option value="Fragile vernetztes Produktion (intern)">Fragile vernetztes Produktion (intern)
+                    </option>
+                    <option value="Fehlinvestitionen">Fehlinvestitionen
+                    </option>
+                    <option value="Unklare rechtliche Rahmenbedingungen">Unklare rechtliche Rahmenbedingungen
+                    </option>
+                    <option value="Mangelnde Mitarbeiterkapazitäten">Mangelnde Mitarbeiterkapazitäten
+                    </option>
+                    <option value="Imageverlust">Imageverlust
+                    </option>
+                    <option value="Ausbleibender Wandel der Kultur">Ausbleibender Wandel der Kultur
+                    </option>
+                    <option value="Unzureichende Kooperationen zw. Netzwerkpartnern">Unzureichende Kooperationen zw.
+                        Netzwerkpartnern
+                    </option>
+                    <option value="Ungeeignetes Geschäftsmodell">Ungeeignetes Geschäftsmodell
+                    </option>
+                    <option value="Ungeeignete Organisationsstruktur">Ungeeignete Organisationsstruktur
+                    </option>
+                    <option value="Fehlerhafte Koordination zw. Orga.-Einheiten">Fehlerhafte Koordination zw.
+                        Orga.-Einheiten
+                    </option>
+                    <option value="Unzureichende Standards">Unzureichende Standards
+                    </option>
+                    <option value="Unklares Wettbewerbsumfeld">Unklares Wettbewerbsumfeld
+                    </option>
+                    <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
+                    </option>
+                </select>
+                <select value="DigiR3" onchange="showEvents3(this.value)">
+                    <option value="">Select a RiskType:</option>
+                    <option value="Kompetenzmangel">Kompetenzmangel
+                    </option>
+                    <option value="Fachkräftemangel">Fachkräftemangel
+                    </option>
+                    <option value="Fehlende Akzeptanz">Fehlende Akzeptanz
+                    </option>
+                    <option value="Entgrenzung der Arbeit">Entgrenzung der Arbeit
+                    </option>
+                    <option value="Gefährdung der Arbeitssicherheit">Gefährdung der Arbeitssicherheit
+                    </option>
+                    <option value="Fehleinschätzung durch intransparente Prozesse">Fehleinschätzung durch intransparente
+                        Prozesse
+                    </option>
+                    <option value="Gefährdung der IT-Sicherheit">Gefährdung der IT-Sicherheit
+                    </option>
+                    <option value="Gefährdung des Datenschutzes">Gefährdung des Datenschutzes
+                    </option>
+                    <option value="Instabile Datenübertragung">Instabile Datenübertragung
+                    </option>
+                    <option value="Unausgereiftes Datenmanagement">Unausgereiftes Datenmanagement
+                    </option>
+                    <option value="Unzureichende Datenqualität">Unzureichende Datenqualität
+                    </option>
+                    <option value="Fehlerhafte Datenverarbeitung">Fehlerhafte Datenverarbeitung
+                    </option>
+                    <option value="Fragiles Wertschöpfungssystem">Fragiles Wertschöpfungssystem
+                    </option>
+                    <option value="Mangelnder technologischer Reifegrad">Mangelnder technologischer Reifegrad
+                    </option>
+                    <option value="Fragile vernetztes Produktion (intern)">Fragile vernetztes Produktion (intern)
+                    </option>
+                    <option value="Fehlinvestitionen">Fehlinvestitionen
+                    </option>
+                    <option value="Unklare rechtliche Rahmenbedingungen">Unklare rechtliche Rahmenbedingungen
+                    </option>
+                    <option value="Mangelnde Mitarbeiterkapazitäten">Mangelnde Mitarbeiterkapazitäten
+                    </option>
+                    <option value="Imageverlust">Imageverlust
+                    </option>
+                    <option value="Ausbleibender Wandel der Kultur">Ausbleibender Wandel der Kultur
+                    </option>
+                    <option value="Unzureichende Kooperationen zw. Netzwerkpartnern">Unzureichende Kooperationen zw.
+                        Netzwerkpartnern
+                    </option>
+                    <option value="Ungeeignetes Geschäftsmodell">Ungeeignetes Geschäftsmodell
+                    </option>
+                    <option value="Ungeeignete Organisationsstruktur">Ungeeignete Organisationsstruktur
+                    </option>
+                    <option value="Fehlerhafte Koordination zw. Orga.-Einheiten">Fehlerhafte Koordination zw.
+                        Orga.-Einheiten
+                    </option>
+                    <option value="Unzureichende Standards">Unzureichende Standards
+                    </option>
+                    <option value="Unklares Wettbewerbsumfeld">Unklares Wettbewerbsumfeld
+                    </option>
+                    <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
+                    </option>
+                </select>
+            </form>
+            <br />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Massnahm Auswahl für Risiko 1</th>
+                        <th>Event 1</th>
+                        <th>Massnahm Auswahl für Risiko 2</th>
+                        <th>Event 2</th>
+                        <th>Massnahm Auswahl für Risiko 3</th>
+                        <th>Event 3</th>
+                    </tr>
+                </thead>
 
-                        <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
-                            Personalkapazitäten</option>
+                <tbody>
+                    <tr class="r1">
 
-                        <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
-                            Personalkapazitäten</option>
+                        <td>
 
-                        <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
+                            <select id="sel1"
+                                onchange="handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel6)">
+                                <option value="">Select a Massnahm:</option>
+                                <option value="Verbesserung der Veränderungskultur">
+                                    Verbesserung der Veränderungskultur
+                                </option>
 
-                        <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten Strukturen
-                        </option>
+                                <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
 
-                        <option value="Prozessoptimierung">Prozessoptimierung</option>
+                                <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
+                                    Personalkapazitäten</option>
 
-                        <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
+                                <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
+                                    Personalkapazitäten</option>
 
-                        <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der Wertschätzung der
-                            Mitarbeiter</option>
+                                <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
 
-                        <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">Incentivierung
-                            der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
+                                <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten
+                                    Strukturen
+                                </option>
 
-                        <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der vertikalen
-                            Kommunikation (Top-down)</option>
+                                <option value="Prozessoptimierung">Prozessoptimierung</option>
 
-                        <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation mit
-                            Kunden</option>
+                                <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
 
-                        <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
-                            Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
+                                <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der
+                                    Wertschätzung der
+                                    Mitarbeiter</option>
 
-                        <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
+                                <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">
+                                    Incentivierung
+                                    der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
 
-                        <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
+                                <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der
+                                    vertikalen
+                                    Kommunikation (Top-down)</option>
 
-                        <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
+                                <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation
+                                    mit
+                                    Kunden</option>
 
-                        <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements</option>
+                                <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
+                                    Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
 
-                        <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit</option>
+                                <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
 
-                        <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                        </option>
+                                <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
 
-                        <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                        </option>
+                                <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
 
-                        <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
-                            Qualitätssteigerung</option>
+                                <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements
+                                </option>
 
-                        <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">Erhöhung der
-                            Kooperationstiefe mit externen Wertschöpfungspartnern</option>
+                                <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit
+                                </option>
 
-                        <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe mit
-                            Kunden</option>
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
 
-                        <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
 
-                        <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
+                                <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
+                                    Qualitätssteigerung</option>
 
-                        <option value="Verbesserung des Ressourcenmanagements">Verbesserung des Ressourcenmanagements
-                        </option>
+                                <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">
+                                    Erhöhung der
+                                    Kooperationstiefe mit externen Wertschöpfungspartnern</option>
 
-                        <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
-                            Dokumentationsmanagements</option>
+                                <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe
+                                    mit
+                                    Kunden</option>
 
-                        <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung von
-                            Kontrollmechanismen [UFT+15, S.780]</option>
+                                <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
 
-                        <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer transparenten
-                            Kostenstruktur</option>
+                                <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
 
-                        <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
-                            Unterstützung [Obe19, S.60]</option>
+                                <option value="Verbesserung des Ressourcenmanagements">Verbesserung des
+                                    Ressourcenmanagements
+                                </option>
 
-                        <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen</option>
-                </form>
-            </td>
-            <td>
-                <div class="massNahme" style="text-align: left;">
-                    <label for="massNahme"></label>
-                    <div id="massNahme1" style="visibility: hidden; text-align: left;"></div>
+                                <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
+                                    Dokumentationsmanagements</option>
+
+                                <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung
+                                    von
+                                    Kontrollmechanismen [UFT+15, S.780]</option>
+
+                                <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer
+                                    transparenten
+                                    Kostenstruktur</option>
+
+                                <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
+                                    Unterstützung [Obe19, S.60]</option>
+
+                                <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen
+                                </option>
+
+                        </td>
+                        <td>
+                            <div class="massNahme" style="text-align: left;">
+                                <label for="massNahme"></label>
+                                <div id="massNahme1" style="visibility: hidden; text-align: left;"></div>
+                            </div>
+                        </td>
+                        <td>
+
+                            <select id="sel2"
+                                onchange="handleSelection(this, sel1); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel6)">
+                                <option value="">Select a Massnahm:</option>
+                                <option value="Verbesserung der Veränderungskultur">
+                                    Verbesserung der Veränderungskultur
+                                </option>
+
+                                <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
+
+                                <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
+
+                                <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten
+                                    Strukturen
+                                </option>
+
+                                <option value="Prozessoptimierung">Prozessoptimierung</option>
+
+                                <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
+
+                                <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der
+                                    Wertschätzung der
+                                    Mitarbeiter</option>
+
+                                <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">
+                                    Incentivierung
+                                    der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
+
+                                <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der
+                                    vertikalen
+                                    Kommunikation (Top-down)</option>
+
+                                <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
+                                    Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
+
+                                <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
+
+                                <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
+
+                                <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
+
+                                <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements
+                                </option>
+
+                                <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
+                                    Qualitätssteigerung</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">
+                                    Erhöhung der
+                                    Kooperationstiefe mit externen Wertschöpfungspartnern</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
+
+                                <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
+
+                                <option value="Verbesserung des Ressourcenmanagements">Verbesserung des
+                                    Ressourcenmanagements
+                                </option>
+
+                                <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
+                                    Dokumentationsmanagements</option>
+
+                                <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung
+                                    von
+                                    Kontrollmechanismen [UFT+15, S.780]</option>
+
+                                <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer
+                                    transparenten
+                                    Kostenstruktur</option>
+
+                                <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
+                                    Unterstützung [Obe19, S.60]</option>
+
+                                <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen
+                                </option>
+
+                        <td>
+                            <div class="massNahme" style="text-align: left;">
+                                <label for="massNahme"></label>
+                                <div id="massNahme2" style="visibility: hidden; text-align: left;"></div>
+                            </div>
+                        </td>
+                        <td>
+
+                            <select id="sel3"
+                                onchange="handleSelection(this, sel1); handleSelection(this, sel2); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel6)">
+                                <option value="">Select a Massnahm:</option>
+                                <option value="Verbesserung der Veränderungskultur">
+                                    Verbesserung der Veränderungskultur
+                                </option>
+
+                                <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
+
+                                <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
+
+                                <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten
+                                    Strukturen
+                                </option>
+
+                                <option value="Prozessoptimierung">Prozessoptimierung</option>
+
+                                <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
+
+                                <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der
+                                    Wertschätzung der
+                                    Mitarbeiter</option>
+
+                                <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">
+                                    Incentivierung
+                                    der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
+
+                                <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der
+                                    vertikalen
+                                    Kommunikation (Top-down)</option>
+
+                                <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
+                                    Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
+
+                                <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
+
+                                <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
+
+                                <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
+
+                                <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements
+                                </option>
+
+                                <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
+                                    Qualitätssteigerung</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">
+                                    Erhöhung der
+                                    Kooperationstiefe mit externen Wertschöpfungspartnern</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
+
+                                <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
+
+                                <option value="Verbesserung des Ressourcenmanagements">Verbesserung des
+                                    Ressourcenmanagements
+                                </option>
+
+                                <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
+                                    Dokumentationsmanagements</option>
+
+                                <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung
+                                    von
+                                    Kontrollmechanismen [UFT+15, S.780]</option>
+
+                                <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer
+                                    transparenten
+                                    Kostenstruktur</option>
+
+                                <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
+                                    Unterstützung [Obe19, S.60]</option>
+
+                                <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen
+                                </option>
+
+                        </td>
+                        </td>
+                        <td>
+                            <div class="massNahme" style="text-align: left;">
+                                <label for="massNahme"></label>
+                                <div id="massNahme3" style="visibility: hidden; text-align: left;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="r2">
+
+                        <td>
+                            <select value="UseCase" id="sel4"
+                                onchange="showMassNahm1(this.value); handleSelection(this, sel1); handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel5); handleSelection(this, sel6)">
+                                <option value="">Select a Massnahm:</option>
+                                <option value="Verbesserung der Veränderungskultur">
+                                    Verbesserung der Veränderungskultur
+                                </option>
+
+                                <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
+
+                                <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
+
+                                <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten
+                                    Strukturen
+                                </option>
+
+                                <option value="Prozessoptimierung">Prozessoptimierung</option>
+
+                                <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
+
+                                <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der
+                                    Wertschätzung der
+                                    Mitarbeiter</option>
+
+                                <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">
+                                    Incentivierung
+                                    der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
+
+                                <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der
+                                    vertikalen
+                                    Kommunikation (Top-down)</option>
+
+                                <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
+                                    Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
+
+                                <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
+
+                                <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
+
+                                <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
+
+                                <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements
+                                </option>
+
+                                <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
+                                    Qualitätssteigerung</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">
+                                    Erhöhung der
+                                    Kooperationstiefe mit externen Wertschöpfungspartnern</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
+
+                                <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
+
+                                <option value="Verbesserung des Ressourcenmanagements">Verbesserung des
+                                    Ressourcenmanagements
+                                </option>
+
+                                <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
+                                    Dokumentationsmanagements</option>
+
+                                <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung
+                                    von
+                                    Kontrollmechanismen [UFT+15, S.780]</option>
+
+                                <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer
+                                    transparenten
+                                    Kostenstruktur</option>
+
+                                <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
+                                    Unterstützung [Obe19, S.60]</option>
+
+                                <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen
+                                </option>
+                        </td>
+                        <td></td>
+                        <td>
+                            <select id="sel5"
+                                onchange="showMassNahm2(this.value); handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel1); handleSelection(this, sel6)">
+                                <option value="">Select a Massnahm:</option>
+                                <option value="Verbesserung der Veränderungskultur">
+                                    Verbesserung der Veränderungskultur
+                                </option>
+
+                                <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
+
+                                <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
+
+                                <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten
+                                    Strukturen
+                                </option>
+
+                                <option value="Prozessoptimierung">Prozessoptimierung</option>
+
+                                <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
+
+                                <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der
+                                    Wertschätzung der
+                                    Mitarbeiter</option>
+
+                                <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">
+                                    Incentivierung
+                                    der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
+
+                                <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der
+                                    vertikalen
+                                    Kommunikation (Top-down)</option>
+
+                                <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
+                                    Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
+
+                                <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
+
+                                <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
+
+                                <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
+
+                                <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements
+                                </option>
+
+                                <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
+                                    Qualitätssteigerung</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">
+                                    Erhöhung der
+                                    Kooperationstiefe mit externen Wertschöpfungspartnern</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
+
+                                <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
+
+                                <option value="Verbesserung des Ressourcenmanagements">Verbesserung des
+                                    Ressourcenmanagements
+                                </option>
+
+                                <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
+                                    Dokumentationsmanagements</option>
+
+                                <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung
+                                    von
+                                    Kontrollmechanismen [UFT+15, S.780]</option>
+
+                                <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer
+                                    transparenten
+                                    Kostenstruktur</option>
+
+                                <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
+                                    Unterstützung [Obe19, S.60]</option>
+
+                                <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen
+                                </option>
+                        </td>
+                        <td></td>
+                        <td>
+                            <select id="sel6"
+                                onchange="showMassNahm3(this.value); handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel1)">
+                                <option value="">Select a Massnahm:</option>
+                                <option value="Verbesserung der Veränderungskultur">
+                                    Verbesserung der Veränderungskultur
+                                </option>
+
+                                <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
+
+                                <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
+                                    Personalkapazitäten</option>
+
+                                <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
+
+                                <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten
+                                    Strukturen
+                                </option>
+
+                                <option value="Prozessoptimierung">Prozessoptimierung</option>
+
+                                <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
+
+                                <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der
+                                    Wertschätzung der
+                                    Mitarbeiter</option>
+
+                                <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">
+                                    Incentivierung
+                                    der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
+
+                                <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der
+                                    vertikalen
+                                    Kommunikation (Top-down)</option>
+
+                                <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
+                                    Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
+
+                                <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
+
+                                <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
+
+                                <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
+
+                                <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements
+                                </option>
+
+                                <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen
+                                    Schäden
+                                </option>
+
+                                <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
+                                    Qualitätssteigerung</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">
+                                    Erhöhung der
+                                    Kooperationstiefe mit externen Wertschöpfungspartnern</option>
+
+                                <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe
+                                    mit
+                                    Kunden</option>
+
+                                <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
+
+                                <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
+
+                                <option value="Verbesserung des Ressourcenmanagements">Verbesserung des
+                                    Ressourcenmanagements
+                                </option>
+
+                                <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
+                                    Dokumentationsmanagements</option>
+
+                                <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung
+                                    von
+                                    Kontrollmechanismen [UFT+15, S.780]</option>
+
+                                <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer
+                                    transparenten
+                                    Kostenstruktur</option>
+
+                                <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
+                                    Unterstützung [Obe19, S.60]</option>
+
+                                <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen
+                                </option>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+        <div class="flex-child green">
+            <div class="left-label-span">Eintrittswahrscheinlichkeit</div>
+            <div class="bottom-label ">Schadenshöhe</div>
+            <div class="headLabel">
+
+                <h5>Risikoportfolio</h5>
+
+            </div>
+            <div class="parent">
+                <div class="child1 "></div>
+                <div class="child2 "></div>
+                <div class="child3 "></div>
+                <div class="child4 "></div>
+
+
+                <div class="child5 "></div>
+                <div class="child6 "></div>
+                <div class="child7 "></div>
+                <div class="child8 "></div>
+
+                <div class="child9 "></div>
+                <div class="child10 "></div>
+                <div class="child11 "></div>
+                <div class="child12 "></div>
+
+                <div class="child13"></div>
+                <div class="child14 "></div>
+                <div class="child15 "></div>
+                <div class="child16 "></div>
+
+
+            </div>
+            <div id="background">
+                <p id="neidrig-text">niedrig</p>
+            </div>
+            <div id="backgroundAbove">
+                <p id="bg-text2">hoch</p>
+            </div>
+            <div id="backgroundBelow">
+                <p id="bg-text3">hoch</p>
+            </div>
+            <div id="backgroundBelow">
+                <p id="bg-text4">gering</p>
+            </div>
+            <button class="button" onclick="calResults(); ">Absenden <i class="fa fa-arrow-circle-up"></i></button>
+            <button class="button2" onclick="uncheckAll()">alle abwählen <i class="fa fa-bandcamp"></i></button>
+
+
+            <!-- <button type="button" id="btn" onclick="calResults()">Submit!</button> -->
+
+        </div>
+
+        <script>
+            //   function convert() {
+            //     var var_array = [];
+            //     var var_array2 = [];
+            //     var val_x = 0;
+            //     var val_y = 0;
+            //     var firstLine = false;
+            //     var secondLine = false;
+            //     var lowValArray = [];
+            //     var lowValues = false;
+
+            //     let rowheader;
+            //     let row1;
+            //     let digiRefM;
+            //     let digiRefT;
+            //     let digiRefO;
+            //     let UscValM;
+            //     let UscValT;
+            //     let UscValO;
+            //     let uscReifgradMTO;
+            //     let results;
+            //     riskTypeCell = 0;
+            //     var table;
+
+
+            //     // grtting the value of table header and turing the checkbox on and off based on header value and 
+            //     // checkbox value
+            //     let uscDim = document.getElementById("uscDimension").innerHTML;
+            //     let uscReifgrad = document.getElementById("uscReifgrad").innerHTML;
+            //     let dr = document.getElementById("txtreifegrad").innerHTML;
+            //     let dr2 = document.getElementById("txtreifegrad2").innerHTML;
+            //     let dr3 = document.getElementById("txtreifegrad3").innerHTML;
+            //     table = document.getElementById("mytab1");
+
+            //     if (uscReifgrad == "Basis-Lösung") {
+            //       uscReifgradMTO = 0;
+            //     } else {
+            //       uscReifgradMTO = 1;
+            //     }
+
+
+            //     for (var i = 1, row; row = table.rows[i]; i++) {
+            //       rowheader = $(`tr.row${i} th:nth-child(1)`).html() //values1[i - 1];
+            //       //console.log(rowheader)
+            //       for (var b = 4; b <= 23; b++) {
+            //         row1 = $(`tr.row${i} td:nth-child(${b}) label input`)
+            //           .val() // label input $(`tr.row1 td:nth-child(${i})`).html()
+            //         //console.log(`the row header ${rowheader} and child is ${row1} ${i}`);
+
+
+            //         UscValO = 0;
+            //         UscValT = 0;
+            //         UscValM = 0;
+            //         digiRefM = 0;
+            //         digiRefT = 0;
+            //         digiRefO = 0;
+
+            //         if (rowheader === "Mensch") {
+            //           if (dr < 3) {
+            //             digiRefM = 1;
+            //           } else {
+            //             digiRefM = 0;
+            //           }
+            //         }
+
+            //         if (rowheader === "Technologie") {
+            //           if (dr2 < 3) {
+            //             digiRefT = 1;
+            //           } else {
+            //             digiRefT = 0;
+            //           }
+            //         }
+
+            //         if (rowheader === "Organisation") {
+            //           if (dr3 < 3) {
+            //             digiRefO = 1;
+            //           } else {
+            //             digiRefO = 0;
+            //           }
+            //         }
+
+            //         if (uscDim === "Mensch" && rowheader === "Mensch") { // && row1 === "Mensch"
+
+            //           UscValM = 1;
+
+            //         } else {
+
+            //           UscValM = 0;
+            //         }
+
+            //         if (uscDim === "Technologie" && rowheader === "Technologie") { // && row1 === "Technologie"
+
+            //           UscValT = 1;
+            //         } else {
+            //           UscValT = 0;
+            //         }
+
+            //         if (uscDim === "Organisation" && rowheader === "Organisation") { // && row1 === "Organisation"
+            //           UscValO = 1;
+
+            //         } else {
+            //           UscValO = 0;
+            //         }
+
+            //         riskTypeCell = 0;
+
+            //         if ((rowheader === "Mensch") && (row1 === "Mensch")) {
+
+            //           riskTypeCell = 1;
+
+            //         }
+
+
+
+            //         if ((rowheader == "Technologie") && (row1 == "Technologie")) {
+
+            //           riskTypeCell = 1;
+
+            //         }
+
+
+            //         if ((rowheader == "Organisation") && (row1 == "Organisation")) {
+
+            //           riskTypeCell = 1;
+
+            //         }
+
+            //         results = uscReifgradMTO + digiRefM + UscValM + riskTypeCell + UscValT + UscValO + digiRefT + digiRefO;
+
+            //         function randomNum(min, max) {
+            //           return Math.floor(Math.random() * (max - min + 1)) + min;
+            //         }
+            //         let sumOfAll = results + randomNum(-1, 1);
+            //         // console.log(sumOfAll);
+
+
+            //         // if (b === 10) {
+            //         //   document.getElementById("TestingValue").innerHTML = results; //TestingValue
+            //         //   }
+            //         //basis-losung + Reifegrad Value für Mensch+ dimenison of useCase Mensch + dimension of risktype dimenison of useCase Tech + dimenison of useCase Org +Reifegrad Value für Tech + Reifegrad Value für Organisation
+            //         if (sumOfAll > 1) {
+            //           $(`tr.row${i} td:nth-child(${b}) label input[type='checkbox'][value =${row1}]`).prop("checked", true);
+            //         } else {
+            //           $(`tr.row${i} td:nth-child(${b}) label input[type='checkbox'][value =${row1}]`).prop("checked", false);
+            //         }
+            //       }
+            //     }
+
+            //     //Eintritwahr Calculation
+            //     let rowheader2;
+            //     let row2;
+            //     var table2;
+            //     let conversion1;
+
+            //     let mdr = document.getElementById("txtreifegrad").innerHTML;
+            //     let tdr2 = document.getElementById("txtreifegrad2").innerHTML;
+            //     let odr3 = document.getElementById("txtreifegrad3").innerHTML;
+
+            //     // //Reifegrad Check
+            //     if (mdr < 3) {
+            //       digiRefM2 = 1;
+            //     } else {
+            //       digiRefM2 = 0;
+            //     }
+            //     if (tdr2 < 3) {
+            //       digiRefT2 = 1;
+            //     } else {
+            //       digiRefT2 = 0;
+            //     }
+            //     if (odr3 < 3) {
+            //       digiRefO2 = 1;
+            //     } else {
+            //       digiRefO2 = 0;
+            //     }
+            //     // getting the value of table header and turing the checkbox on and off based on header value and 
+            //     // checkbox value
+            //     table2 = document.getElementById("mytab2");
+            //     for (var x = 1, row; row = table2.rows[x]; x++) {
+            //       rowheader2 = $(`tr.r${x} td:nth-child(${1})`).html() //values1[i - 1];
+            //       //console.log(rowheader2);
+            //       for (var y = 2; y <= 21; y++) { //column
+            //         row2 = $(`tr.r${x} td:nth-child(${y}) select`).attr(
+            //           'name') // label input $(`tr.row1 td:nth-child(${i})`).html()
+            //         //console.log(`the value of the column is ${row2}`)
+
+            //         //calculating passsive sum and assigning values
+            //         if (1 <= row2 && row2 <= 6) {
+            //           // console.log("0 Points");
+            //           conversion1 = 0;
+            //         } else if (7 <= row2 && row2 <= 13) {
+            //           // console.log("1 Points");
+            //           conversion1 = 1;
+            //         } else if (14 <= row2 && row2 <= 21) {
+            //           // console.log("2 Points");
+            //           conversion1 = 2;
+            //         } else if (22 <= row2 && row2 <= 29) {
+            //           // console.log("3 Points");
+            //           conversion1 = 3;
+            //         }
+
+            //         //Digital Reifegrad Value für Mensch+ Reifegrad Value für Tech+ Reifegrad Value für Organisation+ UseCase Reifegrad (Basis = 0) + Conversion of PassiveSums
+            //         sumOfRow = digiRefM2 + digiRefT2 + digiRefO2 + uscReifgradMTO + conversion1;
+            //         // console.log(`The value of ${y} is ${sumOfRow}`);
+
+
+            //         if (0 <= sumOfRow && sumOfRow <= 2) {
+            //           // console.log("Sehr Gering") value 1;
+            //           $(`tr.r1 td:nth-child(${y}) select`).val('1');
+            //         } else if (3 <= sumOfRow && sumOfRow <= 4) {
+            //           // console.log("Gering")  value 2;
+            //           $(`tr.r1 td:nth-child(${y}) select`).val('2');
+            //         } else if (5 <= sumOfRow && sumOfRow <= 6) {
+            //           // console.log("Moderat")  value 3;
+            //           $(`tr.r1 td:nth-child(${y}) select`).val('3');
+            //         } else if (7 <= sumOfRow && sumOfRow <= 25) {
+            //           // console.log("Hoch")  value 4;
+            //           $(`tr.r1 td:nth-child(${y}) select`).val('4');
+            //         } else {
+            //           $(`tr.r1 td:nth-child(${y}) select`).val(0);
+            //         }
+            //       }
+            //     }
+
+
+            //     // Section for Cordinates and Movements
+            //     $("input:checkbox[name=type]:checked").each(function () {
+            //       var_array.push($(this).val());
+            //       // the value of Y will remin 0 to keeep it on low while the value of 
+            //       // X will change 
+            //       if (var_array.length == '1') {
+            //         val_x = '1';
+            //       } else if (var_array.length == '2') {
+            //         val_x = '2';
+            //       } else if (var_array.length == '3') {
+            //         val_x = '3';
+            //       } else if (var_array.length == '4') {
+            //         val_x = '4';
+            //       } else if (var_array.length == '5') {
+            //         val_x = '5';
+            //       } else if (var_array.length == '6') {
+            //         val_x = '6';
+            //       } else if (var_array.length == '7') {
+            //         val_x = '7';
+            //       } else if (var_array.length == '8') {
+            //         val_x = '8';
+            //       } else if (var_array.length == '9') {
+            //         val_x = '9';
+            //       } else if (var_array.length == '10') {
+            //         val_x = '10';
+            //       } else if (var_array.length == '11') {
+            //         val_x = '11';
+            //       }
+            //       firstLine = true;
+            //     });
+
+
+            // $("input:checkbox[name=type2]:checked").each(function () {
+
+            //   var_array2.push($(this).val());
+            //   // the value of Y will remin 0 to keeep it on low while the value of 
+            //   // X will change 
+            //   if (var_array2.length == '1') {
+            //     val_x = '1';
+            //   }
+            //   else if (var_array2.length == '2') {
+            //     val_x = '2';
+            //   }
+            //   else if (var_array2.length == '3') {
+            //     val_x = '3';
+            //   }
+            //   else if (var_array2.length == '4') {
+            //     val_x = '4';
+            //   } else if (var_array2.length == '5') {
+            //     val_x = '5';
+            //   } else if (var_array2.length == '6') {
+            //     val_x = '6';
+            //   } else if (var_array2.length == '7') {
+            //     val_x = '7';
+            //   } else if (var_array2.length == '8') {
+            //     val_x = '8';
+            //   } else if (var_array2.length == '9') {
+            //     val_x = '9';
+            //   } else if (var_array2.length == '10') {
+            //     val_x = '10';
+            //   }
+            //   else if (var_array2.length == '11') {
+            //     val_x = '11';
+            //   }
+
+            //   secondLine = true;
+            //   firstLine = false;
+            // });
+
+
+            // var previuos = "";
+            // var current = "";
+            // var next = "";
+            // var previuos2 = "";
+            // var current2 = "";
+            // var next2 = "";
+            // debugger
+            // for (var i = 0; i < var_array.length; i++) {
+            //   var len = var_array.length;
+
+            //   previuos = len - 1;
+            //   current = len;
+            //   // next = len + 1;
+            // }
+
+
+            // for (var i = 0; i < var_array2.length; i++) {
+            //   var len2 = var_array2.length;
+
+            //   previuos2 = len2 - 1;
+            //   current2 = len2;
+            //   // next2 = len2 + 1;
+            // }
+
+            //Har ID k against check ho. data ka index change karna ha accordigly id-1 use kar k daikh lena
+            // document.getElementById("link").innerHTML = data[0].Title;
+
+            //     var valX = val_x; // text box values 
+            //     var valY = val_y; // text box values 
+
+            //     if (valX == 0 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500),
+            //         y: (1160)
+            //       }
+            //     } else if (valX == 1 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500),
+            //         y: (1180)
+            //       }
+            //     } else if (valX == 2 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500),
+            //         y: (1200)
+            //       }
+            //     } else if (valX == 3 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500),
+            //         y: (1240)
+            //       }
+            //     } else if (valX == 4 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500), //+ addPX
+            //         y: (1280) // - addPY
+            //       }
+            //     } else if (valX == 5 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500), //+ addPX
+            //         y: (1305) // - addPY
+            //       }
+            //     } else if (valX == 6 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500), //+ addPX
+            //         y: (1330) // - addPY
+            //       }
+            //     } else if (valX == 7 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500), //+ addPX
+            //         y: (1380) // - addPY
+            //       }
+            //     } else if (valX == 8 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500), //+ addPX
+            //         y: (1400) // - addPY
+            //       }
+            //     } else if (valX == 9 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500), //+ addPX
+            //         y: (1430) // - addPY
+            //       }
+            //     } else if (valX == 10 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500), //+ addPX
+            //         y: (1480) // - addPY
+            //       }
+            //     } else if (valX == 11 && valY == 0) {
+            //       this.activeCordinates = {
+            //         x: (500),
+            //         y: (1520)
+            //       }
+            //     }
+
+            //     var xCoord = this.activeCordinates.x;
+            //     var yCoord = this.activeCordinates.y;
+            //     if (firstLine == true) {
+            //       // document.getElementById('risk-matrix').style.top = xCoord + 'px';
+            //       document.getElementById('risk-matrix1').style.left = yCoord + 'px';
+            //       lowValues = false;
+            //     }
+
+            //     // if (secondLine == true) {
+            //     //   document.getElementById('risk-matrix2').style.left = yCoord + 'px';
+            //     //   // document.getElementsByName('type')
+            //     //   //   .forEach(el => el.checked = false);
+            //     //   lowValues = false;
+            //     // }
+
+            //     //lower Blocks to change y-Axis
+            //     $("select[id=combo1]").each(function () {
+            //       lowValArray.push($(this).val());
+
+            //       if ($(this).val() == '1') {
+            //         val_y = '1';
+
+            //       } else if ($(this).val() == '2') {
+            //         val_y = '2';
+
+            //       } else if ($(this).val() == '3') {
+            //         val_y = '3';
+
+            //       } else if ($(this).val() == '4') {
+            //         val_y = '4';
+
+            //       }
+            //       lowValues = true;
+            //     });
+
+
+            //     var valX2 = val_x; // text box values 
+            //     var valY2 = val_y; // text box values 
+
+
+            //     if (valY2 == 1) {
+            //       this.activeCordinates = {
+            //         y: (400)
+            //       }
+            //     } else if (valY2 == 2) {
+            //       this.activeCordinates = {
+            //         y: (295)
+            //       }
+            //     } else if (valY2 == 3) {
+            //       this.activeCordinates = {
+            //         y: (190)
+            //       }
+            //     } else if (valY2 == 4) {
+            //       this.activeCordinates = {
+            //         y: (95)
+            //       }
+            //     }
+
+            //     var yCoord2 = this.activeCordinates.y;
+            //     if (lowValues == true) {
+            //       document.getElementById('risk-matrix1').style.top = yCoord2 + 'px';
+            //       lowValues = false;
+            //     }
+
+            //     // if (lowValues == true) {
+            //     //   document.getElementById('risk-matrix2').style.top = yCoord2 + 'px';
+            //     //   lowValues = false;
+            //     // }
+
+            //     $('#combo1').change(function () {
+            //       if ($(this).val() == "1") {
+            //         document.getElementById('risk-matrix1').style.top = '400px';
+            //         // document.getElementById('risk-matrix2').style.top = '400px';
+            //         lowValues = false;
+            //       } else if ($(this).val() == "2") {
+            //         document.getElementById('risk-matrix1').style.top = '295px';
+            //         // document.getElementById('risk-matrix2').style.top = '400px';
+            //         lowValues = false;
+            //       } else if ($(this).val() == "3") {
+            //         document.getElementById('risk-matrix1').style.top = '190px';
+            //         // document.getElementById('risk-matrix2').style.top = '400px';
+            //         lowValues = false;
+            //       } else if ($(this).val() == "4") {
+            //         document.getElementById('risk-matrix1').style.top = '95px';
+            //         // document.getElementById('risk-matrix2').style.top = '400px';
+            //         lowValues = false;
+            //       }
+            //     });
+            //   } //function ending
+
+            function uncheckAll() {
+                document.querySelectorAll('input[type="checkbox"]')
+                    .forEach(el => el.checked = false);
+                // document.getElementById('risk-matrix1').style.top = '455px';
+                // document.getElementById('risk-matrix1').style.left = '65px';
+                document.getElementById('risk-matrix1').style.top = '500px';
+                document.getElementById('risk-matrix1').style.left = '1160px';
+
+                document.getElementById('risk-matrix2').style.top = '500px';
+                document.getElementById('risk-matrix2').style.left = '1170px';
+
+                $('#fr1').trigger("reset");
+                $('#uscform').trigger("reset");
+
+                document.getElementById("txtreifegrad").innerHTML = "";
+                document.getElementById("txtreifegrad2").innerHTML = "";
+                document.getElementById("txtreifegrad3").innerHTML = "";
+                document.getElementById("uscName").innerHTML
+                document.getElementById("uscDimension").innerHTML = "";
+                document.getElementById("uscReifgrad").innerHTML = "";
+            }
+
+            //for UseCase Queries
+            function showUseCase(useCaseVal) {
+                if (useCaseVal == "") {
+                    document.getElementById("txtHint2").innerHTML = "";
+                    return;
+                }
+                var url2 =
+                    "http://51.15.76.202:3001/api/documents?filter=%7B%22where%22%3A%7B%22name%22%3A%20%22" +
+                    useCaseVal +
+                    "%22%7D%7D";
+
+                const getJSON = async (url) => {
+                    try {
+                        const response = await fetch(url);
+                        if (!response.ok) throw new Error(response.statusText);
+
+                        const data = await response.json();
+                        return data;
+                    } catch (error) {
+                        return error;
+                    }
+                };
+                getJSON(url2)
+                    .then((data) => {
+                        if (data.length == 0) {
+                            alert("No UseCase Data");
+                        } else {
+                            document.getElementById("uscName").innerHTML = data[0].name;
+                            document.getElementById("uscDimension").innerHTML =
+                                data[0].dimension;
+                            document.getElementById("uscReifgrad").innerHTML =
+                                data[0].reifegrad;
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            }
+
+            function showReifgrad(reifgradVal) {
+
+                document.getElementById("txtreifegrad").innerHTML = reifgradVal;
+            }
+
+            function showReifgrad2(reifgradVal) {
+
+                document.getElementById("txtreifegrad2").innerHTML = reifgradVal;
+
+            }
+
+            function showReifgrad3(reifgradVal) {
+                document.getElementById("txtreifegrad3").innerHTML = reifgradVal;
+            }
+
+            //   function calResults() {
+            //   let rowheader;
+            //   let row1;
+            //   let digiRefM;
+            //   let digiRefT;
+            //   let digiRefO;
+            //   let UscValM;
+            //   let UscValT;
+            //   let UscValO;
+            //   let uscReifgradMTO;
+            //   let results;
+            //   riskTypeCell = 0;
+            //   var table;
+
+
+            //   // grtting the value of table header and turing the checkbox on and off based on header value and 
+            //   // checkbox value
+            //   let uscDim = document.getElementById("uscDimension").innerHTML;
+            //   let uscReifgrad = document.getElementById("uscReifgrad").innerHTML;
+            //   let dr = document.getElementById("txtreifegrad").innerHTML;
+            //   let dr2 = document.getElementById("txtreifegrad2").innerHTML;
+            //   let dr3 = document.getElementById("txtreifegrad3").innerHTML;
+            //   table = document.getElementById("mytab1");
+
+            //   if (uscReifgrad == "Basis-Lösung") {
+            //     uscReifgradMTO = 0;
+            //   } else {
+            //     uscReifgradMTO = 1;
+            //   }
+
+            //   // if (dr < 3) {
+            //   //   digiRefM = 1;
+            //   // } else {
+            //   //   digiRefM = 0;
+            //   // }
+            //   // if (dr2 < 3) {
+            //   //   digiRefT = 1;
+            //   // } else {
+            //   //   digiRefT = 0;
+            //   // }
+            //   // if (dr3 < 3) {
+            //   //   digiRefO = 1;
+            //   // } else {
+            //   //   digiRefO = 0;
+            //   // }
+
+
+            //   for (var i = 1, row; row = table.rows[i]; i++) {
+            //     rowheader = $(`tr.row${i} th:nth-child(1)`).html() //values1[i - 1];
+            //     //console.log(rowheader)
+            //     for (var b = 4; b <= 23; b++) {
+            //       row1 = $(`tr.row${i} td:nth-child(${b}) label input`)
+            //       .val() // label input $(`tr.row1 td:nth-child(${i})`).html()
+            //       //console.log(`the row header ${rowheader} and child is ${row1} ${i}`);
+
+
+            //       UscValO = 0;
+            //       UscValT = 0;
+            //       UscValM = 0;
+            //       digiRefM = 0;
+            //       digiRefT = 0;
+            //       digiRefO = 0;
+
+            //       if (rowheader === "Mensch") {
+            //         if (dr < 3) {
+            //           digiRefM = 1;
+            //         } else {
+            //           digiRefM = 0;
+            //         }
+            //       }
+
+            //       if (rowheader === "Technologie") {
+            //         if (dr2 < 3) {
+            //           digiRefT = 1;
+            //         } else {
+            //           digiRefT = 0;
+            //         }
+            //       }
+
+            //       if (rowheader === "Organisation") {
+            //         if (dr3 < 3) {
+            //           digiRefO = 1;
+            //         } else {
+            //           digiRefO = 0;
+            //         }
+            //       }
+
+            //       if (uscDim === "Mensch" && rowheader === "Mensch") { // && row1 === "Mensch"
+
+            //         UscValM = 1;
+
+            //       } else {
+
+            //         UscValM = 0;
+            //       }
+
+            //       if (uscDim === "Technologie" && rowheader === "Technologie") { // && row1 === "Technologie"
+
+            //         UscValT = 1;
+            //       } else {
+            //         UscValT = 0;
+            //       }
+
+            //       if (uscDim === "Organisation" && rowheader === "Organisation") { // && row1 === "Organisation"
+            //         UscValO = 1;
+
+            //       } else {
+            //         UscValO = 0;
+            //       }
+
+            //       riskTypeCell = 0;
+
+            //       if ((rowheader === "Mensch") && (row1 === "Mensch")) {
+
+            //         riskTypeCell = 1;
+
+            //       }
+
+
+
+            //       if ((rowheader == "Technologie") && (row1 == "Technologie")) {
+
+            //         riskTypeCell = 1;
+
+            //       }
+
+
+            //       if ((rowheader == "Organisation") && (row1 == "Organisation")) {
+
+            //         riskTypeCell = 1;
+
+            //       }
+
+            //       results = uscReifgradMTO + digiRefM + UscValM + riskTypeCell + UscValT + UscValO + digiRefT + digiRefO;
+
+            //       function randomNum(min, max) {
+            //         return Math.floor(Math.random() * (max - min + 1)) + min;
+            //       }
+            //       let sumOfAll = results + randomNum(-1, 1);
+            //       console.log(sumOfAll);
+
+
+            //       // if (b === 10) {
+            //       //   document.getElementById("TestingValue").innerHTML = results; //TestingValue
+            //       //   }
+            //       //basis-losung + Reifegrad Value für Mensch+ dimenison of useCase Mensch + dimension of risktype dimenison of useCase Tech + dimenison of useCase Org +Reifegrad Value für Tech + Reifegrad Value für Organisation
+            //       if (sumOfAll > 1) {
+            //         $(`tr.row${i} td:nth-child(${b}) label input[type='checkbox'][value =${row1}]`).prop("checked", true);
+            //       } else {
+            //         $(`tr.row${i} td:nth-child(${b}) label input[type='checkbox'][value =${row1}]`).prop("checked", false);
+            //       }
+            //     }
+            //   }
+
+            //   //Eintritwahr Calculation
+            //   let rowheader2;
+            //   let row2;
+            //   var table2;
+            //   let conversion1;
+
+            //   let mdr = document.getElementById("txtreifegrad").innerHTML;
+            //   let tdr2 = document.getElementById("txtreifegrad2").innerHTML;
+            //   let odr3 = document.getElementById("txtreifegrad3").innerHTML;
+
+            //   // //Reifegrad Check
+            //   if (mdr < 3) {
+            //     digiRefM2 = 1;
+            //   } else {
+            //     digiRefM2 = 0;
+            //   }
+            //   if (tdr2 < 3) {
+            //     digiRefT2 = 1;
+            //   } else {
+            //     digiRefT2 = 0;
+            //   }
+            //   if (odr3 < 3) {
+            //     digiRefO2 = 1;
+            //   } else {
+            //     digiRefO2 = 0;
+            //   }
+            //   // getting the value of table header and turing the checkbox on and off based on header value and 
+            //   // checkbox value
+            //   table2 = document.getElementById("mytab2");
+            //   for (var x = 1, row; row = table2.rows[x]; x++) {
+            //     rowheader2 = $(`tr.r${x} td:nth-child(${1})`).html() //values1[i - 1];
+            //     //console.log(rowheader2);
+            //     for (var y = 2; y <= 21; y++) { //column
+            //       row2 = $(`tr.r${x} td:nth-child(${y}) select`).attr('name') // label input $(`tr.row1 td:nth-child(${i})`).html()
+            //        //console.log(`the value of the column is ${row2}`)
+
+            //       //calculating passsive sum and assigning values
+            //       if (1 <= row2 && row2 <= 6) {
+            //         // console.log("0 Points");
+            //         conversion1 = 0;
+            //       } else if (7 <= row2 && row2 <= 13) {
+            //         // console.log("1 Points");
+            //         conversion1 = 1;
+            //       } else if (14 <= row2 && row2 <= 21) {
+            //         // console.log("2 Points");
+            //         conversion1 = 2;
+            //       } else if (22 <= row2 && row2 <= 29) {
+            //         // console.log("3 Points");
+            //         conversion1 = 3;
+            //       }
+
+            //       //Digital Reifegrad Value für Mensch+ Reifegrad Value für Tech+ Reifegrad Value für Organisation+ UseCase Reifegrad (Basis = 0) + Conversion of PassiveSums
+            //       sumOfRow = digiRefM2 + digiRefT2 + digiRefO2 + uscReifgradMTO + conversion1;
+            //        console.log(`The value of ${y} is ${sumOfRow}`);
+
+
+            //       if (0 <= sumOfRow && sumOfRow <= 2) {
+            //         // console.log("Sehr Gering") value 1;
+            //         $(`tr.r1 td:nth-child(${y}) select`).val('1');
+            //       } else if (3 <= sumOfRow && sumOfRow <= 4) {
+            //         // console.log("Gering")  value 2;
+            //         $(`tr.r1 td:nth-child(${y}) select`).val('2');
+            //       } else if (5 <= sumOfRow && sumOfRow <= 6) {
+            //         // console.log("Moderat")  value 3;
+            //         $(`tr.r1 td:nth-child(${y}) select`).val('3');
+            //       } else if (7 <= sumOfRow && sumOfRow <= 25) {
+            //         // console.log("Hoch")  value 4;
+            //         $(`tr.r1 td:nth-child(${y}) select`).val('4');
+            //       } else {
+            //         $(`tr.r1 td:nth-child(${y}) select`).val(0);
+            //       }
+            //     }
+            //   }
+            // } // function ending
+            // collect all the divs
+        </script>
+
+
+        <!-- <div id="iframeHolder"></div> -->
+        <!-- <button class="closeBtn" onclick="closemyDiv()">Ausblend Iframe</button> -->
+        <div style="height: 1200px;">
+
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix1" href="#popup2" style="left: 73.5%;
+                            top: 55.7%; text-align: center; font-weight: 700;">R1</a>
+            </div>
+
+            <!-- <div id="popup21" class="overlay">
+        <div class="popup">
+          <h2>Risikoprofil</h2>
+          <a class="close" href="#">×</a>
+          <div class="content">
+            <iframe src="../html/FinalSpinDiagram.html" scrolling="no"
+              style="height: 785px; overflow: hidden; width: 100%;"></iframe>
+          </div>
+        </div>
+      </div> -->
+
+            <div id="popup2" class="overlay">
+                <div class="popup">
+                    <h2>Risikoprofil</h2>
+                    <a class="close" href="#">×</a>
+                    <div class="content">
+                        <iframe src="../html/spinDiagram.html" scrolling="no"
+                            style="height: 785px; overflow: hidden; width: 100%;"></iframe>
+                    </div>
                 </div>
-            </td>
-            <td>
-                <form action="UseCaseForm">
-                    <select value="UseCase" onchange="showMassNahm(this.value)">
-                        <option value="">Select a Massnahm:</option>
-                        <option value="Verbesserung der Veränderungskultur">
-                            Verbesserung der Veränderungskultur
-                        </option>
-
-                        <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
-
-                        <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
-                            Personalkapazitäten</option>
-
-                        <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
-                            Personalkapazitäten</option>
-
-                        <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
-
-                        <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten Strukturen
-                        </option>
-
-                        <option value="Prozessoptimierung">Prozessoptimierung</option>
-
-                        <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
-
-                        <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der Wertschätzung der
-                            Mitarbeiter</option>
-
-                        <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">Incentivierung
-                            der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
-
-                        <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der vertikalen
-                            Kommunikation (Top-down)</option>
-
-                        <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation mit
-                            Kunden</option>
-
-                        <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
-                            Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
-
-                        <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
-
-                        <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
-
-                        <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
-
-                        <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements</option>
-
-                        <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit</option>
-
-                        <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                        </option>
-
-                        <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                        </option>
-
-                        <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
-                            Qualitätssteigerung</option>
-
-                        <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">Erhöhung der
-                            Kooperationstiefe mit externen Wertschöpfungspartnern</option>
-
-                        <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe mit
-                            Kunden</option>
-
-                        <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
-
-                        <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
-
-                        <option value="Verbesserung des Ressourcenmanagements">Verbesserung des Ressourcenmanagements
-                        </option>
-
-                        <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
-                            Dokumentationsmanagements</option>
-
-                        <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung von
-                            Kontrollmechanismen [UFT+15, S.780]</option>
-
-                        <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer transparenten
-                            Kostenstruktur</option>
-
-                        <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
-                            Unterstützung [Obe19, S.60]</option>
-
-                        <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen</option>
-                </form>
-            </td>
-            <td>
-                <div class="massNahme" style="text-align: left;">
-                    <label for="massNahme"></label>
-                    <div id="massNahme2" style="visibility: hidden; text-align: left;"></div>
-                </div>
-            </td>
-            <td>
-                <form action="UseCaseForm">
-                    <select value="UseCase" onchange="showMassNahm(this.value)">
-                        <option value="">Select a Massnahm:</option>
-                        <option value="Verbesserung der Veränderungskultur">
-                            Verbesserung der Veränderungskultur
-                        </option>
-
-                        <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
-
-                        <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
-                            Personalkapazitäten</option>
-
-                        <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
-                            Personalkapazitäten</option>
-
-                        <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
-
-                        <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten Strukturen
-                        </option>
-
-                        <option value="Prozessoptimierung">Prozessoptimierung</option>
-
-                        <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
-
-                        <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der Wertschätzung der
-                            Mitarbeiter</option>
-
-                        <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">Incentivierung
-                            der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
-
-                        <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der vertikalen
-                            Kommunikation (Top-down)</option>
-
-                        <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation mit
-                            Kunden</option>
-
-                        <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
-                            Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
-
-                        <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
-
-                        <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
-
-                        <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
-
-                        <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements</option>
-
-                        <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit</option>
-
-                        <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                        </option>
-
-                        <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                        </option>
-
-                        <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
-                            Qualitätssteigerung</option>
-
-                        <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">Erhöhung der
-                            Kooperationstiefe mit externen Wertschöpfungspartnern</option>
-
-                        <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe mit
-                            Kunden</option>
-
-                        <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
-
-                        <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
-
-                        <option value="Verbesserung des Ressourcenmanagements">Verbesserung des Ressourcenmanagements
-                        </option>
-
-                        <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
-                            Dokumentationsmanagements</option>
-
-                        <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung von
-                            Kontrollmechanismen [UFT+15, S.780]</option>
-
-                        <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer transparenten
-                            Kostenstruktur</option>
-
-                        <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
-                            Unterstützung [Obe19, S.60]</option>
-
-                        <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen</option>
-                </form>
-            </td>
-            <td>
-                <div class="massNahme" style="text-align: left;">
-                    <label for="massNahme"></label>
-                    <div id="massNahme3" style="visibility: hidden; text-align: left;"></div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>                <form action="UseCaseForm">
-                <select value="UseCase" onchange="showMassNahm1(this.value)">
-                    <option value="">Select a Massnahm:</option>
-                    <option value="Verbesserung der Veränderungskultur">
-                        Verbesserung der Veränderungskultur
-                    </option>
-
-                    <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
-
-                    <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
-                        Personalkapazitäten</option>
-
-                    <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
-                        Personalkapazitäten</option>
-
-                    <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
-
-                    <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten Strukturen
-                    </option>
-
-                    <option value="Prozessoptimierung">Prozessoptimierung</option>
-
-                    <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
-
-                    <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der Wertschätzung der
-                        Mitarbeiter</option>
-
-                    <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">Incentivierung
-                        der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
-
-                    <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der vertikalen
-                        Kommunikation (Top-down)</option>
-
-                    <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation mit
-                        Kunden</option>
-
-                    <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
-                        Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
-
-                    <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
-
-                    <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
-
-                    <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
-
-                    <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements</option>
-
-                    <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit</option>
-
-                    <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                    </option>
-
-                    <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                    </option>
-
-                    <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
-                        Qualitätssteigerung</option>
-
-                    <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">Erhöhung der
-                        Kooperationstiefe mit externen Wertschöpfungspartnern</option>
-
-                    <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe mit
-                        Kunden</option>
-
-                    <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
-
-                    <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
-
-                    <option value="Verbesserung des Ressourcenmanagements">Verbesserung des Ressourcenmanagements
-                    </option>
-
-                    <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
-                        Dokumentationsmanagements</option>
-
-                    <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung von
-                        Kontrollmechanismen [UFT+15, S.780]</option>
-
-                    <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer transparenten
-                        Kostenstruktur</option>
-
-                    <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
-                        Unterstützung [Obe19, S.60]</option>
-
-                    <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen</option>
-            </form></td>
-            <td></td>
-            <td>                <form action="UseCaseForm">
-                <select value="UseCase" onchange="showMassNahm2(this.value)">
-                    <option value="">Select a Massnahm:</option>
-                    <option value="Verbesserung der Veränderungskultur">
-                        Verbesserung der Veränderungskultur
-                    </option>
-
-                    <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
-
-                    <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
-                        Personalkapazitäten</option>
-
-                    <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
-                        Personalkapazitäten</option>
-
-                    <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
-
-                    <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten Strukturen
-                    </option>
-
-                    <option value="Prozessoptimierung">Prozessoptimierung</option>
-
-                    <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
-
-                    <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der Wertschätzung der
-                        Mitarbeiter</option>
-
-                    <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">Incentivierung
-                        der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
-
-                    <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der vertikalen
-                        Kommunikation (Top-down)</option>
-
-                    <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation mit
-                        Kunden</option>
-
-                    <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
-                        Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
-
-                    <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
-
-                    <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
-
-                    <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
-
-                    <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements</option>
-
-                    <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit</option>
-
-                    <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                    </option>
-
-                    <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                    </option>
-
-                    <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
-                        Qualitätssteigerung</option>
-
-                    <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">Erhöhung der
-                        Kooperationstiefe mit externen Wertschöpfungspartnern</option>
-
-                    <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe mit
-                        Kunden</option>
-
-                    <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
-
-                    <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
-
-                    <option value="Verbesserung des Ressourcenmanagements">Verbesserung des Ressourcenmanagements
-                    </option>
-
-                    <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
-                        Dokumentationsmanagements</option>
-
-                    <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung von
-                        Kontrollmechanismen [UFT+15, S.780]</option>
-
-                    <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer transparenten
-                        Kostenstruktur</option>
-
-                    <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
-                        Unterstützung [Obe19, S.60]</option>
-
-                    <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen</option>
-            </form></td>
-            <td></td>
-            <td>                <form action="UseCaseForm">
-                <select value="UseCase" onchange="showMassNahm3(this.value)">
-                    <option value="">Select a Massnahm:</option>
-                    <option value="Verbesserung der Veränderungskultur">
-                        Verbesserung der Veränderungskultur
-                    </option>
-
-                    <option value="Verbesserung der Fehlerkultur">Verbesserung der Fehlerkultur</option>
-
-                    <option value="Langfristige Erhöhung der Personalkapazitäten">Langfristige Erhöhung der
-                        Personalkapazitäten</option>
-
-                    <option value="Kurzfristige Erhöhung der Personalkapazitäten">Kurzfristige Erhöhung der
-                        Personalkapazitäten</option>
-
-                    <option value="Qualifizierung von Personal">Qualifizierung von Personal</option>
-
-                    <option value="Etablieren von transparenten Strukturen">Etablieren von transparenten Strukturen
-                    </option>
-
-                    <option value="Prozessoptimierung">Prozessoptimierung</option>
-
-                    <option value="Prozesskonkretisierung">Prozesskonkretisierung</option>
-
-                    <option value="Steigerung der Wertschätzung der Mitarbeiter">Steigerung der Wertschätzung der
-                        Mitarbeiter</option>
-
-                    <option value="Incentivierung der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]">Incentivierung
-                        der Mitarbeiter [UFT+15, S.771], [UFT+15, S.778]</option>
-
-                    <option value="Verbesserung der vertikalen Kommunikation (Top-down)">Verbesserung der vertikalen
-                        Kommunikation (Top-down)</option>
-
-                    <option value="Verbesserung der Kommunikation mit Kunden">Verbesserung der Kommunikation mit
-                        Kunden</option>
-
-                    <option value="Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)">
-                        Verbesserung der horizontalen Kommunikation (zwischen Mitarbeitenden)</option>
-
-                    <option value="Prävention von Ausfallschäden">Prävention von Ausfallschäden</option>
-
-                    <option value="Erhöhung der IT-Sicherheit">Erhöhung der IT-Sicherheit</option>
-
-                    <option value="Erhöhung der Datensicherheit">Erhöhung der Datensicherheit</option>
-
-                    <option value="Verbesserung des Datenmanagements">Verbesserung des Datenmanagements</option>
-
-                    <option value="Steigerung der Arbeitssicherheit">Steigerung der Arbeitssicherheit</option>
-
-                    <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                    </option>
-
-                    <option value="Prävention von gesundheitlichen Schäden">Prävention von gesundheitlichen Schäden
-                    </option>
-
-                    <option value="Spezifische Maßnahmen zur Qualitätssteigerung">Spezifische Maßnahmen zur
-                        Qualitätssteigerung</option>
-
-                    <option value="Erhöhung der Kooperationstiefe mit externen Wertschöpfungspartnern">Erhöhung der
-                        Kooperationstiefe mit externen Wertschöpfungspartnern</option>
-
-                    <option value="Erhöhung der Kooperationstiefe mit Kunden">Erhöhung der Kooperationstiefe mit
-                        Kunden</option>
-
-                    <option value="Optimierung der Führungsebene">Optimierung der Führungsebene</option>
-
-                    <option value="Erhöhung der Eigenverantwortung">Erhöhung der Eigenverantwortung</option>
-
-                    <option value="Verbesserung des Ressourcenmanagements">Verbesserung des Ressourcenmanagements
-                    </option>
-
-                    <option value="Verbesserung des Dokumentationsmanagements">Verbesserung des
-                        Dokumentationsmanagements</option>
-
-                    <option value="Intensivierung von Kontrollmechanismen [UFT+15, S.780]">Intensivierung von
-                        Kontrollmechanismen [UFT+15, S.780]</option>
-
-                    <option value="Gestaltung einer transparenten Kostenstruktur">Gestaltung einer transparenten
-                        Kostenstruktur</option>
-
-                    <option value="Einführung digitaler Unterstützung [Obe19, S.60]">Einführung digitaler
-                        Unterstützung [Obe19, S.60]</option>
-
-                    <option value="Verbesserung sozialer Strukturen">Verbesserung sozialer Strukturen</option>
-            </form></td>
-            <td></td>
-        </tr>
-    </table>
-
-
-    <!-- <div style="visibility: hidden;" class="massDim">
-        <label for="massDim" style="font-weight: bold">Events:</label>
-        <div id="massDim"></div>
-    </div> -->
-
-
-
-
-
-
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix2" href="#popup2" style="text-align: center; font-weight: 700; left: 74.5%;
+                            top: 55.7%;">R2</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix3" href="#popup2" style="text-align: center; font-weight: 700; left: 74.5%;
+                            top: 15.7%;">R3</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix4" href="#popup2" style="text-align: center; font-weight: 700; left: 78.5%;
+                            top: 26.7%;">R4</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix5" href="#popup2" style="text-align: center; font-weight: 700; left: 94.5%;
+                            top: 35.7%;">R5</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix6" href="#popup2" style="text-align: center; font-weight: 700; left: 85%;
+                            top: 45.7%;">R6</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix7" href="#popup2" style="text-align: center; font-weight: 700; left: 82.5%;
+                            top: 12.7%;">R7</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix8" href="#popup2" style="text-align: center; font-weight: 700; left: 89.5%;
+                            top: 41.7%;">R8</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix9" href="#popup2" style="text-align: center; font-weight: 700; left: 80.5%;
+                            top: 36.7%;">R9</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix10" href="#popup2" style="text-align: center; font-weight: 700; left: 86.5%;
+                            top: 25.7%;">R10</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix11" href="#popup2" style="text-align: center; font-weight: 700; left: 86.5%;
+                            top: 35.7%;">R11</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix12" href="#popup2" style="text-align: center; font-weight: 700; left: 91%;
+                            top: 21.7%;">R12</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix13" href="#popup2" style="text-align: center; font-weight: 700; left: 82.5%;
+                            top: 52.7%;">R13</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix14" href="#popup2" style="text-align: center; font-weight: 700; left: 96.5%;
+                            top: 50.7%;">R14</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix15" href="#popup2" style="text-align: center; font-weight: 700; left: 93.5%;
+                            top: 13.7%;">R15</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix16" href="#popup2" style="text-align: center; font-weight: 700; left: 79.8%;
+                                      top: 20.7%;">R16</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix17" href="#popup2" style="text-align: center; font-weight: 700; left: 92.5%;
+                                      top: 29.7%;">R17</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix18" href="#popup2" style="text-align: center; font-weight: 700; left: 77%;
+                                      top: 40.7%;">R18</a>
+            </div>
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix19" href="#popup2" style="text-align: center; font-weight: 700; left: 88.5%;
+                                      top: 11.7%;">R19</a>
+            </div> -->
+
+            <div class="box">
+                <a class="overlaybutton" id="risk-matrix20" href="#popup2" style="text-align: center; font-weight: 700; left: 75.5%;
+                                      top: 23.7%;">R20</a>
+            </div>
+        </div>
+
+    </div>
+    </div>
     <script>
-        function showEvents1(riskVal) {
+        function calResults() {
+            debugger
+            var divs = document.getElementsByClassName('box');
+            // get window width and height
+            var winWidth = 1520;
+            var winHeight = 500;
+
+            // i stands for "index". you could also call this banana or haircut. it's a variable
+            for (var i = 0; i < divs.length; i++) {
+
+                // shortcut! the current div in the list
+                var thisDiv = divs[i];
+                let boxes = "risk-matrix" + i;
+                if (boxes === "risk-matrix0") {
+
+                } else {
+
+                    // get random numbers for each element
+                    randomTop = getRandomNumber(95, winHeight);
+                    randomLeft = getRandomNumber(1160, winWidth);
+
+                    // update top and left position
+                    document.getElementById(boxes).style.top = randomTop + 'px';
+                    document.getElementById(boxes).style.left = randomLeft + 'px';
+                }
+
+            }
+
+            // function that returns a random number between a min and max
+            function getRandomNumber(min, max) {
+
+                return Math.random() * (max - min) + min;
+
+            }
+        }
+
+                function showEvents1(riskVal) {
             if (riskVal == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
-            debugger
+             
             var url3 =
                 
                 "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22"+riskVal+"%22%7D%7D"
@@ -825,7 +1929,7 @@ body {
                 alert("There Aint Nothing Here");
                 return;
             }
-            debugger
+             
             var url3 =
                 
                 "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22"+riskVal+"%22%7D%7D"
@@ -866,7 +1970,7 @@ body {
                 alert("There Aint Nothing Here");
                 return;
             }
-            debugger
+             
             var url3 =
                 
                 "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22"+riskVal+"%22%7D%7D"
@@ -908,7 +2012,14 @@ body {
                 alert("There Aint Nothing Here");
                 return;
             }
-            debugger
+            if ($("#digiR1")[0].selectedIndex <= 0) {
+                alert("Bitte wählen Sie zuerst den Risikotyp");
+                $("#sel4").val("");
+                $("sel1").val("");
+            }
+    else
+        {
+             
             var url2 =
                 "http://51.15.76.202:3001/api/massNahmens?filter=%7B%22where%22%3A%7B%22massName%22%3A%20%22" +
                 massNahmVal + "%22%7D%7D";
@@ -942,6 +2053,7 @@ body {
                 .catch((error) => {
                     console.error(error);
                 });
+            }
         }
 
         function showMassNahm2(massNahmVal) {
@@ -949,7 +2061,7 @@ body {
                 alert("There Aint Nothing Here");
                 return;
             }
-            debugger
+             
             var url2 =
                 "http://51.15.76.202:3001/api/massNahmens?filter=%7B%22where%22%3A%7B%22massName%22%3A%20%22" +
                 massNahmVal + "%22%7D%7D";
@@ -990,7 +2102,7 @@ body {
                 alert("There Aint Nothing Here");
                 return;
             }
-            debugger
+             
             var url2 =
                 "http://51.15.76.202:3001/api/massNahmens?filter=%7B%22where%22%3A%7B%22massName%22%3A%20%22" +
                 massNahmVal + "%22%7D%7D";
@@ -1024,6 +2136,15 @@ body {
                     console.error(error);
                 });
         }
+    
+        function handleSelection(source, dest) {
+            
+    source.options[source.selectedIndex].disabled=true;
+    source.options[source.selectedIndex].style.display='none';
+    dest.options[source.selectedIndex].disabled=true;
+    dest.options[source.selectedIndex].style.display='none';
+}
+
     </script>
 </body>
 
