@@ -220,6 +220,11 @@
                     </option>
                 </select>
             </form>
+            <div class="myRow">
+                <div id="txtreifegrad" class="myColumn">Zahlsumme 1:</div>
+                <div id="txtreifegrad2" class="myColumn">Zahlsumme 2:</div>
+                <div id="txtreifegrad3" class="myColumn">Zahlsumme 3:</div>
+            </div>
             <br />
             <table>
                 <thead>
@@ -1848,7 +1853,7 @@
     </div>
     <script>
         function calResults() {
-            
+
             var divs = document.getElementsByClassName('box');
             // get window width and height
             var winWidth = 1520;
@@ -1897,7 +1902,7 @@
             select3.selectedIndex = index3;
 
             var mySelect3 = $("#DigiR2").val();
-            
+
 
 
             if (mySelect1 == "") {
@@ -1932,6 +1937,13 @@
                         //     data[0].eventList[0];
                         document.getElementById("massNahme1").innerHTML =
                             data[0].eventList[0];
+
+                            function randomNum(min, max) {
+                                return Math.floor(Math.random() * (max - min + 1)) + min;
+                            }
+                            let sumOfAll = randomNum(-1, 3);
+
+                            document.getElementById("txtreifegrad").innerHTML = sumOfAll;
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
 
@@ -1941,7 +1953,7 @@
                     console.error(error);
                 });
 
-                if (mySelect2 == "") {
+            if (mySelect2 == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
@@ -1973,6 +1985,13 @@
                         //     data[0].eventList[0];
                         document.getElementById("massNahme2").innerHTML =
                             data[0].eventList[0];
+
+                            function randomNum(min, max) {
+                                return Math.floor(Math.random() * (max - min + 1)) + min;
+                            }
+                            let sumOfAll = randomNum(-1, 3);
+
+                            document.getElementById("txtreifegrad2").innerHTML = sumOfAll;
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
 
@@ -1981,8 +2000,8 @@
                 .catch((error) => {
                     console.error(error);
                 });
-        
-                if (mySelect3 == "") {
+
+            if (mySelect3 == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
@@ -2014,6 +2033,13 @@
                         //     data[0].eventList[0];
                         document.getElementById("massNahme3").innerHTML =
                             data[0].eventList[0];
+
+                            function randomNum(min, max) {
+                                return Math.floor(Math.random() * (max - min + 1)) + min;
+                            }
+                            let sumOfAll = randomNum(-1, 3);
+
+                            document.getElementById("txtreifegrad3").innerHTML = sumOfAll;
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
 
@@ -2023,7 +2049,7 @@
                     console.error(error);
                 });
 
-               
+
 
             // function that returns a random number between a min and max
             function getRandomNumber(min, max) {
@@ -2076,6 +2102,8 @@
                 .catch((error) => {
                     console.error(error);
                 });
+
+            document.getElementById("txtreifegrad").innerHTML = riskVal;
         }
 
         function showEvents2(riskVal) {
@@ -2165,7 +2193,7 @@
         }
 
         function showMassNahm1(massNahmVal) {
-            debugger
+
             if (massNahmVal == "") {
                 alert("There Aint Nothing Here");
                 return;
@@ -2199,6 +2227,13 @@
                             // document.getElementById("massNahme1").innerHTML = data[0].massName;
 
                             document.getElementById("massNahme1").style.visibility = "visible";
+
+                            function randomNum(min, max) {
+                                return Math.floor(Math.random() * (max - min + 1)) + min;
+                            }
+                            let sumOfAll = randomNum(-1, 3);
+
+                            document.getElementById("txtreifegrad").innerHTML = sumOfAll;
                             // document.getElementById("massDim").innerHTML =
                             //     data[0].dimension;
                             // document.getElementById("uscReifgrad").innerHTML =
@@ -2241,6 +2276,13 @@
                         // document.getElementById("massNahme2").innerHTML = data[0].massName;
                         document.getElementById("massNahme2").style.visibility = "visible";
 
+
+                        function randomNum(min, max) {
+                            return Math.floor(Math.random() * (max - min + 1)) + min;
+                        }
+                        let sumOfAll = randomNum(-1, 3);
+
+                        document.getElementById("txtreifegrad2").innerHTML = sumOfAll;
                         // document.getElementById("massDim").style.visibility = "visible";
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].dimension;
@@ -2282,6 +2324,13 @@
                         // document.getElementById("massNahme3").innerHTML = data[0].massName;
                         document.getElementById("massNahme3").style.visibility = "visible";
 
+
+                        function randomNum(min, max) {
+                            return Math.floor(Math.random() * (max - min + 1)) + min;
+                        }
+                        let sumOfAll = randomNum(-1, 3);
+
+                        document.getElementById("txtreifegrad3").innerHTML = sumOfAll;
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].dimension;
                         // document.getElementById("uscReifgrad").innerHTML =
@@ -2301,7 +2350,7 @@
             dest.options[source.selectedIndex].style.display = 'none';
         }
 
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentLoaded", function () {
 
             debugger
             var select = document.getElementById('digiR1');
@@ -2326,7 +2375,7 @@
             select3.selectedIndex = index3;
 
             var mySelect3 = $("#DigiR2").val();
-            
+
 
 
             if (mySelect1 == "") {
@@ -2370,7 +2419,7 @@
                     console.error(error);
                 });
 
-                if (mySelect2 == "") {
+            if (mySelect2 == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
@@ -2410,8 +2459,8 @@
                 .catch((error) => {
                     console.error(error);
                 });
-        
-                if (mySelect3 == "") {
+
+            if (mySelect3 == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
@@ -2452,9 +2501,7 @@
                     console.error(error);
                 });
 
-               });
-
-        
+        });
     </script>
 </body>
 

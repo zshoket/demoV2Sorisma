@@ -401,6 +401,17 @@ th:nth-child(3) {
   font-weight: 550;
 }
 
+.myRow {
+  display: table;
+  width: 80%; /*Optional*/
+  table-layout: fixed; /*Optional*/
+  border-spacing: 10px; /*Optional*/
+}
+.myColumn {
+  display: table-cell;
+  background-color: lightgray; /*Optional*/
+}
+
 .r2Button {
   background-color: transparent;
   background-repeat: no-repeat;
