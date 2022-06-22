@@ -367,11 +367,6 @@ th:nth-child(3) {
    font-weight: bolder; 
  }  */
 
-td:nth-child(2),
-th:nth-child(2) {
-  font-weight: bolder;
-}
-
 .button {
   position: relative;
   top: -105.5px;

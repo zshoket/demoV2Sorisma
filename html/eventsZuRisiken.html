@@ -99,7 +99,7 @@
                     <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
                     </option>
                 </select>
-                <select value="DigiR2" onchange="showEvents2(this.value)">
+                <select id="DigiR2" onchange="showEvents2(this.value)">
                     <option value="">Select a RiskType:</option>
                     <option value="Kompetenzmangel">Kompetenzmangel
                     </option>
@@ -159,7 +159,7 @@
                     <option value="Verlust von Unternehmenskompetenzen">Verlust von Unternehmenskompetenzen
                     </option>
                 </select>
-                <select value="DigiR3" onchange="showEvents3(this.value)">
+                <select id="DigiR3" onchange="showEvents3(this.value)">
                     <option value="">Select a RiskType:</option>
                     <option value="Kompetenzmangel">Kompetenzmangel
                     </option>
@@ -1848,7 +1848,7 @@
     </div>
     <script>
         function calResults() {
-            debugger
+            
             var divs = document.getElementsByClassName('box');
             // get window width and height
             var winWidth = 1520;
@@ -1875,23 +1875,176 @@
 
             }
 
+            var select = document.getElementById('digiR1');
+            var items = select.getElementsByTagName('option');
+            var index = Math.floor(Math.random() * items.length);
+            select.selectedIndex = index;
+
+            var mySelect1 = $("#digiR1").val();
+
+
+
+            var select2 = document.getElementById("DigiR2");
+            var items2 = select2.getElementsByTagName('option');
+            var index2 = Math.floor(Math.random() * items2.length);
+            select2.selectedIndex = index2;
+
+            var mySelect2 = $("#DigiR2").val();
+
+            var select3 = document.getElementById('DigiR3');
+            var items3 = select3.getElementsByTagName('option');
+            var index3 = Math.floor(Math.random() * items3.length);
+            select3.selectedIndex = index3;
+
+            var mySelect3 = $("#DigiR2").val();
+            
+
+
+            if (mySelect1 == "") {
+                alert("There Aint Nothing Here");
+                return;
+            }
+
+            var url3 =
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                mySelect1 + "%22%7D%7D"
+
+
+            const getJSON = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(response.statusText);
+
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    return error;
+                }
+            };
+            getJSON(url3)
+                .then((data) => {
+                    if (data.length == 0) {
+                        alert("No Event Data");
+                    } else {
+                        // document.getElementById("massNahme1").innerHTML = data[0].massName;
+                        // document.getElementById("massDim").innerHTML =
+                        //     data[0].eventList[0];
+                        document.getElementById("massNahme1").innerHTML =
+                            data[0].eventList[0];
+                        // document.getElementById("uscReifgrad").innerHTML =
+                        //     data[0].reifegrad;
+
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+
+                if (mySelect2 == "") {
+                alert("There Aint Nothing Here");
+                return;
+            }
+
+            var url3 =
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                mySelect2 + "%22%7D%7D"
+
+
+            const getJSON2 = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(response.statusText);
+
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    return error;
+                }
+            };
+            getJSON2(url3)
+                .then((data) => {
+                    if (data.length == 0) {
+                        alert("No Event Data");
+                    } else {
+                        // document.getElementById("massNahme1").innerHTML = data[0].massName;
+                        // document.getElementById("massDim").innerHTML =
+                        //     data[0].eventList[0];
+                        document.getElementById("massNahme2").innerHTML =
+                            data[0].eventList[0];
+                        // document.getElementById("uscReifgrad").innerHTML =
+                        //     data[0].reifegrad;
+
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        
+                if (mySelect3 == "") {
+                alert("There Aint Nothing Here");
+                return;
+            }
+
+            var url3 =
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                mySelect3 + "%22%7D%7D"
+
+
+            const getJSON3 = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(response.statusText);
+
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    return error;
+                }
+            };
+            getJSON3(url3)
+                .then((data) => {
+                    if (data.length == 0) {
+                        alert("No Event Data");
+                    } else {
+                        // document.getElementById("massNahme1").innerHTML = data[0].massName;
+                        // document.getElementById("massDim").innerHTML =
+                        //     data[0].eventList[0];
+                        document.getElementById("massNahme3").innerHTML =
+                            data[0].eventList[0];
+                        // document.getElementById("uscReifgrad").innerHTML =
+                        //     data[0].reifegrad;
+
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+
+               
+
             // function that returns a random number between a min and max
             function getRandomNumber(min, max) {
 
                 return Math.random() * (max - min) + min;
 
             }
+
+
         }
 
-                function showEvents1(riskVal) {
+        function showEvents1(riskVal) {
             if (riskVal == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
-             
+
             var url3 =
-                
-                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22"+riskVal+"%22%7D%7D"
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                riskVal + "%22%7D%7D"
 
 
             const getJSON = async (url) => {
@@ -1913,7 +2066,7 @@
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].eventList[0];
-                            document.getElementById("massNahme1").innerHTML =
+                        document.getElementById("massNahme1").innerHTML =
                             data[0].eventList[0];
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
@@ -1924,15 +2077,17 @@
                     console.error(error);
                 });
         }
+
         function showEvents2(riskVal) {
             if (riskVal == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
-             
+
             var url3 =
-                
-                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22"+riskVal+"%22%7D%7D"
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                riskVal + "%22%7D%7D"
 
 
             const getJSON = async (url) => {
@@ -1954,7 +2109,7 @@
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].eventList[0];
-                            document.getElementById("massNahme2").innerHTML =
+                        document.getElementById("massNahme2").innerHTML =
                             data[0].eventList[0];
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
@@ -1965,15 +2120,17 @@
                     console.error(error);
                 });
         }
+
         function showEvents3(riskVal) {
             if (riskVal == "") {
                 alert("There Aint Nothing Here");
                 return;
             }
-             
+
             var url3 =
-                
-                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22"+riskVal+"%22%7D%7D"
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                riskVal + "%22%7D%7D"
 
 
             const getJSON = async (url) => {
@@ -1995,7 +2152,7 @@
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].eventList[0];
-                            document.getElementById("massNahme3").innerHTML =
+                        document.getElementById("massNahme3").innerHTML =
                             data[0].eventList[0];
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
@@ -2008,6 +2165,7 @@
         }
 
         function showMassNahm1(massNahmVal) {
+            debugger
             if (massNahmVal == "") {
                 alert("There Aint Nothing Here");
                 return;
@@ -2016,43 +2174,41 @@
                 alert("Bitte wählen Sie zuerst den Risikotyp");
                 $("#sel4").val("");
                 $("sel1").val("");
-            }
-    else
-        {
-             
-            var url2 =
-                "http://51.15.76.202:3001/api/massNahmens?filter=%7B%22where%22%3A%7B%22massName%22%3A%20%22" +
-                massNahmVal + "%22%7D%7D";
+            } else {
 
-            const getJSON = async (url) => {
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) throw new Error(response.statusText);
+                var url2 =
+                    "http://51.15.76.202:3001/api/massNahmens?filter=%7B%22where%22%3A%7B%22massName%22%3A%20%22" +
+                    massNahmVal + "%22%7D%7D";
 
-                    const data = await response.json();
-                    return data;
-                } catch (error) {
-                    return error;
-                }
-            };
-            getJSON(url2)
-                .then((data) => {
-                    if (data.length == 0) {
-                        alert("No MassNahm Data");
-                    } else {
-                        // document.getElementById("massNahme1").innerHTML = data[0].massName;
+                const getJSON = async (url) => {
+                    try {
+                        const response = await fetch(url);
+                        if (!response.ok) throw new Error(response.statusText);
 
-                        document.getElementById("massNahme1").style.visibility = "visible";
-                        // document.getElementById("massDim").innerHTML =
-                        //     data[0].dimension;
-                        // document.getElementById("uscReifgrad").innerHTML =
-                        //     data[0].reifegrad;
-
+                        const data = await response.json();
+                        return data;
+                    } catch (error) {
+                        return error;
                     }
-                })
-                .catch((error) => {
-                    console.error(error);
-                });
+                };
+                getJSON(url2)
+                    .then((data) => {
+                        if (data.length == 0) {
+                            alert("No MassNahm Data");
+                        } else {
+                            // document.getElementById("massNahme1").innerHTML = data[0].massName;
+
+                            document.getElementById("massNahme1").style.visibility = "visible";
+                            // document.getElementById("massDim").innerHTML =
+                            //     data[0].dimension;
+                            // document.getElementById("uscReifgrad").innerHTML =
+                            //     data[0].reifegrad;
+
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
             }
         }
 
@@ -2061,7 +2217,7 @@
                 alert("There Aint Nothing Here");
                 return;
             }
-             
+
             var url2 =
                 "http://51.15.76.202:3001/api/massNahmens?filter=%7B%22where%22%3A%7B%22massName%22%3A%20%22" +
                 massNahmVal + "%22%7D%7D";
@@ -2102,7 +2258,7 @@
                 alert("There Aint Nothing Here");
                 return;
             }
-             
+
             var url2 =
                 "http://51.15.76.202:3001/api/massNahmens?filter=%7B%22where%22%3A%7B%22massName%22%3A%20%22" +
                 massNahmVal + "%22%7D%7D";
@@ -2136,15 +2292,169 @@
                     console.error(error);
                 });
         }
-    
-        function handleSelection(source, dest) {
-            
-    source.options[source.selectedIndex].disabled=true;
-    source.options[source.selectedIndex].style.display='none';
-    dest.options[source.selectedIndex].disabled=true;
-    dest.options[source.selectedIndex].style.display='none';
-}
 
+        function handleSelection(source, dest) {
+
+            source.options[source.selectedIndex].disabled = true;
+            source.options[source.selectedIndex].style.display = 'none';
+            dest.options[source.selectedIndex].disabled = true;
+            dest.options[source.selectedIndex].style.display = 'none';
+        }
+
+        document.addEventListener("DOMContentLoaded", function(){
+
+            debugger
+            var select = document.getElementById('digiR1');
+            var items = select.getElementsByTagName('option');
+            var index = Math.floor(Math.random() * items.length);
+            select.selectedIndex = index;
+
+            var mySelect1 = $("#digiR1").val();
+
+
+
+            var select2 = document.getElementById("DigiR2");
+            var items2 = select2.getElementsByTagName('option');
+            var index2 = Math.floor(Math.random() * items2.length);
+            select2.selectedIndex = index2;
+
+            var mySelect2 = $("#DigiR2").val();
+
+            var select3 = document.getElementById('DigiR3');
+            var items3 = select3.getElementsByTagName('option');
+            var index3 = Math.floor(Math.random() * items3.length);
+            select3.selectedIndex = index3;
+
+            var mySelect3 = $("#DigiR2").val();
+            
+
+
+            if (mySelect1 == "") {
+                alert("There Aint Nothing Here");
+                return;
+            }
+
+            var url3 =
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                mySelect1 + "%22%7D%7D"
+
+
+            const getJSON = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(response.statusText);
+
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    return error;
+                }
+            };
+            getJSON(url3)
+                .then((data) => {
+                    if (data.length == 0) {
+                        alert("No Event Data");
+                    } else {
+                        // document.getElementById("massNahme1").innerHTML = data[0].massName;
+                        // document.getElementById("massDim").innerHTML =
+                        //     data[0].eventList[0];
+                        document.getElementById("massNahme1").innerHTML =
+                            data[0].eventList[0];
+                        // document.getElementById("uscReifgrad").innerHTML =
+                        //     data[0].reifegrad;
+
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+
+                if (mySelect2 == "") {
+                alert("There Aint Nothing Here");
+                return;
+            }
+
+            var url3 =
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                mySelect2 + "%22%7D%7D"
+
+
+            const getJSON2 = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(response.statusText);
+
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    return error;
+                }
+            };
+            getJSON2(url3)
+                .then((data) => {
+                    if (data.length == 0) {
+                        alert("No Event Data");
+                    } else {
+                        // document.getElementById("massNahme1").innerHTML = data[0].massName;
+                        // document.getElementById("massDim").innerHTML =
+                        //     data[0].eventList[0];
+                        document.getElementById("massNahme2").innerHTML =
+                            data[0].eventList[0];
+                        // document.getElementById("uscReifgrad").innerHTML =
+                        //     data[0].reifegrad;
+
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        
+                if (mySelect3 == "") {
+                alert("There Aint Nothing Here");
+                return;
+            }
+
+            var url3 =
+
+                "http://51.15.76.202:3001/api/eventsZuRisikos?filter=%7B%22where%22%3A%7B%22risikoName%22%3A%20%22" +
+                mySelect3 + "%22%7D%7D"
+
+
+            const getJSON3 = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(response.statusText);
+
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    return error;
+                }
+            };
+            getJSON3(url3)
+                .then((data) => {
+                    if (data.length == 0) {
+                        alert("No Event Data");
+                    } else {
+                        // document.getElementById("massNahme1").innerHTML = data[0].massName;
+                        // document.getElementById("massDim").innerHTML =
+                        //     data[0].eventList[0];
+                        document.getElementById("massNahme3").innerHTML =
+                            data[0].eventList[0];
+                        // document.getElementById("uscReifgrad").innerHTML =
+                        //     data[0].reifegrad;
+
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+
+               });
+
+        
     </script>
 </body>
 
