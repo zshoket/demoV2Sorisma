@@ -402,9 +402,8 @@ th:nth-child(3) {
 }
 
 .myRow {
-  display: table;
+  /* display: table; */
   width: 80%; /*Optional*/
-  table-layout: fixed; /*Optional*/
   border-spacing: 10px; /*Optional*/
 }
 .myColumn {

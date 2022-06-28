@@ -40,7 +40,7 @@
                 <h6>Risiko Auswahl:</h6>
                 <br />
                 <select id="digiR1" value="DigiR" onchange="showEvents1(this.value)">
-                    <option value="">Select a RiskType:</option>
+                    <option value="">Wählen Sie eine Risikotyp:</option>
                     <option value="Kompetenzmangel">Kompetenzmangel
                     </option>
                     <option value="Fachkräftemangel">Fachkräftemangel
@@ -100,7 +100,7 @@
                     </option>
                 </select>
                 <select id="DigiR2" onchange="showEvents2(this.value)">
-                    <option value="">Select a RiskType:</option>
+                    <option value="">Wählen Sie eine Risikotyp:</option>
                     <option value="Kompetenzmangel">Kompetenzmangel
                     </option>
                     <option value="Fachkräftemangel">Fachkräftemangel
@@ -160,7 +160,7 @@
                     </option>
                 </select>
                 <select id="DigiR3" onchange="showEvents3(this.value)">
-                    <option value="">Select a RiskType:</option>
+                    <option value="">Wählen Sie eine Risikotyp:</option>
                     <option value="Kompetenzmangel">Kompetenzmangel
                     </option>
                     <option value="Fachkräftemangel">Fachkräftemangel
@@ -221,19 +221,25 @@
                 </select>
             </form>
             <div class="myRow">
-                <div id="txtreifegrad" class="myColumn">Zahlsumme 1:</div>
-                <div id="txtreifegrad2" class="myColumn">Zahlsumme 2:</div>
-                <div id="txtreifegrad3" class="myColumn">Zahlsumme 3:</div>
+
+
+                <div id="txtreifegrad" class="myColumn">Eintrittswahrscheinlichkeit 1: </div>
+                <div id="txtreifegrad-low" class="myColumn">Schadenshöhe 1: </div>
+                <div id="txtreifegrad2" class="myColumn">Eintrittswahrscheinlichkeit 2: </div>
+                <div id="txtreifegrad2-low" class="myColumn">Schadenshöhe 2: </div>
+                <div id="txtreifegrad3" class="myColumn">Eintrittswahrscheinlichkeit 3: </div>
+                <div id="txtreifegrad3-low" class="myColumn">Schadenshöhe 3: </div>
+
             </div>
             <br />
             <table>
                 <thead>
                     <tr>
-                        <th>Massnahm Auswahl für Risiko 1</th>
+                        <th>Maßnahme Auswahl für Risiko 1</th>
                         <th>Event 1</th>
-                        <th>Massnahm Auswahl für Risiko 2</th>
+                        <th>Maßnahme Auswahl für Risiko 2</th>
                         <th>Event 2</th>
-                        <th>Massnahm Auswahl für Risiko 3</th>
+                        <th>Maßnahme Auswahl für Risiko 3</th>
                         <th>Event 3</th>
                     </tr>
                 </thead>
@@ -245,7 +251,7 @@
 
                             <select id="sel1"
                                 onchange="handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel6)">
-                                <option value="">Select a Massnahm:</option>
+                                <option value="">Wählen Sie eine Maßnahme:</option>
                                 <option value="Verbesserung der Veränderungskultur">
                                     Verbesserung der Veränderungskultur
                                 </option>
@@ -354,7 +360,7 @@
 
                             <select id="sel2"
                                 onchange="handleSelection(this, sel1); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel6)">
-                                <option value="">Select a Massnahm:</option>
+                                <option value="">Wählen Sie eine Maßnahme:</option>
                                 <option value="Verbesserung der Veränderungskultur">
                                     Verbesserung der Veränderungskultur
                                 </option>
@@ -462,7 +468,7 @@
 
                             <select id="sel3"
                                 onchange="handleSelection(this, sel1); handleSelection(this, sel2); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel6)">
-                                <option value="">Select a Massnahm:</option>
+                                <option value="">Wählen Sie eine Maßnahme:</option>
                                 <option value="Verbesserung der Veränderungskultur">
                                     Verbesserung der Veränderungskultur
                                 </option>
@@ -574,7 +580,7 @@
                         <td>
                             <select value="UseCase" id="sel4"
                                 onchange="showMassNahm1(this.value); handleSelection(this, sel1); handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel5); handleSelection(this, sel6)">
-                                <option value="">Select a Massnahm:</option>
+                                <option value="">Wählen Sie eine Maßnahme:</option>
                                 <option value="Verbesserung der Veränderungskultur">
                                     Verbesserung der Veränderungskultur
                                 </option>
@@ -676,7 +682,7 @@
                         <td>
                             <select id="sel5"
                                 onchange="showMassNahm2(this.value); handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel1); handleSelection(this, sel6)">
-                                <option value="">Select a Massnahm:</option>
+                                <option value="">Wählen Sie eine Maßnahme:</option>
                                 <option value="Verbesserung der Veränderungskultur">
                                     Verbesserung der Veränderungskultur
                                 </option>
@@ -778,7 +784,7 @@
                         <td>
                             <select id="sel6"
                                 onchange="showMassNahm3(this.value); handleSelection(this, sel2); handleSelection(this, sel3); handleSelection(this, sel4); handleSelection(this, sel5); handleSelection(this, sel1)">
-                                <option value="">Select a Massnahm:</option>
+                                <option value="">Wählen Sie eine Maßnahme:</option>
                                 <option value="Verbesserung der Veränderungskultur">
                                     Verbesserung der Veränderungskultur
                                 </option>
@@ -1430,9 +1436,6 @@
                 document.getElementById("txtreifegrad").innerHTML = "";
                 document.getElementById("txtreifegrad2").innerHTML = "";
                 document.getElementById("txtreifegrad3").innerHTML = "";
-                document.getElementById("uscName").innerHTML
-                document.getElementById("uscDimension").innerHTML = "";
-                document.getElementById("uscReifgrad").innerHTML = "";
             }
 
             //for UseCase Queries
@@ -1938,12 +1941,22 @@
                         document.getElementById("massNahme1").innerHTML =
                             data[0].eventList[0];
 
-                            function randomNum(min, max) {
-                                return Math.floor(Math.random() * (max - min + 1)) + min;
-                            }
-                            let sumOfAll = randomNum(-1, 3);
 
-                            document.getElementById("txtreifegrad").innerHTML = sumOfAll;
+                        function randomNum(min, max, decimals) {
+                            return parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
+                        }
+                        let sumOfAll = randomNum(3.3, 4.0, 1);
+
+                        var newVar1 = document.getElementById("txtreifegrad").innerHTML;
+                        if (newVar1 === "Eintrittswahrscheinlichkeit 1: ") {
+                            document.getElementById("txtreifegrad").innerHTML += sumOfAll;
+                        } else {
+                            document.getElementById("txtreifegrad").innerHTML = "Eintrittswahrscheinlichkeit 1: " +
+                                sumOfAll;
+                        }
+
+
+                        // document.getElementById("txtreifegrad").innerHTML += sumOfAll;
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
 
@@ -1986,12 +1999,25 @@
                         document.getElementById("massNahme2").innerHTML =
                             data[0].eventList[0];
 
-                            function randomNum(min, max) {
-                                return Math.floor(Math.random() * (max - min + 1)) + min;
-                            }
-                            let sumOfAll = randomNum(-1, 3);
+                        // function randomNum(min, max) {
+                        //     return Math.floor(Math.random() * (max - min + 1)) + min;
+                        // }
+                        // let sumOfAll = randomNum(2.9, 4.0);
+                        function randomNum(min, max, decimals) {
+                            return parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
+                        }
+                        let sumOfAll = randomNum(3.3, 4.0, 1);
 
-                            document.getElementById("txtreifegrad2").innerHTML = sumOfAll;
+                        var newVar1 = document.getElementById("txtreifegrad2").innerHTML;
+                        if (newVar1 === "Eintrittswahrscheinlichkeit 2: ") {
+                            document.getElementById("txtreifegrad2").innerHTML += sumOfAll;
+                        } else {
+                            document.getElementById("txtreifegrad2").innerHTML = "Eintrittswahrscheinlichkeit 2: " +
+                                sumOfAll;
+                        }
+
+
+
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
 
@@ -2034,12 +2060,19 @@
                         document.getElementById("massNahme3").innerHTML =
                             data[0].eventList[0];
 
-                            function randomNum(min, max) {
-                                return Math.floor(Math.random() * (max - min + 1)) + min;
-                            }
-                            let sumOfAll = randomNum(-1, 3);
+                        function randomNum(min, max, decimals) {
+                            return parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
+                        }
+                        let sumOfAll = randomNum(3.3, 4.0, 1);
 
-                            document.getElementById("txtreifegrad3").innerHTML = sumOfAll;
+                        var newVar1 = document.getElementById("txtreifegrad3").innerHTML;
+                        if (newVar1 === "Eintrittswahrscheinlichkeit 3: ") {
+                            document.getElementById("txtreifegrad3").innerHTML += sumOfAll;
+                        } else {
+                            document.getElementById("txtreifegrad3").innerHTML = "Eintrittswahrscheinlichkeit 3: " +
+                                sumOfAll;
+                        }
+
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
 
@@ -2103,7 +2136,7 @@
                     console.error(error);
                 });
 
-            document.getElementById("txtreifegrad").innerHTML = riskVal;
+            // document.getElementById("txtreifegrad").innerHTML = riskVal;
         }
 
         function showEvents2(riskVal) {
@@ -2233,7 +2266,7 @@
                             }
                             let sumOfAll = randomNum(-1, 3);
 
-                            document.getElementById("txtreifegrad").innerHTML = sumOfAll;
+                            document.getElementById("txtreifegrad").innerHTML += sumOfAll;
                             // document.getElementById("massDim").innerHTML =
                             //     data[0].dimension;
                             // document.getElementById("uscReifgrad").innerHTML =
@@ -2282,7 +2315,7 @@
                         }
                         let sumOfAll = randomNum(-1, 3);
 
-                        document.getElementById("txtreifegrad2").innerHTML = sumOfAll;
+                        document.getElementById("txtreifegrad2").innerHTML += sumOfAll;
                         // document.getElementById("massDim").style.visibility = "visible";
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].dimension;
@@ -2330,7 +2363,7 @@
                         }
                         let sumOfAll = randomNum(-1, 3);
 
-                        document.getElementById("txtreifegrad3").innerHTML = sumOfAll;
+                        document.getElementById("txtreifegrad3").innerHTML += sumOfAll;
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].dimension;
                         // document.getElementById("uscReifgrad").innerHTML =
@@ -2352,7 +2385,7 @@
 
         document.addEventListener("DOMContentLoaded", function () {
 
-            debugger
+
             var select = document.getElementById('digiR1');
             var items = select.getElementsByTagName('option');
             var index = Math.floor(Math.random() * items.length);

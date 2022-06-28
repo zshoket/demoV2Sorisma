@@ -7,7 +7,7 @@ Ext.define('SORISMA.store.massNahmenEventsviewstore', {
         type: "ajax", 
       //  url: "http://localhost:3002/getAll",
     // url: "http://51.15.76.202:3001/api/documents/",
-     url: "http://localhost:3001/api/eventsZuRisikos",
+     url: "http://51.15.76.202:3001/api/eventsZuRisikos",
         headers: {
             Accept: "application/json"
         },

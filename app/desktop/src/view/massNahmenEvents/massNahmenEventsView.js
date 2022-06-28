@@ -4,7 +4,7 @@ Ext.define('SORISMA.view.massNahmenEvents.massNahmenEventsView', {
     cls: 'massNahmenEventsview',
     controller: { type: 'massNahmenEventsviewcontroller' },
     viewModel: { type: 'massNahmenEventsviewmodel' },
-    store: { type: 'massNahmenEventsviewstore' },
+    // store: { type: 'massNahmenEventsviewstore' },
     // rowNumbers: true,
 
     scrollable: true,
