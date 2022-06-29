@@ -231,6 +231,16 @@
                 <div id="txtreifegrad3-low" class="myColumn">Schadenshöhe 3: </div>
 
             </div>
+
+            <div class="myRow">
+
+
+                <div id="shownewsum" class="myColumn">Verbesserung Summe 1: </div>
+                <div id="shownewsum2" class="myColumn">Verbesserung Summe 2: </div>
+                <div id="shownewsum3" class="myColumn">Verbesserung Summe 3: </div>
+               
+
+            </div>
             <br />
             <table>
                 <thead>
@@ -1436,6 +1446,16 @@
                 document.getElementById("txtreifegrad").innerHTML = "";
                 document.getElementById("txtreifegrad2").innerHTML = "";
                 document.getElementById("txtreifegrad3").innerHTML = "";
+
+                document.getElementById("txtreifegrad-low").innerHTML = "";
+                document.getElementById("txtreifegrad2-low").innerHTML = "";
+                document.getElementById("txtreifegrad3-low").innerHTML = "";
+
+                document.getElementById("shownewsum").innerHTML = "";
+                document.getElementById("shownewsum2").innerHTML = "";
+                document.getElementById("shownewsum3").innerHTML = "";
+
+                
             }
 
             //for UseCase Queries
@@ -1909,7 +1929,7 @@
 
 
             if (mySelect1 == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -1933,7 +1953,7 @@
             getJSON(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -1955,6 +1975,14 @@
                                 sumOfAll;
                         }
 
+                        let sumOfAll1 = randomNum(2.9, 3.9, 1);
+                        var newVar0 = document.getElementById("txtreifegrad-low").innerHTML;
+                        if (newVar0 === "Schadenshöhe 1: ") {
+                            document.getElementById("txtreifegrad-low").innerHTML += sumOfAll1;
+                        } else {
+                            document.getElementById("txtreifegrad-low").innerHTML = "Schadenshöhe 1: " +
+                                sumOfAll1;
+                        }
 
                         // document.getElementById("txtreifegrad").innerHTML += sumOfAll;
                         // document.getElementById("uscReifgrad").innerHTML =
@@ -1967,7 +1995,7 @@
                 });
 
             if (mySelect2 == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -1991,7 +2019,7 @@
             getJSON2(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -2016,7 +2044,14 @@
                                 sumOfAll;
                         }
 
-
+                        let sumOfAll2 = randomNum(2.9, 3.9, 1);
+                        var newVar3 = document.getElementById("txtreifegrad2-low").innerHTML;
+                        if (newVar3 === "Schadenshöhe 2: ") {
+                            document.getElementById("txtreifegrad2-low").innerHTML += sumOfAll2;
+                        } else {
+                            document.getElementById("txtreifegrad2-low").innerHTML = "Schadenshöhe 2: " +
+                                sumOfAll2;
+                        }
 
                         // document.getElementById("uscReifgrad").innerHTML =
                         //     data[0].reifegrad;
@@ -2028,7 +2063,7 @@
                 });
 
             if (mySelect3 == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2052,7 +2087,7 @@
             getJSON3(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -2071,6 +2106,15 @@
                         } else {
                             document.getElementById("txtreifegrad3").innerHTML = "Eintrittswahrscheinlichkeit 3: " +
                                 sumOfAll;
+                        }
+
+                        let sumOfAll3 = randomNum(2.9, 3.9, 1);
+                        var newVar2 = document.getElementById("txtreifegrad3-low").innerHTML;
+                        if (newVar2 === "Schadenshöhe 3: ") {
+                            document.getElementById("txtreifegrad3-low").innerHTML += sumOfAll3;
+                        } else {
+                            document.getElementById("txtreifegrad3-low").innerHTML = "Schadenshöhe 3: " +
+                                sumOfAll3;
                         }
 
                         // document.getElementById("uscReifgrad").innerHTML =
@@ -2096,7 +2140,7 @@
 
         function showEvents1(riskVal) {
             if (riskVal == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2120,7 +2164,7 @@
             getJSON(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -2141,7 +2185,7 @@
 
         function showEvents2(riskVal) {
             if (riskVal == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2165,7 +2209,7 @@
             getJSON(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -2184,7 +2228,7 @@
 
         function showEvents3(riskVal) {
             if (riskVal == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2208,7 +2252,7 @@
             getJSON(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -2228,7 +2272,7 @@
         function showMassNahm1(massNahmVal) {
 
             if (massNahmVal == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
             if ($("#digiR1")[0].selectedIndex <= 0) {
@@ -2266,7 +2310,15 @@
                             }
                             let sumOfAll = randomNum(-1, 3);
 
-                            document.getElementById("txtreifegrad").innerHTML += sumOfAll;
+                         //   document.getElementById("shownewsum").innerHTML += sumOfAll;
+
+                            var newVar1 = document.getElementById("shownewsum").innerHTML;
+                        if (newVar1 === "Verbesserung Summe 1: ") {
+                            document.getElementById("shownewsum").innerHTML += sumOfAll;
+                        } else {
+                            document.getElementById("shownewsum").innerHTML = "Verbesserung Summe 1: " +
+                                sumOfAll;
+                        }
                             // document.getElementById("massDim").innerHTML =
                             //     data[0].dimension;
                             // document.getElementById("uscReifgrad").innerHTML =
@@ -2282,7 +2334,7 @@
 
         function showMassNahm2(massNahmVal) {
             if (massNahmVal == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2315,7 +2367,14 @@
                         }
                         let sumOfAll = randomNum(-1, 3);
 
-                        document.getElementById("txtreifegrad2").innerHTML += sumOfAll;
+                        // document.getElementById("shownewsum2").innerHTML += sumOfAll;
+                        var newVar2 = document.getElementById("shownewsum2").innerHTML;
+                        if (newVar2 === "Verbesserung Summe 2: ") {
+                            document.getElementById("shownewsum2").innerHTML += sumOfAll;
+                        } else {
+                            document.getElementById("shownewsum2").innerHTML = "Verbesserung Summe 2: " +
+                                sumOfAll;
+                        }
                         // document.getElementById("massDim").style.visibility = "visible";
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].dimension;
@@ -2330,7 +2389,7 @@
 
         function showMassNahm3(massNahmVal) {
             if (massNahmVal == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2363,7 +2422,14 @@
                         }
                         let sumOfAll = randomNum(-1, 3);
 
-                        document.getElementById("txtreifegrad3").innerHTML += sumOfAll;
+                        // document.getElementById("shownewsum3").innerHTML += sumOfAll;
+                        var newVar3 = document.getElementById("shownewsum3").innerHTML;
+                        if (newVar3 === "Verbesserung Summe 3: ") {
+                            document.getElementById("shownewsum3").innerHTML += sumOfAll;
+                        } else {
+                            document.getElementById("shownewsum3").innerHTML = "Verbesserung Summe 3: " +
+                                sumOfAll;
+                        }
                         // document.getElementById("massDim").innerHTML =
                         //     data[0].dimension;
                         // document.getElementById("uscReifgrad").innerHTML =
@@ -2412,7 +2478,7 @@
 
 
             if (mySelect1 == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2436,7 +2502,7 @@
             getJSON(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -2453,7 +2519,7 @@
                 });
 
             if (mySelect2 == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2477,7 +2543,7 @@
             getJSON2(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
@@ -2494,7 +2560,7 @@
                 });
 
             if (mySelect3 == "") {
-                alert("There Aint Nothing Here");
+                alert("Ungültige Auswahl");
                 return;
             }
 
@@ -2518,7 +2584,7 @@
             getJSON3(url3)
                 .then((data) => {
                     if (data.length == 0) {
-                        alert("No Event Data");
+                        alert("Keine Event-Daten");
                     } else {
                         // document.getElementById("massNahme1").innerHTML = data[0].massName;
                         // document.getElementById("massDim").innerHTML =
