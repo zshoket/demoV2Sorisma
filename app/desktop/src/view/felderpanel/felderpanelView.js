@@ -59,7 +59,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Ursachen",
+      title: "Charakteristische Ursachen",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -75,7 +75,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Risikotyp",
+      title: "Charakteristischer Risikotyp",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -91,7 +91,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Auswirkung",
+      title: "Charakteristische Auswirkung",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -131,7 +131,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     // },
 
     {
-      title: "Charakteristisch Ursachen",
+      title: "Charakteristische Ursachen",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -147,7 +147,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Risikotyp",
+      title: "Charakteristischer Risikotyp",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -163,7 +163,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Auswirkung",
+      title: "Charakteristische Auswirkung",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -202,7 +202,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     // },
 
     {
-      title: "Charakteristisch Ursachen",
+      title: "Charakteristische Ursachen",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -218,7 +218,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Risikotyp",
+      title: "Charakteristischer Risikotyp",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -234,7 +234,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Auswirkung",
+      title: "Charakteristische Auswirkung",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -273,7 +273,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
     // },
 
     {
-      title: "Charakteristisch Ursachen",
+      title: "Charakteristische Ursachen",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -289,7 +289,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Risikotyp",
+      title: "Charakteristischer Risikotyp",
       width: "32.3%",
       height: "18%",
       split: true,
@@ -305,7 +305,7 @@ Ext.define("SORISMA.view.felderpanel.felderpanelView", {
       },
     },
     {
-      title: "Charakteristisch Auswirkung",
+      title: "Charakteristische Auswirkung",
       width: "32.3%",
       height: "18%",
       split: true,
